@@ -1,0 +1,14 @@
+# Core scraping
+scrapy>=2.11.0
+requests>=2.31.0
+
+# For dynamic pages (if needed)
+selenium>=4.15.0
+webdriver-manager>=4.0.0
+
+# For PDF scraping (todra)
+pdfplumber>=0.10.0
+
+# Other common dependencies
+lxml>=4.9.0
+cssselect>=1.2.0
