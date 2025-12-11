@@ -20,7 +20,12 @@ jobs:
         with:
           python-version: '3.11'
           cache: 'pip'
-      
+
+      - name: 🌐 Setup Chrome
+        uses: browser-actions/setup-chrome@latest
+        with:
+          chrome-version: stable
+
       - name: 📦 Install Dependencies
         run: |
           pip install --upgrade pip
