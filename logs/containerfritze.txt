@@ -1,0 +1,74 @@
+2025-12-11 21:11:25 [scrapy.utils.log] INFO: Scrapy 2.13.4 started (bot: nebi_spiders)
+2025-12-11 21:11:25 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.2',
+ 'libxml2': '2.14.6',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.14 (main, Oct 10 2025, 01:03:14) [GCC 13.3.0]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.4 30 Sep 2025)',
+ 'cryptography': '46.0.3',
+ 'Platform': 'Linux-6.11.0-1018-azure-x86_64-with-glibc2.39'}
+2025-12-11 21:11:25 [selenium.webdriver.common.selenium_manager] DEBUG: Selenium Manager binary found at: /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/selenium/webdriver/common/linux/selenium-manager
+2025-12-11 21:11:25 [selenium.webdriver.common.selenium_manager] DEBUG: Executing process: /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/selenium/webdriver/common/linux/selenium-manager --browser chrome --language-binding python --output json
+2025-12-11 21:11:25 [selenium.webdriver.common.selenium_manager] DEBUG: Driver path: /usr/bin/chromedriver
+2025-12-11 21:11:25 [selenium.webdriver.common.selenium_manager] DEBUG: Browser path: /usr/bin/google-chrome
+2025-12-11 21:11:25 [selenium.webdriver.common.service] DEBUG: Started executable: `/usr/bin/chromedriver` in a child process with pid: 2131 using 0 to output -3
+2025-12-11 21:11:25 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://localhost:33785/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': '/usr/bin/google-chrome', 'args': []}}}}
+2025-12-11 21:11:25 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): localhost:33785
+2025-12-11 21:11:26 [urllib3.connectionpool] DEBUG: http://localhost:33785 "POST /session HTTP/1.1" 500 0
+2025-12-11 21:11:26 [selenium.webdriver.remote.remote_connection] DEBUG: Remote response: status=500 | data={"value":{"error":"session not created","message":"session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.","stacktrace":"#0 0x559153a9616a \u003Cunknown>\n#1 0x559153513c4b \u003Cunknown>\n#2 0x55915354dd1d \u003Cunknown>\n#3 0x5591535496d3 \u003Cunknown>\n#4 0x55915359924c \u003Cunknown>\n#5 0x55915359896c \u003Cunknown>\n#6 0x559153557c42 \u003Cunknown>\n#7 0x5591535588f1 \u003Cunknown>\n#8 0x559153a5ef09 \u003Cunknown>\n#9 0x559153a61e4d \u003Cunknown>\n#10 0x559153a47c51 \u003Cunknown>\n#11 0x559153a62a2b \u003Cunknown>\n#12 0x559153a2ea20 \u003Cunknown>\n#13 0x559153a83a78 \u003Cunknown>\n#14 0x559153a83c49 \u003Cunknown>\n#15 0x559153a954c3 \u003Cunknown>\n#16 0x7f9bd649caa4 \u003Cunknown>\n#17 0x7f9bd6529c6c \u003Cunknown>\n"}} | headers=HTTPHeaderDict({'Content-Length': '791', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2025-12-11 21:11:26 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2025-12-11 21:11:26 [twisted] CRITICAL: Unhandled error in Deferred:
+2025-12-11 21:11:26 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/twisted/internet/defer.py", line 1857, in _inlineCallbacks
+    result = context.run(gen.send, result)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/scrapy/crawler.py", line 153, in crawl
+    self.spider = self._create_spider(*args, **kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/scrapy/crawler.py", line 166, in _create_spider
+    return self.spidercls.from_crawler(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/scrapy/spiders/__init__.py", line 74, in from_crawler
+    spider = cls(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/containerfritze.py", line 18, in __init__
+    self.driver = webdriver.Chrome()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/selenium/webdriver/chrome/webdriver.py", line 46, in __init__
+    super().__init__(
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/selenium/webdriver/chromium/webdriver.py", line 67, in __init__
+    super().__init__(command_executor=executor, options=options)
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 257, in __init__
+    self.start_session(capabilities)
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 352, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/selenium/webdriver/remote/webdriver.py", line 432, in execute
+    self.error_handler.check_response(response)
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: Chrome instance exited. Examine ChromeDriver verbose log to determine the cause.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+#0 0x559153a9616a <unknown>
+#1 0x559153513c4b <unknown>
+#2 0x55915354dd1d <unknown>
+#3 0x5591535496d3 <unknown>
+#4 0x55915359924c <unknown>
+#5 0x55915359896c <unknown>
+#6 0x559153557c42 <unknown>
+#7 0x5591535588f1 <unknown>
+#8 0x559153a5ef09 <unknown>
+#9 0x559153a61e4d <unknown>
+#10 0x559153a47c51 <unknown>
+#11 0x559153a62a2b <unknown>
+#12 0x559153a2ea20 <unknown>
+#13 0x559153a83a78 <unknown>
+#14 0x559153a83c49 <unknown>
+#15 0x559153a954c3 <unknown>
+#16 0x7f9bd649caa4 <unknown>
+#17 0x7f9bd6529c6c <unknown>
+
