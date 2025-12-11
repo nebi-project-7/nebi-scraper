@@ -1,0 +1,502 @@
+2025-12-11 22:59:36 [scrapy.utils.log] INFO: Scrapy 2.13.4 started (bot: nebi_spiders)
+2025-12-11 22:59:36 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.2',
+ 'libxml2': '2.14.6',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.14 (main, Oct 10 2025, 01:03:14) [GCC 13.3.0]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.4 30 Sep 2025)',
+ 'cryptography': '46.0.3',
+ 'Platform': 'Linux-6.11.0-1018-azure-x86_64-with-glibc2.39'}
+2025-12-11 22:59:36 [scrapy.addons] INFO: Enabled addons:
+[]
+2025-12-11 22:59:36 [asyncio] DEBUG: Using selector: EpollSelector
+2025-12-11 22:59:36 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2025-12-11 22:59:36 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2025-12-11 22:59:36 [scrapy.extensions.telnet] INFO: Telnet Password: 5d795409b749e085
+2025-12-11 22:59:36 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2025-12-11 22:59:36 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'nebi_spiders',
+ 'CONCURRENT_REQUESTS': 1,
+ 'DOWNLOAD_DELAY': 0.5,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': 'logs/elno-container-products.txt',
+ 'NEWSPIDER_MODULE': 'nebi_spiders.spiders',
+ 'SPIDER_MODULES': ['nebi_spiders.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, '
+               'like Gecko) Chrome/141.0.0.0 Safari/537.36'}
+2025-12-11 22:59:36 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-12-11 22:59:36 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-12-11 22:59:36 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2025-12-11 22:59:36 [scrapy.core.engine] INFO: Spider opened
+2025-12-11 22:59:36 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-12-11 22:59:36 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2025-12-11 22:59:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://heyflow.id/elno-container> (referer: None)
+2025-12-11 22:59:37 [elno-container-products] DEBUG: 
+================================================================================
+2025-12-11 22:59:37 [elno-container-products] DEBUG: Starte Heyflow elno-container Scraping
+2025-12-11 22:59:37 [elno-container-products] DEBUG: ================================================================================
+
+2025-12-11 22:59:37 [elno-container-products] DEBUG: 
+--- Verarbeite: Holz A1-A3 ---
+2025-12-11 22:59:47 [elno-container-products] DEBUG: ✓ Mietinfo extrahiert: 14 Tage, danach 3€/Tag
+2025-12-11 22:59:47 [elno-container-products] DEBUG:   ✓ Gefunden: 8 Container-Größen
+2025-12-11 22:59:47 [elno-container-products] DEBUG: 
+--- Verarbeite: Holz A4 (imprägniert) ---
+2025-12-11 22:59:54 [elno-container-products] DEBUG:   ✓ Gefunden: 8 Container-Größen
+2025-12-11 22:59:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '3', 'price': '239.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-a1-a3-holz'}
+2025-12-11 22:59:54 [elno-container-products] DEBUG: 
+--- Verarbeite: Baumisch (leicht) ---
+2025-12-11 23:00:01 [elno-container-products] DEBUG:   ✓ Gefunden: 8 Container-Größen
+2025-12-11 23:00:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '5', 'price': '289.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-a1-a3-holz'}
+2025-12-11 23:00:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '7', 'price': '329.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-a1-a3-holz'}
+2025-12-11 23:00:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '10', 'price': '379.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-a1-a3-holz'}
+2025-12-11 23:00:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '12', 'price': '469.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-a1-a3-holz'}
+2025-12-11 23:00:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '24', 'price': '579.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-a1-a3-holz'}
+2025-12-11 23:00:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '34', 'price': '649.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-a1-a3-holz'}
+2025-12-11 23:00:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '36', 'price': '669.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-a1-a3-holz'}
+2025-12-11 23:00:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Holz A4 (imprägniert)', 'city': 'Berlin', 'size': '3', 'price': '289.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-holz-a4-impraegniert'}
+2025-12-11 23:00:01 [elno-container-products] DEBUG: 
+--- Verarbeite: Baumisch (20% Mineralik) ---
+2025-12-11 23:00:08 [elno-container-products] DEBUG:   ✓ Gefunden: 6 Container-Größen
+2025-12-11 23:00:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Holz A4 (imprägniert)', 'city': 'Berlin', 'size': '5', 'price': '339.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-holz-a4-impraegniert'}
+2025-12-11 23:00:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Holz A4 (imprägniert)', 'city': 'Berlin', 'size': '7', 'price': '379.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-holz-a4-impraegniert'}
+2025-12-11 23:00:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Holz A4 (imprägniert)', 'city': 'Berlin', 'size': '10', 'price': '449.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-holz-a4-impraegniert'}
+2025-12-11 23:00:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Holz A4 (imprägniert)', 'city': 'Berlin', 'size': '12', 'price': '519.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-holz-a4-impraegniert'}
+2025-12-11 23:00:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Holz A4 (imprägniert)', 'city': 'Berlin', 'size': '24', 'price': '639.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-holz-a4-impraegniert'}
+2025-12-11 23:00:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Holz A4 (imprägniert)', 'city': 'Berlin', 'size': '34', 'price': '799.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-holz-a4-impraegniert'}
+2025-12-11 23:00:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Holz A4 (imprägniert)', 'city': 'Berlin', 'size': '36', 'price': '839.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-holz-a4-impraegniert'}
+2025-12-11 23:00:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Baumisch (leicht)', 'city': 'Berlin', 'size': '3', 'price': '329.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-baumisch-leicht'}
+2025-12-11 23:00:08 [elno-container-products] DEBUG: 
+--- Verarbeite: Bauschutt ---
+2025-12-11 23:00:15 [elno-container-products] DEBUG:   ✓ Gefunden: 4 Container-Größen
+2025-12-11 23:00:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Baumisch (leicht)', 'city': 'Berlin', 'size': '5', 'price': '429.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-baumisch-leicht'}
+2025-12-11 23:00:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Baumisch (leicht)', 'city': 'Berlin', 'size': '7', 'price': '499.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-baumisch-leicht'}
+2025-12-11 23:00:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Baumisch (leicht)', 'city': 'Berlin', 'size': '10', 'price': '649.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-baumisch-leicht'}
+2025-12-11 23:00:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Baumisch (leicht)', 'city': 'Berlin', 'size': '12', 'price': '869.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-baumisch-leicht'}
+2025-12-11 23:00:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Baumisch (leicht)', 'city': 'Berlin', 'size': '24', 'price': '1099.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-baumisch-leicht'}
+2025-12-11 23:00:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Baumisch (leicht)', 'city': 'Berlin', 'size': '34', 'price': '1549.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-baumisch-leicht'}
+2025-12-11 23:00:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Baumisch (leicht)', 'city': 'Berlin', 'size': '36', 'price': '1699.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-baumisch-leicht'}
+2025-12-11 23:00:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Baumisch (20% Mineralik)', 'city': 'Berlin', 'size': '3', 'price': '399.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-baumisch-20-mineralik'}
+2025-12-11 23:00:15 [elno-container-products] DEBUG: 
+--- Verarbeite: Beton ---
+2025-12-11 23:00:22 [elno-container-products] DEBUG:   ✓ Gefunden: 4 Container-Größen
+2025-12-11 23:00:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Baumisch (20% Mineralik)', 'city': 'Berlin', 'size': '5', 'price': '569.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-baumisch-20-mineralik'}
+2025-12-11 23:00:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Baumisch (20% Mineralik)', 'city': 'Berlin', 'size': '7', 'price': '745.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-baumisch-20-mineralik'}
+2025-12-11 23:00:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Baumisch (20% Mineralik)', 'city': 'Berlin', 'size': '10', 'price': '949.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-baumisch-20-mineralik'}
+2025-12-11 23:00:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Baumisch (20% Mineralik)', 'city': 'Berlin', 'size': '12', 'price': '1079.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-baumisch-20-mineralik'}
+2025-12-11 23:00:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Baumisch (20% Mineralik)', 'city': 'Berlin', 'size': '24', 'price': '2099.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-baumisch-20-mineralik'}
+2025-12-11 23:00:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '3', 'price': '349.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-bauschutt'}
+2025-12-11 23:00:22 [elno-container-products] DEBUG: 
+--- Verarbeite: Boden (hell) ---
+2025-12-11 23:00:29 [elno-container-products] DEBUG:   ✓ Gefunden: 4 Container-Größen
+2025-12-11 23:00:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '5', 'price': '439.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-bauschutt'}
+2025-12-11 23:00:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '7', 'price': '499.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-bauschutt'}
+2025-12-11 23:00:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '12', 'price': '929.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-bauschutt'}
+2025-12-11 23:00:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Beton', 'city': 'Berlin', 'size': '3', 'price': '259.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-beton'}
+2025-12-11 23:00:29 [elno-container-products] DEBUG: 
+--- Verarbeite: Boden (dunkel) ---
+2025-12-11 23:00:36 [elno-container-products] DEBUG:   ✓ Gefunden: 4 Container-Größen
+2025-12-11 23:00:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Beton', 'city': 'Berlin', 'size': '5', 'price': '279.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-beton'}
+2025-12-11 23:00:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Beton', 'city': 'Berlin', 'size': '7', 'price': '339.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-beton'}
+2025-12-11 23:00:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Beton', 'city': 'Berlin', 'size': '12', 'price': '509.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-beton'}
+2025-12-11 23:00:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Boden (hell)', 'city': 'Berlin', 'size': '3', 'price': '319.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-boden-hell'}
+2025-12-11 23:00:36 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 1 pages/min), scraped 39 items (at 39 items/min)
+2025-12-11 23:00:36 [elno-container-products] DEBUG: 
+--- Verarbeite: Grünschnitt ---
+2025-12-11 23:00:43 [elno-container-products] DEBUG:   ✓ Gefunden: 8 Container-Größen
+2025-12-11 23:00:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Boden (hell)', 'city': 'Berlin', 'size': '5', 'price': '389.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-boden-hell'}
+2025-12-11 23:00:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Boden (hell)', 'city': 'Berlin', 'size': '7', 'price': '419.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-boden-hell'}
+2025-12-11 23:00:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Boden (hell)', 'city': 'Berlin', 'size': '12', 'price': '619.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-boden-hell'}
+2025-12-11 23:00:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Boden (dunkel)', 'city': 'Berlin', 'size': '3', 'price': '349.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-boden-dunkel'}
+2025-12-11 23:00:43 [elno-container-products] DEBUG: 
+--- Verarbeite: Gips ---
+2025-12-11 23:00:50 [elno-container-products] DEBUG:   ✓ Gefunden: 7 Container-Größen
+2025-12-11 23:00:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Boden (dunkel)', 'city': 'Berlin', 'size': '5', 'price': '439.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-boden-dunkel'}
+2025-12-11 23:00:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Boden (dunkel)', 'city': 'Berlin', 'size': '7', 'price': '499.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-boden-dunkel'}
+2025-12-11 23:00:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Boden (dunkel)', 'city': 'Berlin', 'size': '12', 'price': '929.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-boden-dunkel'}
+2025-12-11 23:00:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Grünschnitt', 'city': 'Berlin', 'size': '3', 'price': '279.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-gruenschnitt'}
+2025-12-11 23:00:50 [elno-container-products] DEBUG: 
+--- Verarbeite: Sperrmüll ---
+2025-12-11 23:00:57 [elno-container-products] DEBUG:   ✓ Gefunden: 8 Container-Größen
+2025-12-11 23:00:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Grünschnitt', 'city': 'Berlin', 'size': '5', 'price': '349.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-gruenschnitt'}
+2025-12-11 23:00:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Grünschnitt', 'city': 'Berlin', 'size': '7', 'price': '409.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-gruenschnitt'}
+2025-12-11 23:00:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Grünschnitt', 'city': 'Berlin', 'size': '10', 'price': '459.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-gruenschnitt'}
+2025-12-11 23:00:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Grünschnitt', 'city': 'Berlin', 'size': '12', 'price': '499.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-gruenschnitt'}
+2025-12-11 23:00:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Grünschnitt', 'city': 'Berlin', 'size': '24', 'price': '729.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-gruenschnitt'}
+2025-12-11 23:00:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Grünschnitt', 'city': 'Berlin', 'size': '34', 'price': '929.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-gruenschnitt'}
+2025-12-11 23:00:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Grünschnitt', 'city': 'Berlin', 'size': '36', 'price': '969.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-gruenschnitt'}
+2025-12-11 23:00:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Gips', 'city': 'Berlin', 'size': '3', 'price': '339.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-gips'}
+2025-12-11 23:00:57 [elno-container-products] DEBUG: 
+--- Verarbeite: Siedlungsabfall ---
+2025-12-11 23:01:04 [elno-container-products] DEBUG:   ✓ Gefunden: 8 Container-Größen
+2025-12-11 23:01:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Gips', 'city': 'Berlin', 'size': '5', 'price': '429.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-gips'}
+2025-12-11 23:01:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Gips', 'city': 'Berlin', 'size': '7', 'price': '509.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-gips'}
+2025-12-11 23:01:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Gips', 'city': 'Berlin', 'size': '10', 'price': '649.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-gips'}
+2025-12-11 23:01:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Gips', 'city': 'Berlin', 'size': '12', 'price': '929.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-gips'}
+2025-12-11 23:01:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Gips', 'city': 'Berlin', 'size': '24', 'price': '1329.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-gips'}
+2025-12-11 23:01:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Gips', 'city': 'Berlin', 'size': '36', 'price': '1599.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-gips'}
+2025-12-11 23:01:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '3', 'price': '319.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-sperrmuell'}
+2025-12-11 23:01:04 [elno-container-products] DEBUG: 
+--- Verarbeite: Styropor ---
+2025-12-11 23:01:11 [elno-container-products] DEBUG:   ✓ Gefunden: 8 Container-Größen
+2025-12-11 23:01:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '5', 'price': '379.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-sperrmuell'}
+2025-12-11 23:01:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '7', 'price': '439.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-sperrmuell'}
+2025-12-11 23:01:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '10', 'price': '569.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-sperrmuell'}
+2025-12-11 23:01:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '12', 'price': '649.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-sperrmuell'}
+2025-12-11 23:01:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '24', 'price': '999.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-sperrmuell'}
+2025-12-11 23:01:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '34', 'price': '1279.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-sperrmuell'}
+2025-12-11 23:01:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '36', 'price': '1349.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-sperrmuell'}
+2025-12-11 23:01:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Siedlungsabfall', 'city': 'Berlin', 'size': '3', 'price': '329.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-siedlungsabfall'}
+2025-12-11 23:01:11 [elno-container-products] DEBUG: 
+--- Verarbeite: Kunststoff ---
+2025-12-11 23:01:18 [elno-container-products] DEBUG:   ✓ Gefunden: 8 Container-Größen
+2025-12-11 23:01:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Siedlungsabfall', 'city': 'Berlin', 'size': '5', 'price': '439.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-siedlungsabfall'}
+2025-12-11 23:01:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Siedlungsabfall', 'city': 'Berlin', 'size': '7', 'price': '569.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-siedlungsabfall'}
+2025-12-11 23:01:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Siedlungsabfall', 'city': 'Berlin', 'size': '10', 'price': '729.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-siedlungsabfall'}
+2025-12-11 23:01:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Siedlungsabfall', 'city': 'Berlin', 'size': '12', 'price': '899.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-siedlungsabfall'}
+2025-12-11 23:01:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Siedlungsabfall', 'city': 'Berlin', 'size': '24', 'price': '1599.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-siedlungsabfall'}
+2025-12-11 23:01:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Siedlungsabfall', 'city': 'Berlin', 'size': '34', 'price': '2299.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-siedlungsabfall'}
+2025-12-11 23:01:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Siedlungsabfall', 'city': 'Berlin', 'size': '36', 'price': '2449.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-siedlungsabfall'}
+2025-12-11 23:01:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Styropor', 'city': 'Berlin', 'size': '3', 'price': '399.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-styropor'}
+2025-12-11 23:01:18 [elno-container-products] DEBUG: 
+--- Verarbeite: Glas ---
+2025-12-11 23:01:25 [elno-container-products] DEBUG:   ✓ Gefunden: 5 Container-Größen
+2025-12-11 23:01:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Styropor', 'city': 'Berlin', 'size': '5', 'price': '539.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-styropor'}
+2025-12-11 23:01:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Styropor', 'city': 'Berlin', 'size': '7', 'price': '649.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-styropor'}
+2025-12-11 23:01:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Styropor', 'city': 'Berlin', 'size': '10', 'price': '819.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-styropor'}
+2025-12-11 23:01:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Styropor', 'city': 'Berlin', 'size': '12', 'price': '929.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-styropor'}
+2025-12-11 23:01:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Styropor', 'city': 'Berlin', 'size': '24', 'price': '1599.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-styropor'}
+2025-12-11 23:01:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Styropor', 'city': 'Berlin', 'size': '34', 'price': '2149.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-styropor'}
+2025-12-11 23:01:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Styropor', 'city': 'Berlin', 'size': '36', 'price': '2249.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-styropor'}
+2025-12-11 23:01:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Kunststoff', 'city': 'Berlin', 'size': '3', 'price': '349.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-kunststoff'}
+2025-12-11 23:01:25 [elno-container-products] DEBUG: 
+--- Verarbeite: Dachpappe ---
+2025-12-11 23:01:32 [elno-container-products] DEBUG:   ✓ Gefunden: 5 Container-Größen
+2025-12-11 23:01:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Kunststoff', 'city': 'Berlin', 'size': '5', 'price': '459.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-kunststoff'}
+2025-12-11 23:01:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Kunststoff', 'city': 'Berlin', 'size': '7', 'price': '699.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-kunststoff'}
+2025-12-11 23:01:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Kunststoff', 'city': 'Berlin', 'size': '10', 'price': '759.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-kunststoff'}
+2025-12-11 23:01:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Kunststoff', 'city': 'Berlin', 'size': '12', 'price': '949.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-kunststoff'}
+2025-12-11 23:01:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Kunststoff', 'city': 'Berlin', 'size': '24', 'price': '1749.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-kunststoff'}
+2025-12-11 23:01:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Kunststoff', 'city': 'Berlin', 'size': '34', 'price': '2299.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-kunststoff'}
+2025-12-11 23:01:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Kunststoff', 'city': 'Berlin', 'size': '36', 'price': '2349.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-kunststoff'}
+2025-12-11 23:01:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Glas', 'city': 'Berlin', 'size': '3', 'price': '449.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-glas'}
+2025-12-11 23:01:32 [elno-container-products] DEBUG: 
+--- Verarbeite: Dämmwolle ---
+2025-12-11 23:01:39 [elno-container-products] DEBUG:   ✓ Gefunden: 8 Container-Größen
+2025-12-11 23:01:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Glas', 'city': 'Berlin', 'size': '5', 'price': '519.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-glas'}
+2025-12-11 23:01:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Glas', 'city': 'Berlin', 'size': '7', 'price': '589.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-glas'}
+2025-12-11 23:01:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Glas', 'city': 'Berlin', 'size': '10', 'price': '689.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-glas'}
+2025-12-11 23:01:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Glas', 'city': 'Berlin', 'size': '12', 'price': '769.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-glas'}
+2025-12-11 23:01:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Dachpappe', 'city': 'Berlin', 'size': '3', 'price': '799.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-dachpape'}
+2025-12-11 23:01:39 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 99 items (at 60 items/min)
+2025-12-11 23:01:39 [elno-container-products] DEBUG: 
+--- Verarbeite: Asbest ---
+2025-12-11 23:01:46 [elno-container-products] DEBUG:   ✓ Gefunden: 8 Container-Größen
+2025-12-11 23:01:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Dachpappe', 'city': 'Berlin', 'size': '5', 'price': '1149.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-dachpape'}
+2025-12-11 23:01:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Dachpappe', 'city': 'Berlin', 'size': '7', 'price': '1499.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-dachpape'}
+2025-12-11 23:01:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Dachpappe', 'city': 'Berlin', 'size': '10', 'price': '1999.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-dachpape'}
+2025-12-11 23:01:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Dachpappe', 'city': 'Berlin', 'size': '12', 'price': '2399.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-dachpape'}
+2025-12-11 23:01:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Dämmwolle', 'city': 'Berlin', 'size': '3', 'price': '399.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-daemwolle'}
+2025-12-11 23:01:46 [elno-container-products] DEBUG: 
+--- Verarbeite: Absetzzement ---
+2025-12-11 23:01:54 [elno-container-products] DEBUG:   ✓ Gefunden: 6 Container-Größen
+2025-12-11 23:01:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Dämmwolle', 'city': 'Berlin', 'size': '5', 'price': '529.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-daemwolle'}
+2025-12-11 23:01:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Dämmwolle', 'city': 'Berlin', 'size': '7', 'price': '679.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-daemwolle'}
+2025-12-11 23:01:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Dämmwolle', 'city': 'Berlin', 'size': '10', 'price': '829.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-daemwolle'}
+2025-12-11 23:01:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Dämmwolle', 'city': 'Berlin', 'size': '12', 'price': '999.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-daemwolle'}
+2025-12-11 23:01:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Dämmwolle', 'city': 'Berlin', 'size': '24', 'price': '1499.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-daemwolle'}
+2025-12-11 23:01:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Dämmwolle', 'city': 'Berlin', 'size': '34', 'price': '1899.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-daemwolle'}
+2025-12-11 23:01:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Dämmwolle', 'city': 'Berlin', 'size': '36', 'price': '1999.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-daemwolle'}
+2025-12-11 23:01:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Asbest', 'city': 'Berlin', 'size': '3', 'price': '429.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-asbest'}
+2025-12-11 23:01:54 [elno-container-products] DEBUG: 
+--- Verarbeite: Elektronikschrott ---
+2025-12-11 23:02:01 [elno-container-products] DEBUG:   ✓ Gefunden: 6 Container-Größen
+2025-12-11 23:02:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Asbest', 'city': 'Berlin', 'size': '5', 'price': '549.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-asbest'}
+2025-12-11 23:02:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Asbest', 'city': 'Berlin', 'size': '7', 'price': '699.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-asbest'}
+2025-12-11 23:02:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Asbest', 'city': 'Berlin', 'size': '10', 'price': '849.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-asbest'}
+2025-12-11 23:02:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Asbest', 'city': 'Berlin', 'size': '12', 'price': '1049.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-asbest'}
+2025-12-11 23:02:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Asbest', 'city': 'Berlin', 'size': '24', 'price': '1549.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-asbest'}
+2025-12-11 23:02:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Asbest', 'city': 'Berlin', 'size': '34', 'price': '1949.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-asbest'}
+2025-12-11 23:02:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Asbest', 'city': 'Berlin', 'size': '36', 'price': '2049.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-asbest'}
+2025-12-11 23:02:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Absetzzement', 'city': 'Berlin', 'size': '3', 'price': '549.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-absetzzement'}
+2025-12-11 23:02:01 [elno-container-products] DEBUG: 
+--- Verarbeite: Schrott ---
+2025-12-11 23:02:08 [elno-container-products] DEBUG:   ⚠️ Keine Preise gefunden
+2025-12-11 23:02:08 [elno-container-products] DEBUG: 
+--- Verarbeite: PKW-Reifen ---
+2025-12-11 23:02:15 [elno-container-products] DEBUG:   ✓ Gefunden: 8 Container-Größen
+2025-12-11 23:02:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Absetzzement', 'city': 'Berlin', 'size': '5', 'price': '799.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-absetzzement'}
+2025-12-11 23:02:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Absetzzement', 'city': 'Berlin', 'size': '7', 'price': '999.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-absetzzement'}
+2025-12-11 23:02:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Absetzzement', 'city': 'Berlin', 'size': '10', 'price': '1269.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-absetzzement'}
+2025-12-11 23:02:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Absetzzement', 'city': 'Berlin', 'size': '12', 'price': '1449.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-absetzzement'}
+2025-12-11 23:02:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Absetzzement', 'city': 'Berlin', 'size': '24', 'price': '2199.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-absetzzement'}
+2025-12-11 23:02:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Elektronikschrott', 'city': 'Berlin', 'size': '3', 'price': '229.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-elektronikschrott'}
+2025-12-11 23:02:15 [elno-container-products] DEBUG: 
+--- Verarbeite: Wurzeln und Stubben ---
+2025-12-11 23:02:22 [elno-container-products] DEBUG:   ✓ Gefunden: 8 Container-Größen
+2025-12-11 23:02:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Elektronikschrott', 'city': 'Berlin', 'size': '5', 'price': '279.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-elektronikschrott'}
+2025-12-11 23:02:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Elektronikschrott', 'city': 'Berlin', 'size': '7', 'price': '349.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-elektronikschrott'}
+2025-12-11 23:02:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Elektronikschrott', 'city': 'Berlin', 'size': '10', 'price': '419.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-elektronikschrott'}
+2025-12-11 23:02:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Elektronikschrott', 'city': 'Berlin', 'size': '12', 'price': '649.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-elektronikschrott'}
+2025-12-11 23:02:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Elektronikschrott', 'city': 'Berlin', 'size': '24', 'price': '1179.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-elektronikschrott'}
+2025-12-11 23:02:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'PKW-Reifen', 'city': 'Berlin', 'size': '3', 'price': '449.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-pkwreifen'}
+2025-12-11 23:02:22 [elno-container-products] DEBUG: 
+--- Verarbeite: Fußbodenbeläge ---
+2025-12-11 23:02:29 [elno-container-products] DEBUG:   ✓ Gefunden: 8 Container-Größen
+2025-12-11 23:02:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'PKW-Reifen', 'city': 'Berlin', 'size': '5', 'price': '549.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-pkwreifen'}
+2025-12-11 23:02:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'PKW-Reifen', 'city': 'Berlin', 'size': '7', 'price': '649.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-pkwreifen'}
+2025-12-11 23:02:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'PKW-Reifen', 'city': 'Berlin', 'size': '10', 'price': '799.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-pkwreifen'}
+2025-12-11 23:02:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'PKW-Reifen', 'city': 'Berlin', 'size': '12', 'price': '899.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-pkwreifen'}
+2025-12-11 23:02:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'PKW-Reifen', 'city': 'Berlin', 'size': '24', 'price': '1499.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-pkwreifen'}
+2025-12-11 23:02:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'PKW-Reifen', 'city': 'Berlin', 'size': '34', 'price': '1999.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-pkwreifen'}
+2025-12-11 23:02:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'PKW-Reifen', 'city': 'Berlin', 'size': '36', 'price': '2099.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-pkwreifen'}
+2025-12-11 23:02:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Wurzeln und Stubben', 'city': 'Berlin', 'size': '3', 'price': '339.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-wurzelnundstuben'}
+2025-12-11 23:02:29 [elno-container-products] DEBUG: 
+--- Verarbeite: Verpackungsabfall ---
+2025-12-11 23:02:36 [elno-container-products] DEBUG:   ✓ Gefunden: 8 Container-Größen
+2025-12-11 23:02:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Wurzeln und Stubben', 'city': 'Berlin', 'size': '5', 'price': '399.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-wurzelnundstuben'}
+2025-12-11 23:02:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Wurzeln und Stubben', 'city': 'Berlin', 'size': '7', 'price': '459.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-wurzelnundstuben'}
+2025-12-11 23:02:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Wurzeln und Stubben', 'city': 'Berlin', 'size': '10', 'price': '549.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-wurzelnundstuben'}
+2025-12-11 23:02:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Wurzeln und Stubben', 'city': 'Berlin', 'size': '12', 'price': '609.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-wurzelnundstuben'}
+2025-12-11 23:02:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Wurzeln und Stubben', 'city': 'Berlin', 'size': '24', 'price': '969.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-wurzelnundstuben'}
+2025-12-11 23:02:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Wurzeln und Stubben', 'city': 'Berlin', 'size': '34', 'price': '1269.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-wurzelnundstuben'}
+2025-12-11 23:02:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Wurzeln und Stubben', 'city': 'Berlin', 'size': '36', 'price': '1329.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-wurzelnundstuben'}
+2025-12-11 23:02:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Fußbodenbeläge', 'city': 'Berlin', 'size': '3', 'price': '349.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-fussbodenbelge'}
+2025-12-11 23:02:36 [elno-container-products] DEBUG: 
+================================================================================
+2025-12-11 23:02:36 [elno-container-products] DEBUG: ✓ Gesamt gescrapt: 163 Produkte
+2025-12-11 23:02:36 [elno-container-products] DEBUG: ================================================================================
+
+2025-12-11 23:02:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Fußbodenbeläge', 'city': 'Berlin', 'size': '5', 'price': '459.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-fussbodenbelge'}
+2025-12-11 23:02:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Fußbodenbeläge', 'city': 'Berlin', 'size': '7', 'price': '699.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-fussbodenbelge'}
+2025-12-11 23:02:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Fußbodenbeläge', 'city': 'Berlin', 'size': '10', 'price': '759.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-fussbodenbelge'}
+2025-12-11 23:02:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Fußbodenbeläge', 'city': 'Berlin', 'size': '12', 'price': '949.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-fussbodenbelge'}
+2025-12-11 23:02:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Fußbodenbeläge', 'city': 'Berlin', 'size': '24', 'price': '1749.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-fussbodenbelge'}
+2025-12-11 23:02:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Fußbodenbeläge', 'city': 'Berlin', 'size': '34', 'price': '2299.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-fussbodenbelge'}
+2025-12-11 23:02:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Fußbodenbeläge', 'city': 'Berlin', 'size': '36', 'price': '2349.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-fussbodenbelge'}
+2025-12-11 23:02:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Verpackungsabfall', 'city': 'Berlin', 'size': '3', 'price': '329.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-verpackungsabfall'}
+2025-12-11 23:02:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Verpackungsabfall', 'city': 'Berlin', 'size': '5', 'price': '439.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-verpackungsabfall'}
+2025-12-11 23:02:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Verpackungsabfall', 'city': 'Berlin', 'size': '7', 'price': '569.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-verpackungsabfall'}
+2025-12-11 23:02:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Verpackungsabfall', 'city': 'Berlin', 'size': '10', 'price': '729.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-verpackungsabfall'}
+2025-12-11 23:02:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Verpackungsabfall', 'city': 'Berlin', 'size': '12', 'price': '899.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-verpackungsabfall'}
+2025-12-11 23:02:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Verpackungsabfall', 'city': 'Berlin', 'size': '24', 'price': '1599.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-verpackungsabfall'}
+2025-12-11 23:02:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Verpackungsabfall', 'city': 'Berlin', 'size': '34', 'price': '2299.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-verpackungsabfall'}
+2025-12-11 23:02:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://heyflow.id/elno-container>
+{'source': 'elno-container.de', 'type': 'Verpackungsabfall', 'city': 'Berlin', 'size': '36', 'price': '2449.00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '3', 'cancellation_fee': '', 'URL': 'https://heyflow.id/elno-container#abfallart-verpackungsabfall'}
+2025-12-11 23:02:36 [scrapy.core.engine] INFO: Closing spider (finished)
+2025-12-11 23:02:36 [scrapy.extensions.feedexport] INFO: Stored json feed (163 items) in: data/elno-container-products.json
+2025-12-11 23:02:36 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 291,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 30580,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 179.887006,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2025, 12, 11, 23, 2, 36, 374863, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 779994,
+ 'httpcompression/response_count': 1,
+ 'item_scraped_count': 163,
+ 'items_per_minute': 54.63687150837989,
+ 'log_count/DEBUG': 224,
+ 'log_count/INFO': 13,
+ 'memusage/max': 79495168,
+ 'memusage/startup': 74489856,
+ 'response_received_count': 1,
+ 'responses_per_minute': 0.33519553072625696,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2025, 12, 11, 22, 59, 36, 487857, tzinfo=datetime.timezone.utc)}
+2025-12-11 23:02:36 [scrapy.core.engine] INFO: Spider closed (finished)
