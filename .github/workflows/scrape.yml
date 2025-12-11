@@ -104,6 +104,7 @@ jobs:
             echo "Keine Änderungen"
           else
             git commit -m "🔄 Scraping Update $(date +'%Y-%m-%d %H:%M')"
+            git pull --rebase
             git push
           fi
       
