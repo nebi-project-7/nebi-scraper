@@ -4,6 +4,10 @@ import requests
 from time import sleep
 from scrapy import Spider
 from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException, ElementClickInterceptedException
 from scrapy.selector import Selector
 from scrapy.shell import inspect_response
 from scrapy.http import Request, FormRequest
@@ -35,6 +39,53 @@ class ContainerfritzeSpider(Spider):
         logging.getLogger('selenium').setLevel(logging.WARNING)
         logging.getLogger('urllib3').setLevel(logging.WARNING)
 
+    def _dismiss_cookie_banner(self):
+        """Versucht Cookie-Banner zu schließen."""
+        cookie_selectors = [
+            "//button[contains(text(), 'Akzeptieren')]",
+            "//button[contains(text(), 'Alle akzeptieren')]",
+            "//button[contains(text(), 'Accept')]",
+            "//a[contains(text(), 'Akzeptieren')]",
+            "//button[contains(@class, 'cookie')]",
+            "//div[contains(@class, 'cookie')]//button",
+        ]
+        for selector in cookie_selectors:
+            try:
+                elements = self.driver.find_elements(By.XPATH, selector)
+                for elem in elements:
+                    if elem.is_displayed():
+                        self._js_click(elem)
+                        self.log("✓ Cookie-Banner geschlossen")
+                        sleep(1)
+                        return True
+            except:
+                pass
+        return False
+
+    def _js_click(self, element):
+        """Führt JavaScript-Klick aus um Overlay-Probleme zu vermeiden."""
+        self.driver.execute_script("arguments[0].click();", element)
+
+    def _safe_click(self, xpath):
+        """Sicherer Klick mit JavaScript-Fallback."""
+        try:
+            element = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, xpath))
+            )
+            self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", element)
+            sleep(0.5)
+            self._js_click(element)
+            return True
+        except Exception as e:
+            self.log(f"Klick fehlgeschlagen für {xpath}: {e}")
+            return False
+
+    def closed(self, reason):
+        try:
+            self.driver.quit()
+        except:
+            pass
+
     def parse(self, response):
         # open_in_browser(response)
         # inspect_response(response, self)
@@ -45,41 +96,47 @@ class ContainerfritzeSpider(Spider):
 
         for start_url in start_urls:
             self.driver.get(start_url)
-            sleep(3)
+            sleep(5)
+
+            # Cookie-Banner beim ersten Laden schließen
+            self._dismiss_cookie_banner()
 
             containers = Selector(text=self.driver.page_source).xpath('//h2/a/@href').getall()
             for container in containers:
 
                 self.driver.get(container)
-                sleep(3)
+                sleep(5)
+
+                # Cookie-Banner erneut prüfen
+                self._dismiss_cookie_banner()
 
                 order_now_button_url = Selector(text=self.driver.page_source).xpath(
                     '//a[@class="elementor-button elementor-button-link elementor-size-lg"]/@href').get()
 
                 if order_now_button_url:
                     self.driver.get(order_now_button_url)
-                    sleep(4)
+                    sleep(6)
 
-                    try:
-                        self.driver.find_element('xpath', '//span[text()="Brutto"]').click()
-                        sleep(3)
-                    except:
-                        pass
-                    try:
-                        self.driver.find_element('xpath', '//li/a[text()="Privat"]').click()
-                        sleep(2)
-                    except:
-                        pass
-                    try:
-                        self.driver.find_element('xpath', '//span[text()="Brutto"]').click()
-                        sleep(3)
-                    except:
-                        pass
+                    # Cookie-Banner auf Produktseite schließen
+                    self._dismiss_cookie_banner()
 
-                    containers = self.driver.find_elements('xpath', '//ul[@data-attribute="attribute_pa_groesse"]/li/a')
+                    # JavaScript-Klicks statt normaler Klicks
+                    self._safe_click('//span[text()="Brutto"]')
+                    sleep(3)
+
+                    self._safe_click('//li/a[text()="Privat"]')
+                    sleep(3)
+
+                    self._safe_click('//span[text()="Brutto"]')
+                    sleep(3)
+
+                    containers = self.driver.find_elements(By.XPATH, '//ul[@data-attribute="attribute_pa_groesse"]/li/a')
                     for container_num, container in enumerate(containers):
-                        self.driver.find_elements('xpath', '//ul[@data-attribute="attribute_pa_groesse"]/li/a')[container_num].click()
-                        sleep(3)
+                        # JavaScript-Klick für Größen-Auswahl
+                        size_elements = self.driver.find_elements(By.XPATH, '//ul[@data-attribute="attribute_pa_groesse"]/li/a')
+                        if container_num < len(size_elements):
+                            self._js_click(size_elements[container_num])
+                        sleep(4)
 
                         sel = Selector(text=self.driver.page_source)
 
