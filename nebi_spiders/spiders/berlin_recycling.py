@@ -1,6 +1,5 @@
 import re
 import logging
-import requests
 from time import sleep
 from scrapy import Spider
 from selenium import webdriver
@@ -8,15 +7,34 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from scrapy.selector import Selector
-from scrapy.shell import inspect_response
-from scrapy.http import Request, FormRequest
-from scrapy.utils.response import open_in_browser
 
 
 class BerlinRecyclingSpider(Spider):
     name = 'berlin-recycling'
     allowed_domains = ['shop.berlin-recycling.de']
-    start_urls = ['https://shop.berlin-recycling.de/collections/container']
+    start_urls = ['https://shop.berlin-recycling.de/']
+
+    # Direkte Produkt-URLs für alle Abfallarten
+    PRODUCT_URLS = [
+        "https://shop.berlin-recycling.de/products/baumischabfall-entsorgen-container",
+        "https://shop.berlin-recycling.de/products/bauschutt-entsorgen-container",
+        "https://shop.berlin-recycling.de/products/erdaushub-entsorgen-container",
+        "https://shop.berlin-recycling.de/products/asbestentsorgung-container",
+        "https://shop.berlin-recycling.de/products/elektrogrossgerate-container",
+        "https://shop.berlin-recycling.de/products/elektrokleingeraete-container",
+        "https://shop.berlin-recycling.de/products/gartenabfall-entsorgen-container",
+        "https://shop.berlin-recycling.de/products/gemischte-verpackungen-entsorgen-container",
+        "https://shop.berlin-recycling.de/products/gewerbeabfall-entsorgen-container",
+        "https://shop.berlin-recycling.de/products/glaswolle-entsorgung-container",
+        "https://shop.berlin-recycling.de/products/holz-a1-entsorgen-container",
+        "https://shop.berlin-recycling.de/products/holz-a2-a3-entsorgen-container",
+        "https://shop.berlin-recycling.de/products/holz-a4-entsorgen-container",
+        "https://shop.berlin-recycling.de/products/pappe-papier-entsorgen-container",
+        "https://shop.berlin-recycling.de/products/rigipsentsorgung-container",
+        "https://shop.berlin-recycling.de/products/sperrmuell-entsorgen-container",
+        "https://shop.berlin-recycling.de/products/styropor-eps-entsorgung-container",
+        "https://shop.berlin-recycling.de/products/verpackungsstyropor-entsorgung-container",
+    ]
 
     def __init__(self):
         logging.getLogger('selenium').setLevel(logging.WARNING)
@@ -32,7 +50,7 @@ class BerlinRecyclingSpider(Spider):
         self.cookie_dismissed = False
 
     def _dismiss_cookie_banner(self):
-        """Schließt OneTrust Cookie-Banner."""
+        """Schließt Cookie-Banner."""
         if self.cookie_dismissed:
             return
 
@@ -40,9 +58,6 @@ class BerlinRecyclingSpider(Spider):
             "//button[@title='Akzeptieren Sie alle cookies']",
             "//button[contains(text(), 'Alle akzeptieren')]",
             "//button[@id='onetrust-accept-btn-handler']",
-            "//button[contains(@class, 'onetrust')]",
-            "//button[contains(text(), 'Accept')]",
-            "//button[contains(text(), 'Akzeptieren')]",
         ]
 
         for selector in cookie_selectors:
@@ -51,26 +66,56 @@ class BerlinRecyclingSpider(Spider):
                     EC.element_to_be_clickable((By.XPATH, selector))
                 )
                 self.driver.execute_script("arguments[0].click();", element)
-                self.log("✓ Cookie-Banner geschlossen")
+                self.log("Cookie-Banner geschlossen")
                 self.cookie_dismissed = True
                 sleep(1)
                 return
             except:
                 pass
 
-    def _js_click(self, xpath):
+    def _js_click(self, element):
         """JavaScript-Klick für robustere Interaktion."""
+        self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", element)
+        sleep(0.3)
+        self.driver.execute_script("arguments[0].click();", element)
+
+    def _extract_price(self):
+        """Extrahiert den aktuellen Preis von der Seite."""
         try:
-            element = WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.XPATH, xpath))
-            )
-            self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", element)
-            sleep(0.5)
-            self.driver.execute_script("arguments[0].click();", element)
-            return True
-        except Exception as e:
-            self.log(f"Klick fehlgeschlagen für {xpath}: {e}")
-            return False
+            # Suche nach Preis-Pattern im sichtbaren Text
+            page_text = self.driver.execute_script("return document.body.innerText;")
+
+            # Suche nach dem Hauptpreis (erstes Vorkommen von XXX,XX €)
+            price_match = re.search(r'(\d{1,3}(?:\.\d{3})*,\d{2})\s*€', page_text)
+            if price_match:
+                return price_match.group(1)
+        except:
+            pass
+        return None
+
+    def _extract_fee_after_max(self):
+        """Extrahiert die Gebühr nach Mietdauer."""
+        try:
+            page_text = self.driver.execute_script("return document.body.innerText;")
+            # Pattern: "danach X,XX € netto" oder "X,XX € netto zzgl."
+            fee_match = re.search(r'danach\s+(\d+,\d{2})\s*€\s*netto', page_text, re.IGNORECASE)
+            if fee_match:
+                return fee_match.group(1)
+        except:
+            pass
+        return ""
+
+    def _extract_max_rental(self):
+        """Extrahiert die maximale Mietdauer."""
+        try:
+            page_text = self.driver.execute_script("return document.body.innerText;")
+            # Pattern: "bis zu X Tage" oder "X Tage Miete"
+            rental_match = re.search(r'bis\s+(?:zu\s+)?(\d+)\s+Tage', page_text, re.IGNORECASE)
+            if rental_match:
+                return rental_match.group(1)
+        except:
+            pass
+        return "10"  # Default
 
     def closed(self, reason):
         try:
@@ -79,90 +124,89 @@ class BerlinRecyclingSpider(Spider):
             pass
 
     def parse(self, response):
-        # open_in_browser(response)
-        # inspect_response(response, self)
+        for product_url in self.PRODUCT_URLS:
+            self.log(f"Verarbeite: {product_url}")
 
-        containers = response.xpath('//div[contains(@class, "grid w-full gap-4")]/a/@href').getall()
-        for container in containers:
+            try:
+                self.driver.get(product_url)
+                sleep(4)
 
-            source = 'shop.berlin-recycling.de'
+                # Cookie-Banner schließen
+                self._dismiss_cookie_banner()
 
-            self.driver.get(response.urljoin(container))
-            sleep(3)
-
-            # Cookie-Banner schließen (OneTrust)
-            self._dismiss_cookie_banner()
-
-            # Überspringe Produkte mit "Brandenburg" im Titel
-            page_title = Selector(text=self.driver.page_source).xpath('//h1/text()').get() or ''
-            if 'Brandenburg' in page_title:
-                self.log(f'Überspringe Brandenburg-Produkt: {page_title}')
-                continue
-
-            if Selector(text=self.driver.page_source).xpath('//span[text()="Infos zum Ablauf (Vorlaufzeit, Terminvereinbarung & Rechnung)"]'):
-                pass
-            else:
+                # Titel extrahieren (= Abfallart)
                 try:
-                    option_values = Selector(text=self.driver.page_source).xpath(
-                        '//dd/select')[0].xpath('.//option[not(@disabled)]/@value').getall()
+                    title = self.driver.find_element(By.XPATH, "//h1").text
+                    # Entferne "(Container)" aus dem Titel
+                    waste_type = title.replace('(Container)', '').replace('Container', '').strip()
                 except:
-                    input('Waiting')
+                    self.log(f"Titel nicht gefunden für {product_url}")
+                    continue
 
-                for option_value in option_values:
-                    # JavaScript-Klick für Option
-                    self._js_click(f'//option[@value="{option_value}"]')
-                    sleep(3)
+                # Finde das Dropdown für Containergrößen
+                try:
+                    size_select = self.driver.find_element(
+                        By.XPATH,
+                        "//select[.//option[contains(text(), 'm³')]]"
+                    )
+                    size_options = size_select.find_elements(
+                        By.XPATH,
+                        ".//option[contains(text(), 'm³') and not(@disabled)]"
+                    )
+                except Exception as e:
+                    self.log(f"Größen-Dropdown nicht gefunden für {waste_type}: {e}")
+                    continue
 
-                    self.log(f'Processing: {self.driver.current_url}')
-                    sel = Selector(text=self.driver.page_source)
+                self.log(f"  Gefunden: {len(size_options)} Größen für {waste_type}")
 
-                    title = sel.xpath('//h1/text()').get()
-
-                    # Entferne "Container" aus dem Typ-Namen
-                    type_raw = sel.xpath('//a[@class="transition-colors hover:text-foreground"]/text()').getall()[-1]
-                    type = type_raw.replace('Container', '').replace('container', '').strip()
-
-                    city = 'Berlin'
-
+                # Für jede Containergröße
+                for size_option in size_options:
                     try:
-                        size = re.findall(r'(\d+(?:[.,]\d+)?)\s*m³', option_value)[0]
-                    except:
-                        size = ''
+                        size_text = size_option.text  # z.B. "3 m³ Muldencontainer"
 
-                    if size:
-                        price = sel.xpath('//p[@class="text-2xl font-semibold leading-8"]/text()').get()
-                        if price:
-                            price = price.replace('\xa0€', '')
+                        # Extrahiere Größe (z.B. "3" aus "3 m³ Muldencontainer")
+                        size_match = re.search(r'(\d+(?:,\d+)?)\s*m³', size_text)
+                        if not size_match:
+                            continue
+                        size = size_match.group(1)
 
-                            lid_price = ''
+                        # Wähle diese Option
+                        self._js_click(size_option)
+                        sleep(2)
 
-                            arrival_price = 'free'
-                            departure_price = 'free'
+                        # Extrahiere Preis
+                        price = self._extract_price()
+                        if not price:
+                            self.log(f"    Kein Preis für {size} m³")
+                            continue
 
-                            matches = (
-                                re.findall(r'(?<=bis )([\d,]+)(?= Tage)', response.text)
-                                or re.findall(r'(?<=& )([\d,]+)(?= Tage mietfrei)', response.text))
-                            max_rental_period = matches[0] if matches else None
+                        # Extrahiere weitere Infos
+                        fee_after_max = self._extract_fee_after_max()
+                        max_rental_period = self._extract_max_rental()
 
-                            matches = (
-                                re.findall(r'(\d+,\d+ € Nettopreis zzgl\. \d+% MwSt\. \([^)]*\))', response.text)
-                                or re.findall(r'\d+,\d+\s€\snetto\szzgl\.\s\d+% MwSt\.\s\(\d+,\d+\s€\sbrutto\sinkl\.\s\d+% MwSt\.\)', response.text))
-                            fee_after_max = matches[0] if matches else None
+                        item = {
+                            'source': 'berlin-recycling.de',
+                            'title': f"{size} m³ {waste_type}",
+                            'type': waste_type,
+                            'city': 'Berlin',
+                            'size': size,
+                            'price': price,
+                            'lid_price': '',
+                            'arrival_price': 'inklusive',
+                            'departure_price': 'inklusive',
+                            'max_rental_period': max_rental_period,
+                            'fee_after_max': fee_after_max,
+                            'cancellation_fee': '',
+                            'URL': self.driver.current_url
+                        }
 
-                            cancellation_fee = ''
+                        self.log(f"    {size} m³: {price} €")
+                        yield item
 
-                            item = {'source': source,
-                                    'title': title,
-                                    'type': type,
-                                    'city': city,
-                                    'size': size,
-                                    'price': price,
-                                    'lid_price': lid_price,
-                                    'arrival_price': arrival_price,
-                                    'departure_price': departure_price,
-                                    'max_rental_period': max_rental_period,
-                                    'fee_after_max': fee_after_max,
-                                    'cancellation_fee': cancellation_fee,
-                                    'URL': self.driver.current_url}
+                    except Exception as e:
+                        self.log(f"    Fehler bei Größe: {e}")
+                        continue
 
-                            yield item
+            except Exception as e:
+                self.log(f"Fehler bei {product_url}: {e}")
+                continue
