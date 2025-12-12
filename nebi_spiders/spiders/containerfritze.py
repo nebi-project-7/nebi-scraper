@@ -39,6 +39,36 @@ class ContainerfritzeSpider(Spider):
         logging.getLogger('selenium').setLevel(logging.WARNING)
         logging.getLogger('urllib3').setLevel(logging.WARNING)
 
+        # Mapping von URL-Slugs zu korrekten Abfallart-Namen
+        self.waste_type_mapping = {
+            'baumischabfall-leicht': 'Baumischabfall leicht',
+            'baumischabfall-schwer': 'Baumischabfall schwer',
+            'betonbruch-bewehrt-mit-stahl': 'Betonbruch bewehrt mit Stahl',
+            'betonbruch-unbewehrt-ohne-stahl': 'Betonbruch unbewehrt ohne Stahl',
+            'daemmwolle': 'Dämmstoffe',
+            'erdaushub-mit-grasnarbe': 'Erdaushub mit Grasnarbe',
+            'erdaushub-mit-steinen': 'Erdaushub mit Steinen',
+            'erdaushub-ohne-fremdanteil': 'Erdaushub ohne Fremdanteil',
+            'flachglas': 'Flachglas',
+            'gartenabfall-gemischt': 'Gartenabfall',
+            'gruenschnitt': 'Grünschnitt',
+            'gewerbeabfall-gemischt': 'Gewerbeabfall',
+            'gipsabfaelle': 'Gipsabfälle',
+            'glasverpackungen': 'Glasverpackungen',
+            'holz-a1': 'Holz A1',
+            'holz-a2-a3': 'Holz A2-A3',
+            'holz-a4': 'Holz A4',
+            'porenbeton': 'Porenbeton',
+            'bauschutt': 'Bauschutt',
+            'bauschutt-recyclingfaehig': 'Bauschutt recyclingfähig',
+            'bauschutt-nicht-recyclingfaehig': 'Bauschutt nicht recyclingfähig',
+            'styropor-mit-anhaftungen': 'Styropor mit Anhaftungen',
+            'styropor-ohne-anhaftungen': 'Styropor ohne Anhaftungen',
+            'sperrmuell': 'Sperrmüll',
+            'papier-pappe': 'Papier/Pappe',
+            'folie': 'Folie',
+        }
+
     def _dismiss_cookie_banner(self):
         """Versucht Cookie-Banner zu schließen."""
         cookie_selectors = [
@@ -65,6 +95,24 @@ class ContainerfritzeSpider(Spider):
     def _js_click(self, element):
         """Führt JavaScript-Klick aus um Overlay-Probleme zu vermeiden."""
         self.driver.execute_script("arguments[0].click();", element)
+
+    def _extract_waste_type_from_url(self, url):
+        """Extrahiert den Abfallart-Namen aus der URL."""
+        # URL: https://shop.containerfritze.de/mieten/baumischabfall-leicht-container/
+        # -> baumischabfall-leicht
+        try:
+            # Extrahiere den Slug aus der URL (zwischen /mieten/ und -container)
+            match = re.search(r'/mieten/([^/]+)-container', url)
+            if match:
+                slug = match.group(1)
+                # Schaue im Mapping nach
+                if slug in self.waste_type_mapping:
+                    return self.waste_type_mapping[slug]
+                # Fallback: Slug formatieren
+                return slug.replace('-', ' ').title()
+        except:
+            pass
+        return None
 
     def _safe_click(self, xpath):
         """Sicherer Klick mit JavaScript-Fallback."""
@@ -148,7 +196,11 @@ class ContainerfritzeSpider(Spider):
                         else:
                             title = ''
 
-                        type = sel.xpath('//nav[@aria-label="Breadcrumb"]/a[3]/text()').get()
+                        # Extrahiere Abfallart aus URL statt Breadcrumb für genauere Bezeichnung
+                        type = self._extract_waste_type_from_url(self.driver.current_url)
+                        if not type:
+                            # Fallback auf Breadcrumb
+                            type = sel.xpath('//nav[@aria-label="Breadcrumb"]/a[3]/text()').get()
 
                         city = 'Berlin'
 
@@ -159,9 +211,15 @@ class ContainerfritzeSpider(Spider):
                         price = sel.xpath('//div[@class="inklMWST"]//span[@class="woocommerce-Price-amount amount"]/bdi/text()').get()
                         if price:
                             price = price.replace(',00', '').strip()
-                            price = price.replace('.', ',')
+                            # Entferne Tausendertrennzeichen (Punkt), behalte Komma als Dezimalzeichen
+                            # z.B. "1.011,50" -> "1011,50"
+                            if ',' in price:
+                                # Es gibt ein Dezimalkomma - entferne alle Punkte (Tausendertrennzeichen)
+                                price = price.replace('.', '')
 
                             lid_price = sel.xpath('//option[@value="Mit Abdeckung  +"]/@data-option-cost').get()
+                            if lid_price:
+                                lid_price = lid_price.replace('.', ',')
 
                             match = re.search(r'\d+', sel.xpath('//strong[contains(text(), "max.")]/text()').get())
                             if match:
@@ -169,11 +227,12 @@ class ContainerfritzeSpider(Spider):
                             else:
                                 max_rental_period = ''
 
-                            arrival_price = 'free'
-                            departure_price = 'free'
+                            arrival_price = 'inklusive'
+                            departure_price = 'inklusive'
 
                             try:
                                 fee_after_max = re.findall(r'(?<=werden nachträglich mit )([\d,]+)(?= €)', sel.extract())[0]
+                                fee_after_max = fee_after_max + '€'
                             except:
                                 fee_after_max = ''
 
