@@ -30,6 +30,17 @@ class TodraContainerProductsSpider(Spider):
             ("10", 6),    # 10 m³ ist Spalte 6
         ]
 
+        # Abfallarten-Mapping für konsistente Benennung
+        self.waste_type_mapping = {
+            'unbehandeltes Holz (A1-A3)': 'Holz A1-A3',
+            'behandeltes Holz (A4)': 'Holz A4',
+            'reiner Bauschutt': 'Bauschutt (rein)',
+            'unreiner Bauschutt': 'Bauschutt (unrein)',
+            'Boden unrein': 'Boden (unrein)',
+            'Boden rein': 'Boden (rein)',
+            'Mineralfaserdämmstoffe KMF': 'Dämmstoffe',
+        }
+
     def parse(self, response):
         self.log(f"\n{'='*80}")
         self.log(f"Starte TODRA Dienstleistungen PDF Scraping")
@@ -159,6 +170,9 @@ class TodraContainerProductsSpider(Spider):
                         waste_type = current_category.replace('\n', ' ')
                     else:
                         continue
+
+                    # Wende Mapping für konsistente Benennung an
+                    waste_type = self.waste_type_mapping.get(waste_type, waste_type)
 
                     # Für jede Container-Größe ein Produkt erstellen
                     for size, col_idx in self.container_sizes:
