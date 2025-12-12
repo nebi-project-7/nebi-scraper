@@ -33,9 +33,9 @@ jobs:
       
       - name: 🗑️ Clean Old Data
         run: |
-          echo "🗑️ Removing old JSON files..."
-          find data -name "*.json" -type f -delete 2>/dev/null || true
-          find logs -name "*.txt" -type f -delete 2>/dev/null || true
+          echo "🗑️ Removing old JSON and log files..."
+          rm -f data/*.json
+          rm -f logs/*.txt
           echo "✅ Cleanup complete"
 
       - name: 🕷️ Run All Scrapy Spiders
