@@ -210,12 +210,13 @@ class ContainerfritzeSpider(Spider):
                         # price = (sel.xpath('//input[@id="pewc-product-price"]/@value').get() or '').replace(',', '.')
                         price = sel.xpath('//div[@class="inklMWST"]//span[@class="woocommerce-Price-amount amount"]/bdi/text()').get()
                         if price:
-                            price = price.replace(',00', '').strip()
-                            # Entferne Tausendertrennzeichen (Punkt), behalte Komma als Dezimalzeichen
-                            # z.B. "1.011,50" -> "1011,50"
-                            if ',' in price:
-                                # Es gibt ein Dezimalkomma - entferne alle Punkte (Tausendertrennzeichen)
-                                price = price.replace('.', '')
+                            price = price.strip()
+                            # Im deutschen Format: Punkt = Tausendertrennzeichen, Komma = Dezimalzeichen
+                            # Entferne IMMER alle Punkte (Tausendertrennzeichen)
+                            # z.B. "1.071,00" -> "1071,00", "1.071" -> "1071"
+                            price = price.replace('.', '')
+                            # Entferne ",00" am Ende (ganze Zahlen)
+                            price = price.replace(',00', '')
 
                             lid_price = sel.xpath('//option[@value="Mit Abdeckung  +"]/@data-option-cost').get()
                             if lid_price:
