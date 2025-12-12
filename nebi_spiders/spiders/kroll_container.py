@@ -116,16 +116,17 @@ class KrollContainerSpider(scrapy.Spider):
 
                     yield {
                         "source": "Kroll Entsorgung",
+                        "title": f"{size} m³ {waste_name}",
                         "type": waste_name,
                         "city": "Berlin",
                         "size": str(size),
-                        "price": str(price_with_vat),
-                        "price_without_vat": str(price_net),
-                        "max_rental_period": "nicht angegeben",
-                        "lid_available": has_lid,
+                        "price": f"{price_with_vat:.2f}".replace('.', ','),
                         "lid_price": lid_price,
-                        "arrival_price": str(self.ARRIVAL_PRICE_WITH_VAT),
+                        "arrival_price": f"{self.ARRIVAL_PRICE_WITH_VAT:.2f}".replace('.', ','),
                         "departure_price": "inklusive",
+                        "max_rental_period": "",
+                        "fee_after_max": "",
+                        "cancellation_fee": "",
                         "URL": response.url,
                     }
 
@@ -144,15 +145,16 @@ class KrollContainerSpider(scrapy.Spider):
 
                     yield {
                         "source": "Kroll Entsorgung",
+                        "title": f"{size} m³ {waste_name}",
                         "type": waste_name,
                         "city": "Berlin",
                         "size": str(size),
-                        "price": str(price_with_vat),
-                        "price_without_vat": str(price_net),
-                        "max_rental_period": "nicht angegeben",
-                        "lid_available": has_lid,
+                        "price": f"{price_with_vat:.2f}".replace('.', ','),
                         "lid_price": lid_price,
-                        "arrival_price": str(self.ARRIVAL_PRICE_WITH_VAT),
+                        "arrival_price": f"{self.ARRIVAL_PRICE_WITH_VAT:.2f}".replace('.', ','),
                         "departure_price": "inklusive",
+                        "max_rental_period": "",
+                        "fee_after_max": "",
+                        "cancellation_fee": "",
                         "URL": response.url,
                     }

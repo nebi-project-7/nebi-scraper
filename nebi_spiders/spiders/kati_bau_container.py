@@ -114,17 +114,16 @@ class KatiBauContainerSpider(scrapy.Spider):
 
                 yield {
                     "source": "Kati Bau",
+                    "title": f"{size} m³ {waste_name}",
                     "type": waste_name,
                     "city": "Berlin",
                     "size": str(size),
-                    "price": str(price_with_vat),
-                    "price_without_vat": str(price_net),
-                    "container_type": container_type,
-                    "max_rental_period": "9 Tage",
-                    "rental_fee_per_day_after_9_days": str(rental_fee_per_day),
-                    "lid_available": "nein",
-                    "empty_trip_fee": str(self.EMPTY_TRIP_FEE_WITH_VAT),
+                    "price": f"{price_with_vat:.2f}".replace('.', ','),
+                    "lid_price": "",
                     "arrival_price": "Anbieter anfragen",
                     "departure_price": "Anbieter anfragen",
+                    "max_rental_period": "9",
+                    "fee_after_max": str(rental_fee_per_day),
+                    "cancellation_fee": f"{self.EMPTY_TRIP_FEE_WITH_VAT:.2f}".replace('.', ','),
                     "URL": "https://www.kati-bau.de/wp-content/uploads/2020/12/Preisliste-2019-12.pdf",
                 }

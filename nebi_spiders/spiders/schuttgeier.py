@@ -115,6 +115,7 @@ class SchuttgeierProductsSpider(Spider):
 
                     product = {
                         "source": "schuttgeier.de",
+                        "title": f"{size} m³ {display_name}",
                         "type": display_name,
                         "city": "Berlin",
                         "size": size,

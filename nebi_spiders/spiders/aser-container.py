@@ -55,19 +55,17 @@ class AserContainerProductsSpider(Spider):
 
                     product_3m3 = {
                         "source": "Aser Containerdienst",
+                        "title": f"3 m³ {waste_type}",
                         "type": waste_type,
                         "city": "Berlin",
                         "size": "3",
-                        "price": f"{total_price_3m3:.2f}",
-                        "price_per_m3": container_3m3,
-                        "price_unit": unit,
+                        "price": f"{total_price_3m3:.2f}".replace('.', ','),
                         "lid_price": "",
                         "arrival_price": self.transport_absetzcontainer,
                         "departure_price": "inklusive",
                         "max_rental_period": "",
                         "fee_after_max": "",
                         "cancellation_fee": self.cancellation_fee,
-                        "additional_fee": f"Mindermenge < 3m³: {self.mindermenge_pauschale}€",
                         "URL": self.pdf_url
                     }
                     total_products += 1
@@ -89,12 +87,11 @@ class AserContainerProductsSpider(Spider):
 
                         product_large = {
                             "source": "Aser Containerdienst",
+                            "title": f"{size} m³ {waste_type}",
                             "type": waste_type,
                             "city": "Berlin",
                             "size": size,
-                            "price": f"{total_price:.2f}",
-                            "price_per_m3": container_large,
-                            "price_unit": unit,
+                            "price": f"{total_price:.2f}".replace('.', ','),
                             "lid_price": "",
                             "arrival_price": transport,
                             "departure_price": "inklusive",

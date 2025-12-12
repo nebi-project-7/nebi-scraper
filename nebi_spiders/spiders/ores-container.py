@@ -237,6 +237,7 @@ class OresContainerProductsSpider(Spider):
 
             product = {
                 "source": "ORES Containerlogistik",
+                "title": f"{size} m³ {waste_type}",
                 "type": waste_type,
                 "city": "Berlin",
                 "size": size,

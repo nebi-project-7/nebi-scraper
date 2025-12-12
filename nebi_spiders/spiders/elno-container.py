@@ -198,6 +198,7 @@ class ElnoContainerProductsSpider(Spider):
 
                 product = {
                     "source": "elno-container.de",
+                    "title": f"{size} m³ {waste_type}",
                     "type": waste_type,
                     "city": "Berlin",
                     "size": size,
@@ -260,6 +261,7 @@ class ElnoContainerProductsSpider(Spider):
 
             product = {
                 "source": "elno-container.de",
+                "title": f"{size} m³ {waste_type}",
                 "type": waste_type,
                 "city": "Berlin",
                 "size": size,

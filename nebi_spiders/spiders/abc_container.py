@@ -109,12 +109,16 @@ class ABCContainerSpider(scrapy.Spider):
 
             yield {
                 "source": "ABC-Containerdienst",
+                "title": f"{size} m³ {waste_type}",
                 "type": waste_type,
                 "city": "Berlin",
                 "size": str(size),
                 "price": f"{price_with_vat:.2f}".replace('.', ','),
-                "price_without_vat": f"{price_without_vat:.2f}".replace('.', ','),
+                "lid_price": "",
+                "arrival_price": "inklusive",
+                "departure_price": "inklusive",
                 "max_rental_period": "10",
+                "fee_after_max": "",
                 "cancellation_fee": "Preis anfragen",
                 "URL": response.url,
             }

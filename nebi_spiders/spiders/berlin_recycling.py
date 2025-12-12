@@ -216,7 +216,6 @@ class BerlinRecyclingSpider(Spider):
                             'city': 'Berlin',
                             'size': size,
                             'price': price,
-                            'price_type': 'Tonnage' if is_tonnage else 'Pauschal',
                             'lid_price': '',
                             'arrival_price': 'inklusive',
                             'departure_price': 'inklusive',
