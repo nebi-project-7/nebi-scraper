@@ -173,6 +173,15 @@ class DareShopProductsSpider(Spider):
             .strip()
         )
 
+        # Umbenennungen
+        waste_type_mapping = {
+            'Holz A1-3': 'Holz A1-A3',
+            'Gartenabfall': 'Gartenabfälle',
+            'Gipsbaustoffe': 'Gips',
+        }
+        if waste_type in waste_type_mapping:
+            waste_type = waste_type_mapping[waste_type]
+
         # Dropdown "Größe" finden (Option 1: wirklich klicken)
         try:
             select_el = self.driver.find_element(
@@ -330,8 +339,8 @@ class DareShopProductsSpider(Spider):
             "size": size,
             "price": price,
             "lid_price": "kostenlos nur, wenn verfügbar",
-            "arrival_price": "free",
-            "departure_price": "free",
+            "arrival_price": "inklusive",
+            "departure_price": "inklusive",
             "max_rental_period": self.agb_values["max_rental_period"],
             "fee_after_max": self.agb_values["fee_after_max"],
             "cancellation_fee": self.agb_values["cancellation_fee"],
