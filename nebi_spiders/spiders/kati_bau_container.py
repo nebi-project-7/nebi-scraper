@@ -87,7 +87,7 @@ class KatiBauContainerSpider(scrapy.Spider):
                 'container_type': 'Absetzcontainer'
             },
             {
-                'name': 'Dämmwolle',
+                'name': 'Dämmstoffe',
                 'prices': {3: 370.00, 7: 565.00},
                 'container_type': 'Absetzcontainer'
             },
