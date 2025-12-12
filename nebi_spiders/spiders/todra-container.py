@@ -177,7 +177,7 @@ class TodraContainerProductsSpider(Spider):
                             product = {
                                 "source": "TODRA Dienstleistungen",
                                 "type": waste_type,
-                                "city": "",  # Nicht im PDF angegeben
+                                "city": "Berlin",
                                 "size": size,
                                 "price": f"{total_price:.2f}".replace('.', ','),
                                 "price_per_m3": f"{price_per_m3_float:.2f}".replace('.', ','),
