@@ -51,7 +51,7 @@ class TodraContainerProductsSpider(Spider):
 
             for product in self._extract_products(temp_pdf):
                 total_products += 1
-                self.log(f"  ✓ {product['type'][:40]:40} | {product['size']}m³ | {product['price_per_m3']}€/m³ → {product['price']}€")
+                self.log(f"  ✓ {product['type'][:40]:40} | {product['size']}m³ | {product['price']}€")
                 yield product
 
             self.log(f"\n{'='*80}")
