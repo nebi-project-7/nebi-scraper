@@ -53,12 +53,12 @@ class KrollContainerSpider(scrapy.Spider):
                 'prices': {3: 315.00, 5.5: 577.50}
             },
             {
-                'name': 'Beton',
+                'name': 'Beton (ohne Armierung)',
                 'type': 'flat',
                 'prices': {3: 150.00, 5.5: 250.00, 7: 315.00}
             },
             {
-                'name': 'Bauschutt',
+                'name': 'Bauschutt (mineralisch, sortenrein)',
                 'type': 'flat',
                 'prices': {3: 206.00, 5.5: 375.00, 7: 478.00}
             },
@@ -73,12 +73,17 @@ class KrollContainerSpider(scrapy.Spider):
                 'prices': {3: 206.00, 5.5: 375.00, 7: 478.00}
             },
             {
-                'name': 'Bauholz AIII',
+                'name': 'Holz A1-A3',
                 'type': 'flat',
                 'prices': {3: 180.00, 5.5: 315.00, 7: 399.00}
             },
             {
-                'name': 'Gartenabfall',
+                'name': 'Holz A4',
+                'type': 'flat',
+                'prices': {3: 220.00, 5.5: 385.00, 7: 490.00}
+            },
+            {
+                'name': 'Gartenabfälle',
                 'type': 'flat',
                 'prices': {3: 101.00, 5.5: 185.00, 7: 220.00}
             },
@@ -88,16 +93,16 @@ class KrollContainerSpider(scrapy.Spider):
                 'prices': {3: 291.00}
             },
             {
-                'name': 'Styropor',
+                'name': 'Styropor (ohne Anhaftungen)',
                 'type': 'per_m3',
                 'price_per_m3': 125.00,
-                'available_sizes': [3, 5.5, 7]  # Assuming not available for 10m³
+                'available_sizes': [3, 5.5, 7]
             },
             {
-                'name': 'Dämmwolle',
+                'name': 'Dämmstoffe (sauber)',
                 'type': 'per_m3',
                 'price_per_m3': 125.00,
-                'available_sizes': [3, 5.5, 7]  # Assuming not available for 10m³
+                'available_sizes': [3, 5.5, 7]
             },
         ]
 
