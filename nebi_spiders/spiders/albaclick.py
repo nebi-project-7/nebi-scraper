@@ -31,6 +31,14 @@ class AlbaclickSpider(Spider):
         self.driver = webdriver.Chrome(options=options)
         self.cookie_dismissed = False
 
+        # Mapping für Abfallart-Umbenennungen
+        self.waste_type_mapping = {
+            'Pappe | Papier': 'Pappe, Papier und Kartonage',
+            'Grünschnitt | Gartenabfälle': 'Gartenabfälle',
+            'E-Geräte (Kleingeräte)': 'Elektrokleingeräte',
+            'E-Geräte (Großgeräte)': 'Elektrogroßgeräte',
+        }
+
     def _dismiss_cookie_banner(self):
         """Schließt OneTrust Cookie-Banner."""
         if self.cookie_dismissed:
@@ -122,38 +130,43 @@ class AlbaclickSpider(Spider):
 
                     title = option.xpath('.//div[@class="variant-configuration-variants-item__variant"]/span/text()').get()
 
-                    if 'Flexibler' in title:
-                        pass
-                    else:
-                        type = sel.xpath('//div[@itemprop="itemListElement"]')[1].xpath('.//span/text()').get()
+                    # Überspringe "Flexibler" und "240 Liter" (Umleerbehälter)
+                    if 'Flexibler' in title or '240 Liter' in title:
+                        continue
 
-                        city = 'Berlin'
+                    type = sel.xpath('//div[@itemprop="itemListElement"]')[1].xpath('.//span/text()').get()
 
-                        regex_match = re.search(r'\b\d+(?:[.,]\d+)?\s?(?:m³|m3|liter|litre)\b', title, re.IGNORECASE)
-                        size = (regex_match.group() if regex_match else None)
+                    # Wende Mapping an für Umbenennungen
+                    if type in self.waste_type_mapping:
+                        type = self.waste_type_mapping[type]
 
-                        price = option.xpath('.//div[@class="variant-configuration-variants-item__price"]/span/text()').get()
-                        price = price.replace('€', '').strip()
+                    city = 'Berlin'
 
-                        lid_price = '17,85'
+                    regex_match = re.search(r'\b\d+(?:[.,]\d+)?\s?(?:m³|m3|liter|litre)\b', title, re.IGNORECASE)
+                    size = (regex_match.group() if regex_match else None)
 
-                        arrival_price = 'free'
-                        departure_price = 'free'
-                        fee_after_max = ''
-                        cancellation_fee = '151,00'
+                    price = option.xpath('.//div[@class="variant-configuration-variants-item__price"]/span/text()').get()
+                    price = price.replace('€', '').strip()
 
-                        item = {'source': source,
-                                'title': title,
-                                'type': type,
-                                'city': city,
-                                'size': size,
-                                'price': price,
-                                'lid_price': lid_price,
-                                'arrival_price': arrival_price,
-                                'departure_price': departure_price,
-                                'max_rental_period': max_rental_period,
-                                'fee_after_max': fee_after_max,
-                                'cancellation_fee': cancellation_fee,
-                                'URL': self.driver.current_url}
+                    lid_price = '17,85'
 
-                        yield item
+                    arrival_price = 'inklusive'
+                    departure_price = 'inklusive'
+                    fee_after_max = ''
+                    cancellation_fee = '151,00'
+
+                    item = {'source': source,
+                            'title': title,
+                            'type': type,
+                            'city': city,
+                            'size': size,
+                            'price': price,
+                            'lid_price': lid_price,
+                            'arrival_price': arrival_price,
+                            'departure_price': departure_price,
+                            'max_rental_period': max_rental_period,
+                            'fee_after_max': fee_after_max,
+                            'cancellation_fee': cancellation_fee,
+                            'URL': self.driver.current_url}
+
+                    yield item
