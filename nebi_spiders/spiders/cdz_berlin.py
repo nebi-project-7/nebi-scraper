@@ -64,6 +64,9 @@ class CdzBerlinSpider(Spider):
         title = response.xpath('//h1[@class="product_title entry-title"]/text()').get()
 
         type = response.xpath('//span[@class="posted_in"]/a/text()').get()
+        # Umbenennung: Holz A IV → Holz A4
+        if type == 'Holz A IV':
+            type = 'Holz A4'
 
         city = 'Berlin'
 
@@ -78,8 +81,8 @@ class CdzBerlinSpider(Spider):
             lid_price = response.xpath('//input[@data-name="Containerdeckel"]/@data-value').get()
 
             if 'cdz-berlin.de/wp-content/uploads/2021/01/Logo2-300x89.png' in response.text:
-                arrival_price = 'free'
-                departure_price = 'free'
+                arrival_price = 'inklusive'
+                departure_price = 'inklusive'
             else:
                 arrival_price = ''
                 departure_price = ''
