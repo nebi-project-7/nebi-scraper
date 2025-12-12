@@ -4,7 +4,7 @@ from time import sleep
 from scrapy import Spider
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.support import expected_conditions as EC
 from scrapy.selector import Selector
 
@@ -80,18 +80,39 @@ class BerlinRecyclingSpider(Spider):
         self.driver.execute_script("arguments[0].click();", element)
 
     def _extract_price(self):
-        """Extrahiert den aktuellen Preis von der Seite."""
+        """Extrahiert den aktuellen Preis von der Seite.
+
+        Returns tuple: (price, is_tonnage_price)
+        - is_tonnage_price=True wenn es ein Basis-Preis pro Tonnage ist
+        """
         try:
-            # Suche nach Preis-Pattern im sichtbaren Text
             page_text = self.driver.execute_script("return document.body.innerText;")
 
-            # Suche nach dem Hauptpreis (erstes Vorkommen von XXX,XX €)
-            price_match = re.search(r'(\d{1,3}(?:\.\d{3})*,\d{2})\s*€', page_text)
-            if price_match:
-                return price_match.group(1)
+            # Prüfe ob es ein Tonnage-Preis ist (Abrollcontainer)
+            is_tonnage = 'pro Tonnage' in page_text or 'Tonnage zzgl' in page_text
+
+            if is_tonnage:
+                # Bei Tonnage-Preisen: Finde den ersten großen Preis (Basis-Transportpreis)
+                prices = re.findall(r'(\d{1,3}(?:\.\d{3})*,\d{2})\s*€', page_text)
+                for price in prices:
+                    price_float = float(price.replace('.', '').replace(',', '.'))
+                    if price_float >= 200:  # Basis-Preis typischerweise >= 200€
+                        return (price, True)
+            else:
+                # Bei Pauschalpreisen: Suche nach "Nettopreis" Kontext
+                nettopreis_match = re.search(r'(\d{1,3}(?:\.\d{3})*,\d{2})\s*€\s*Nettopreis', page_text)
+                if nettopreis_match:
+                    return (nettopreis_match.group(1), False)
+
+                # Fallback: Erstes Vorkommen von XXX,XX €
+                prices = re.findall(r'(\d{1,3}(?:\.\d{3})*,\d{2})\s*€', page_text)
+                for price in prices:
+                    price_float = float(price.replace('.', '').replace(',', '.'))
+                    if price_float > 200:
+                        return (price, False)
         except:
             pass
-        return None
+        return (None, False)
 
     def _extract_fee_after_max(self):
         """Extrahiert die Gebühr nach Mietdauer."""
@@ -145,14 +166,13 @@ class BerlinRecyclingSpider(Spider):
 
                 # Finde das Dropdown für Containergrößen
                 try:
-                    size_select = self.driver.find_element(
+                    size_select_element = self.driver.find_element(
                         By.XPATH,
                         "//select[.//option[contains(text(), 'm³')]]"
                     )
-                    size_options = size_select.find_elements(
-                        By.XPATH,
-                        ".//option[contains(text(), 'm³') and not(@disabled)]"
-                    )
+                    size_select = Select(size_select_element)
+                    size_options = [opt for opt in size_select.options
+                                    if 'm³' in opt.text and opt.get_attribute('disabled') is None]
                 except Exception as e:
                     self.log(f"Größen-Dropdown nicht gefunden für {waste_type}: {e}")
                     continue
@@ -160,7 +180,7 @@ class BerlinRecyclingSpider(Spider):
                 self.log(f"  Gefunden: {len(size_options)} Größen für {waste_type}")
 
                 # Für jede Containergröße
-                for size_option in size_options:
+                for i, size_option in enumerate(size_options):
                     try:
                         size_text = size_option.text  # z.B. "3 m³ Muldencontainer"
 
@@ -170,12 +190,12 @@ class BerlinRecyclingSpider(Spider):
                             continue
                         size = size_match.group(1)
 
-                        # Wähle diese Option
-                        self._js_click(size_option)
-                        sleep(2)
+                        # Wähle diese Option über Select-Klasse
+                        size_select.select_by_index(i)
+                        sleep(3)  # Längere Wartezeit für JavaScript-Updates
 
-                        # Extrahiere Preis
-                        price = self._extract_price()
+                        # Extrahiere Preis (returns tuple: price, is_tonnage)
+                        price, is_tonnage = self._extract_price()
                         if not price:
                             self.log(f"    Kein Preis für {size} m³")
                             continue
@@ -184,6 +204,11 @@ class BerlinRecyclingSpider(Spider):
                         fee_after_max = self._extract_fee_after_max()
                         max_rental_period = self._extract_max_rental()
 
+                        # Bei Tonnage-Preisen: markiere als Basis-Preis
+                        price_note = ""
+                        if is_tonnage:
+                            price_note = " (Basis + Tonnage)"
+
                         item = {
                             'source': 'berlin-recycling.de',
                             'title': f"{size} m³ {waste_type}",
@@ -191,6 +216,7 @@ class BerlinRecyclingSpider(Spider):
                             'city': 'Berlin',
                             'size': size,
                             'price': price,
+                            'price_type': 'Tonnage' if is_tonnage else 'Pauschal',
                             'lid_price': '',
                             'arrival_price': 'inklusive',
                             'departure_price': 'inklusive',
@@ -200,7 +226,7 @@ class BerlinRecyclingSpider(Spider):
                             'URL': self.driver.current_url
                         }
 
-                        self.log(f"    {size} m³: {price} €")
+                        self.log(f"    {size} m³: {price} €{price_note}")
                         yield item
 
                     except Exception as e:
