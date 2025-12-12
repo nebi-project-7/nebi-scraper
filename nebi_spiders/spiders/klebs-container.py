@@ -15,15 +15,15 @@ class KlebsContainerProductsSpider(Spider):
 
     # Abfallarten URLs
     waste_type_urls = [
-        ("https://www.klebs.info/abfaelle/altholz/", "Altholz"),
+        ("https://www.klebs.info/abfaelle/altholz/", "Holz A1-A3"),
         ("https://www.klebs.info/abfaelle/asbest/", "Asbest"),
         ("https://www.klebs.info/abfaelle/baumischabfall/", "Baumischabfall"),
         ("https://www.klebs.info/abfaelle/bauschutt/", "Bauschutt"),
-        ("https://www.klebs.info/abfaelle/gipsabfaelle/", "Gipsabfälle"),
-        ("https://www.klebs.info/abfaelle/behandeltes-holz/", "Behandeltes Holz"),
+        ("https://www.klebs.info/abfaelle/gipsabfaelle/", "Gips"),
+        ("https://www.klebs.info/abfaelle/behandeltes-holz/", "Holz A4"),
         ("https://www.klebs.info/abfaelle/dachpappe/", "Dachpappe"),
-        ("https://www.klebs.info/abfaelle/daemmwolle/", "Dämmwolle"),
-        ("https://www.klebs.info/abfaelle/gartenabfall/", "Gartenabfall"),
+        ("https://www.klebs.info/abfaelle/daemmwolle/", "Dämmstoffe"),
+        ("https://www.klebs.info/abfaelle/gartenabfall/", "Gartenabfälle"),
         ("https://www.klebs.info/gewerbeabfall/", "Gewerbeabfall"),
         ("https://www.klebs.info/abfaelle/sperrmuell/", "Sperrmüll"),
     ]
@@ -193,7 +193,7 @@ class KlebsContainerProductsSpider(Spider):
                 return None
 
             product = {
-                "source": "klebs.info",
+                "source": "Bernd Klebs",
                 "title": f"{size} m³ {waste_type}",
                 "type": waste_type,
                 "city": "Berlin",
