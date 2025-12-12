@@ -45,6 +45,12 @@ class BerlinRecyclingSpider(Spider):
             except:
                 pass
 
+            # Überspringe Produkte mit "Brandenburg" im Titel
+            page_title = Selector(text=self.driver.page_source).xpath('//h1/text()').get() or ''
+            if 'Brandenburg' in page_title:
+                self.log(f'Überspringe Brandenburg-Produkt: {page_title}')
+                continue
+
             if Selector(text=self.driver.page_source).xpath('//span[text()="Infos zum Ablauf (Vorlaufzeit, Terminvereinbarung & Rechnung)"]'):
                 pass
             else:
@@ -63,7 +69,9 @@ class BerlinRecyclingSpider(Spider):
 
                     title = sel.xpath('//h1/text()').get()
 
-                    type = sel.xpath('//a[@class="transition-colors hover:text-foreground"]/text()').getall()[-1]
+                    # Entferne "Container" aus dem Typ-Namen
+                    type_raw = sel.xpath('//a[@class="transition-colors hover:text-foreground"]/text()').getall()[-1]
+                    type = type_raw.replace('Container', '').replace('container', '').strip()
 
                     city = 'Berlin'
 
