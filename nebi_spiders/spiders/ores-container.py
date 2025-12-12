@@ -16,8 +16,8 @@ class OresContainerProductsSpider(Spider):
     # Waste type URLs
     waste_type_urls = [
         ("https://containerentsorgung-berlin.de/Bauschutt-mineral.-oh.-Gipsanteile/", "Bauschutt mineral. oh. Gipsanteile"),
-        ("https://containerentsorgung-berlin.de/Holz-Entsorgung/Holz-unbehandelt/", "Holz unbehandelt"),
-        ("https://containerentsorgung-berlin.de/Holz-Entsorgung/Holz-behandelt/", "Holz behandelt"),
+        ("https://containerentsorgung-berlin.de/Holz-Entsorgung/Holz-unbehandelt/", "Holz A1-A3"),
+        ("https://containerentsorgung-berlin.de/Holz-Entsorgung/Holz-behandelt/", "Holz A4"),
         ("https://containerentsorgung-berlin.de/Gewerbeabfaelle/", "Gewerbeabfälle"),
         ("https://containerentsorgung-berlin.de/Sperrmuell/", "Sperrmüll"),
         ("https://containerentsorgung-berlin.de/Boden/", "Boden"),
