@@ -160,6 +160,9 @@ class BerlinRecyclingSpider(Spider):
                     title = self.driver.find_element(By.XPATH, "//h1").text
                     # Entferne "(Container)" aus dem Titel
                     waste_type = title.replace('(Container)', '').replace('Container', '').strip()
+                    # Umbenennung: Gartenabfall → Gartenabfälle
+                    if waste_type == 'Gartenabfall':
+                        waste_type = 'Gartenabfälle'
                 except:
                     self.log(f"Titel nicht gefunden für {product_url}")
                     continue
