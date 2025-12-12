@@ -4,6 +4,9 @@ import requests
 from time import sleep
 from scrapy import Spider
 from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from scrapy.selector import Selector
 from scrapy.shell import inspect_response
 from scrapy.http import Request, FormRequest
@@ -26,6 +29,54 @@ class BerlinRecyclingSpider(Spider):
         options.add_argument('--disable-gpu')
         options.add_argument('--window-size=1920,1080')
         self.driver = webdriver.Chrome(options=options)
+        self.cookie_dismissed = False
+
+    def _dismiss_cookie_banner(self):
+        """Schließt OneTrust Cookie-Banner."""
+        if self.cookie_dismissed:
+            return
+
+        cookie_selectors = [
+            "//button[@title='Akzeptieren Sie alle cookies']",
+            "//button[contains(text(), 'Alle akzeptieren')]",
+            "//button[@id='onetrust-accept-btn-handler']",
+            "//button[contains(@class, 'onetrust')]",
+            "//button[contains(text(), 'Accept')]",
+            "//button[contains(text(), 'Akzeptieren')]",
+        ]
+
+        for selector in cookie_selectors:
+            try:
+                element = WebDriverWait(self.driver, 3).until(
+                    EC.element_to_be_clickable((By.XPATH, selector))
+                )
+                self.driver.execute_script("arguments[0].click();", element)
+                self.log("✓ Cookie-Banner geschlossen")
+                self.cookie_dismissed = True
+                sleep(1)
+                return
+            except:
+                pass
+
+    def _js_click(self, xpath):
+        """JavaScript-Klick für robustere Interaktion."""
+        try:
+            element = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, xpath))
+            )
+            self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", element)
+            sleep(0.5)
+            self.driver.execute_script("arguments[0].click();", element)
+            return True
+        except Exception as e:
+            self.log(f"Klick fehlgeschlagen für {xpath}: {e}")
+            return False
+
+    def closed(self, reason):
+        try:
+            self.driver.quit()
+        except:
+            pass
 
     def parse(self, response):
         # open_in_browser(response)
@@ -37,13 +88,10 @@ class BerlinRecyclingSpider(Spider):
             source = 'shop.berlin-recycling.de'
 
             self.driver.get(response.urljoin(container))
-            sleep(2.5)
+            sleep(3)
 
-            try:
-                self.driver.find_element('xpath', '//button[@title="Akzeptieren Sie alle cookies"]').click()
-                sleep(0.5)
-            except:
-                pass
+            # Cookie-Banner schließen (OneTrust)
+            self._dismiss_cookie_banner()
 
             # Überspringe Produkte mit "Brandenburg" im Titel
             page_title = Selector(text=self.driver.page_source).xpath('//h1/text()').get() or ''
@@ -61,7 +109,8 @@ class BerlinRecyclingSpider(Spider):
                     input('Waiting')
 
                 for option_value in option_values:
-                    self.driver.find_element('xpath', f'//option[@value="{option_value}"]').click()
+                    # JavaScript-Klick für Option
+                    self._js_click(f'//option[@value="{option_value}"]')
                     sleep(3)
 
                     self.log(f'Processing: {self.driver.current_url}')

@@ -4,6 +4,9 @@ import requests
 from time import sleep
 from scrapy import Spider
 from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from scrapy.selector import Selector
 from scrapy.shell import inspect_response
 from scrapy.http import Request, FormRequest
@@ -26,6 +29,54 @@ class AlbaclickSpider(Spider):
         options.add_argument('--disable-gpu')
         options.add_argument('--window-size=1920,1080')
         self.driver = webdriver.Chrome(options=options)
+        self.cookie_dismissed = False
+
+    def _dismiss_cookie_banner(self):
+        """Schließt OneTrust Cookie-Banner."""
+        if self.cookie_dismissed:
+            return
+
+        cookie_selectors = [
+            "//button[text()='Alle akzeptieren']",
+            "//button[contains(text(), 'Alle akzeptieren')]",
+            "//button[@id='onetrust-accept-btn-handler']",
+            "//button[contains(@class, 'onetrust')]",
+            "//button[contains(text(), 'Accept')]",
+            "//button[contains(text(), 'Akzeptieren')]",
+        ]
+
+        for selector in cookie_selectors:
+            try:
+                element = WebDriverWait(self.driver, 3).until(
+                    EC.element_to_be_clickable((By.XPATH, selector))
+                )
+                self.driver.execute_script("arguments[0].click();", element)
+                self.log("✓ Cookie-Banner geschlossen")
+                self.cookie_dismissed = True
+                sleep(1)
+                return
+            except:
+                pass
+
+    def _js_click(self, xpath):
+        """JavaScript-Klick für robustere Interaktion."""
+        try:
+            element = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, xpath))
+            )
+            self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", element)
+            sleep(0.5)
+            self.driver.execute_script("arguments[0].click();", element)
+            return True
+        except Exception as e:
+            self.log(f"Klick fehlgeschlagen für {xpath}: {e}")
+            return False
+
+    def closed(self, reason):
+        try:
+            self.driver.quit()
+        except:
+            pass
 
     def parse(self, response):
         # open_in_browser(response)
@@ -48,25 +99,18 @@ class AlbaclickSpider(Spider):
             for post_code in post_codes:
 
                 self.driver.get(f'https://shop.albaclick.de/{waste_type}/{post_code}-Berlin/privat/produkt?postCode={post_code}')
-                sleep(3)
+                sleep(4)
 
                 self.log(f'Processing: {self.driver.current_url}')
 
-                try:
-                    self.driver.find_element('xpath', '//button[text()="Alle akzeptieren"]').click()
-                    sleep(2)
-                except:
-                    pass
+                # Cookie-Banner schließen (OneTrust)
+                self._dismiss_cookie_banner()
 
-                # try:
-                #     max_rental_period_sel = self.driver.find_elements('xpath', '//strong[contains(text(), "Tage Stellzeit")]')[-1].text
-                #     max_rental_period = max_rental_period_sel.split()[0]
-                # except:
-                #     max_rental_period = ''
                 max_rental_period = '7'
 
-                self.driver.find_element('xpath', '//button[contains(@aria-label, "Welche Größe?")]').click()
-                sleep(2)
+                # JavaScript-Klick für "Welche Größe?" Button
+                self._js_click('//button[contains(@aria-label, "Welche Größe?")]')
+                sleep(3)
 
                 sel = Selector(text=self.driver.page_source)
 
