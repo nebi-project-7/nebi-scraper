@@ -194,7 +194,8 @@ class ElnoContainerProductsSpider(Spider):
 
             for item in visible_prices:
                 size = item['size']
-                price = item['price']  # Behalte Komma als Dezimalzeichen
+                # Stelle sicher, dass Komma als Dezimalzeichen verwendet wird
+                price = item['price'].replace('.', ',')
 
                 product = {
                     "source": "elno-container.de",
