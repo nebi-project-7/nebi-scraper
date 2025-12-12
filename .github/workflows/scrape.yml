@@ -31,10 +31,17 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
       
+      - name: 🗑️ Clean Old Data
+        run: |
+          echo "🗑️ Removing old JSON files..."
+          find data -name "*.json" -type f -delete 2>/dev/null || true
+          find logs -name "*.txt" -type f -delete 2>/dev/null || true
+          echo "✅ Cleanup complete"
+
       - name: 🕷️ Run All Scrapy Spiders
         run: |
           mkdir -p data logs
-          
+
           echo "🕷️ Starting all spiders..."
           
           scrapy crawl abc-container -o data/abc-container.json --logfile logs/abc-container.txt 2>&1 || echo "⚠️ abc-container failed"
