@@ -2,19 +2,25 @@ name: Weekly Container Price Scraper
 
 on:
   schedule:
-    - cron: '0 7 * * 1'
+    - cron: '0 6 * * 0'  # Sonntags 6 Uhr
   workflow_dispatch:
+    inputs:
+      spiders:
+        description: 'Spider zum Ausführen (komma-getrennt oder "all")'
+        required: true
+        default: 'all'
+        type: string
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: 📥 Checkout Repository
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-      
+
       - name: 🐍 Setup Python
         uses: actions/setup-python@v5
         with:
@@ -30,48 +36,62 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install -r requirements.txt
-      
+
       - name: 🗑️ Clean Old Data
         run: |
-          echo "🗑️ Removing old JSON and log files..."
-          rm -f data/*.json
-          rm -f logs/*.txt
-          echo "✅ Cleanup complete"
-
-      - name: 🕷️ Run All Scrapy Spiders
-        run: |
           mkdir -p data logs
+          if [ "${{ github.event.inputs.spiders }}" = "all" ] || [ -z "${{ github.event.inputs.spiders }}" ]; then
+            rm -f data/*.json
+            rm -f logs/*.txt
+            echo "🗑️ Deleted all JSON and log files"
+          else
+            IFS=',' read -ra SPIDER_ARRAY <<< "${{ github.event.inputs.spiders }}"
+            for spider in "${SPIDER_ARRAY[@]}"; do
+              spider=$(echo "$spider" | xargs)
+              rm -f "data/${spider}.json"
+              rm -f "logs/${spider}.txt"
+              echo "🗑️ Deleted ${spider}.json and ${spider}.txt"
+            done
+          fi
 
-          echo "🕷️ Starting all spiders..."
-          
-          scrapy crawl abc-container -o data/abc-container.json --logfile logs/abc-container.txt 2>&1 || echo "⚠️ abc-container failed"
-          scrapy crawl albaclick -o data/albaclick.json --logfile logs/albaclick.txt 2>&1 || echo "⚠️ albaclick failed"
-          scrapy crawl aser-container-products -o data/aser-container-products.json --logfile logs/aser-container-products.txt 2>&1 || echo "⚠️ aser-container-products failed"
-          scrapy crawl berlin-recycling -o data/berlin-recycling.json --logfile logs/berlin-recycling.txt 2>&1 || echo "⚠️ berlin-recycling failed"
-          scrapy crawl cdz-berlin -o data/cdz-berlin.json --logfile logs/cdz-berlin.txt 2>&1 || echo "⚠️ cdz-berlin failed"
-          scrapy crawl containerfritze -o data/containerfritze.json --logfile logs/containerfritze.txt 2>&1 || echo "⚠️ containerfritze failed"
-          scrapy crawl dare-shop-products -o data/dare-shop-products.json --logfile logs/dare-shop-products.txt 2>&1 || echo "⚠️ dare-shop-products failed"
-          scrapy crawl elno-container-products -o data/elno-container-products.json --logfile logs/elno-container-products.txt 2>&1 || echo "⚠️ elno-container-products failed"
-          scrapy crawl kati-bau-container -o data/kati-bau-container.json --logfile logs/kati-bau-container.txt 2>&1 || echo "⚠️ kati-bau-container failed"
-          scrapy crawl klebs-container-products -o data/klebs-container-products.json --logfile logs/klebs-container-products.txt 2>&1 || echo "⚠️ klebs-container-products failed"
-          scrapy crawl kroll-container -o data/kroll-container.json --logfile logs/kroll-container.txt 2>&1 || echo "⚠️ kroll-container failed"
-          scrapy crawl ores-container-products -o data/ores-container-products.json --logfile logs/ores-container-products.txt 2>&1 || echo "⚠️ ores-container-products failed"
-          scrapy crawl schuttgeier-products -o data/schuttgeier-products.json --logfile logs/schuttgeier-products.txt 2>&1 || echo "⚠️ schuttgeier-products failed"
-          scrapy crawl todra-container-products -o data/todra-container-products.json --logfile logs/todra-container-products.txt 2>&1 || echo "⚠️ todra-container-products failed"
-          scrapy crawl ts-container-products -o data/ts-container-products.json --logfile logs/ts-container-products.txt 2>&1 || echo "⚠️ ts-container-products failed"
-          
-          echo "✅ All spiders completed!"
-      
+      - name: 🕷️ Run Spiders
+        run: |
+          # Liste aller verfügbaren Spider
+          ALL_SPIDERS="abc-container albaclick aser-container-products berlin-recycling cdz-berlin containerfritze dare-shop-products elno-container-products kati-bau-container klebs-container-products kroll-container ores-container-products schuttgeier-products todra-container-products ts-container-products"
+
+          # Bestimme welche Spider laufen sollen
+          if [ "${{ github.event.inputs.spiders }}" = "all" ] || [ -z "${{ github.event.inputs.spiders }}" ]; then
+            SPIDERS_TO_RUN="$ALL_SPIDERS"
+            echo "🕷️ Running ALL spiders"
+          else
+            SPIDERS_TO_RUN="${{ github.event.inputs.spiders }}"
+            echo "🕷️ Running selected spiders: $SPIDERS_TO_RUN"
+          fi
+
+          # Führe jeden Spider aus
+          IFS=',' read -ra SPIDER_ARRAY <<< "$SPIDERS_TO_RUN"
+          for spider in "${SPIDER_ARRAY[@]}"; do
+            spider=$(echo "$spider" | xargs)  # Trim whitespace
+            echo "=========================================="
+            echo "🕷️ Starting spider: $spider"
+            echo "=========================================="
+            scrapy crawl "$spider" -o "data/${spider}.json" --logfile "logs/${spider}.txt" 2>&1 || echo "⚠️ $spider failed"
+            echo "✅ Finished: $spider"
+          done
+
+          echo "✅ All selected spiders completed!"
+
       - name: 📊 Create Combined JSON
+        if: github.event.inputs.spiders == 'all' || github.event.inputs.spiders == ''
         run: |
           python << 'EOF'
           import json
           import glob
           from datetime import datetime
-          
+
           all_products = []
           sources = {}
-          
+
           for file in glob.glob('data/*.json'):
               if 'all_products' in file:
                   continue
@@ -88,33 +108,29 @@ jobs:
                           print(f"✅ {source_name}: {len(products)} Produkte")
               except Exception as e:
                   print(f"⚠️ Fehler bei {file}: {e}")
-          
+
           output = {
               "last_updated": datetime.utcnow().isoformat() + "Z",
               "total_products": len(all_products),
               "sources": sources,
               "products": all_products
           }
-          
+
           with open('data/all_products.json', 'w', encoding='utf-8') as f:
               json.dump(output, f, ensure_ascii=False, indent=2)
-          
+
           print(f"📦 GESAMT: {len(all_products)} Produkte")
           EOF
-      
+
       - name: 📤 Commit & Push Results
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
           git add .
-          if git diff --staged --quiet; then
-            echo "Keine Änderungen"
-          else
-            git commit -m "🔄 Scraping Update $(date +'%Y-%m-%d %H:%M')"
-            git pull --rebase
-            git push
-          fi
-      
+          git diff --staged --quiet || git commit -m "🕷️ Scraper update: ${{ github.event.inputs.spiders || 'all' }} - $(date +'%Y-%m-%d %H:%M')"
+          git pull --rebase origin main
+          git push
+
       - name: 📁 Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
