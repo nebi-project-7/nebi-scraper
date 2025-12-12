@@ -107,10 +107,10 @@ class TodraContainerProductsSpider(Spider):
                         self.max_rental_period = rental_match.group(1)
                         self.log(f"  ✓ Mietdauer: {self.max_rental_period} Werktage")
 
-                    # Suche nach Gebühr: "3,00 Euro / Tag"
+                    # Suche nach Gebühr: "3,00 Euro / Tag" - behalte Komma
                     fee_match = re.search(r'(\d+[.,]\d+)\s*Euro\s*/\s*Tag', agb_text)
                     if fee_match:
-                        self.fee_after_max = fee_match.group(1).replace(',', '.')
+                        self.fee_after_max = fee_match.group(1)
                         self.log(f"  ✓ Gebühr nach Mietdauer: {self.fee_after_max}€/Tag")
 
                     # Suche nach Stornierungsgebühr: "75 € für die Leerfahrt"
@@ -179,8 +179,8 @@ class TodraContainerProductsSpider(Spider):
                                 "type": waste_type,
                                 "city": "",  # Nicht im PDF angegeben
                                 "size": size,
-                                "price": f"{total_price:.2f}",
-                                "price_per_m3": f"{price_per_m3_float:.2f}",
+                                "price": f"{total_price:.2f}".replace('.', ','),
+                                "price_per_m3": f"{price_per_m3_float:.2f}".replace('.', ','),
                                 "lid_price": "",
                                 "arrival_price": "inklusive",
                                 "departure_price": "inklusive",

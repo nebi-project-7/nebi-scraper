@@ -206,13 +206,13 @@ class OresContainerProductsSpider(Spider):
                 # Skip first price (0,00 cart total), take second price (product price)
                 # But only if first is 0,00
                 if price_matches[0] == "0,00":
-                    # Remove thousand separator (.) and replace decimal separator (,) with (.)
-                    price = price_matches[1].replace('.', '').replace(',', '.')
+                    # Remove thousand separator (.) but keep comma as decimal separator
+                    price = price_matches[1].replace('.', '') if '.' in price_matches[1] and ',' in price_matches[1] else price_matches[1]
                 else:
                     # If first is not 0,00, it might be the correct price
-                    price = price_matches[0].replace('.', '').replace(',', '.')
+                    price = price_matches[0].replace('.', '') if '.' in price_matches[0] and ',' in price_matches[0] else price_matches[0]
             elif len(price_matches) >= 1:
-                price = price_matches[0].replace('.', '').replace(',', '.')
+                price = price_matches[0].replace('.', '') if '.' in price_matches[0] and ',' in price_matches[0] else price_matches[0]
 
             # Extract lid price (Deckel)
             # Find "Mit Deckel" text on the page, then find associated price
@@ -225,8 +225,9 @@ class OresContainerProductsSpider(Spider):
                     remaining_text = visible_text[deckel_pos:]
                     lid_match = re.search(r'([\d.,]+)\s*€', remaining_text)
                     if lid_match:
-                        # Remove thousand separator (.) and replace decimal separator (,) with (.)
-                        lid_price = lid_match.group(1).replace('.', '').replace(',', '.')
+                        # Remove thousand separator (.) but keep comma as decimal separator
+                        lid_str = lid_match.group(1)
+                        lid_price = lid_str.replace('.', '') if '.' in lid_str and ',' in lid_str else lid_str
             except:
                 pass
 
@@ -245,7 +246,7 @@ class OresContainerProductsSpider(Spider):
                 "departure_price": "inklusive",
                 "max_rental_period": self.max_rental_period or "6",
                 "fee_after_max": "",
-                "cancellation_fee": "109.48",
+                "cancellation_fee": "109,48",
                 "URL": product_url
             }
 

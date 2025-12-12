@@ -162,15 +162,15 @@ class KlebsContainerProductsSpider(Spider):
             price = ""
             price_match = re.search(r'Mietpreis.*?(\d{1,3}(?:[.,]\d{3})*[.,]\d{2})\s*€', visible_text, re.DOTALL | re.IGNORECASE)
             if price_match:
-                # Normalisiere: 1.071,00 → 1071.00
+                # Normalisiere: 1.071,00 → 1071,00 (behalte Komma als Dezimalzeichen)
                 price_str = price_match.group(1)
-                # Entferne Tausendertrennzeichen (. oder ,) und ersetze Komma durch Punkt
+                # Entferne nur Tausendertrennzeichen (Punkt), behalte Komma
                 if '.' in price_str and ',' in price_str:
-                    # Format: 1.071,00 → 1071.00
-                    price = price_str.replace('.', '').replace(',', '.')
+                    # Format: 1.071,00 → 1071,00
+                    price = price_str.replace('.', '')
                 else:
-                    # Format: 321,30 → 321.30
-                    price = price_str.replace(',', '.')
+                    # Format: 321,30 → bleibt 321,30
+                    price = price_str
 
             # Extrahiere Größe aus Seitentitel (nicht aus URL, da URLs manchmal falsch sind!)
             # Beispiel: "5,5 cbm (Kubikmeter) Gartenabfall – Container"
@@ -202,7 +202,7 @@ class KlebsContainerProductsSpider(Spider):
                 "arrival_price": "inklusive",
                 "departure_price": "inklusive",
                 "max_rental_period": "15",
-                "fee_after_max": "6.54",
+                "fee_after_max": "6,54",
                 "cancellation_fee": "",
                 "URL": container_url
             }

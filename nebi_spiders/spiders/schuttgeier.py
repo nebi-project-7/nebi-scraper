@@ -105,9 +105,9 @@ class SchuttgeierProductsSpider(Spider):
                     # Second <p> contains price (e.g., "185,00\n€")
                     price_text = ''.join(p_tags[1].xpath('.//text()').getall())
 
-                    # Extract price using regex (format: XXX,XX)
+                    # Extract price using regex (format: XXX,XX) - behalte Komma
                     price_match = re.search(r'(\d+,\d+)', price_text)
-                    price = price_match.group(1).replace(',', '.') if price_match else None
+                    price = price_match.group(1) if price_match else None
 
                     if not size or not price:
                         self.log(f"  ⚠️ Größe oder Preis nicht vollständig extrahiert: size={size}, price={price}")

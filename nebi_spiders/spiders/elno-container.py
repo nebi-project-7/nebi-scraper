@@ -194,7 +194,7 @@ class ElnoContainerProductsSpider(Spider):
 
             for item in visible_prices:
                 size = item['size']
-                price = item['price'].replace(',', '.')
+                price = item['price']  # Behalte Komma als Dezimalzeichen
 
                 product = {
                     "source": "elno-container.de",
@@ -250,8 +250,8 @@ class ElnoContainerProductsSpider(Spider):
         seen_sizes = set()
 
         for size, price in matches:
-            # Bereinige Preis
-            price_clean = price.replace(',', '.')
+            # Bereinige Preis - behalte Komma als Dezimalzeichen
+            price_clean = price
 
             # Vermeide Duplikate (gleiche Größe)
             if size in seen_sizes:
