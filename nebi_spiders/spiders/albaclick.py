@@ -37,9 +37,7 @@ class AlbaclickSpider(Spider):
                        'bauschutt',
                        'holz-A1-A3',
                        'holz-A4',
-                       'dachpappe',
                        'gruenschnitt-gartenabfaelle',
-                       'aktenentsorgung',
                        'kunststoff-verpackungen',
                        'elektro-kleingeraete',
                        'elektro-grossgeraete']
