@@ -72,7 +72,7 @@ class TSContainerProductsSpider(Spider):
             return {
                 "max_rental_period": max_rental_period,
                 "fee_after_max": "siehe AGB",
-                "cancellation_fee": "siehe AGB",
+                "cancellation_fee": "",
             }
 
         except Exception as e:
@@ -80,7 +80,7 @@ class TSContainerProductsSpider(Spider):
             return {
                 "max_rental_period": "14",
                 "fee_after_max": "siehe AGB",
-                "cancellation_fee": "siehe AGB",
+                "cancellation_fee": "",
             }
 
     # ---------------------------------------------------------
@@ -167,10 +167,10 @@ class TSContainerProductsSpider(Spider):
         """
         mapping = {
             "baumischabfaelle": "Baumischabfall",
-            "bauschutt": "Bauschutt",
+            "bauschutt": "Bauschutt (rein)",
             "holzabfall": "Holzabfall",
             "sperrmuell": "Sperrmüll",
-            "gartenabfaelle": "Gartenabfall",
+            "gartenabfaelle": "Gartenabfälle und Grünschnitt",
         }
 
         for key, value in mapping.items():
@@ -191,7 +191,7 @@ class TSContainerProductsSpider(Spider):
         product_url: str,
     ) -> dict:
         return {
-            "source": "ts-container.de",
+            "source": "TS Container",
             "title": title,
             "type": waste_type,
             "city": "Berlin",
