@@ -57,7 +57,7 @@ class KatiBauContainerSpider(scrapy.Spider):
                 'container_type': 'Absetzcontainer'
             },
             {
-                'name': 'Baumisch (ohne Wertstoffe)',
+                'name': 'Baumischschutt (ohne Wertstoffe)',
                 'prices': {3: 470.00, 7: 730.00},
                 'container_type': 'Absetzcontainer'
             },
