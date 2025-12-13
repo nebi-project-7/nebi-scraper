@@ -27,7 +27,7 @@ class CdzBerlinSpider(Spider):
         page = requests.get('https://cdz-berlin.de/allgemeine_geschaeftsbedingungen')
 
         self.max_rental_period = re.findall(r'(?<=bis zu )(\d+)(?= Tagen)', page.text)[0]
-        self.fee_after_max = re.findall(r'(?<=von )([\d,]+)(?= €)', page.text)[0]
+        self.fee_after_max = re.findall(r'(?<=von )([\d,]+)(?= €)', page.text)[0] + '€'
         self.cancellation_fee = get_cancellation_fee(page.text)
 
     def parse(self, response):
