@@ -36,6 +36,9 @@ class ContainerfritzeSpider(Spider):
 
         self.cancellation_fee = '180'
 
+        # Set zur Vermeidung von Duplikaten (type + size Kombination)
+        self.seen_products = set()
+
         logging.getLogger('selenium').setLevel(logging.WARNING)
         logging.getLogger('urllib3').setLevel(logging.WARNING)
 
@@ -52,7 +55,7 @@ class ContainerfritzeSpider(Spider):
             'flachglas': 'Flachglas',
             'gartenabfall-gemischt': 'Gartenabfälle',
             'gruenschnitt': 'Grünschnitt',
-            'gewerbeabfall-gemischt': 'Gewerbeabfall',
+            'gewerbeabfall-gemischt': 'Gewerbeabfälle',
             'gipsabfaelle': 'Gips',
             'glasverpackungen': 'Glasverpackungen',
             'holz-a1-a3': 'Holz A1-A3',
@@ -274,4 +277,10 @@ class ContainerfritzeSpider(Spider):
                                 'cancellation_fee': self.cancellation_fee,
                                 'URL': self.driver.current_url}
 
-                        yield item
+                        # Duplikat-Check: type + size Kombination
+                        product_key = f"{type}|{size}"
+                        if product_key not in self.seen_products:
+                            self.seen_products.add(product_key)
+                            yield item
+                        else:
+                            self.log(f"⚠️ Duplikat übersprungen: {type} {size}")
