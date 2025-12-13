@@ -121,7 +121,7 @@ class BerlinRecyclingSpider(Spider):
             # Pattern: "danach X,XX € netto" oder "X,XX € netto zzgl."
             fee_match = re.search(r'danach\s+(\d+,\d{2})\s*€\s*netto', page_text, re.IGNORECASE)
             if fee_match:
-                return fee_match.group(1)
+                return fee_match.group(1) + '€'
         except:
             pass
         return ""
