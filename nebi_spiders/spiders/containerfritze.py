@@ -43,8 +43,8 @@ class ContainerfritzeSpider(Spider):
         self.waste_type_mapping = {
             'baumischabfall-leicht': 'Baumischabfall leicht',
             'baumischabfall-schwer': 'Baumischabfall schwer',
-            'betonbruch-bewehrt-mit-stahl': 'Betonbruch bewehrt mit Stahl',
-            'betonbruch-unbewehrt-ohne-stahl': 'Betonbruch unbewehrt ohne Stahl',
+            'betonbruch-bewehrt-mit-stahl': 'Beton bewehrt mit Stahl',
+            'betonbruch-unbewehrt-ohne-stahl': 'Beton bewehrt ohne Stahl',
             'daemmwolle': 'Dämmstoffe',
             'erdaushub-mit-grasnarbe': 'Erdaushub mit Grasnarbe',
             'erdaushub-mit-steinen': 'Erdaushub mit Steinen',
