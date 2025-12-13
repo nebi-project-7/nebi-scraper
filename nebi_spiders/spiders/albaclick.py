@@ -37,7 +37,7 @@ class AlbaclickSpider(Spider):
             'Grünschnitt | Gartenabfälle': 'Gartenabfälle',
             'E-Geräte (Kleingeräte)': 'Elektrokleingeräte',
             'E-Geräte (Großgeräte)': 'Elektrogroßgeräte',
-            'Baumisch (leicht)': 'Baumischabfall',
+            'Baumisch (leicht)': 'Baumischabfall (leicht)',
         }
 
     def _dismiss_cookie_banner(self):
