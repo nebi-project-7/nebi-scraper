@@ -243,7 +243,7 @@ class OresContainerProductsSpider(Spider):
                 "size": size,
                 "price": price,
                 "lid_price": lid_price,
-                "arrival_price": "Abhängig von Zone 4, 6, 10, 12 EURO",
+                "arrival_price": "Abhängig v. d. Zone 4€,6€,10€,12€",
                 "departure_price": "inklusive",
                 "max_rental_period": self.max_rental_period or "6",
                 "fee_after_max": "",
