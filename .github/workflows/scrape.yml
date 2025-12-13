@@ -56,8 +56,8 @@ jobs:
 
       - name: 🕷️ Run Spiders
         run: |
-          # Liste aller verfügbaren Spider
-          ALL_SPIDERS="abc-container albaclick aser-container-products berlin-recycling cdz-berlin containerfritze dare-shop-products elno-container-products kati-bau-container klebs-container-products kroll-container ores-container-products schuttgeier-products todra-container-products ts-container-products"
+          # Liste aller verfügbaren Spider (komma-getrennt)
+          ALL_SPIDERS="abc-container,albaclick,aser-container-products,berlin-recycling,cdz-berlin,containerfritze,dare-shop-products,elno-container-products,kati-bau-container,klebs-container-products,kroll-container,ores-container-products,schuttgeier-products,todra-container-products,ts-container-products"
 
           # Bestimme welche Spider laufen sollen
           if [ "${{ github.event.inputs.spiders }}" = "all" ] || [ -z "${{ github.event.inputs.spiders }}" ]; then
