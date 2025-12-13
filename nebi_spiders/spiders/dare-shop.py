@@ -117,7 +117,7 @@ class DareShopProductsSpider(Spider):
                 "max_rental_period": max_rental_period,
                 "wait_time": wait_time,
                 # Diese Werte stehen nicht in AGB, bleiben fest codiert:
-                "fee_after_max": "5",  # Preis nicht in AGB angegeben
+                "fee_after_max": "5€",  # Preis nicht in AGB angegeben
                 "cancellation_fee": "135",  # Nicht in AGB erwähnt
             }
 
@@ -126,7 +126,7 @@ class DareShopProductsSpider(Spider):
             return {
                 "max_rental_period": "14",
                 "wait_time": "15",
-                "fee_after_max": "5",
+                "fee_after_max": "5€",
                 "cancellation_fee": "135",
             }
 
