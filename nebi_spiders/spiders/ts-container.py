@@ -71,7 +71,7 @@ class TSContainerProductsSpider(Spider):
 
             return {
                 "max_rental_period": max_rental_period,
-                "fee_after_max": "siehe AGB",
+                "fee_after_max": "",
                 "cancellation_fee": "",
             }
 
@@ -79,7 +79,7 @@ class TSContainerProductsSpider(Spider):
             self.log(f"⚠️ Keine AGB gefunden oder Fehler: {e}. Verwende Standardwerte.")
             return {
                 "max_rental_period": "14",
-                "fee_after_max": "siehe AGB",
+                "fee_after_max": "",
                 "cancellation_fee": "",
             }
 
