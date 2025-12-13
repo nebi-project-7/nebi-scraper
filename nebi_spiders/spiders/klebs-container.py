@@ -203,7 +203,7 @@ class KlebsContainerProductsSpider(Spider):
                 "arrival_price": "inklusive",
                 "departure_price": "inklusive",
                 "max_rental_period": "15",
-                "fee_after_max": "6,54",
+                "fee_after_max": "6,54€",
                 "cancellation_fee": "",
                 "URL": container_url
             }
