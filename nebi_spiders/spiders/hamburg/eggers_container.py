@@ -186,7 +186,7 @@ class EggersContainerSpider(Spider):
                         "arrival_price": "inklusive",
                         "departure_price": "inklusive",
                         "max_rental_period": "14",
-                        "fee_after_max": "",
+                        "fee_after_max": "5,95€",
                         "cancellation_fee": "",
                         "URL": category_url
                     }
@@ -250,7 +250,7 @@ class EggersContainerSpider(Spider):
                         "arrival_price": "inklusive",
                         "departure_price": "inklusive",
                         "max_rental_period": "14",
-                        "fee_after_max": "",
+                        "fee_after_max": "5,95€",
                         "cancellation_fee": "",
                         "URL": product_url
                     }
