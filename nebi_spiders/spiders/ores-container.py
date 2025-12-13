@@ -22,7 +22,7 @@ class OresContainerProductsSpider(Spider):
         ("https://containerentsorgung-berlin.de/Sperrmuell/", "Sperrmüll"),
         ("https://containerentsorgung-berlin.de/Boden/", "Boden"),
         ("https://containerentsorgung-berlin.de/Bau-und-Abbruchabfaelle/", "Bau- und Abbruchabfälle"),
-        ("https://containerentsorgung-berlin.de/Gruenabfall-Laub-Grasschnitt/", "Grünabfall Laub Grasschnitt"),
+        ("https://containerentsorgung-berlin.de/Gruenabfall-Laub-Grasschnitt/", "Gartenabfälle Laub Grasschnitt"),
         ("https://containerentsorgung-berlin.de/Strauchwerk/Strauchwerk-mit-Stammholz/", "Strauchwerk mit Stammholz"),
         ("https://containerentsorgung-berlin.de/Strauchwerk/Strauchwerk-ohne-Stammholz/", "Strauchwerk ohne Stammholz"),
     ]
