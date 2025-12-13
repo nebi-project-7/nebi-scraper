@@ -61,6 +61,7 @@ class ContainerfritzeSpider(Spider):
             'holz-a4': 'Holz A4',
             'porenbeton': 'Porenbeton',
             'bauschutt': 'Bauschutt',
+            'bauschutt-sortenrein': 'Bauschutt sortenrein',
             'bauschutt-recyclingfaehig': 'Bauschutt recyclingfähig',
             'bauschutt-nicht-recyclingfaehig': 'Bauschutt nicht recyclingfähig',
             'styropor-mit-anhaftungen': 'Styropor mit Anhaftungen',
@@ -149,6 +150,16 @@ class ContainerfritzeSpider(Spider):
                       'https://containerfritze.de/dienste/entsorgung-berlin/page/2/',
                       'https://containerfritze.de/dienste/entsorgung-berlin/page/3/']
 
+        # Zusätzliche Container-Seiten die nicht auf den Listing-Seiten verlinkt sind
+        additional_container_urls = [
+            'https://containerfritze.de/dienste/holz-a1-container-mieten-berlin/',
+            'https://containerfritze.de/dienste/holz-a2-a3-container-mieten-berlin/',
+            'https://containerfritze.de/dienste/bauschutt-container-mieten-berlin/',
+            'https://containerfritze.de/dienste/bauschutt-sortenrein-container-mieten-berlin/',
+        ]
+
+        all_containers = []
+
         for start_url in start_urls:
             self.driver.get(start_url)
             sleep(5)
@@ -157,105 +168,112 @@ class ContainerfritzeSpider(Spider):
             self._dismiss_cookie_banner()
 
             containers = Selector(text=self.driver.page_source).xpath('//h2/a/@href').getall()
-            for container in containers:
+            all_containers.extend(containers)
 
-                self.driver.get(container)
-                sleep(5)
+        # Füge zusätzliche Container-URLs hinzu
+        all_containers.extend(additional_container_urls)
 
-                # Cookie-Banner erneut prüfen
+        # Entferne Duplikate
+        all_containers = list(set(all_containers))
+
+        for container in all_containers:
+            self.driver.get(container)
+            sleep(5)
+
+            # Cookie-Banner erneut prüfen
+            self._dismiss_cookie_banner()
+
+            order_now_button_url = Selector(text=self.driver.page_source).xpath(
+                '//a[@class="elementor-button elementor-button-link elementor-size-lg"]/@href').get()
+
+            if order_now_button_url:
+                self.driver.get(order_now_button_url)
+                sleep(6)
+
+                # Cookie-Banner auf Produktseite schließen
                 self._dismiss_cookie_banner()
 
-                order_now_button_url = Selector(text=self.driver.page_source).xpath(
-                    '//a[@class="elementor-button elementor-button-link elementor-size-lg"]/@href').get()
+                # JavaScript-Klicks statt normaler Klicks
+                self._safe_click('//span[text()="Brutto"]')
+                sleep(3)
 
-                if order_now_button_url:
-                    self.driver.get(order_now_button_url)
-                    sleep(6)
+                self._safe_click('//li/a[text()="Privat"]')
+                sleep(3)
 
-                    # Cookie-Banner auf Produktseite schließen
-                    self._dismiss_cookie_banner()
+                self._safe_click('//span[text()="Brutto"]')
+                sleep(3)
 
-                    # JavaScript-Klicks statt normaler Klicks
-                    self._safe_click('//span[text()="Brutto"]')
-                    sleep(3)
+                containers = self.driver.find_elements(By.XPATH, '//ul[@data-attribute="attribute_pa_groesse"]/li/a')
+                for container_num, container in enumerate(containers):
+                    # JavaScript-Klick für Größen-Auswahl
+                    size_elements = self.driver.find_elements(By.XPATH, '//ul[@data-attribute="attribute_pa_groesse"]/li/a')
+                    if container_num < len(size_elements):
+                        self._js_click(size_elements[container_num])
+                    sleep(4)
 
-                    self._safe_click('//li/a[text()="Privat"]')
-                    sleep(3)
+                    sel = Selector(text=self.driver.page_source)
 
-                    self._safe_click('//span[text()="Brutto"]')
-                    sleep(3)
+                    source = 'containerfritze'
 
-                    containers = self.driver.find_elements(By.XPATH, '//ul[@data-attribute="attribute_pa_groesse"]/li/a')
-                    for container_num, container in enumerate(containers):
-                        # JavaScript-Klick für Größen-Auswahl
-                        size_elements = self.driver.find_elements(By.XPATH, '//ul[@data-attribute="attribute_pa_groesse"]/li/a')
-                        if container_num < len(size_elements):
-                            self._js_click(size_elements[container_num])
-                        sleep(4)
+                    title = sel.xpath('//strong[text()="Größe"]/following-sibling::span/text()').getall()
+                    if title:
+                        title = ' '.join(title).replace(':', '').strip()
+                    else:
+                        title = ''
 
-                        sel = Selector(text=self.driver.page_source)
+                    # Extrahiere Abfallart aus URL statt Breadcrumb für genauere Bezeichnung
+                    type = self._extract_waste_type_from_url(self.driver.current_url)
+                    if not type:
+                        # Fallback auf Breadcrumb
+                        type = sel.xpath('//nav[@aria-label="Breadcrumb"]/a[3]/text()').get()
 
-                        source = 'containerfritze'
+                    city = 'Berlin'
 
-                        title = sel.xpath('//strong[text()="Größe"]/following-sibling::span/text()').getall()
-                        if title:
-                            title = ' '.join(title).replace(':', '').strip()
+                    regex_match = re.search(r'\b\d+(?:[.,]\d+)?\s?(?:m³|m3|liter|litre)\b', title, re.IGNORECASE)
+                    size = (regex_match.group() if regex_match else None)
+
+                    # price = (sel.xpath('//input[@id="pewc-product-price"]/@value').get() or '').replace(',', '.')
+                    price = sel.xpath('//div[@class="inklMWST"]//span[@class="woocommerce-Price-amount amount"]/bdi/text()').get()
+                    if price:
+                        price = price.strip()
+                        # Im deutschen Format: Punkt = Tausendertrennzeichen, Komma = Dezimalzeichen
+                        # Entferne IMMER alle Punkte (Tausendertrennzeichen)
+                        # z.B. "1.071,00" -> "1071,00", "1.071" -> "1071"
+                        price = price.replace('.', '')
+                        # Entferne ",00" am Ende (ganze Zahlen)
+                        price = price.replace(',00', '')
+
+                        lid_price = sel.xpath('//option[@value="Mit Abdeckung  +"]/@data-option-cost').get()
+                        if lid_price:
+                            lid_price = lid_price.replace('.', ',')
+
+                        match = re.search(r'\d+', sel.xpath('//strong[contains(text(), "max.")]/text()').get())
+                        if match:
+                            max_rental_period = match.group(0)
                         else:
-                            title = ''
+                            max_rental_period = ''
 
-                        # Extrahiere Abfallart aus URL statt Breadcrumb für genauere Bezeichnung
-                        type = self._extract_waste_type_from_url(self.driver.current_url)
-                        if not type:
-                            # Fallback auf Breadcrumb
-                            type = sel.xpath('//nav[@aria-label="Breadcrumb"]/a[3]/text()').get()
+                        arrival_price = 'inklusive'
+                        departure_price = 'inklusive'
 
-                        city = 'Berlin'
+                        try:
+                            fee_after_max = re.findall(r'(?<=werden nachträglich mit )([\d,]+)(?= €)', sel.extract())[0]
+                            fee_after_max = fee_after_max + '€'
+                        except:
+                            fee_after_max = ''
 
-                        regex_match = re.search(r'\b\d+(?:[.,]\d+)?\s?(?:m³|m3|liter|litre)\b', title, re.IGNORECASE)
-                        size = (regex_match.group() if regex_match else None)
+                        item = {'source': source,
+                                'title': title,
+                                'type': type,
+                                'city': city,
+                                'size': size,
+                                'price': price,
+                                'lid_price': lid_price,
+                                'arrival_price': arrival_price,
+                                'departure_price': departure_price,
+                                'max_rental_period': max_rental_period,
+                                'fee_after_max': fee_after_max,
+                                'cancellation_fee': self.cancellation_fee,
+                                'URL': self.driver.current_url}
 
-                        # price = (sel.xpath('//input[@id="pewc-product-price"]/@value').get() or '').replace(',', '.')
-                        price = sel.xpath('//div[@class="inklMWST"]//span[@class="woocommerce-Price-amount amount"]/bdi/text()').get()
-                        if price:
-                            price = price.strip()
-                            # Im deutschen Format: Punkt = Tausendertrennzeichen, Komma = Dezimalzeichen
-                            # Entferne IMMER alle Punkte (Tausendertrennzeichen)
-                            # z.B. "1.071,00" -> "1071,00", "1.071" -> "1071"
-                            price = price.replace('.', '')
-                            # Entferne ",00" am Ende (ganze Zahlen)
-                            price = price.replace(',00', '')
-
-                            lid_price = sel.xpath('//option[@value="Mit Abdeckung  +"]/@data-option-cost').get()
-                            if lid_price:
-                                lid_price = lid_price.replace('.', ',')
-
-                            match = re.search(r'\d+', sel.xpath('//strong[contains(text(), "max.")]/text()').get())
-                            if match:
-                                max_rental_period = match.group(0)
-                            else:
-                                max_rental_period = ''
-
-                            arrival_price = 'inklusive'
-                            departure_price = 'inklusive'
-
-                            try:
-                                fee_after_max = re.findall(r'(?<=werden nachträglich mit )([\d,]+)(?= €)', sel.extract())[0]
-                                fee_after_max = fee_after_max + '€'
-                            except:
-                                fee_after_max = ''
-
-                            item = {'source': source,
-                                    'title': title,
-                                    'type': type,
-                                    'city': city,
-                                    'size': size,
-                                    'price': price,
-                                    'lid_price': lid_price,
-                                    'arrival_price': arrival_price,
-                                    'departure_price': departure_price,
-                                    'max_rental_period': max_rental_period,
-                                    'fee_after_max': fee_after_max,
-                                    'cancellation_fee': self.cancellation_fee,
-                                    'URL': self.driver.current_url}
-
-                            yield item
+                        yield item
