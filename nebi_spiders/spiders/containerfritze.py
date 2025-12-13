@@ -56,8 +56,8 @@ class ContainerfritzeSpider(Spider):
             'gipsabfaelle': 'Gips',
             'glasverpackungen': 'Glasverpackungen',
             'holz-a1-a3': 'Holz A1-A3',
-            'holz-a1': 'Holz A1',
-            'holz-a2-a3': 'Holz A2-A3',
+            'holz-a1': 'Holz A1-A3',
+            'holz-a2-a3': 'Holz A1-A3',
             'holz-a4': 'Holz A4',
             'porenbeton': 'Porenbeton',
             'bauschutt': 'Bauschutt',
@@ -152,8 +152,6 @@ class ContainerfritzeSpider(Spider):
 
         # Zusätzliche Container-Seiten die nicht auf den Listing-Seiten verlinkt sind
         additional_container_urls = [
-            'https://containerfritze.de/dienste/holz-a1-container-mieten-berlin/',
-            'https://containerfritze.de/dienste/holz-a2-a3-container-mieten-berlin/',
             'https://containerfritze.de/dienste/bauschutt-container-mieten-berlin/',
             'https://containerfritze.de/dienste/bauschutt-sortenrein-container-mieten-berlin/',
         ]
