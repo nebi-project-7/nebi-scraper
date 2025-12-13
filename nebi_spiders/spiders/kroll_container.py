@@ -53,17 +53,17 @@ class KrollContainerSpider(scrapy.Spider):
                 'prices': {3: 315.00, 5.5: 577.50}
             },
             {
-                'name': 'Beton (ohne Armierung)',
+                'name': 'Beton bewehrt ohne Stahl',
                 'type': 'flat',
                 'prices': {3: 150.00, 5.5: 250.00, 7: 315.00}
             },
             {
-                'name': 'Bauschutt (mineralisch, sortenrein)',
+                'name': 'Bauschutt (sortenrein)',
                 'type': 'flat',
                 'prices': {3: 206.00, 5.5: 375.00, 7: 478.00}
             },
             {
-                'name': 'Gemischter Bauschutt',
+                'name': 'Bauschutt (gemischt)',
                 'type': 'flat',
                 'prices': {3: 240.00, 5.5: 431.00, 7: 546.00}
             },
