@@ -177,6 +177,7 @@ class DareShopProductsSpider(Spider):
         waste_type_mapping = {
             'Holz A1-3': 'Holz A1-A3',
             'Gartenabfall': 'Gartenabfälle',
+            'Gewerbeabfall': 'Gewerbeabfälle',
             'Gipsbaustoffe': 'Gips',
         }
         if waste_type in waste_type_mapping:
