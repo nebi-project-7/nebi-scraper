@@ -1,5 +1,5 @@
-2025-12-13 12:31:21 [scrapy.utils.log] INFO: Scrapy 2.13.4 started (bot: nebi_spiders)
-2025-12-13 12:31:21 [scrapy.utils.log] INFO: Versions:
+2025-12-13 15:12:15 [scrapy.utils.log] INFO: Scrapy 2.13.4 started (bot: nebi_spiders)
+2025-12-13 15:12:15 [scrapy.utils.log] INFO: Versions:
 {'lxml': '6.0.2',
  'libxml2': '2.14.6',
  'cssselect': '1.3.0',
@@ -10,19 +10,19 @@
  'pyOpenSSL': '25.3.0 (OpenSSL 3.5.4 30 Sep 2025)',
  'cryptography': '46.0.3',
  'Platform': 'Linux-6.11.0-1018-azure-x86_64-with-glibc2.39'}
-2025-12-13 12:31:21 [scrapy.addons] INFO: Enabled addons:
+2025-12-13 15:12:15 [scrapy.addons] INFO: Enabled addons:
 []
-2025-12-13 12:31:21 [asyncio] DEBUG: Using selector: EpollSelector
-2025-12-13 12:31:21 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
-2025-12-13 12:31:21 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
-2025-12-13 12:31:21 [scrapy.extensions.telnet] INFO: Telnet Password: d3db71d3c8738dec
-2025-12-13 12:31:21 [scrapy.middleware] INFO: Enabled extensions:
+2025-12-13 15:12:15 [asyncio] DEBUG: Using selector: EpollSelector
+2025-12-13 15:12:15 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2025-12-13 15:12:15 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2025-12-13 15:12:15 [scrapy.extensions.telnet] INFO: Telnet Password: 9ead160ac8757d30
+2025-12-13 15:12:15 [scrapy.middleware] INFO: Enabled extensions:
 ['scrapy.extensions.corestats.CoreStats',
  'scrapy.extensions.telnet.TelnetConsole',
  'scrapy.extensions.memusage.MemoryUsage',
  'scrapy.extensions.feedexport.FeedExporter',
  'scrapy.extensions.logstats.LogStats']
-2025-12-13 12:31:21 [scrapy.crawler] INFO: Overridden settings:
+2025-12-13 15:12:15 [scrapy.crawler] INFO: Overridden settings:
 {'BOT_NAME': 'nebi_spiders',
  'CONCURRENT_REQUESTS': 1,
  'DOWNLOAD_DELAY': 0.5,
@@ -32,7 +32,7 @@
  'SPIDER_MODULES': ['nebi_spiders.spiders'],
  'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, '
                'like Gecko) Chrome/141.0.0.0 Safari/537.36'}
-2025-12-13 12:31:22 [scrapy.middleware] INFO: Enabled downloader middlewares:
+2025-12-13 15:12:15 [scrapy.middleware] INFO: Enabled downloader middlewares:
 ['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
  'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
@@ -45,482 +45,482 @@
  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
  'scrapy.downloadermiddlewares.stats.DownloaderStats']
-2025-12-13 12:31:22 [scrapy.middleware] INFO: Enabled spider middlewares:
+2025-12-13 15:12:15 [scrapy.middleware] INFO: Enabled spider middlewares:
 ['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
  'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
  'scrapy.spidermiddlewares.referer.RefererMiddleware',
  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
  'scrapy.spidermiddlewares.depth.DepthMiddleware']
-2025-12-13 12:31:22 [scrapy.middleware] INFO: Enabled item pipelines:
+2025-12-13 15:12:15 [scrapy.middleware] INFO: Enabled item pipelines:
 []
-2025-12-13 12:31:22 [scrapy.core.engine] INFO: Spider opened
-2025-12-13 12:31:22 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2025-12-13 12:31:22 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
-2025-12-13 12:31:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://shop.berlin-recycling.de/> (referer: None)
-2025-12-13 12:31:23 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/baumischabfall-entsorgen-container
-2025-12-13 12:31:29 [berlin-recycling] DEBUG: Cookie-Banner geschlossen
-2025-12-13 12:31:30 [berlin-recycling] DEBUG:   Gefunden: 7 Größen für Baumischabfall
-2025-12-13 12:31:33 [berlin-recycling] DEBUG:     3 m³: 293,00 €
-2025-12-13 12:31:36 [berlin-recycling] DEBUG:     5 m³: 441,00 €
-2025-12-13 12:31:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '3 m³ Baumischabfall', 'type': 'Baumischabfall', 'city': 'Berlin', 'size': '3', 'price': '293,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/baumischabfall-entsorgen-container?variant=46760136409373&quantity=1'}
-2025-12-13 12:31:39 [berlin-recycling] DEBUG:     7 m³: 542,00 €
-2025-12-13 12:31:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '5 m³ Baumischabfall', 'type': 'Baumischabfall', 'city': 'Berlin', 'size': '5', 'price': '441,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/baumischabfall-entsorgen-container?variant=46760136507677&quantity=1'}
-2025-12-13 12:31:42 [berlin-recycling] DEBUG:     10 m³: 693,00 €
-2025-12-13 12:31:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '7 m³ Baumischabfall', 'type': 'Baumischabfall', 'city': 'Berlin', 'size': '7', 'price': '542,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/baumischabfall-entsorgen-container?variant=46760136573213&quantity=1'}
-2025-12-13 12:31:45 [berlin-recycling] DEBUG:     13 m³: 245,00 € (Basis + Tonnage)
-2025-12-13 12:31:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '10 m³ Baumischabfall', 'type': 'Baumischabfall', 'city': 'Berlin', 'size': '10', 'price': '693,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/baumischabfall-entsorgen-container?variant=46760136704285&quantity=1'}
-2025-12-13 12:31:48 [berlin-recycling] DEBUG:     22 m³: 245,00 € (Basis + Tonnage)
-2025-12-13 12:31:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '13 m³ Baumischabfall', 'type': 'Baumischabfall', 'city': 'Berlin', 'size': '13', 'price': '245,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/baumischabfall-entsorgen-container?variant=47205271077149&quantity=1'}
-2025-12-13 12:31:51 [berlin-recycling] DEBUG:     40 m³: 245,00 € (Basis + Tonnage)
-2025-12-13 12:31:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '22 m³ Baumischabfall', 'type': 'Baumischabfall', 'city': 'Berlin', 'size': '22', 'price': '245,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/baumischabfall-entsorgen-container?variant=55271221068149&quantity=1'}
-2025-12-13 12:31:51 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/bauschutt-entsorgen-container
-2025-12-13 12:31:56 [berlin-recycling] DEBUG:   Gefunden: 5 Größen für Bauschutt
-2025-12-13 12:31:59 [berlin-recycling] DEBUG:     3 m³: 300,00 €
-2025-12-13 12:31:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '40 m³ Baumischabfall', 'type': 'Baumischabfall', 'city': 'Berlin', 'size': '40', 'price': '245,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/baumischabfall-entsorgen-container?variant=46760137228573&quantity=1'}
-2025-12-13 12:32:02 [berlin-recycling] DEBUG:     5 m³: 453,00 €
-2025-12-13 12:32:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '3 m³ Bauschutt', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '3', 'price': '300,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/bauschutt-entsorgen-container?variant=46760202600733&quantity=1'}
-2025-12-13 12:32:05 [berlin-recycling] DEBUG:     7 m³: 558,00 €
-2025-12-13 12:32:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '5 m³ Bauschutt', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '5', 'price': '453,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/bauschutt-entsorgen-container?variant=46760202666269&quantity=1'}
-2025-12-13 12:32:09 [berlin-recycling] DEBUG:     10 m³: 717,00 €
-2025-12-13 12:32:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '7 m³ Bauschutt', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '7', 'price': '558,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/bauschutt-entsorgen-container?variant=46760202731805&quantity=1'}
-2025-12-13 12:32:12 [berlin-recycling] DEBUG:     13 m³: 245,00 € (Basis + Tonnage)
-2025-12-13 12:32:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '10 m³ Bauschutt', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '10', 'price': '717,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/bauschutt-entsorgen-container?variant=46760202862877&quantity=1'}
-2025-12-13 12:32:12 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/erdaushub-entsorgen-container
-2025-12-13 12:32:16 [berlin-recycling] DEBUG:   Gefunden: 4 Größen für Erdaushub
-2025-12-13 12:32:19 [berlin-recycling] DEBUG:     3 m³: 507,00 €
-2025-12-13 12:32:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '13 m³ Bauschutt', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '13', 'price': '245,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/bauschutt-entsorgen-container?variant=47205505106205&quantity=1'}
-2025-12-13 12:32:23 [berlin-recycling] DEBUG:     5 m³: 781,00 €
-2025-12-13 12:32:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '3 m³ Erdaushub', 'type': 'Erdaushub', 'city': 'Berlin', 'size': '3', 'price': '507,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/erdaushub-entsorgen-container?variant=55433443901813&quantity=1'}
-2025-12-13 12:32:23 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 1 pages/min), scraped 13 items (at 13 items/min)
-2025-12-13 12:32:26 [berlin-recycling] DEBUG:     7 m³: 993,00 €
-2025-12-13 12:32:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '5 m³ Erdaushub', 'type': 'Erdaushub', 'city': 'Berlin', 'size': '5', 'price': '781,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/erdaushub-entsorgen-container?variant=46760516223261&quantity=1'}
-2025-12-13 12:32:29 [berlin-recycling] DEBUG:     10 m³: 1.310,00 €
-2025-12-13 12:32:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '7 m³ Erdaushub', 'type': 'Erdaushub', 'city': 'Berlin', 'size': '7', 'price': '993,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/erdaushub-entsorgen-container?variant=46760516288797&quantity=1'}
-2025-12-13 12:32:29 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/asbestentsorgung-container
-2025-12-13 12:32:34 [berlin-recycling] DEBUG:   Gefunden: 12 Größen für Asbest
-2025-12-13 12:32:37 [berlin-recycling] DEBUG:     3 m³: 950,00 €
-2025-12-13 12:32:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '10 m³ Erdaushub', 'type': 'Erdaushub', 'city': 'Berlin', 'size': '10', 'price': '1.310,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/erdaushub-entsorgen-container?variant=55433444098421&quantity=1'}
-2025-12-13 12:32:40 [berlin-recycling] DEBUG:     3 m³: 950,00 €
-2025-12-13 12:32:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '3 m³ Asbest', 'type': 'Asbest', 'city': 'Berlin', 'size': '3', 'price': '950,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/asbestentsorgung-container?variant=47245154615581&quantity=1'}
-2025-12-13 12:32:43 [berlin-recycling] DEBUG:     5 m³: 1.350,00 €
-2025-12-13 12:32:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '3 m³ Asbest', 'type': 'Asbest', 'city': 'Berlin', 'size': '3', 'price': '950,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/asbestentsorgung-container?variant=55489878458741&quantity=1'}
-2025-12-13 12:32:46 [berlin-recycling] DEBUG:     5 m³: 1.350,00 €
-2025-12-13 12:32:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '5 m³ Asbest', 'type': 'Asbest', 'city': 'Berlin', 'size': '5', 'price': '1.350,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/asbestentsorgung-container?variant=47245154746653&quantity=1'}
-2025-12-13 12:32:49 [berlin-recycling] DEBUG:     7 m³: 1.800,00 €
-2025-12-13 12:32:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '5 m³ Asbest', 'type': 'Asbest', 'city': 'Berlin', 'size': '5', 'price': '1.350,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/asbestentsorgung-container?variant=55489878557045&quantity=1'}
-2025-12-13 12:32:52 [berlin-recycling] DEBUG:     7 m³: 1.800,00 €
-2025-12-13 12:32:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '7 m³ Asbest', 'type': 'Asbest', 'city': 'Berlin', 'size': '7', 'price': '1.800,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/asbestentsorgung-container?variant=47245154877725&quantity=1'}
-2025-12-13 12:32:55 [berlin-recycling] DEBUG:     10 m³: 2.400,00 €
-2025-12-13 12:32:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '7 m³ Asbest', 'type': 'Asbest', 'city': 'Berlin', 'size': '7', 'price': '1.800,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/asbestentsorgung-container?variant=55489878655349&quantity=1'}
-2025-12-13 12:32:58 [berlin-recycling] DEBUG:     10 m³: 2.400,00 €
-2025-12-13 12:32:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '10 m³ Asbest', 'type': 'Asbest', 'city': 'Berlin', 'size': '10', 'price': '2.400,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/asbestentsorgung-container?variant=47245155139869&quantity=1'}
-2025-12-13 12:33:01 [berlin-recycling] DEBUG:     13 m³: 3.500,00 € (Basis + Tonnage)
-2025-12-13 12:33:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '10 m³ Asbest', 'type': 'Asbest', 'city': 'Berlin', 'size': '10', 'price': '2.400,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/asbestentsorgung-container?variant=55489878753653&quantity=1'}
-2025-12-13 12:33:05 [berlin-recycling] DEBUG:     13 m³: 3.500,00 €
-2025-12-13 12:33:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '13 m³ Asbest', 'type': 'Asbest', 'city': 'Berlin', 'size': '13', 'price': '3.500,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/asbestentsorgung-container?variant=47245155533085&quantity=1'}
-2025-12-13 12:33:08 [berlin-recycling] DEBUG:     22 m³: 5.000,00 €
-2025-12-13 12:33:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '13 m³ Asbest', 'type': 'Asbest', 'city': 'Berlin', 'size': '13', 'price': '3.500,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/asbestentsorgung-container?variant=55489911619957&quantity=1'}
-2025-12-13 12:33:11 [berlin-recycling] DEBUG:     22 m³: 5.000,00 €
-2025-12-13 12:33:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '22 m³ Asbest', 'type': 'Asbest', 'city': 'Berlin', 'size': '22', 'price': '5.000,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/asbestentsorgung-container?variant=55489878851957&quantity=1'}
-2025-12-13 12:33:11 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/elektrogrossgerate-container
-2025-12-13 12:33:15 [berlin-recycling] DEBUG:   Gefunden: 7 Größen für Elektrogroßgeräte
-2025-12-13 12:33:18 [berlin-recycling] DEBUG:     3 m³: 350,00 €
-2025-12-13 12:33:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '22 m³ Asbest', 'type': 'Asbest', 'city': 'Berlin', 'size': '22', 'price': '5.000,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/asbestentsorgung-container?variant=55489911685493&quantity=1'}
-2025-12-13 12:33:22 [berlin-recycling] DEBUG:     5 m³: 385,00 €
-2025-12-13 12:33:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:12:15 [scrapy.core.engine] INFO: Spider opened
+2025-12-13 15:12:15 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-12-13 15:12:15 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2025-12-13 15:12:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://shop.berlin-recycling.de/> (referer: None)
+2025-12-13 15:12:16 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/baumischabfall-entsorgen-container
+2025-12-13 15:12:23 [berlin-recycling] DEBUG: Cookie-Banner geschlossen
+2025-12-13 15:12:24 [berlin-recycling] DEBUG:   Gefunden: 7 Größen für Baumischabfall
+2025-12-13 15:12:27 [berlin-recycling] DEBUG:     3 m³: 293,00 €
+2025-12-13 15:12:30 [berlin-recycling] DEBUG:     5 m³: 441,00 €
+2025-12-13 15:12:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '3 m³ Baumischabfall', 'type': 'Baumischabfall', 'city': 'Berlin', 'size': '3', 'price': '293,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/baumischabfall-entsorgen-container?variant=46760136409373&quantity=1'}
+2025-12-13 15:12:33 [berlin-recycling] DEBUG:     7 m³: 542,00 €
+2025-12-13 15:12:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '5 m³ Baumischabfall', 'type': 'Baumischabfall', 'city': 'Berlin', 'size': '5', 'price': '441,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/baumischabfall-entsorgen-container?variant=46760136507677&quantity=1'}
+2025-12-13 15:12:36 [berlin-recycling] DEBUG:     10 m³: 693,00 €
+2025-12-13 15:12:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '7 m³ Baumischabfall', 'type': 'Baumischabfall', 'city': 'Berlin', 'size': '7', 'price': '542,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/baumischabfall-entsorgen-container?variant=46760136573213&quantity=1'}
+2025-12-13 15:12:39 [berlin-recycling] DEBUG:     13 m³: 245,00 € (Basis + Tonnage)
+2025-12-13 15:12:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '10 m³ Baumischabfall', 'type': 'Baumischabfall', 'city': 'Berlin', 'size': '10', 'price': '693,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/baumischabfall-entsorgen-container?variant=46760136704285&quantity=1'}
+2025-12-13 15:12:42 [berlin-recycling] DEBUG:     22 m³: 245,00 € (Basis + Tonnage)
+2025-12-13 15:12:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '13 m³ Baumischabfall', 'type': 'Baumischabfall', 'city': 'Berlin', 'size': '13', 'price': '245,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/baumischabfall-entsorgen-container?variant=47205271077149&quantity=1'}
+2025-12-13 15:12:46 [berlin-recycling] DEBUG:     40 m³: 245,00 € (Basis + Tonnage)
+2025-12-13 15:12:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '22 m³ Baumischabfall', 'type': 'Baumischabfall', 'city': 'Berlin', 'size': '22', 'price': '245,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/baumischabfall-entsorgen-container?variant=55271221068149&quantity=1'}
+2025-12-13 15:12:46 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/bauschutt-entsorgen-container
+2025-12-13 15:12:51 [berlin-recycling] DEBUG:   Gefunden: 5 Größen für Bauschutt
+2025-12-13 15:12:54 [berlin-recycling] DEBUG:     3 m³: 300,00 €
+2025-12-13 15:12:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '40 m³ Baumischabfall', 'type': 'Baumischabfall', 'city': 'Berlin', 'size': '40', 'price': '245,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/baumischabfall-entsorgen-container?variant=46760137228573&quantity=1'}
+2025-12-13 15:12:57 [berlin-recycling] DEBUG:     5 m³: 453,00 €
+2025-12-13 15:12:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '3 m³ Bauschutt', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '3', 'price': '300,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/bauschutt-entsorgen-container?variant=46760202600733&quantity=1'}
+2025-12-13 15:13:00 [berlin-recycling] DEBUG:     7 m³: 558,00 €
+2025-12-13 15:13:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '5 m³ Bauschutt', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '5', 'price': '453,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/bauschutt-entsorgen-container?variant=46760202666269&quantity=1'}
+2025-12-13 15:13:03 [berlin-recycling] DEBUG:     10 m³: 717,00 €
+2025-12-13 15:13:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '7 m³ Bauschutt', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '7', 'price': '558,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/bauschutt-entsorgen-container?variant=46760202731805&quantity=1'}
+2025-12-13 15:13:06 [berlin-recycling] DEBUG:     13 m³: 245,00 € (Basis + Tonnage)
+2025-12-13 15:13:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '10 m³ Bauschutt', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '10', 'price': '717,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/bauschutt-entsorgen-container?variant=46760202862877&quantity=1'}
+2025-12-13 15:13:06 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/erdaushub-entsorgen-container
+2025-12-13 15:13:11 [berlin-recycling] DEBUG:   Gefunden: 4 Größen für Erdaushub
+2025-12-13 15:13:14 [berlin-recycling] DEBUG:     3 m³: 507,00 €
+2025-12-13 15:13:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '13 m³ Bauschutt', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '13', 'price': '245,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/bauschutt-entsorgen-container?variant=47205505106205&quantity=1'}
+2025-12-13 15:13:17 [berlin-recycling] DEBUG:     5 m³: 781,00 €
+2025-12-13 15:13:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '3 m³ Erdaushub', 'type': 'Erdaushub', 'city': 'Berlin', 'size': '3', 'price': '507,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/erdaushub-entsorgen-container?variant=55433443901813&quantity=1'}
+2025-12-13 15:13:17 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 1 pages/min), scraped 13 items (at 13 items/min)
+2025-12-13 15:13:20 [berlin-recycling] DEBUG:     7 m³: 993,00 €
+2025-12-13 15:13:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '5 m³ Erdaushub', 'type': 'Erdaushub', 'city': 'Berlin', 'size': '5', 'price': '781,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/erdaushub-entsorgen-container?variant=46760516223261&quantity=1'}
+2025-12-13 15:13:23 [berlin-recycling] DEBUG:     10 m³: 1.310,00 €
+2025-12-13 15:13:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '7 m³ Erdaushub', 'type': 'Erdaushub', 'city': 'Berlin', 'size': '7', 'price': '993,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/erdaushub-entsorgen-container?variant=46760516288797&quantity=1'}
+2025-12-13 15:13:23 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/asbestentsorgung-container
+2025-12-13 15:13:28 [berlin-recycling] DEBUG:   Gefunden: 12 Größen für Asbest
+2025-12-13 15:13:31 [berlin-recycling] DEBUG:     3 m³: 950,00 €
+2025-12-13 15:13:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '10 m³ Erdaushub', 'type': 'Erdaushub', 'city': 'Berlin', 'size': '10', 'price': '1.310,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/erdaushub-entsorgen-container?variant=55433444098421&quantity=1'}
+2025-12-13 15:13:34 [berlin-recycling] DEBUG:     3 m³: 950,00 €
+2025-12-13 15:13:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '3 m³ Asbest', 'type': 'Asbest', 'city': 'Berlin', 'size': '3', 'price': '950,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/asbestentsorgung-container?variant=47245154615581&quantity=1'}
+2025-12-13 15:13:38 [berlin-recycling] DEBUG:     5 m³: 1.350,00 €
+2025-12-13 15:13:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '3 m³ Asbest', 'type': 'Asbest', 'city': 'Berlin', 'size': '3', 'price': '950,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/asbestentsorgung-container?variant=55489878458741&quantity=1'}
+2025-12-13 15:13:41 [berlin-recycling] DEBUG:     5 m³: 1.350,00 €
+2025-12-13 15:13:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '5 m³ Asbest', 'type': 'Asbest', 'city': 'Berlin', 'size': '5', 'price': '1.350,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/asbestentsorgung-container?variant=47245154746653&quantity=1'}
+2025-12-13 15:13:44 [berlin-recycling] DEBUG:     7 m³: 1.800,00 €
+2025-12-13 15:13:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '5 m³ Asbest', 'type': 'Asbest', 'city': 'Berlin', 'size': '5', 'price': '1.350,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/asbestentsorgung-container?variant=55489878557045&quantity=1'}
+2025-12-13 15:13:47 [berlin-recycling] DEBUG:     7 m³: 1.800,00 €
+2025-12-13 15:13:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '7 m³ Asbest', 'type': 'Asbest', 'city': 'Berlin', 'size': '7', 'price': '1.800,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/asbestentsorgung-container?variant=47245154877725&quantity=1'}
+2025-12-13 15:13:50 [berlin-recycling] DEBUG:     10 m³: 2.400,00 €
+2025-12-13 15:13:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '7 m³ Asbest', 'type': 'Asbest', 'city': 'Berlin', 'size': '7', 'price': '1.800,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/asbestentsorgung-container?variant=55489878655349&quantity=1'}
+2025-12-13 15:13:53 [berlin-recycling] DEBUG:     10 m³: 2.400,00 €
+2025-12-13 15:13:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '10 m³ Asbest', 'type': 'Asbest', 'city': 'Berlin', 'size': '10', 'price': '2.400,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/asbestentsorgung-container?variant=47245155139869&quantity=1'}
+2025-12-13 15:13:56 [berlin-recycling] DEBUG:     13 m³: 3.500,00 € (Basis + Tonnage)
+2025-12-13 15:13:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '10 m³ Asbest', 'type': 'Asbest', 'city': 'Berlin', 'size': '10', 'price': '2.400,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/asbestentsorgung-container?variant=55489878753653&quantity=1'}
+2025-12-13 15:13:59 [berlin-recycling] DEBUG:     13 m³: 3.500,00 €
+2025-12-13 15:13:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '13 m³ Asbest', 'type': 'Asbest', 'city': 'Berlin', 'size': '13', 'price': '3.500,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/asbestentsorgung-container?variant=47245155533085&quantity=1'}
+2025-12-13 15:14:02 [berlin-recycling] DEBUG:     22 m³: 5.000,00 €
+2025-12-13 15:14:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '13 m³ Asbest', 'type': 'Asbest', 'city': 'Berlin', 'size': '13', 'price': '3.500,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/asbestentsorgung-container?variant=55489911619957&quantity=1'}
+2025-12-13 15:14:06 [berlin-recycling] DEBUG:     22 m³: 5.000,00 €
+2025-12-13 15:14:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '22 m³ Asbest', 'type': 'Asbest', 'city': 'Berlin', 'size': '22', 'price': '5.000,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/asbestentsorgung-container?variant=55489878851957&quantity=1'}
+2025-12-13 15:14:06 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/elektrogrossgerate-container
+2025-12-13 15:14:10 [berlin-recycling] DEBUG:   Gefunden: 7 Größen für Elektrogroßgeräte
+2025-12-13 15:14:14 [berlin-recycling] DEBUG:     3 m³: 350,00 €
+2025-12-13 15:14:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '22 m³ Asbest', 'type': 'Asbest', 'city': 'Berlin', 'size': '22', 'price': '5.000,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/asbestentsorgung-container?variant=55489911685493&quantity=1'}
+2025-12-13 15:14:17 [berlin-recycling] DEBUG:     5 m³: 385,00 €
+2025-12-13 15:14:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '3 m³ Elektrogroßgeräte', 'type': 'Elektrogroßgeräte', 'city': 'Berlin', 'size': '3', 'price': '350,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/elektrogrossgerate-container?variant=55573160296821&quantity=1'}
-2025-12-13 12:33:22 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 29 items (at 16 items/min)
-2025-12-13 12:33:25 [berlin-recycling] DEBUG:     7 m³: 430,00 €
-2025-12-13 12:33:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:14:17 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 29 items (at 16 items/min)
+2025-12-13 15:14:20 [berlin-recycling] DEBUG:     7 m³: 430,00 €
+2025-12-13 15:14:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '5 m³ Elektrogroßgeräte', 'type': 'Elektrogroßgeräte', 'city': 'Berlin', 'size': '5', 'price': '385,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/elektrogrossgerate-container?variant=55573160493429&quantity=1'}
-2025-12-13 12:33:28 [berlin-recycling] DEBUG:     10 m³: 485,00 €
-2025-12-13 12:33:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:14:23 [berlin-recycling] DEBUG:     10 m³: 485,00 €
+2025-12-13 15:14:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '7 m³ Elektrogroßgeräte', 'type': 'Elektrogroßgeräte', 'city': 'Berlin', 'size': '7', 'price': '430,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/elektrogrossgerate-container?variant=55573160690037&quantity=1'}
-2025-12-13 12:33:31 [berlin-recycling] DEBUG:     13 m³: 580,00 €
-2025-12-13 12:33:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:14:26 [berlin-recycling] DEBUG:     13 m³: 580,00 €
+2025-12-13 15:14:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '10 m³ Elektrogroßgeräte', 'type': 'Elektrogroßgeräte', 'city': 'Berlin', 'size': '10', 'price': '485,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/elektrogrossgerate-container?variant=55573160886645&quantity=1'}
-2025-12-13 12:33:34 [berlin-recycling] DEBUG:     22 m³: 795,00 €
-2025-12-13 12:33:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:14:29 [berlin-recycling] DEBUG:     22 m³: 795,00 €
+2025-12-13 15:14:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '13 m³ Elektrogroßgeräte', 'type': 'Elektrogroßgeräte', 'city': 'Berlin', 'size': '13', 'price': '580,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/elektrogrossgerate-container?variant=55573161083253&quantity=1'}
-2025-12-13 12:33:37 [berlin-recycling] DEBUG:     40 m³: 1.100,00 €
-2025-12-13 12:33:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:14:32 [berlin-recycling] DEBUG:     40 m³: 1.100,00 €
+2025-12-13 15:14:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '22 m³ Elektrogroßgeräte', 'type': 'Elektrogroßgeräte', 'city': 'Berlin', 'size': '22', 'price': '795,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/elektrogrossgerate-container?variant=55573161279861&quantity=1'}
-2025-12-13 12:33:37 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/elektrokleingeraete-container
-2025-12-13 12:33:43 [berlin-recycling] DEBUG:   Gefunden: 7 Größen für Elektrokleingeräte
-2025-12-13 12:33:47 [berlin-recycling] DEBUG:     3 m³: 300,00 €
-2025-12-13 12:33:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:14:32 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/elektrokleingeraete-container
+2025-12-13 15:14:37 [berlin-recycling] DEBUG:   Gefunden: 7 Größen für Elektrokleingeräte
+2025-12-13 15:14:41 [berlin-recycling] DEBUG:     3 m³: 300,00 €
+2025-12-13 15:14:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '40 m³ Elektrogroßgeräte', 'type': 'Elektrogroßgeräte', 'city': 'Berlin', 'size': '40', 'price': '1.100,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/elektrogrossgerate-container?variant=55573161476469&quantity=1'}
-2025-12-13 12:33:50 [berlin-recycling] DEBUG:     5 m³: 310,00 €
-2025-12-13 12:33:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:14:44 [berlin-recycling] DEBUG:     5 m³: 310,00 €
+2025-12-13 15:14:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '3 m³ Elektrokleingeräte', 'type': 'Elektrokleingeräte', 'city': 'Berlin', 'size': '3', 'price': '300,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/elektrokleingeraete-container?variant=55573144043893&quantity=1'}
-2025-12-13 12:33:53 [berlin-recycling] DEBUG:     7 m³: 320,00 €
-2025-12-13 12:33:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:14:47 [berlin-recycling] DEBUG:     7 m³: 320,00 €
+2025-12-13 15:14:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '5 m³ Elektrokleingeräte', 'type': 'Elektrokleingeräte', 'city': 'Berlin', 'size': '5', 'price': '310,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/elektrokleingeraete-container?variant=55573144240501&quantity=1'}
-2025-12-13 12:33:56 [berlin-recycling] DEBUG:     10 m³: 325,00 €
-2025-12-13 12:33:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:14:50 [berlin-recycling] DEBUG:     10 m³: 325,00 €
+2025-12-13 15:14:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '7 m³ Elektrokleingeräte', 'type': 'Elektrokleingeräte', 'city': 'Berlin', 'size': '7', 'price': '320,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/elektrokleingeraete-container?variant=55573144437109&quantity=1'}
-2025-12-13 12:33:59 [berlin-recycling] DEBUG:     13 m³: 370,00 €
-2025-12-13 12:33:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:14:53 [berlin-recycling] DEBUG:     13 m³: 370,00 €
+2025-12-13 15:14:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '10 m³ Elektrokleingeräte', 'type': 'Elektrokleingeräte', 'city': 'Berlin', 'size': '10', 'price': '325,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/elektrokleingeraete-container?variant=55573144633717&quantity=1'}
-2025-12-13 12:34:02 [berlin-recycling] DEBUG:     22 m³: 415,00 €
-2025-12-13 12:34:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:14:56 [berlin-recycling] DEBUG:     22 m³: 415,00 €
+2025-12-13 15:14:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '13 m³ Elektrokleingeräte', 'type': 'Elektrokleingeräte', 'city': 'Berlin', 'size': '13', 'price': '370,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/elektrokleingeraete-container?variant=55573144830325&quantity=1'}
-2025-12-13 12:34:05 [berlin-recycling] DEBUG:     40 m³: 500,00 €
-2025-12-13 12:34:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:14:59 [berlin-recycling] DEBUG:     40 m³: 500,00 €
+2025-12-13 15:14:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '22 m³ Elektrokleingeräte', 'type': 'Elektrokleingeräte', 'city': 'Berlin', 'size': '22', 'price': '415,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/elektrokleingeraete-container?variant=55573145026933&quantity=1'}
-2025-12-13 12:34:05 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/gartenabfall-entsorgen-container
-2025-12-13 12:34:10 [berlin-recycling] DEBUG:   Gefunden: 6 Größen für Gartenabfälle
-2025-12-13 12:34:13 [berlin-recycling] DEBUG:     3 m³: 219,00 €
-2025-12-13 12:34:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:14:59 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/gartenabfall-entsorgen-container
+2025-12-13 15:15:04 [berlin-recycling] DEBUG:   Gefunden: 6 Größen für Gartenabfälle
+2025-12-13 15:15:07 [berlin-recycling] DEBUG:     3 m³: 219,00 €
+2025-12-13 15:15:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '40 m³ Elektrokleingeräte', 'type': 'Elektrokleingeräte', 'city': 'Berlin', 'size': '40', 'price': '500,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/elektrokleingeraete-container?variant=55573145223541&quantity=1'}
-2025-12-13 12:34:16 [berlin-recycling] DEBUG:     5 m³: 318,00 €
-2025-12-13 12:34:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '3 m³ Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '3', 'price': '219,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gartenabfall-entsorgen-container?variant=46671537537309&quantity=1'}
-2025-12-13 12:34:19 [berlin-recycling] DEBUG:     7 m³: 370,00 €
-2025-12-13 12:34:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '5 m³ Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '5', 'price': '318,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gartenabfall-entsorgen-container?variant=46671537701149&quantity=1'}
-2025-12-13 12:34:22 [berlin-recycling] DEBUG:     10 m³: 447,00 €
-2025-12-13 12:34:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '7 m³ Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '7', 'price': '370,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gartenabfall-entsorgen-container?variant=46671537832221&quantity=1'}
-2025-12-13 12:34:22 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 45 items (at 16 items/min)
-2025-12-13 12:34:25 [berlin-recycling] DEBUG:     13 m³: 566,00 €
-2025-12-13 12:34:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '10 m³ Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '10', 'price': '447,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gartenabfall-entsorgen-container?variant=46671538094365&quantity=1'}
-2025-12-13 12:34:28 [berlin-recycling] DEBUG:     22 m³: 798,00 €
-2025-12-13 12:34:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '13 m³ Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '13', 'price': '566,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gartenabfall-entsorgen-container?variant=47205493440797&quantity=1'}
-2025-12-13 12:34:28 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/gemischte-verpackungen-entsorgen-container
-2025-12-13 12:34:33 [berlin-recycling] DEBUG:   Gefunden: 7 Größen für Gemischte Verpackungen
-2025-12-13 12:34:36 [berlin-recycling] DEBUG:     3 m³: 300,00 €
-2025-12-13 12:34:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '22 m³ Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '22', 'price': '798,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gartenabfall-entsorgen-container?variant=47073303331101&quantity=1'}
-2025-12-13 12:34:39 [berlin-recycling] DEBUG:     5 m³: 385,00 €
-2025-12-13 12:34:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:15:10 [berlin-recycling] DEBUG:     5 m³: 318,00 €
+2025-12-13 15:15:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '3 m³ Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '3', 'price': '219,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gartenabfall-entsorgen-container?variant=46671537537309&quantity=1'}
+2025-12-13 15:15:13 [berlin-recycling] DEBUG:     7 m³: 370,00 €
+2025-12-13 15:15:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '5 m³ Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '5', 'price': '318,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gartenabfall-entsorgen-container?variant=46671537701149&quantity=1'}
+2025-12-13 15:15:16 [berlin-recycling] DEBUG:     10 m³: 447,00 €
+2025-12-13 15:15:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '7 m³ Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '7', 'price': '370,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gartenabfall-entsorgen-container?variant=46671537832221&quantity=1'}
+2025-12-13 15:15:16 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 45 items (at 16 items/min)
+2025-12-13 15:15:19 [berlin-recycling] DEBUG:     13 m³: 566,00 €
+2025-12-13 15:15:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '10 m³ Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '10', 'price': '447,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gartenabfall-entsorgen-container?variant=46671538094365&quantity=1'}
+2025-12-13 15:15:22 [berlin-recycling] DEBUG:     22 m³: 798,00 €
+2025-12-13 15:15:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '13 m³ Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '13', 'price': '566,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gartenabfall-entsorgen-container?variant=47205493440797&quantity=1'}
+2025-12-13 15:15:22 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/gemischte-verpackungen-entsorgen-container
+2025-12-13 15:15:27 [berlin-recycling] DEBUG:   Gefunden: 7 Größen für Gemischte Verpackungen
+2025-12-13 15:15:30 [berlin-recycling] DEBUG:     3 m³: 300,00 €
+2025-12-13 15:15:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '22 m³ Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '22', 'price': '798,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gartenabfall-entsorgen-container?variant=47073303331101&quantity=1'}
+2025-12-13 15:15:33 [berlin-recycling] DEBUG:     5 m³: 385,00 €
+2025-12-13 15:15:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '3 m³ Gemischte Verpackungen', 'type': 'Gemischte Verpackungen', 'city': 'Berlin', 'size': '3', 'price': '300,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gemischte-verpackungen-entsorgen-container?variant=55568651452789&quantity=1'}
-2025-12-13 12:34:42 [berlin-recycling] DEBUG:     7 m³: 410,00 €
-2025-12-13 12:34:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:15:36 [berlin-recycling] DEBUG:     7 m³: 410,00 €
+2025-12-13 15:15:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '5 m³ Gemischte Verpackungen', 'type': 'Gemischte Verpackungen', 'city': 'Berlin', 'size': '5', 'price': '385,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gemischte-verpackungen-entsorgen-container?variant=55568651649397&quantity=1'}
-2025-12-13 12:34:45 [berlin-recycling] DEBUG:     10 m³: 440,00 €
-2025-12-13 12:34:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:15:39 [berlin-recycling] DEBUG:     10 m³: 440,00 €
+2025-12-13 15:15:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '7 m³ Gemischte Verpackungen', 'type': 'Gemischte Verpackungen', 'city': 'Berlin', 'size': '7', 'price': '410,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gemischte-verpackungen-entsorgen-container?variant=55568651846005&quantity=1'}
-2025-12-13 12:34:48 [berlin-recycling] DEBUG:     13 m³: 880,00 €
-2025-12-13 12:34:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:15:43 [berlin-recycling] DEBUG:     13 m³: 880,00 €
+2025-12-13 15:15:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '10 m³ Gemischte Verpackungen', 'type': 'Gemischte Verpackungen', 'city': 'Berlin', 'size': '10', 'price': '440,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gemischte-verpackungen-entsorgen-container?variant=55568652042613&quantity=1'}
-2025-12-13 12:34:51 [berlin-recycling] DEBUG:     22 m³: 1.200,00 €
-2025-12-13 12:34:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:15:46 [berlin-recycling] DEBUG:     22 m³: 1.200,00 €
+2025-12-13 15:15:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '13 m³ Gemischte Verpackungen', 'type': 'Gemischte Verpackungen', 'city': 'Berlin', 'size': '13', 'price': '880,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gemischte-verpackungen-entsorgen-container?variant=55568652239221&quantity=1'}
-2025-12-13 12:34:54 [berlin-recycling] DEBUG:     40 m³: 1.950,00 €
-2025-12-13 12:34:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:15:49 [berlin-recycling] DEBUG:     40 m³: 1.950,00 €
+2025-12-13 15:15:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '22 m³ Gemischte Verpackungen', 'type': 'Gemischte Verpackungen', 'city': 'Berlin', 'size': '22', 'price': '1.200,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gemischte-verpackungen-entsorgen-container?variant=55568652435829&quantity=1'}
-2025-12-13 12:34:54 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/gewerbeabfall-entsorgen-container
-2025-12-13 12:34:59 [berlin-recycling] DEBUG:   Gefunden: 7 Größen für Gewerbeabfall
-2025-12-13 12:35:02 [berlin-recycling] DEBUG:     3 m³: 285,00 €
-2025-12-13 12:35:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:15:49 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/gewerbeabfall-entsorgen-container
+2025-12-13 15:15:54 [berlin-recycling] DEBUG:   Gefunden: 7 Größen für Gewerbeabfall
+2025-12-13 15:15:57 [berlin-recycling] DEBUG:     3 m³: 285,00 €
+2025-12-13 15:15:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '40 m³ Gemischte Verpackungen', 'type': 'Gemischte Verpackungen', 'city': 'Berlin', 'size': '40', 'price': '1.950,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gemischte-verpackungen-entsorgen-container?variant=55568652632437&quantity=1'}
-2025-12-13 12:35:05 [berlin-recycling] DEBUG:     5 m³: 428,00 €
-2025-12-13 12:35:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '3 m³ Gewerbeabfall', 'type': 'Gewerbeabfall', 'city': 'Berlin', 'size': '3', 'price': '285,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gewerbeabfall-entsorgen-container?variant=46671802007837&quantity=1'}
-2025-12-13 12:35:08 [berlin-recycling] DEBUG:     7 m³: 524,00 €
-2025-12-13 12:35:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '5 m³ Gewerbeabfall', 'type': 'Gewerbeabfall', 'city': 'Berlin', 'size': '5', 'price': '428,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gewerbeabfall-entsorgen-container?variant=46671802138909&quantity=1'}
-2025-12-13 12:35:11 [berlin-recycling] DEBUG:     10 m³: 668,00 €
-2025-12-13 12:35:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '7 m³ Gewerbeabfall', 'type': 'Gewerbeabfall', 'city': 'Berlin', 'size': '7', 'price': '524,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gewerbeabfall-entsorgen-container?variant=46671802269981&quantity=1'}
-2025-12-13 12:35:15 [berlin-recycling] DEBUG:     13 m³: 852,00 €
-2025-12-13 12:35:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '10 m³ Gewerbeabfall', 'type': 'Gewerbeabfall', 'city': 'Berlin', 'size': '10', 'price': '668,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gewerbeabfall-entsorgen-container?variant=46671802564893&quantity=1'}
-2025-12-13 12:35:18 [berlin-recycling] DEBUG:     22 m³: 1.283,00 €
-2025-12-13 12:35:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '13 m³ Gewerbeabfall', 'type': 'Gewerbeabfall', 'city': 'Berlin', 'size': '13', 'price': '852,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gewerbeabfall-entsorgen-container?variant=47205486756125&quantity=1'}
-2025-12-13 12:35:21 [berlin-recycling] DEBUG:     40 m³: 2.145,00 €
-2025-12-13 12:35:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '22 m³ Gewerbeabfall', 'type': 'Gewerbeabfall', 'city': 'Berlin', 'size': '22', 'price': '1.283,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gewerbeabfall-entsorgen-container?variant=46671803089181&quantity=1'}
-2025-12-13 12:35:21 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/glaswolle-entsorgung-container
-2025-12-13 12:35:26 [berlin-recycling] DEBUG:   Gefunden: 14 Größen für Glaswolle
-2025-12-13 12:35:29 [berlin-recycling] DEBUG:     3 m³: 375,00 €
-2025-12-13 12:35:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '40 m³ Gewerbeabfall', 'type': 'Gewerbeabfall', 'city': 'Berlin', 'size': '40', 'price': '2.145,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gewerbeabfall-entsorgen-container?variant=46671803646237&quantity=1'}
-2025-12-13 12:35:29 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 62 items (at 17 items/min)
-2025-12-13 12:35:32 [berlin-recycling] DEBUG:     3 m³: 375,00 €
-2025-12-13 12:35:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:16:00 [berlin-recycling] DEBUG:     5 m³: 428,00 €
+2025-12-13 15:16:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '3 m³ Gewerbeabfall', 'type': 'Gewerbeabfall', 'city': 'Berlin', 'size': '3', 'price': '285,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gewerbeabfall-entsorgen-container?variant=46671802007837&quantity=1'}
+2025-12-13 15:16:03 [berlin-recycling] DEBUG:     7 m³: 524,00 €
+2025-12-13 15:16:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '5 m³ Gewerbeabfall', 'type': 'Gewerbeabfall', 'city': 'Berlin', 'size': '5', 'price': '428,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gewerbeabfall-entsorgen-container?variant=46671802138909&quantity=1'}
+2025-12-13 15:16:06 [berlin-recycling] DEBUG:     10 m³: 668,00 €
+2025-12-13 15:16:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '7 m³ Gewerbeabfall', 'type': 'Gewerbeabfall', 'city': 'Berlin', 'size': '7', 'price': '524,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gewerbeabfall-entsorgen-container?variant=46671802269981&quantity=1'}
+2025-12-13 15:16:09 [berlin-recycling] DEBUG:     13 m³: 852,00 €
+2025-12-13 15:16:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '10 m³ Gewerbeabfall', 'type': 'Gewerbeabfall', 'city': 'Berlin', 'size': '10', 'price': '668,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gewerbeabfall-entsorgen-container?variant=46671802564893&quantity=1'}
+2025-12-13 15:16:12 [berlin-recycling] DEBUG:     22 m³: 1.283,00 €
+2025-12-13 15:16:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '13 m³ Gewerbeabfall', 'type': 'Gewerbeabfall', 'city': 'Berlin', 'size': '13', 'price': '852,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gewerbeabfall-entsorgen-container?variant=47205486756125&quantity=1'}
+2025-12-13 15:16:15 [berlin-recycling] DEBUG:     40 m³: 2.145,00 €
+2025-12-13 15:16:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '22 m³ Gewerbeabfall', 'type': 'Gewerbeabfall', 'city': 'Berlin', 'size': '22', 'price': '1.283,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gewerbeabfall-entsorgen-container?variant=46671803089181&quantity=1'}
+2025-12-13 15:16:15 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 61 items (at 16 items/min)
+2025-12-13 15:16:15 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/glaswolle-entsorgung-container
+2025-12-13 15:16:20 [berlin-recycling] DEBUG:   Gefunden: 14 Größen für Glaswolle
+2025-12-13 15:16:23 [berlin-recycling] DEBUG:     3 m³: 375,00 €
+2025-12-13 15:16:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '40 m³ Gewerbeabfall', 'type': 'Gewerbeabfall', 'city': 'Berlin', 'size': '40', 'price': '2.145,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/gewerbeabfall-entsorgen-container?variant=46671803646237&quantity=1'}
+2025-12-13 15:16:26 [berlin-recycling] DEBUG:     3 m³: 375,00 €
+2025-12-13 15:16:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '3 m³ Glaswolle', 'type': 'Glaswolle', 'city': 'Berlin', 'size': '3', 'price': '375,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/glaswolle-entsorgung-container?variant=47284906098973&quantity=1'}
-2025-12-13 12:35:35 [berlin-recycling] DEBUG:     5 m³: 635,00 €
-2025-12-13 12:35:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:16:29 [berlin-recycling] DEBUG:     5 m³: 635,00 €
+2025-12-13 15:16:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '3 m³ Glaswolle', 'type': 'Glaswolle', 'city': 'Berlin', 'size': '3', 'price': '375,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/glaswolle-entsorgung-container?variant=55490202141045&quantity=1'}
-2025-12-13 12:35:38 [berlin-recycling] DEBUG:     5 m³: 635,00 €
-2025-12-13 12:35:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:16:32 [berlin-recycling] DEBUG:     5 m³: 635,00 €
+2025-12-13 15:16:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '5 m³ Glaswolle', 'type': 'Glaswolle', 'city': 'Berlin', 'size': '5', 'price': '635,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/glaswolle-entsorgung-container?variant=47284906230045&quantity=1'}
-2025-12-13 12:35:41 [berlin-recycling] DEBUG:     7 m³: 825,00 €
-2025-12-13 12:35:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:16:36 [berlin-recycling] DEBUG:     7 m³: 825,00 €
+2025-12-13 15:16:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '5 m³ Glaswolle', 'type': 'Glaswolle', 'city': 'Berlin', 'size': '5', 'price': '635,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/glaswolle-entsorgung-container?variant=55490202272117&quantity=1'}
-2025-12-13 12:35:44 [berlin-recycling] DEBUG:     7 m³: 825,00 €
-2025-12-13 12:35:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:16:39 [berlin-recycling] DEBUG:     7 m³: 825,00 €
+2025-12-13 15:16:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '7 m³ Glaswolle', 'type': 'Glaswolle', 'city': 'Berlin', 'size': '7', 'price': '825,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/glaswolle-entsorgung-container?variant=47284906361117&quantity=1'}
-2025-12-13 12:35:47 [berlin-recycling] DEBUG:     10 m³: 1.010,00 €
-2025-12-13 12:35:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:16:42 [berlin-recycling] DEBUG:     10 m³: 1.010,00 €
+2025-12-13 15:16:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '7 m³ Glaswolle', 'type': 'Glaswolle', 'city': 'Berlin', 'size': '7', 'price': '825,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/glaswolle-entsorgung-container?variant=55490202403189&quantity=1'}
-2025-12-13 12:35:50 [berlin-recycling] DEBUG:     10 m³: 1.010,00 €
-2025-12-13 12:35:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:16:45 [berlin-recycling] DEBUG:     10 m³: 1.010,00 €
+2025-12-13 15:16:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '10 m³ Glaswolle', 'type': 'Glaswolle', 'city': 'Berlin', 'size': '10', 'price': '1.010,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/glaswolle-entsorgung-container?variant=47284906623261&quantity=1'}
-2025-12-13 12:35:53 [berlin-recycling] DEBUG:     13 m³: 1.270,00 €
-2025-12-13 12:35:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:16:48 [berlin-recycling] DEBUG:     13 m³: 1.270,00 €
+2025-12-13 15:16:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '10 m³ Glaswolle', 'type': 'Glaswolle', 'city': 'Berlin', 'size': '10', 'price': '1.010,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/glaswolle-entsorgung-container?variant=55490202534261&quantity=1'}
-2025-12-13 12:35:57 [berlin-recycling] DEBUG:     13 m³: 1.270,00 €
-2025-12-13 12:35:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:16:51 [berlin-recycling] DEBUG:     13 m³: 1.270,00 €
+2025-12-13 15:16:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '13 m³ Glaswolle', 'type': 'Glaswolle', 'city': 'Berlin', 'size': '13', 'price': '1.270,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/glaswolle-entsorgung-container?variant=47284906885405&quantity=1'}
-2025-12-13 12:36:00 [berlin-recycling] DEBUG:     22 m³: 1.820,00 €
-2025-12-13 12:36:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:16:54 [berlin-recycling] DEBUG:     22 m³: 1.820,00 €
+2025-12-13 15:16:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '13 m³ Glaswolle', 'type': 'Glaswolle', 'city': 'Berlin', 'size': '13', 'price': '1.270,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/glaswolle-entsorgung-container?variant=55490202665333&quantity=1'}
-2025-12-13 12:36:03 [berlin-recycling] DEBUG:     22 m³: 1.820,00 €
-2025-12-13 12:36:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:16:57 [berlin-recycling] DEBUG:     22 m³: 1.820,00 €
+2025-12-13 15:16:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '22 m³ Glaswolle', 'type': 'Glaswolle', 'city': 'Berlin', 'size': '22', 'price': '1.820,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/glaswolle-entsorgung-container?variant=47284907278621&quantity=1'}
-2025-12-13 12:36:06 [berlin-recycling] DEBUG:     40 m³: 2.910,00 €
-2025-12-13 12:36:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:17:00 [berlin-recycling] DEBUG:     40 m³: 2.910,00 €
+2025-12-13 15:17:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '22 m³ Glaswolle', 'type': 'Glaswolle', 'city': 'Berlin', 'size': '22', 'price': '1.820,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/glaswolle-entsorgung-container?variant=55490202796405&quantity=1'}
-2025-12-13 12:36:09 [berlin-recycling] DEBUG:     40 m³: 2.910,00 €
-2025-12-13 12:36:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:17:04 [berlin-recycling] DEBUG:     40 m³: 2.910,00 €
+2025-12-13 15:17:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '40 m³ Glaswolle', 'type': 'Glaswolle', 'city': 'Berlin', 'size': '40', 'price': '2.910,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/glaswolle-entsorgung-container?variant=55489998815605&quantity=1'}
-2025-12-13 12:36:09 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/holz-a1-entsorgen-container
-2025-12-13 12:36:14 [berlin-recycling] DEBUG:   Gefunden: 7 Größen für Holz A1
-2025-12-13 12:36:17 [berlin-recycling] DEBUG:     3 m³: 230,00 €
-2025-12-13 12:36:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:17:04 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/holz-a1-entsorgen-container
+2025-12-13 15:17:08 [berlin-recycling] DEBUG:   Gefunden: 7 Größen für Holz A1
+2025-12-13 15:17:11 [berlin-recycling] DEBUG:     3 m³: 230,00 €
+2025-12-13 15:17:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '40 m³ Glaswolle', 'type': 'Glaswolle', 'city': 'Berlin', 'size': '40', 'price': '2.910,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/glaswolle-entsorgung-container?variant=55490202927477&quantity=1'}
-2025-12-13 12:36:20 [berlin-recycling] DEBUG:     5 m³: 305,00 €
-2025-12-13 12:36:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '3 m³ Holz A1', 'type': 'Holz A1', 'city': 'Berlin', 'size': '3', 'price': '230,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a1-entsorgen-container?variant=55568260759925&quantity=1'}
-2025-12-13 12:36:23 [berlin-recycling] DEBUG:     7 m³: 305,00 €
-2025-12-13 12:36:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '5 m³ Holz A1', 'type': 'Holz A1', 'city': 'Berlin', 'size': '5', 'price': '305,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a1-entsorgen-container?variant=55568260956533&quantity=1'}
-2025-12-13 12:36:23 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 78 items (at 16 items/min)
-2025-12-13 12:36:26 [berlin-recycling] DEBUG:     10 m³: 365,00 €
-2025-12-13 12:36:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '7 m³ Holz A1', 'type': 'Holz A1', 'city': 'Berlin', 'size': '7', 'price': '305,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a1-entsorgen-container?variant=55568261153141&quantity=1'}
-2025-12-13 12:36:29 [berlin-recycling] DEBUG:     13 m³: 550,00 €
-2025-12-13 12:36:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '10 m³ Holz A1', 'type': 'Holz A1', 'city': 'Berlin', 'size': '10', 'price': '365,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a1-entsorgen-container?variant=55568261349749&quantity=1'}
-2025-12-13 12:36:32 [berlin-recycling] DEBUG:     22 m³: 660,00 €
-2025-12-13 12:36:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '13 m³ Holz A1', 'type': 'Holz A1', 'city': 'Berlin', 'size': '13', 'price': '550,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a1-entsorgen-container?variant=55568261546357&quantity=1'}
-2025-12-13 12:36:35 [berlin-recycling] DEBUG:     40 m³: 900,00 €
-2025-12-13 12:36:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '22 m³ Holz A1', 'type': 'Holz A1', 'city': 'Berlin', 'size': '22', 'price': '660,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a1-entsorgen-container?variant=55568261742965&quantity=1'}
-2025-12-13 12:36:35 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/holz-a2-a3-entsorgen-container
-2025-12-13 12:36:40 [berlin-recycling] DEBUG:   Gefunden: 7 Größen für Holz A2-A3
-2025-12-13 12:36:43 [berlin-recycling] DEBUG:     3 m³: 214,00 €
-2025-12-13 12:36:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '40 m³ Holz A1', 'type': 'Holz A1', 'city': 'Berlin', 'size': '40', 'price': '900,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a1-entsorgen-container?variant=55568261939573&quantity=1'}
-2025-12-13 12:36:47 [berlin-recycling] DEBUG:     5 m³: 309,00 €
-2025-12-13 12:36:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '3 m³ Holz A2-A3', 'type': 'Holz A2-A3', 'city': 'Berlin', 'size': '3', 'price': '214,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a2-a3-entsorgen-container?variant=47205477318941&quantity=1'}
-2025-12-13 12:36:50 [berlin-recycling] DEBUG:     7 m³: 357,00 €
-2025-12-13 12:36:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '5 m³ Holz A2-A3', 'type': 'Holz A2-A3', 'city': 'Berlin', 'size': '5', 'price': '309,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a2-a3-entsorgen-container?variant=47205477450013&quantity=1'}
-2025-12-13 12:36:53 [berlin-recycling] DEBUG:     10 m³: 428,00 €
-2025-12-13 12:36:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '7 m³ Holz A2-A3', 'type': 'Holz A2-A3', 'city': 'Berlin', 'size': '7', 'price': '357,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a2-a3-entsorgen-container?variant=47205477581085&quantity=1'}
-2025-12-13 12:36:56 [berlin-recycling] DEBUG:     13 m³: 541,00 €
-2025-12-13 12:36:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '10 m³ Holz A2-A3', 'type': 'Holz A2-A3', 'city': 'Berlin', 'size': '10', 'price': '428,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a2-a3-entsorgen-container?variant=47205477843229&quantity=1'}
-2025-12-13 12:36:59 [berlin-recycling] DEBUG:     22 m³: 757,00 €
-2025-12-13 12:36:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '13 m³ Holz A2-A3', 'type': 'Holz A2-A3', 'city': 'Berlin', 'size': '13', 'price': '541,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a2-a3-entsorgen-container?variant=46797241909533&quantity=1'}
-2025-12-13 12:37:02 [berlin-recycling] DEBUG:     40 m³: 1.188,00 €
-2025-12-13 12:37:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '22 m³ Holz A2-A3', 'type': 'Holz A2-A3', 'city': 'Berlin', 'size': '22', 'price': '757,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a2-a3-entsorgen-container?variant=47205478498589&quantity=1'}
-2025-12-13 12:37:02 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/holz-a4-entsorgen-container
-2025-12-13 12:37:07 [berlin-recycling] DEBUG:   Gefunden: 7 Größen für Holz A4
-2025-12-13 12:37:10 [berlin-recycling] DEBUG:     3 m³: 221,00 €
-2025-12-13 12:37:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '40 m³ Holz A2-A3', 'type': 'Holz A2-A3', 'city': 'Berlin', 'size': '40', 'price': '1.188,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a2-a3-entsorgen-container?variant=47205478629661&quantity=1'}
-2025-12-13 12:37:13 [berlin-recycling] DEBUG:     5 m³: 321,00 €
-2025-12-13 12:37:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '3 m³ Holz A4', 'type': 'Holz A4', 'city': 'Berlin', 'size': '3', 'price': '221,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a4-entsorgen-container?variant=47205467357469&quantity=1'}
-2025-12-13 12:37:16 [berlin-recycling] DEBUG:     7 m³: 374,00 €
-2025-12-13 12:37:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '5 m³ Holz A4', 'type': 'Holz A4', 'city': 'Berlin', 'size': '5', 'price': '321,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a4-entsorgen-container?variant=47205467488541&quantity=1'}
-2025-12-13 12:37:19 [berlin-recycling] DEBUG:     10 m³: 454,00 €
-2025-12-13 12:37:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '7 m³ Holz A4', 'type': 'Holz A4', 'city': 'Berlin', 'size': '7', 'price': '374,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a4-entsorgen-container?variant=47205467619613&quantity=1'}
-2025-12-13 12:37:22 [berlin-recycling] DEBUG:     13 m³: 574,00 €
-2025-12-13 12:37:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '10 m³ Holz A4', 'type': 'Holz A4', 'city': 'Berlin', 'size': '10', 'price': '454,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a4-entsorgen-container?variant=47205467881757&quantity=1'}
-2025-12-13 12:37:22 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 94 items (at 16 items/min)
-2025-12-13 12:37:25 [berlin-recycling] DEBUG:     22 m³: 812,00 €
-2025-12-13 12:37:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '13 m³ Holz A4', 'type': 'Holz A4', 'city': 'Berlin', 'size': '13', 'price': '574,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a4-entsorgen-container?variant=47205468143901&quantity=1'}
-2025-12-13 12:37:28 [berlin-recycling] DEBUG:     40 m³: 1.288,00 €
-2025-12-13 12:37:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '22 m³ Holz A4', 'type': 'Holz A4', 'city': 'Berlin', 'size': '22', 'price': '812,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a4-entsorgen-container?variant=55433159639413&quantity=1'}
-2025-12-13 12:37:28 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/pappe-papier-entsorgen-container
-2025-12-13 12:37:33 [berlin-recycling] DEBUG:   Gefunden: 7 Größen für Pappe, Papier und Kartonage
-2025-12-13 12:37:36 [berlin-recycling] DEBUG:     3 m³: 190,00 €
-2025-12-13 12:37:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '40 m³ Holz A4', 'type': 'Holz A4', 'city': 'Berlin', 'size': '40', 'price': '1.288,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a4-entsorgen-container?variant=47205468537117&quantity=1'}
-2025-12-13 12:37:39 [berlin-recycling] DEBUG:     5 m³: 220,00 €
-2025-12-13 12:37:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '3 m³ Pappe, Papier und Kartonage', 'type': 'Pappe, Papier und Kartonage', 'city': 'Berlin', 'size': '3', 'price': '190,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/pappe-papier-entsorgen-container?variant=47205449662749&quantity=1'}
-2025-12-13 12:37:42 [berlin-recycling] DEBUG:     7 m³: 220,00 €
-2025-12-13 12:37:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '5 m³ Pappe, Papier und Kartonage', 'type': 'Pappe, Papier und Kartonage', 'city': 'Berlin', 'size': '5', 'price': '220,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/pappe-papier-entsorgen-container?variant=47205449793821&quantity=1'}
-2025-12-13 12:37:45 [berlin-recycling] DEBUG:     10 m³: 250,00 €
-2025-12-13 12:37:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '7 m³ Pappe, Papier und Kartonage', 'type': 'Pappe, Papier und Kartonage', 'city': 'Berlin', 'size': '7', 'price': '220,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/pappe-papier-entsorgen-container?variant=47205449924893&quantity=1'}
-2025-12-13 12:37:48 [berlin-recycling] DEBUG:     13 m³: 260,00 €
-2025-12-13 12:37:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '10 m³ Pappe, Papier und Kartonage', 'type': 'Pappe, Papier und Kartonage', 'city': 'Berlin', 'size': '10', 'price': '250,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/pappe-papier-entsorgen-container?variant=47205450187037&quantity=1'}
-2025-12-13 12:37:52 [berlin-recycling] DEBUG:     22 m³: 260,00 €
-2025-12-13 12:37:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '13 m³ Pappe, Papier und Kartonage', 'type': 'Pappe, Papier und Kartonage', 'city': 'Berlin', 'size': '13', 'price': '260,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/pappe-papier-entsorgen-container?variant=46797932855581&quantity=1'}
-2025-12-13 12:37:55 [berlin-recycling] DEBUG:     40 m³: 300,00 €
-2025-12-13 12:37:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '22 m³ Pappe, Papier und Kartonage', 'type': 'Pappe, Papier und Kartonage', 'city': 'Berlin', 'size': '22', 'price': '260,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/pappe-papier-entsorgen-container?variant=47205450580253&quantity=1'}
-2025-12-13 12:37:55 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/rigipsentsorgung-container
-2025-12-13 12:37:59 [berlin-recycling] DEBUG:   Gefunden: 6 Größen für Rigips
-2025-12-13 12:38:02 [berlin-recycling] DEBUG:     3 m³: 285,00 €
-2025-12-13 12:38:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '40 m³ Pappe, Papier und Kartonage', 'type': 'Pappe, Papier und Kartonage', 'city': 'Berlin', 'size': '40', 'price': '300,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/pappe-papier-entsorgen-container?variant=47205450973469&quantity=1'}
-2025-12-13 12:38:05 [berlin-recycling] DEBUG:     5 m³: 428,00 €
-2025-12-13 12:38:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '3 m³ Rigips', 'type': 'Rigips', 'city': 'Berlin', 'size': '3', 'price': '285,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/rigipsentsorgung-container?variant=47310209417501&quantity=1'}
-2025-12-13 12:38:09 [berlin-recycling] DEBUG:     7 m³: 524,00 €
-2025-12-13 12:38:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '5 m³ Rigips', 'type': 'Rigips', 'city': 'Berlin', 'size': '5', 'price': '428,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/rigipsentsorgung-container?variant=47310209548573&quantity=1'}
-2025-12-13 12:38:12 [berlin-recycling] DEBUG:     10 m³: 668,00 €
-2025-12-13 12:38:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '7 m³ Rigips', 'type': 'Rigips', 'city': 'Berlin', 'size': '7', 'price': '524,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/rigipsentsorgung-container?variant=47310209679645&quantity=1'}
-2025-12-13 12:38:15 [berlin-recycling] DEBUG:     13 m³: 852,00 €
-2025-12-13 12:38:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '10 m³ Rigips', 'type': 'Rigips', 'city': 'Berlin', 'size': '10', 'price': '668,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/rigipsentsorgung-container?variant=47310209941789&quantity=1'}
-2025-12-13 12:38:18 [berlin-recycling] DEBUG:     22 m³: 1.283,00 €
-2025-12-13 12:38:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '13 m³ Rigips', 'type': 'Rigips', 'city': 'Berlin', 'size': '13', 'price': '852,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/rigipsentsorgung-container?variant=47310210335005&quantity=1'}
-2025-12-13 12:38:18 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/sperrmuell-entsorgen-container
-2025-12-13 12:38:23 [berlin-recycling] DEBUG:   Gefunden: 7 Größen für Sperrmüll
-2025-12-13 12:38:26 [berlin-recycling] DEBUG:     3 m³: 270,00 €
-2025-12-13 12:38:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '22 m³ Rigips', 'type': 'Rigips', 'city': 'Berlin', 'size': '22', 'price': '1.283,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/rigipsentsorgung-container?variant=48261222007069&quantity=1'}
-2025-12-13 12:38:26 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 110 items (at 16 items/min)
-2025-12-13 12:38:29 [berlin-recycling] DEBUG:     5 m³: 403,00 €
-2025-12-13 12:38:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '3 m³ Sperrmüll', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '3', 'price': '270,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/sperrmuell-entsorgen-container?variant=46674580668701&quantity=1'}
-2025-12-13 12:38:32 [berlin-recycling] DEBUG:     7 m³: 489,00 €
-2025-12-13 12:38:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '5 m³ Sperrmüll', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '5', 'price': '403,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/sperrmuell-entsorgen-container?variant=46674580799773&quantity=1'}
-2025-12-13 12:38:35 [berlin-recycling] DEBUG:     10 m³: 617,00 €
-2025-12-13 12:38:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '7 m³ Sperrmüll', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '7', 'price': '489,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/sperrmuell-entsorgen-container?variant=46674580930845&quantity=1'}
-2025-12-13 12:38:38 [berlin-recycling] DEBUG:     13 m³: 787,00 €
-2025-12-13 12:38:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '10 m³ Sperrmüll', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '10', 'price': '617,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/sperrmuell-entsorgen-container?variant=46674581192989&quantity=1'}
-2025-12-13 12:38:41 [berlin-recycling] DEBUG:     22 m³: 1.172,00 €
-2025-12-13 12:38:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '13 m³ Sperrmüll', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '13', 'price': '787,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/sperrmuell-entsorgen-container?variant=47205440815389&quantity=1'}
-2025-12-13 12:38:44 [berlin-recycling] DEBUG:     40 m³: 1.944,00 €
-2025-12-13 12:38:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '22 m³ Sperrmüll', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '22', 'price': '1.172,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/sperrmuell-entsorgen-container?variant=55433153905013&quantity=1'}
-2025-12-13 12:38:44 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/styropor-eps-entsorgung-container
-2025-12-13 12:38:49 [berlin-recycling] DEBUG:   Gefunden: 7 Größen für Styropor EPS
-2025-12-13 12:38:52 [berlin-recycling] DEBUG:     3 m³: 375,00 €
-2025-12-13 12:38:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '40 m³ Sperrmüll', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '40', 'price': '1.944,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/sperrmuell-entsorgen-container?variant=46674582307101&quantity=1'}
-2025-12-13 12:38:55 [berlin-recycling] DEBUG:     5 m³: 580,00 €
-2025-12-13 12:38:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '3 m³ Styropor EPS', 'type': 'Styropor EPS', 'city': 'Berlin', 'size': '3', 'price': '375,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/styropor-eps-entsorgung-container?variant=55499186798965&quantity=1'}
-2025-12-13 12:38:58 [berlin-recycling] DEBUG:     7 m³: 865,00 €
-2025-12-13 12:38:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '5 m³ Styropor EPS', 'type': 'Styropor EPS', 'city': 'Berlin', 'size': '5', 'price': '580,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/styropor-eps-entsorgung-container?variant=46805184971037&quantity=1'}
-2025-12-13 12:39:01 [berlin-recycling] DEBUG:     10 m³: 1.200,00 €
-2025-12-13 12:39:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '7 m³ Styropor EPS', 'type': 'Styropor EPS', 'city': 'Berlin', 'size': '7', 'price': '865,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/styropor-eps-entsorgung-container?variant=55499187093877&quantity=1'}
-2025-12-13 12:39:04 [berlin-recycling] DEBUG:     13 m³: 1.600,00 €
-2025-12-13 12:39:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '10 m³ Styropor EPS', 'type': 'Styropor EPS', 'city': 'Berlin', 'size': '10', 'price': '1.200,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/styropor-eps-entsorgung-container?variant=55499187290485&quantity=1'}
-2025-12-13 12:39:07 [berlin-recycling] DEBUG:     22 m³: 2.800,00 €
-2025-12-13 12:39:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '13 m³ Styropor EPS', 'type': 'Styropor EPS', 'city': 'Berlin', 'size': '13', 'price': '1.600,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/styropor-eps-entsorgung-container?variant=47277106266397&quantity=1'}
-2025-12-13 12:39:10 [berlin-recycling] DEBUG:     40 m³: 4.950,00 €
-2025-12-13 12:39:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '22 m³ Styropor EPS', 'type': 'Styropor EPS', 'city': 'Berlin', 'size': '22', 'price': '2.800,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/styropor-eps-entsorgung-container?variant=46805185167645&quantity=1'}
-2025-12-13 12:39:10 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/verpackungsstyropor-entsorgung-container
-2025-12-13 12:39:15 [berlin-recycling] DEBUG:   Gefunden: 7 Größen für Verpackungsstyropor
-2025-12-13 12:39:18 [berlin-recycling] DEBUG:     3 m³: 375,00 €
-2025-12-13 12:39:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
-{'source': 'berlin-recycling.de', 'title': '40 m³ Styropor EPS', 'type': 'Styropor EPS', 'city': 'Berlin', 'size': '40', 'price': '4.950,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/styropor-eps-entsorgung-container?variant=55499187683701&quantity=1'}
-2025-12-13 12:39:21 [berlin-recycling] DEBUG:     5 m³: 580,00 €
-2025-12-13 12:39:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:17:15 [berlin-recycling] DEBUG:     5 m³: 305,00 €
+2025-12-13 15:17:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '3 m³ Holz A1', 'type': 'Holz A1', 'city': 'Berlin', 'size': '3', 'price': '230,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a1-entsorgen-container?variant=55568260759925&quantity=1'}
+2025-12-13 15:17:18 [berlin-recycling] DEBUG:     7 m³: 305,00 €
+2025-12-13 15:17:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '5 m³ Holz A1', 'type': 'Holz A1', 'city': 'Berlin', 'size': '5', 'price': '305,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a1-entsorgen-container?variant=55568260956533&quantity=1'}
+2025-12-13 15:17:18 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 78 items (at 17 items/min)
+2025-12-13 15:17:21 [berlin-recycling] DEBUG:     10 m³: 365,00 €
+2025-12-13 15:17:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '7 m³ Holz A1', 'type': 'Holz A1', 'city': 'Berlin', 'size': '7', 'price': '305,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a1-entsorgen-container?variant=55568261153141&quantity=1'}
+2025-12-13 15:17:24 [berlin-recycling] DEBUG:     13 m³: 550,00 €
+2025-12-13 15:17:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '10 m³ Holz A1', 'type': 'Holz A1', 'city': 'Berlin', 'size': '10', 'price': '365,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a1-entsorgen-container?variant=55568261349749&quantity=1'}
+2025-12-13 15:17:27 [berlin-recycling] DEBUG:     22 m³: 660,00 €
+2025-12-13 15:17:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '13 m³ Holz A1', 'type': 'Holz A1', 'city': 'Berlin', 'size': '13', 'price': '550,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a1-entsorgen-container?variant=55568261546357&quantity=1'}
+2025-12-13 15:17:30 [berlin-recycling] DEBUG:     40 m³: 900,00 €
+2025-12-13 15:17:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '22 m³ Holz A1', 'type': 'Holz A1', 'city': 'Berlin', 'size': '22', 'price': '660,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a1-entsorgen-container?variant=55568261742965&quantity=1'}
+2025-12-13 15:17:30 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/holz-a2-a3-entsorgen-container
+2025-12-13 15:17:35 [berlin-recycling] DEBUG:   Gefunden: 7 Größen für Holz A2-A3
+2025-12-13 15:17:38 [berlin-recycling] DEBUG:     3 m³: 214,00 €
+2025-12-13 15:17:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '40 m³ Holz A1', 'type': 'Holz A1', 'city': 'Berlin', 'size': '40', 'price': '900,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a1-entsorgen-container?variant=55568261939573&quantity=1'}
+2025-12-13 15:17:41 [berlin-recycling] DEBUG:     5 m³: 309,00 €
+2025-12-13 15:17:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '3 m³ Holz A2-A3', 'type': 'Holz A2-A3', 'city': 'Berlin', 'size': '3', 'price': '214,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a2-a3-entsorgen-container?variant=47205477318941&quantity=1'}
+2025-12-13 15:17:44 [berlin-recycling] DEBUG:     7 m³: 357,00 €
+2025-12-13 15:17:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '5 m³ Holz A2-A3', 'type': 'Holz A2-A3', 'city': 'Berlin', 'size': '5', 'price': '309,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a2-a3-entsorgen-container?variant=47205477450013&quantity=1'}
+2025-12-13 15:17:47 [berlin-recycling] DEBUG:     10 m³: 428,00 €
+2025-12-13 15:17:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '7 m³ Holz A2-A3', 'type': 'Holz A2-A3', 'city': 'Berlin', 'size': '7', 'price': '357,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a2-a3-entsorgen-container?variant=47205477581085&quantity=1'}
+2025-12-13 15:17:50 [berlin-recycling] DEBUG:     13 m³: 541,00 €
+2025-12-13 15:17:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '10 m³ Holz A2-A3', 'type': 'Holz A2-A3', 'city': 'Berlin', 'size': '10', 'price': '428,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a2-a3-entsorgen-container?variant=47205477843229&quantity=1'}
+2025-12-13 15:17:54 [berlin-recycling] DEBUG:     22 m³: 757,00 €
+2025-12-13 15:17:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '13 m³ Holz A2-A3', 'type': 'Holz A2-A3', 'city': 'Berlin', 'size': '13', 'price': '541,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a2-a3-entsorgen-container?variant=46797241909533&quantity=1'}
+2025-12-13 15:17:57 [berlin-recycling] DEBUG:     40 m³: 1.188,00 €
+2025-12-13 15:17:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '22 m³ Holz A2-A3', 'type': 'Holz A2-A3', 'city': 'Berlin', 'size': '22', 'price': '757,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a2-a3-entsorgen-container?variant=47205478498589&quantity=1'}
+2025-12-13 15:17:57 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/holz-a4-entsorgen-container
+2025-12-13 15:18:01 [berlin-recycling] DEBUG:   Gefunden: 7 Größen für Holz A4
+2025-12-13 15:18:04 [berlin-recycling] DEBUG:     3 m³: 221,00 €
+2025-12-13 15:18:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '40 m³ Holz A2-A3', 'type': 'Holz A2-A3', 'city': 'Berlin', 'size': '40', 'price': '1.188,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a2-a3-entsorgen-container?variant=47205478629661&quantity=1'}
+2025-12-13 15:18:08 [berlin-recycling] DEBUG:     5 m³: 321,00 €
+2025-12-13 15:18:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '3 m³ Holz A4', 'type': 'Holz A4', 'city': 'Berlin', 'size': '3', 'price': '221,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a4-entsorgen-container?variant=47205467357469&quantity=1'}
+2025-12-13 15:18:11 [berlin-recycling] DEBUG:     7 m³: 374,00 €
+2025-12-13 15:18:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '5 m³ Holz A4', 'type': 'Holz A4', 'city': 'Berlin', 'size': '5', 'price': '321,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a4-entsorgen-container?variant=47205467488541&quantity=1'}
+2025-12-13 15:18:14 [berlin-recycling] DEBUG:     10 m³: 454,00 €
+2025-12-13 15:18:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '7 m³ Holz A4', 'type': 'Holz A4', 'city': 'Berlin', 'size': '7', 'price': '374,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a4-entsorgen-container?variant=47205467619613&quantity=1'}
+2025-12-13 15:18:17 [berlin-recycling] DEBUG:     13 m³: 574,00 €
+2025-12-13 15:18:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '10 m³ Holz A4', 'type': 'Holz A4', 'city': 'Berlin', 'size': '10', 'price': '454,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a4-entsorgen-container?variant=47205467881757&quantity=1'}
+2025-12-13 15:18:17 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 94 items (at 16 items/min)
+2025-12-13 15:18:20 [berlin-recycling] DEBUG:     22 m³: 812,00 €
+2025-12-13 15:18:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '13 m³ Holz A4', 'type': 'Holz A4', 'city': 'Berlin', 'size': '13', 'price': '574,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a4-entsorgen-container?variant=47205468143901&quantity=1'}
+2025-12-13 15:18:23 [berlin-recycling] DEBUG:     40 m³: 1.288,00 €
+2025-12-13 15:18:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '22 m³ Holz A4', 'type': 'Holz A4', 'city': 'Berlin', 'size': '22', 'price': '812,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a4-entsorgen-container?variant=55433159639413&quantity=1'}
+2025-12-13 15:18:23 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/pappe-papier-entsorgen-container
+2025-12-13 15:18:28 [berlin-recycling] DEBUG:   Gefunden: 7 Größen für Pappe, Papier und Kartonage
+2025-12-13 15:18:31 [berlin-recycling] DEBUG:     3 m³: 190,00 €
+2025-12-13 15:18:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '40 m³ Holz A4', 'type': 'Holz A4', 'city': 'Berlin', 'size': '40', 'price': '1.288,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/holz-a4-entsorgen-container?variant=47205468537117&quantity=1'}
+2025-12-13 15:18:34 [berlin-recycling] DEBUG:     5 m³: 220,00 €
+2025-12-13 15:18:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '3 m³ Pappe, Papier und Kartonage', 'type': 'Pappe, Papier und Kartonage', 'city': 'Berlin', 'size': '3', 'price': '190,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/pappe-papier-entsorgen-container?variant=47205449662749&quantity=1'}
+2025-12-13 15:18:37 [berlin-recycling] DEBUG:     7 m³: 220,00 €
+2025-12-13 15:18:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '5 m³ Pappe, Papier und Kartonage', 'type': 'Pappe, Papier und Kartonage', 'city': 'Berlin', 'size': '5', 'price': '220,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/pappe-papier-entsorgen-container?variant=47205449793821&quantity=1'}
+2025-12-13 15:18:40 [berlin-recycling] DEBUG:     10 m³: 250,00 €
+2025-12-13 15:18:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '7 m³ Pappe, Papier und Kartonage', 'type': 'Pappe, Papier und Kartonage', 'city': 'Berlin', 'size': '7', 'price': '220,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/pappe-papier-entsorgen-container?variant=47205449924893&quantity=1'}
+2025-12-13 15:18:43 [berlin-recycling] DEBUG:     13 m³: 260,00 €
+2025-12-13 15:18:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '10 m³ Pappe, Papier und Kartonage', 'type': 'Pappe, Papier und Kartonage', 'city': 'Berlin', 'size': '10', 'price': '250,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/pappe-papier-entsorgen-container?variant=47205450187037&quantity=1'}
+2025-12-13 15:18:46 [berlin-recycling] DEBUG:     22 m³: 260,00 €
+2025-12-13 15:18:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '13 m³ Pappe, Papier und Kartonage', 'type': 'Pappe, Papier und Kartonage', 'city': 'Berlin', 'size': '13', 'price': '260,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/pappe-papier-entsorgen-container?variant=46797932855581&quantity=1'}
+2025-12-13 15:18:50 [berlin-recycling] DEBUG:     40 m³: 300,00 €
+2025-12-13 15:18:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '22 m³ Pappe, Papier und Kartonage', 'type': 'Pappe, Papier und Kartonage', 'city': 'Berlin', 'size': '22', 'price': '260,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/pappe-papier-entsorgen-container?variant=47205450580253&quantity=1'}
+2025-12-13 15:18:50 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/rigipsentsorgung-container
+2025-12-13 15:18:55 [berlin-recycling] DEBUG:   Gefunden: 6 Größen für Rigips
+2025-12-13 15:18:58 [berlin-recycling] DEBUG:     3 m³: 285,00 €
+2025-12-13 15:18:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '40 m³ Pappe, Papier und Kartonage', 'type': 'Pappe, Papier und Kartonage', 'city': 'Berlin', 'size': '40', 'price': '300,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/pappe-papier-entsorgen-container?variant=47205450973469&quantity=1'}
+2025-12-13 15:19:01 [berlin-recycling] DEBUG:     5 m³: 428,00 €
+2025-12-13 15:19:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '3 m³ Rigips', 'type': 'Rigips', 'city': 'Berlin', 'size': '3', 'price': '285,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/rigipsentsorgung-container?variant=47310209417501&quantity=1'}
+2025-12-13 15:19:04 [berlin-recycling] DEBUG:     7 m³: 524,00 €
+2025-12-13 15:19:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '5 m³ Rigips', 'type': 'Rigips', 'city': 'Berlin', 'size': '5', 'price': '428,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/rigipsentsorgung-container?variant=47310209548573&quantity=1'}
+2025-12-13 15:19:07 [berlin-recycling] DEBUG:     10 m³: 668,00 €
+2025-12-13 15:19:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '7 m³ Rigips', 'type': 'Rigips', 'city': 'Berlin', 'size': '7', 'price': '524,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/rigipsentsorgung-container?variant=47310209679645&quantity=1'}
+2025-12-13 15:19:10 [berlin-recycling] DEBUG:     13 m³: 852,00 €
+2025-12-13 15:19:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '10 m³ Rigips', 'type': 'Rigips', 'city': 'Berlin', 'size': '10', 'price': '668,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/rigipsentsorgung-container?variant=47310209941789&quantity=1'}
+2025-12-13 15:19:13 [berlin-recycling] DEBUG:     22 m³: 1.283,00 €
+2025-12-13 15:19:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '13 m³ Rigips', 'type': 'Rigips', 'city': 'Berlin', 'size': '13', 'price': '852,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/rigipsentsorgung-container?variant=47310210335005&quantity=1'}
+2025-12-13 15:19:13 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/sperrmuell-entsorgen-container
+2025-12-13 15:19:18 [berlin-recycling] DEBUG:   Gefunden: 7 Größen für Sperrmüll
+2025-12-13 15:19:21 [berlin-recycling] DEBUG:     3 m³: 270,00 €
+2025-12-13 15:19:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '22 m³ Rigips', 'type': 'Rigips', 'city': 'Berlin', 'size': '22', 'price': '1.283,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/rigipsentsorgung-container?variant=48261222007069&quantity=1'}
+2025-12-13 15:19:21 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 110 items (at 16 items/min)
+2025-12-13 15:19:24 [berlin-recycling] DEBUG:     5 m³: 403,00 €
+2025-12-13 15:19:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '3 m³ Sperrmüll', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '3', 'price': '270,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/sperrmuell-entsorgen-container?variant=46674580668701&quantity=1'}
+2025-12-13 15:19:27 [berlin-recycling] DEBUG:     7 m³: 489,00 €
+2025-12-13 15:19:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '5 m³ Sperrmüll', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '5', 'price': '403,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/sperrmuell-entsorgen-container?variant=46674580799773&quantity=1'}
+2025-12-13 15:19:30 [berlin-recycling] DEBUG:     10 m³: 617,00 €
+2025-12-13 15:19:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '7 m³ Sperrmüll', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '7', 'price': '489,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/sperrmuell-entsorgen-container?variant=46674580930845&quantity=1'}
+2025-12-13 15:19:33 [berlin-recycling] DEBUG:     13 m³: 787,00 €
+2025-12-13 15:19:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '10 m³ Sperrmüll', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '10', 'price': '617,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/sperrmuell-entsorgen-container?variant=46674581192989&quantity=1'}
+2025-12-13 15:19:37 [berlin-recycling] DEBUG:     22 m³: 1.172,00 €
+2025-12-13 15:19:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '13 m³ Sperrmüll', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '13', 'price': '787,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/sperrmuell-entsorgen-container?variant=47205440815389&quantity=1'}
+2025-12-13 15:19:40 [berlin-recycling] DEBUG:     40 m³: 1.944,00 €
+2025-12-13 15:19:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '22 m³ Sperrmüll', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '22', 'price': '1.172,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/sperrmuell-entsorgen-container?variant=55433153905013&quantity=1'}
+2025-12-13 15:19:40 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/styropor-eps-entsorgung-container
+2025-12-13 15:19:45 [berlin-recycling] DEBUG:   Gefunden: 7 Größen für Styropor EPS
+2025-12-13 15:19:48 [berlin-recycling] DEBUG:     3 m³: 375,00 €
+2025-12-13 15:19:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '40 m³ Sperrmüll', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '40', 'price': '1.944,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/sperrmuell-entsorgen-container?variant=46674582307101&quantity=1'}
+2025-12-13 15:19:51 [berlin-recycling] DEBUG:     5 m³: 580,00 €
+2025-12-13 15:19:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '3 m³ Styropor EPS', 'type': 'Styropor EPS', 'city': 'Berlin', 'size': '3', 'price': '375,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/styropor-eps-entsorgung-container?variant=55499186798965&quantity=1'}
+2025-12-13 15:19:54 [berlin-recycling] DEBUG:     7 m³: 865,00 €
+2025-12-13 15:19:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '5 m³ Styropor EPS', 'type': 'Styropor EPS', 'city': 'Berlin', 'size': '5', 'price': '580,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/styropor-eps-entsorgung-container?variant=46805184971037&quantity=1'}
+2025-12-13 15:19:57 [berlin-recycling] DEBUG:     10 m³: 1.200,00 €
+2025-12-13 15:19:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '7 m³ Styropor EPS', 'type': 'Styropor EPS', 'city': 'Berlin', 'size': '7', 'price': '865,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/styropor-eps-entsorgung-container?variant=55499187093877&quantity=1'}
+2025-12-13 15:20:00 [berlin-recycling] DEBUG:     13 m³: 1.600,00 €
+2025-12-13 15:20:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '10 m³ Styropor EPS', 'type': 'Styropor EPS', 'city': 'Berlin', 'size': '10', 'price': '1.200,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/styropor-eps-entsorgung-container?variant=55499187290485&quantity=1'}
+2025-12-13 15:20:03 [berlin-recycling] DEBUG:     22 m³: 2.800,00 €
+2025-12-13 15:20:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '13 m³ Styropor EPS', 'type': 'Styropor EPS', 'city': 'Berlin', 'size': '13', 'price': '1.600,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/styropor-eps-entsorgung-container?variant=47277106266397&quantity=1'}
+2025-12-13 15:20:06 [berlin-recycling] DEBUG:     40 m³: 4.950,00 €
+2025-12-13 15:20:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '22 m³ Styropor EPS', 'type': 'Styropor EPS', 'city': 'Berlin', 'size': '22', 'price': '2.800,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/styropor-eps-entsorgung-container?variant=46805185167645&quantity=1'}
+2025-12-13 15:20:06 [berlin-recycling] DEBUG: Verarbeite: https://shop.berlin-recycling.de/products/verpackungsstyropor-entsorgung-container
+2025-12-13 15:20:11 [berlin-recycling] DEBUG:   Gefunden: 7 Größen für Verpackungsstyropor
+2025-12-13 15:20:14 [berlin-recycling] DEBUG:     3 m³: 375,00 €
+2025-12-13 15:20:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+{'source': 'berlin-recycling.de', 'title': '40 m³ Styropor EPS', 'type': 'Styropor EPS', 'city': 'Berlin', 'size': '40', 'price': '4.950,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,50€', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/styropor-eps-entsorgung-container?variant=55499187683701&quantity=1'}
+2025-12-13 15:20:17 [berlin-recycling] DEBUG:     5 m³: 580,00 €
+2025-12-13 15:20:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '3 m³ Verpackungsstyropor', 'type': 'Verpackungsstyropor', 'city': 'Berlin', 'size': '3', 'price': '375,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/verpackungsstyropor-entsorgung-container?variant=46805191131421&quantity=1'}
-2025-12-13 12:39:24 [berlin-recycling] DEBUG:     7 m³: 865,00 €
-2025-12-13 12:39:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:20:17 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 125 items (at 15 items/min)
+2025-12-13 15:20:20 [berlin-recycling] DEBUG:     7 m³: 865,00 €
+2025-12-13 15:20:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '5 m³ Verpackungsstyropor', 'type': 'Verpackungsstyropor', 'city': 'Berlin', 'size': '5', 'price': '580,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/verpackungsstyropor-entsorgung-container?variant=46805191196957&quantity=1'}
-2025-12-13 12:39:24 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 126 items (at 16 items/min)
-2025-12-13 12:39:27 [berlin-recycling] DEBUG:     10 m³: 1.200,00 €
-2025-12-13 12:39:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:20:23 [berlin-recycling] DEBUG:     10 m³: 1.200,00 €
+2025-12-13 15:20:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '7 m³ Verpackungsstyropor', 'type': 'Verpackungsstyropor', 'city': 'Berlin', 'size': '7', 'price': '865,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/verpackungsstyropor-entsorgung-container?variant=46805191262493&quantity=1'}
-2025-12-13 12:39:31 [berlin-recycling] DEBUG:     13 m³: 1.600,00 €
-2025-12-13 12:39:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:20:27 [berlin-recycling] DEBUG:     13 m³: 1.600,00 €
+2025-12-13 15:20:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '10 m³ Verpackungsstyropor', 'type': 'Verpackungsstyropor', 'city': 'Berlin', 'size': '10', 'price': '1.200,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/verpackungsstyropor-entsorgung-container?variant=46805191328029&quantity=1'}
-2025-12-13 12:39:34 [berlin-recycling] DEBUG:     22 m³: 2.800,00 €
-2025-12-13 12:39:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:20:30 [berlin-recycling] DEBUG:     22 m³: 2.800,00 €
+2025-12-13 15:20:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '13 m³ Verpackungsstyropor', 'type': 'Verpackungsstyropor', 'city': 'Berlin', 'size': '13', 'price': '1.600,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/verpackungsstyropor-entsorgung-container?variant=55498870980981&quantity=1'}
-2025-12-13 12:39:37 [berlin-recycling] DEBUG:     40 m³: 4.950,00 €
-2025-12-13 12:39:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:20:33 [berlin-recycling] DEBUG:     40 m³: 4.950,00 €
+2025-12-13 15:20:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '22 m³ Verpackungsstyropor', 'type': 'Verpackungsstyropor', 'city': 'Berlin', 'size': '22', 'price': '2.800,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/verpackungsstyropor-entsorgung-container?variant=55498871177589&quantity=1'}
-2025-12-13 12:39:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
+2025-12-13 15:20:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.berlin-recycling.de/>
 {'source': 'berlin-recycling.de', 'title': '40 m³ Verpackungsstyropor', 'type': 'Verpackungsstyropor', 'city': 'Berlin', 'size': '40', 'price': '4.950,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': '', 'URL': 'https://shop.berlin-recycling.de/products/verpackungsstyropor-entsorgung-container?variant=55498871374197&quantity=1'}
-2025-12-13 12:39:37 [scrapy.core.engine] INFO: Closing spider (finished)
-2025-12-13 12:39:37 [scrapy.extensions.feedexport] INFO: Stored json feed (131 items) in: data/berlin-recycling.json
-2025-12-13 12:39:37 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+2025-12-13 15:20:33 [scrapy.core.engine] INFO: Closing spider (finished)
+2025-12-13 15:20:33 [scrapy.extensions.feedexport] INFO: Stored json feed (131 items) in: data/berlin-recycling.json
+2025-12-13 15:20:33 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
 {'downloader/request_bytes': 291,
  'downloader/request_count': 1,
  'downloader/request_method_count/GET': 1,
  'downloader/response_bytes': 116925,
  'downloader/response_count': 1,
  'downloader/response_status_count/200': 1,
- 'elapsed_time_seconds': 495.261703,
+ 'elapsed_time_seconds': 497.929634,
  'feedexport/success_count/FileFeedStorage': 1,
  'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2025, 12, 13, 12, 39, 37, 295156, tzinfo=datetime.timezone.utc),
+ 'finish_time': datetime.datetime(2025, 12, 13, 15, 20, 33, 309098, tzinfo=datetime.timezone.utc),
  'httpcompression/response_bytes': 601519,
  'httpcompression/response_count': 1,
  'item_scraped_count': 131,
- 'items_per_minute': 15.878787878787879,
+ 'items_per_minute': 15.814889336016098,
  'log_count/DEBUG': 303,
  'log_count/INFO': 19,
- 'memusage/max': 81076224,
- 'memusage/startup': 74489856,
+ 'memusage/max': 80429056,
+ 'memusage/startup': 74473472,
  'response_received_count': 1,
- 'responses_per_minute': 0.12121212121212122,
+ 'responses_per_minute': 0.12072434607645875,
  'scheduler/dequeued': 1,
  'scheduler/dequeued/memory': 1,
  'scheduler/enqueued': 1,
  'scheduler/enqueued/memory': 1,
- 'start_time': datetime.datetime(2025, 12, 13, 12, 31, 22, 33453, tzinfo=datetime.timezone.utc)}
-2025-12-13 12:39:37 [scrapy.core.engine] INFO: Spider closed (finished)
+ 'start_time': datetime.datetime(2025, 12, 13, 15, 12, 15, 379464, tzinfo=datetime.timezone.utc)}
+2025-12-13 15:20:33 [scrapy.core.engine] INFO: Spider closed (finished)
