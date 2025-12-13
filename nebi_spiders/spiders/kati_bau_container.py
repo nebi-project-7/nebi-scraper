@@ -77,7 +77,7 @@ class KatiBauContainerSpider(scrapy.Spider):
                 'container_type': 'Absetzcontainer'
             },
             {
-                'name': 'Grünabfall Äste',
+                'name': 'Gartenabfälle Äste',
                 'prices': {3: 290.00, 7: 445.00},
                 'container_type': 'Absetzcontainer'
             },
