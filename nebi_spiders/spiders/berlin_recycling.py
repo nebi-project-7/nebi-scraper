@@ -48,6 +48,8 @@ class BerlinRecyclingSpider(Spider):
         options.add_argument('--window-size=1920,1080')
         self.driver = webdriver.Chrome(options=options)
         self.cookie_dismissed = False
+        # Set zur Vermeidung von Duplikaten (type + size Kombination)
+        self.seen_products = set()
 
     def _dismiss_cookie_banner(self):
         """Schließt Cookie-Banner."""
@@ -160,9 +162,11 @@ class BerlinRecyclingSpider(Spider):
                     title = self.driver.find_element(By.XPATH, "//h1").text
                     # Entferne "(Container)" aus dem Titel
                     waste_type = title.replace('(Container)', '').replace('Container', '').strip()
-                    # Umbenennung: Gartenabfall → Gartenabfälle
+                    # Umbenennungen
                     if waste_type == 'Gartenabfall':
                         waste_type = 'Gartenabfälle'
+                    elif waste_type == 'Gewerbeabfall':
+                        waste_type = 'Gewerbeabfälle'
                 except:
                     self.log(f"Titel nicht gefunden für {product_url}")
                     continue
@@ -228,8 +232,14 @@ class BerlinRecyclingSpider(Spider):
                             'URL': self.driver.current_url
                         }
 
-                        self.log(f"    {size} m³: {price} €{price_note}")
-                        yield item
+                        # Duplikat-Check: type + size Kombination
+                        product_key = f"{waste_type}|{size}"
+                        if product_key not in self.seen_products:
+                            self.seen_products.add(product_key)
+                            self.log(f"    {size} m³: {price} €{price_note}")
+                            yield item
+                        else:
+                            self.log(f"    ⚠️ Duplikat übersprungen: {waste_type} {size} m³")
 
                     except Exception as e:
                         self.log(f"    Fehler bei Größe: {e}")
