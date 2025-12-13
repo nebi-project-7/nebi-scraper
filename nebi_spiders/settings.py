@@ -9,8 +9,16 @@
 
 BOT_NAME = "nebi_spiders"
 
-SPIDER_MODULES = ["nebi_spiders.spiders"]
-NEWSPIDER_MODULE = "nebi_spiders.spiders"
+import pathlib
+
+# Automatisch alle Stadt-Ordner finden
+SPIDERS_PATH = pathlib.Path(__file__).parent / 'spiders'
+SPIDER_MODULES = [
+    f'nebi_spiders.spiders.{folder.name}'
+    for folder in SPIDERS_PATH.iterdir()
+    if folder.is_dir() and not folder.name.startswith('_')
+]
+NEWSPIDER_MODULE = 'nebi_spiders.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent

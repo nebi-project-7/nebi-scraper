@@ -40,43 +40,99 @@ jobs:
       - name: 🗑️ Clean Old Data
         run: |
           mkdir -p data logs
-          if [ "${{ github.event.inputs.spiders }}" = "all" ] || [ -z "${{ github.event.inputs.spiders }}" ]; then
-            rm -f data/*.json
-            rm -f logs/*.txt
+          cd nebi_spiders
+          CITIES=$(ls -d spiders/*/ 2>/dev/null | xargs -n1 basename | grep -v __pycache__ | tr '\n' ' ')
+          INPUT="${{ github.event.inputs.spiders }}"
+
+          if [ -z "$INPUT" ] || [ "$INPUT" = "all" ]; then
+            rm -f ../data/*.json
+            rm -f ../logs/*.txt
             echo "🗑️ Deleted all JSON and log files"
+          elif echo "$CITIES" | grep -qw "$INPUT"; then
+            for spider_file in spiders/$INPUT/*.py; do
+              if [ "$(basename $spider_file)" != "__init__.py" ]; then
+                spider_name=$(basename $spider_file .py)
+                rm -f "../data/${spider_name}-products.json"
+                rm -f "../logs/${spider_name}.txt"
+                echo "🗑️ Deleted ${spider_name} files"
+              fi
+            done
           else
-            IFS=',' read -ra SPIDER_ARRAY <<< "${{ github.event.inputs.spiders }}"
-            for spider in "${SPIDER_ARRAY[@]}"; do
-              spider=$(echo "$spider" | xargs)
-              rm -f "data/${spider}.json"
-              rm -f "logs/${spider}.txt"
-              echo "🗑️ Deleted ${spider}.json and ${spider}.txt"
+            IFS=',' read -ra ITEMS <<< "$INPUT"
+            for item in "${ITEMS[@]}"; do
+              item=$(echo "$item" | xargs)
+              if echo "$CITIES" | grep -qw "$item"; then
+                for spider_file in spiders/$item/*.py; do
+                  if [ "$(basename $spider_file)" != "__init__.py" ]; then
+                    spider_name=$(basename $spider_file .py)
+                    rm -f "../data/${spider_name}-products.json"
+                    rm -f "../logs/${spider_name}.txt"
+                  fi
+                done
+              else
+                rm -f "../data/${item}-products.json"
+                rm -f "../logs/${item}.txt"
+                echo "🗑️ Deleted ${item} files"
+              fi
             done
           fi
 
       - name: 🕷️ Run Spiders
         run: |
-          # Liste aller verfügbaren Spider (komma-getrennt)
-          ALL_SPIDERS="abc-container,albaclick,aser-container-products,berlin-recycling,cdz-berlin,containerfritze,dare-shop-products,elno-container-products,klebs-container-products,kroll-container,ores-container-products,schuttgeier-products,todra-container-products,ts-container-products"
+          cd nebi_spiders
 
-          # Bestimme welche Spider laufen sollen
-          if [ "${{ github.event.inputs.spiders }}" = "all" ] || [ -z "${{ github.event.inputs.spiders }}" ]; then
-            SPIDERS_TO_RUN="$ALL_SPIDERS"
-            echo "🕷️ Running ALL spiders"
+          # Automatisch alle Stadt-Ordner finden
+          CITIES=$(ls -d spiders/*/ 2>/dev/null | xargs -n1 basename | grep -v __pycache__ | tr '\n' ' ')
+          INPUT="${{ github.event.inputs.spiders }}"
+
+          echo "📍 Verfügbare Städte: $CITIES"
+          echo "📋 Input: $INPUT"
+
+          # Wenn Input leer oder "all" → alle Spider
+          if [ -z "$INPUT" ] || [ "$INPUT" = "all" ]; then
+            SPIDERS_TO_RUN=$(find spiders/*/ -name "*.py" ! -name "__init__.py" -exec basename {} .py \; 2>/dev/null)
+            echo "🌍 Running ALL spiders"
+
+          # Wenn Input eine Stadt ist
+          elif echo "$CITIES" | grep -qw "$INPUT"; then
+            SPIDERS_TO_RUN=$(find spiders/$INPUT/ -name "*.py" ! -name "__init__.py" -exec basename {} .py \; 2>/dev/null)
+            echo "🏙️ Running all spiders from: $INPUT"
+
+          # Wenn Input mehrere Werte (Städte oder Spider)
+          elif echo "$INPUT" | grep -q ","; then
+            SPIDERS_TO_RUN=""
+            IFS=',' read -ra ITEMS <<< "$INPUT"
+            for item in "${ITEMS[@]}"; do
+              item=$(echo "$item" | xargs)
+              if echo "$CITIES" | grep -qw "$item"; then
+                echo "🏙️ Adding city: $item"
+                SPIDERS_TO_RUN="$SPIDERS_TO_RUN $(find spiders/$item/ -name "*.py" ! -name "__init__.py" -exec basename {} .py \; 2>/dev/null)"
+              else
+                echo "🕷️ Adding spider: $item"
+                SPIDERS_TO_RUN="$SPIDERS_TO_RUN $item"
+              fi
+            done
+
+          # Sonst: Input sind Spider-Namen
           else
-            SPIDERS_TO_RUN="${{ github.event.inputs.spiders }}"
-            echo "🕷️ Running selected spiders: $SPIDERS_TO_RUN"
+            SPIDERS_TO_RUN="$INPUT"
+            echo "🕷️ Running specific spiders: $INPUT"
           fi
 
-          # Führe jeden Spider aus
-          IFS=',' read -ra SPIDER_ARRAY <<< "$SPIDERS_TO_RUN"
-          for spider in "${SPIDER_ARRAY[@]}"; do
-            spider=$(echo "$spider" | xargs)  # Trim whitespace
-            echo "=========================================="
-            echo "🕷️ Starting spider: $spider"
-            echo "=========================================="
-            scrapy crawl "$spider" -o "data/${spider}.json" --logfile "logs/${spider}.txt" 2>&1 || echo "⚠️ $spider failed"
-            echo "✅ Finished: $spider"
+          echo "=========================================="
+          echo "🕷️ Spiders to run: $SPIDERS_TO_RUN"
+          echo "=========================================="
+
+          # Jeden Spider ausführen
+          for spider in $SPIDERS_TO_RUN; do
+            spider=$(echo "$spider" | xargs)
+            if [ -n "$spider" ]; then
+              echo "=========================================="
+              echo "🕷️ Starting: $spider"
+              echo "=========================================="
+              scrapy crawl "$spider" -O "../data/${spider}-products.json" 2>&1 | tee "../logs/${spider}.txt" || true
+              echo "✅ Finished: $spider"
+            fi
           done
 
           echo "✅ All selected spiders completed!"
@@ -128,7 +184,7 @@ jobs:
           git config user.email "actions@github.com"
           git add .
           git diff --staged --quiet || git commit -m "🕷️ Scraper update: ${{ github.event.inputs.spiders || 'all' }} - $(date +'%Y-%m-%d %H:%M')"
-          git pull --rebase origin main
+          git pull --rebase origin main || true
           git push
 
       - name: 📁 Upload Artifacts
