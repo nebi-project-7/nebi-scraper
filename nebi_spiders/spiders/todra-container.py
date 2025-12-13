@@ -20,7 +20,7 @@ class TodraContainerProductsSpider(Spider):
     def __init__(self):
         # AGB-Daten (werden aus PDF extrahiert)
         self.max_rental_period = "10"
-        self.fee_after_max = "3"
+        self.fee_after_max = "3€"
         self.cancellation_fee = "75"
 
         # Container-Größen und ihre Spaltenindizes
@@ -122,8 +122,8 @@ class TodraContainerProductsSpider(Spider):
                     # Suche nach Gebühr: "3,00 Euro / Tag" - behalte Komma
                     fee_match = re.search(r'(\d+[.,]\d+)\s*Euro\s*/\s*Tag', agb_text)
                     if fee_match:
-                        self.fee_after_max = fee_match.group(1)
-                        self.log(f"  ✓ Gebühr nach Mietdauer: {self.fee_after_max}€/Tag")
+                        self.fee_after_max = fee_match.group(1) + '€'
+                        self.log(f"  ✓ Gebühr nach Mietdauer: {self.fee_after_max}/Tag")
 
                     # Suche nach Stornierungsgebühr: "75 € für die Leerfahrt"
                     cancel_match = re.search(r'(\d+)\s*€\s+für die Leerfahrt', agb_text)
