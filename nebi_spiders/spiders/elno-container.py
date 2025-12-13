@@ -130,14 +130,14 @@ class ElnoContainerProductsSpider(Spider):
             # Pattern: "weiterer Tag wird mit X,-€" oder "weiterer Tag wird mit X€"
             fee_match = re.search(r'weiterer?\s+Tag.*?(\d+)[,.-]*\s*€', visible_text, re.IGNORECASE)
             if fee_match:
-                fee_after_max = fee_match.group(1)
+                fee_after_max = fee_match.group(1) + '€'
 
             self.rental_info = {
                 "max_rental_period": max_rental_period,
                 "fee_after_max": fee_after_max
             }
 
-            self.log(f"✓ Mietinfo extrahiert: {max_rental_period} Tage, danach {fee_after_max}€/Tag")
+            self.log(f"✓ Mietinfo extrahiert: {max_rental_period} Tage, danach {fee_after_max}/Tag")
 
         except Exception as e:
             self.log(f"⚠️ Fehler beim Extrahieren der Mietinfo: {e}")
