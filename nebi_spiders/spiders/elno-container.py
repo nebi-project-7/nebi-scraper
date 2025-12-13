@@ -20,7 +20,7 @@ class ElnoContainerProductsSpider(Spider):
     waste_types = [
         ("a1-a3-holz", "Holz A1-A3"),
         ("holz-a4-impraegniert", "Holz A4"),
-        ("baumisch-leicht", "Baumischabfall (leicht)"),
+        ("baumisch-leicht", "Baumischabfall leicht"),
         ("baumisch-20-mineralik", "Baumischabfall (20% Mineralik)"),
         ("baumisch-ohne-wertstoffe", "Baumischabfall (ohne Wertstoffe)"),
         ("bauschutt", "Bauschutt"),
@@ -37,7 +37,7 @@ class ElnoContainerProductsSpider(Spider):
         ("dachpape", "Dachpappe"),
         ("daemwolle", "Dämmstoffe"),
         ("asbest", "Asbest"),
-        ("absetzzement", "Absetzzement"),
+        ("absetzzement", "Asbestzement"),
         ("elektronikschrott", "Elektroschrott"),
         ("schrott", "Schrott"),
         ("pkwreifen", "PKW-Reifen"),
