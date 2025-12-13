@@ -39,6 +39,7 @@ class TodraContainerProductsSpider(Spider):
             'Boden unrein': 'Boden (unrein)',
             'Boden rein': 'Boden (rein)',
             'Mineralfaserdämmstoffe KMF': 'Dämmstoffe',
+            'Gibskarton und Porenbeton': 'Gipskarton und Porenbeton',
         }
 
     def parse(self, response):
