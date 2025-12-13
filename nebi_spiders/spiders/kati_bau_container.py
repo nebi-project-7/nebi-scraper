@@ -121,7 +121,7 @@ class KatiBauContainerSpider(scrapy.Spider):
                     "price": f"{price_with_vat:.2f}".replace('.', ','),
                     "lid_price": "",
                     "arrival_price": "Anbieter anfragen",
-                    "departure_price": "Anbieter anfragen",
+                    "departure_price": "",
                     "max_rental_period": "9",
                     "fee_after_max": str(rental_fee_per_day),
                     "cancellation_fee": f"{self.EMPTY_TRIP_FEE_WITH_VAT:.2f}".replace('.', ','),
