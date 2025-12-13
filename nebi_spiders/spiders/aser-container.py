@@ -25,7 +25,7 @@ class AserContainerProductsSpider(Spider):
             ("Holz A4", "49.00", "49.00", "49.00", "m³"),
             ("Sperrmüll (verwertbar 40-50%)", "69.00", "59.00", "59.00", "m³"),
             ("Sperrmüll (verwertbar <40%)", "79.00", "69.00", "69.00", "m³"),
-            ("Asbestzement", "220.00", "220.00", "220.00", "m³"),
+            ("Asbest", "220.00", "220.00", "220.00", "m³"),
             ("Gartenabfälle", "25.50", "25.50", "25.50", "m³"),
         ]
 
