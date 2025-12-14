@@ -1,0 +1,45 @@
+2025-12-14 06:57:45 [scrapy.utils.log] INFO: Scrapy 2.13.4 started (bot: nebi_spiders)
+2025-12-14 06:57:45 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.2',
+ 'libxml2': '2.14.6',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.14 (main, Oct 10 2025, 01:03:14) [GCC 13.3.0]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.4 30 Sep 2025)',
+ 'cryptography': '46.0.3',
+ 'Platform': 'Linux-6.11.0-1018-azure-x86_64-with-glibc2.39'}
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/scrapy/spiderloader.py", line 106, in load
+    return self._spiders[spider_name]
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'berlin_recycling'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/bin/scrapy", line 7, in <module>
+    sys.exit(execute())
+             ^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/scrapy/cmdline.py", line 205, in execute
+    _run_print_help(parser, _run_command, cmd, args, opts)
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/scrapy/cmdline.py", line 158, in _run_print_help
+    func(*a, **kw)
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/scrapy/cmdline.py", line 213, in _run_command
+    cmd.run(args, opts)
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/scrapy/commands/crawl.py", line 33, in run
+    crawl_defer = self.crawler_process.crawl(spname, **opts.spargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/scrapy/crawler.py", line 338, in crawl
+    crawler = self.create_crawler(crawler_or_spidercls)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/scrapy/crawler.py", line 374, in create_crawler
+    return self._create_crawler(crawler_or_spidercls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/scrapy/crawler.py", line 458, in _create_crawler
+    spidercls = self.spider_loader.load(spidercls)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/scrapy/spiderloader.py", line 108, in load
+    raise KeyError(f"Spider not found: {spider_name}")
+KeyError: 'Spider not found: berlin_recycling'
