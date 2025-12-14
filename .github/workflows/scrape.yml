@@ -37,91 +37,76 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: 🗑️ Clean Old Data
-        run: |
-          mkdir -p data logs
-          cd nebi_spiders
-          CITIES=$(ls -d spiders/*/ 2>/dev/null | xargs -n1 basename | grep -v __pycache__ | tr '\n' ' ')
-          INPUT="${{ github.event.inputs.spiders }}"
-          INPUT_LOWER=$(echo "$INPUT" | tr '[:upper:]' '[:lower:]')
-
-          if [ -z "$INPUT" ] || [ "$INPUT_LOWER" = "all" ]; then
-            rm -f ../data/*.json
-            rm -f ../logs/*.txt
-            echo "🗑️ Deleted all JSON and log files"
-          elif echo "$CITIES" | grep -qw "$INPUT_LOWER"; then
-            for spider_file in spiders/$INPUT_LOWER/*.py; do
-              if [ "$(basename $spider_file)" != "__init__.py" ]; then
-                spider_name=$(basename $spider_file .py)
-                rm -f "../data/${spider_name}-products.json"
-                rm -f "../logs/${spider_name}.txt"
-                echo "🗑️ Deleted ${spider_name} files"
-              fi
-            done
-          else
-            IFS=',' read -ra ITEMS <<< "$INPUT"
-            for item in "${ITEMS[@]}"; do
-              item=$(echo "$item" | xargs)
-              item_lower=$(echo "$item" | tr '[:upper:]' '[:lower:]')
-              if echo "$CITIES" | grep -qw "$item_lower"; then
-                for spider_file in spiders/$item_lower/*.py; do
-                  if [ "$(basename $spider_file)" != "__init__.py" ]; then
-                    spider_name=$(basename $spider_file .py)
-                    rm -f "../data/${spider_name}-products.json"
-                    rm -f "../logs/${spider_name}.txt"
-                  fi
-                done
-              else
-                rm -f "../data/${item}-products.json"
-                rm -f "../logs/${item}.txt"
-                echo "🗑️ Deleted ${item} files"
-              fi
-            done
-          fi
-
       - name: 🕷️ Run Spiders
         run: |
           cd nebi_spiders
+          mkdir -p ../data ../logs
 
-          # Automatisch alle Stadt-Ordner finden
+          # Hilfsfunktion: Spider-Name aus Python-Datei extrahieren
+          get_spider_name() {
+            grep -oP "^\s*name\s*=\s*['\"]\\K[^'\"]+" "$1" | head -1
+          }
+
+          # Alle Stadt-Ordner finden
           CITIES=$(ls -d spiders/*/ 2>/dev/null | xargs -n1 basename | grep -v __pycache__ | tr '\n' ' ')
           INPUT="${{ github.event.inputs.spiders }}"
-          # Input zu Kleinbuchstaben für case-insensitiven Vergleich
           INPUT_LOWER=$(echo "$INPUT" | tr '[:upper:]' '[:lower:]')
 
           echo "📍 Verfügbare Städte: $CITIES"
           echo "📋 Input: $INPUT (lowercase: $INPUT_LOWER)"
 
-          # Wenn Input leer oder "all" → alle Spider
-          if [ -z "$INPUT" ] || [ "$INPUT_LOWER" = "all" ]; then
-            SPIDERS_TO_RUN=$(find spiders/*/ -name "*.py" ! -name "__init__.py" -exec basename {} .py \; 2>/dev/null)
-            echo "🌍 Running ALL spiders"
+          # Spider-Namen sammeln
+          SPIDERS_TO_RUN=""
 
-          # Wenn Input eine Stadt ist (case-insensitiv)
+          # Wenn Input leer oder "all" → alle Spider via scrapy list
+          if [ -z "$INPUT" ] || [ "$INPUT_LOWER" = "all" ]; then
+            echo "🌍 Running ALL spiders"
+            rm -f ../data/*.json ../logs/*.txt
+            echo "🗑️ Deleted all JSON and log files"
+            SPIDERS_TO_RUN=$(scrapy list)
+
+          # Wenn Input eine Stadt ist
           elif echo "$CITIES" | grep -qw "$INPUT_LOWER"; then
-            SPIDERS_TO_RUN=$(find spiders/$INPUT_LOWER/ -name "*.py" ! -name "__init__.py" -exec basename {} .py \; 2>/dev/null)
             echo "🏙️ Running all spiders from: $INPUT_LOWER"
+            for spider_file in spiders/$INPUT_LOWER/*.py; do
+              if [ "$(basename $spider_file)" != "__init__.py" ]; then
+                spider_name=$(get_spider_name "$spider_file")
+                if [ -n "$spider_name" ]; then
+                  rm -f "../data/${spider_name}-products.json" "../logs/${spider_name}.txt"
+                  SPIDERS_TO_RUN="$SPIDERS_TO_RUN $spider_name"
+                fi
+              fi
+            done
 
           # Wenn Input mehrere Werte (Städte oder Spider)
           elif echo "$INPUT" | grep -q ","; then
-            SPIDERS_TO_RUN=""
             IFS=',' read -ra ITEMS <<< "$INPUT"
             for item in "${ITEMS[@]}"; do
               item=$(echo "$item" | xargs)
               item_lower=$(echo "$item" | tr '[:upper:]' '[:lower:]')
               if echo "$CITIES" | grep -qw "$item_lower"; then
                 echo "🏙️ Adding city: $item_lower"
-                SPIDERS_TO_RUN="$SPIDERS_TO_RUN $(find spiders/$item_lower/ -name "*.py" ! -name "__init__.py" -exec basename {} .py \; 2>/dev/null)"
+                for spider_file in spiders/$item_lower/*.py; do
+                  if [ "$(basename $spider_file)" != "__init__.py" ]; then
+                    spider_name=$(get_spider_name "$spider_file")
+                    if [ -n "$spider_name" ]; then
+                      rm -f "../data/${spider_name}-products.json" "../logs/${spider_name}.txt"
+                      SPIDERS_TO_RUN="$SPIDERS_TO_RUN $spider_name"
+                    fi
+                  fi
+                done
               else
                 echo "🕷️ Adding spider: $item"
+                rm -f "../data/${item}-products.json" "../logs/${item}.txt"
                 SPIDERS_TO_RUN="$SPIDERS_TO_RUN $item"
               fi
             done
 
           # Sonst: Input sind Spider-Namen
           else
+            rm -f "../data/${INPUT}-products.json" "../logs/${INPUT}.txt"
             SPIDERS_TO_RUN="$INPUT"
-            echo "🕷️ Running specific spiders: $INPUT"
+            echo "🕷️ Running specific spider: $INPUT"
           fi
 
           echo "=========================================="
