@@ -26,7 +26,7 @@ class EggersContainerSpider(Spider):
     waste_categories = [
         ("altholz-unbehandelt", "Holz A1-A3"),
         ("altholz-behandelt-a4", "Holz A4"),
-        ("asbest", "Asbest"),
+        # ("asbest", "Asbest"),  # Entfernt - Preis nur auf Anfrage
         ("baumischabfall", "Baumischabfall"),
         ("baumischabfall-gipshaltig", "Baumischabfall gipshaltig"),
         ("bauschutt", "Bauschutt"),
