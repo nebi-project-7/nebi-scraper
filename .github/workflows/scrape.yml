@@ -43,13 +43,14 @@ jobs:
           cd nebi_spiders
           CITIES=$(ls -d spiders/*/ 2>/dev/null | xargs -n1 basename | grep -v __pycache__ | tr '\n' ' ')
           INPUT="${{ github.event.inputs.spiders }}"
+          INPUT_LOWER=$(echo "$INPUT" | tr '[:upper:]' '[:lower:]')
 
-          if [ -z "$INPUT" ] || [ "$INPUT" = "all" ]; then
+          if [ -z "$INPUT" ] || [ "$INPUT_LOWER" = "all" ]; then
             rm -f ../data/*.json
             rm -f ../logs/*.txt
             echo "🗑️ Deleted all JSON and log files"
-          elif echo "$CITIES" | grep -qw "$INPUT"; then
-            for spider_file in spiders/$INPUT/*.py; do
+          elif echo "$CITIES" | grep -qw "$INPUT_LOWER"; then
+            for spider_file in spiders/$INPUT_LOWER/*.py; do
               if [ "$(basename $spider_file)" != "__init__.py" ]; then
                 spider_name=$(basename $spider_file .py)
                 rm -f "../data/${spider_name}-products.json"
@@ -61,8 +62,9 @@ jobs:
             IFS=',' read -ra ITEMS <<< "$INPUT"
             for item in "${ITEMS[@]}"; do
               item=$(echo "$item" | xargs)
-              if echo "$CITIES" | grep -qw "$item"; then
-                for spider_file in spiders/$item/*.py; do
+              item_lower=$(echo "$item" | tr '[:upper:]' '[:lower:]')
+              if echo "$CITIES" | grep -qw "$item_lower"; then
+                for spider_file in spiders/$item_lower/*.py; do
                   if [ "$(basename $spider_file)" != "__init__.py" ]; then
                     spider_name=$(basename $spider_file .py)
                     rm -f "../data/${spider_name}-products.json"
@@ -84,19 +86,21 @@ jobs:
           # Automatisch alle Stadt-Ordner finden
           CITIES=$(ls -d spiders/*/ 2>/dev/null | xargs -n1 basename | grep -v __pycache__ | tr '\n' ' ')
           INPUT="${{ github.event.inputs.spiders }}"
+          # Input zu Kleinbuchstaben für case-insensitiven Vergleich
+          INPUT_LOWER=$(echo "$INPUT" | tr '[:upper:]' '[:lower:]')
 
           echo "📍 Verfügbare Städte: $CITIES"
-          echo "📋 Input: $INPUT"
+          echo "📋 Input: $INPUT (lowercase: $INPUT_LOWER)"
 
           # Wenn Input leer oder "all" → alle Spider
-          if [ -z "$INPUT" ] || [ "$INPUT" = "all" ]; then
+          if [ -z "$INPUT" ] || [ "$INPUT_LOWER" = "all" ]; then
             SPIDERS_TO_RUN=$(find spiders/*/ -name "*.py" ! -name "__init__.py" -exec basename {} .py \; 2>/dev/null)
             echo "🌍 Running ALL spiders"
 
-          # Wenn Input eine Stadt ist
-          elif echo "$CITIES" | grep -qw "$INPUT"; then
-            SPIDERS_TO_RUN=$(find spiders/$INPUT/ -name "*.py" ! -name "__init__.py" -exec basename {} .py \; 2>/dev/null)
-            echo "🏙️ Running all spiders from: $INPUT"
+          # Wenn Input eine Stadt ist (case-insensitiv)
+          elif echo "$CITIES" | grep -qw "$INPUT_LOWER"; then
+            SPIDERS_TO_RUN=$(find spiders/$INPUT_LOWER/ -name "*.py" ! -name "__init__.py" -exec basename {} .py \; 2>/dev/null)
+            echo "🏙️ Running all spiders from: $INPUT_LOWER"
 
           # Wenn Input mehrere Werte (Städte oder Spider)
           elif echo "$INPUT" | grep -q ","; then
@@ -104,9 +108,10 @@ jobs:
             IFS=',' read -ra ITEMS <<< "$INPUT"
             for item in "${ITEMS[@]}"; do
               item=$(echo "$item" | xargs)
-              if echo "$CITIES" | grep -qw "$item"; then
-                echo "🏙️ Adding city: $item"
-                SPIDERS_TO_RUN="$SPIDERS_TO_RUN $(find spiders/$item/ -name "*.py" ! -name "__init__.py" -exec basename {} .py \; 2>/dev/null)"
+              item_lower=$(echo "$item" | tr '[:upper:]' '[:lower:]')
+              if echo "$CITIES" | grep -qw "$item_lower"; then
+                echo "🏙️ Adding city: $item_lower"
+                SPIDERS_TO_RUN="$SPIDERS_TO_RUN $(find spiders/$item_lower/ -name "*.py" ! -name "__init__.py" -exec basename {} .py \; 2>/dev/null)"
               else
                 echo "🕷️ Adding spider: $item"
                 SPIDERS_TO_RUN="$SPIDERS_TO_RUN $item"
