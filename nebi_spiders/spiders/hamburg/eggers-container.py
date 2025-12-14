@@ -125,63 +125,56 @@ class EggersContainerSpider(Spider):
             pass
 
     def _extract_products_from_category(self, waste_type, category_url):
-        """Extrahiert alle Produkte von einer Kategorieseite."""
+        """Extrahiert alle Produkte von einer Kategorieseite via Google Analytics JSON."""
         products = []
+        import json
 
-        try:
-            # Warte auf Produktliste
-            WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, ".product-box, .product-listing, .product"))
-            )
-        except:
-            pass
+        # HTML Quellcode holen
+        page_source = self.driver.page_source
 
-        # HTML parsen
-        sel = Selector(text=self.driver.page_source)
+        # Suche nach Google Analytics view_item_list Event mit Produktdaten
+        # Format: gtag('event', 'view_item_list', {"currency": 'EUR',"items": [...]})
+        ga_pattern = re.search(
+            r"gtag\('event',\s*'view_item_list',\s*(\{.*?\])\s*\}\)",
+            page_source,
+            re.DOTALL
+        )
 
-        # Finde alle Produkt-Boxen
-        product_boxes = sel.css('.product-box, .card-body, .product-info')
+        if ga_pattern:
+            try:
+                # JSON-ähnlichen String extrahieren und bereinigen
+                json_str = ga_pattern.group(1) + '}'
+                # Einfache Anführungszeichen durch doppelte ersetzen
+                json_str = json_str.replace("'", '"')
+                # Parse JSON
+                ga_data = json.loads(json_str)
+                items = ga_data.get('items', [])
 
-        if not product_boxes:
-            # Alternative: Suche nach Produkt-Links
-            product_links = sel.xpath('//a[contains(@href, "/alle-abfaelle-containerdienst/") and contains(@href, "-cbm-")]/@href').getall()
-            product_titles = sel.xpath('//a[contains(@href, "/alle-abfaelle-containerdienst/") and contains(@href, "-cbm-")]/text()').getall()
+                for item in items:
+                    item_name = item.get('item_name', '')
+                    price = item.get('price', 0)
 
-            # Fallback: Extrahiere aus dem sichtbaren Text
-            page_text = self.driver.execute_script("return document.body.innerText;")
+                    # Überspringe BigBag
+                    if 'bigbag' in item_name.lower() or 'big bag' in item_name.lower():
+                        continue
 
-            # Pattern für Produkte: "X cbm ... €Y.YY"
-            # Suche nach Zeilen mit cbm und Preisen
-            lines = page_text.split('\n')
+                    # Extrahiere Größe aus item_name (z.B. "3 cbm Absetzcontainer")
+                    size_match = re.search(r'(\d+)\s*cbm', item_name, re.IGNORECASE)
+                    if not size_match:
+                        continue
 
-            current_size = None
-            for line in lines:
-                line = line.strip()
+                    size = size_match.group(1)
 
-                # Überspringe BigBag
-                if 'bigbag' in line.lower() or 'big bag' in line.lower() or 'big-bag' in line.lower():
-                    continue
+                    # Preis formatieren (329.33 → "329,33")
+                    price_str = f"{price:.2f}".replace('.', ',')
 
-                # Suche nach Größe (z.B. "3 cbm Absetzcontainer")
-                size_match = re.search(r'^(\d+)\s*cbm', line, re.IGNORECASE)
-                if size_match:
-                    current_size = size_match.group(1)
-
-                # Suche nach Preis (z.B. "€329,33" oder "329,33 €")
-                price_match = re.search(r'€?\s*(\d{1,3}(?:\.\d{3})*(?:,\d{2})?)\s*€?', line)
-                if price_match and current_size:
-                    price_str = price_match.group(1)
-                    # Normalisiere Preis: "1.184,05" → "1184,05"
-                    price = price_str.replace('.', '').replace(',', ',')
-
-                    # Erstelle Produkt
                     product = {
                         "source": "EGGERS Container",
-                        "title": f"{current_size} m³ {waste_type}",
+                        "title": f"{size} m³ {waste_type}",
                         "type": waste_type,
                         "city": "Hamburg",
-                        "size": current_size,
-                        "price": price,
+                        "size": size,
+                        "price": price_str,
                         "lid_price": "",
                         "arrival_price": "inklusive",
                         "departure_price": "inklusive",
@@ -191,17 +184,25 @@ class EggersContainerSpider(Spider):
                         "URL": category_url
                     }
                     products.append(product)
-                    current_size = None
 
-        else:
-            # Parse strukturierte Produkt-Boxen
+                self.log(f"  ✓ {len(products)} Produkte via GA-Daten extrahiert")
+
+            except json.JSONDecodeError as e:
+                self.log(f"  ⚠️ JSON Parse Fehler: {e}")
+
+        # Fallback: Preis-Elemente im HTML suchen
+        if not products:
+            sel = Selector(text=page_source)
+
+            # Suche nach Produkt-Boxen mit Preis
+            product_boxes = sel.css('.product-box, .box--content, .product-info')
+
             for box in product_boxes:
                 try:
-                    # Titel extrahieren
-                    title = box.css('.product-name::text, .product-title::text, h2::text, h3::text').get()
+                    # Titel/Name extrahieren
+                    title = box.css('.product-name a::text, .product-title::text, a.product-name::text').get()
                     if not title:
-                        title = box.xpath('.//a/text()').get()
-
+                        title = box.xpath('.//a[contains(@class, "product")]/text()').get()
                     if not title:
                         continue
 
@@ -211,33 +212,26 @@ class EggersContainerSpider(Spider):
                     if 'bigbag' in title.lower() or 'big bag' in title.lower():
                         continue
 
-                    # Extrahiere Größe aus Titel
+                    # Extrahiere Größe
                     size_match = re.search(r'(\d+)\s*cbm', title, re.IGNORECASE)
                     if not size_match:
                         continue
                     size = size_match.group(1)
 
-                    # Preis extrahieren
-                    price_text = box.css('.product-price::text, .price::text').get()
-                    if not price_text:
-                        price_text = box.xpath('.//*[contains(@class, "price")]/text()').get()
+                    # Preis extrahieren - suche nach price--default Klasse
+                    price_elem = box.css('.price--default::text, .product-price::text, span.price::text').get()
+                    if not price_elem:
+                        price_elem = box.xpath('.//*[contains(@class, "price")]//text()').get()
 
-                    if not price_text:
+                    if not price_elem:
                         continue
 
-                    # Normalisiere Preis
-                    price_match = re.search(r'(\d{1,3}(?:\.\d{3})*(?:,\d{2})?)', price_text)
+                    # Preis bereinigen (z.B. "329,33 €" → "329,33")
+                    price_match = re.search(r'(\d{1,3}(?:\.\d{3})*(?:,\d{2}))', price_elem)
                     if not price_match:
                         continue
 
-                    price = price_match.group(1).replace('.', '')
-
-                    # URL extrahieren
-                    product_url = box.css('a::attr(href)').get()
-                    if product_url and not product_url.startswith('http'):
-                        product_url = f"https://shop.eggers-gruppe.de{product_url}"
-                    if not product_url:
-                        product_url = category_url
+                    price_str = price_match.group(1).replace('.', '')
 
                     product = {
                         "source": "EGGERS Container",
@@ -245,19 +239,22 @@ class EggersContainerSpider(Spider):
                         "type": waste_type,
                         "city": "Hamburg",
                         "size": size,
-                        "price": price,
+                        "price": price_str,
                         "lid_price": "",
                         "arrival_price": "inklusive",
                         "departure_price": "inklusive",
                         "max_rental_period": "14",
                         "fee_after_max": "5,95€",
                         "cancellation_fee": "",
-                        "URL": product_url
+                        "URL": category_url
                     }
                     products.append(product)
 
                 except Exception as e:
-                    self.log(f"  ⚠️ Fehler beim Parsen eines Produkts: {e}")
+                    self.log(f"  ⚠️ Fehler beim Parsen: {e}")
                     continue
+
+            if products:
+                self.log(f"  ✓ {len(products)} Produkte via HTML extrahiert")
 
         return products
