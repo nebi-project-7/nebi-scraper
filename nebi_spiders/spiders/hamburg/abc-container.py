@@ -32,34 +32,36 @@ class ABCContainerHamburgSpider(Spider):
     }
 
     # Mapping: PDF-Text → Standardisierter Name
-    waste_type_mapping = {
-        "bauschutt sauber": "Bauschutt",
-        "beton< 50 cm": "Beton",
-        "beton < 50 cm": "Beton",
-        "boden bis 20m³ unbeprobt": "Boden",
-        "boden über 20m³+ boden+steine unbeprobt": "Boden mit Steinen",
-        "boden über 20m³": "Boden mit Steinen",
-        "boden mit wurzeln, soden + grasnaben": "Boden mit Wurzeln",
-        "boden mit wurzeln": "Boden mit Wurzeln",
-        "baustellenabfälle": "Baumischabfall",
-        "baustellenabfälle/ bauschutt verunreinigt": "Baumischabfall mit Bauschutt",
-        "baustellenabfälle nicht recycelbar": "Baumischabfall nicht recycelbar",
-        "sperrmüll": "Sperrmüll",
-        "holz a1-a3": "Holz A1-A3",
-        "holz a4": "Holz A4",
-        "gartenabfälle 1": "Gartenabfälle",
-        "gartenabfälle 2": "Gartenabfälle (Laub/Gras)",
-        "subben & stammholz": "Stammholz",
-        "stubben & stammholz": "Stammholz",
-        "dachpappe": "Dachpappe",
-    }
+    # WICHTIG: Spezifischere Patterns MÜSSEN vor allgemeineren stehen!
+    waste_type_mapping = [
+        # Baustellenabfälle - spezifische zuerst
+        ("baustellenabfälle/ bauschutt verunreinigt", "Baustellenabfälle/ Bauschutt verunreinigt durch Bauschutt/ Gips"),
+        ("baustellenabfälle nicht recycelbar", "Baustellenabfälle nicht recycelbar"),
+        ("baustellenabfälle", "Baustellenabfälle ohne Bauschutt/ Gips"),
+        # Rest
+        ("bauschutt sauber", "Bauschutt sauber"),
+        ("beton< 50 cm", "Beton < 50 cm"),
+        ("beton < 50 cm", "Beton < 50 cm"),
+        ("boden mit wurzeln, soden + grasnaben", "Boden mit Wurzeln, Soden + Grasnaben"),
+        ("boden mit wurzeln", "Boden mit Wurzeln, Soden + Grasnaben"),
+        ("sperrmüll", "Sperrmüll"),
+        ("holz a1-a3", "Holz A1-A3"),
+        ("holz a4", "Holz A4"),
+        ("gartenabfälle 1", "Gartenabfälle 1 Strauchgut, Baumschnitt"),
+        ("gartenabfälle 2", "Gartenabfälle 2 Laub- und Grasschnitt"),
+        ("subben & stammholz", "Subben & Stammholz"),
+        ("stubben & stammholz", "Subben & Stammholz"),
+        ("dachpappe", "Dachpappe"),
+    ]
 
-    # BigBag-only Kategorien überspringen
+    # Kategorien überspringen (BigBag-only und andere Boden-Arten)
     skip_categories = [
         "kmf-dämmstoffe",
         "kmf-deckenplatten",
         "odenwaldplatten",
         "styropor",
+        "boden bis 20m³",
+        "boden über 20m³",
     ]
 
     def parse(self, response):
@@ -166,8 +168,8 @@ class ABCContainerHamburgSpider(Spider):
         """Wandelt PDF-Abfallart in standardisierten Namen um."""
         name_lower = raw_name.lower().strip()
 
-        # Exakte Matches zuerst
-        for pattern, standard in self.waste_type_mapping.items():
+        # Spezifischere Patterns werden zuerst geprüft (Liste-Reihenfolge)
+        for pattern, standard in self.waste_type_mapping:
             if pattern in name_lower:
                 return standard
 
