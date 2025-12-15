@@ -5,6 +5,7 @@ Shop: https://der-hamburg-container.de/
 """
 
 import re
+from urllib.parse import unquote
 from scrapy import Spider, Request
 
 
@@ -114,7 +115,14 @@ class DerHamburgContainerSpider(Spider):
                 product_url = None
                 for link in all_links:
                     if '/produkt/' in link:
-                        product_url = link
+                        # Prüfe ob Facebook Share Link
+                        if 'facebook.com/sharer' in link:
+                            # Extrahiere echte URL aus u= Parameter
+                            url_match = re.search(r'[?&]u=([^&]+)', link)
+                            if url_match:
+                                product_url = unquote(url_match.group(1))
+                        else:
+                            product_url = link
                         break
                 # Fallback: Kategorie-URL statt Liefergebiet
                 if not product_url:
