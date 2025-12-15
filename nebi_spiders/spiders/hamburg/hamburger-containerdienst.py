@@ -298,22 +298,54 @@ class HamburgerContainerdienstSpider(Spider):
                 return None
 
             # Bereinige Preis (entferne "EUR" etc.)
-            # Format kann sein: 1.157,87 oder 1,157,87
-            # Ziel: 1157,87 (nur letztes Komma als Dezimaltrenner behalten)
             price_clean = re.sub(r'[^\d,\.]', '', price_text)
-            if price_clean:
-                # Finde Position des letzten Kommas (Dezimaltrenner)
+            if not price_clean:
+                return None
+
+            # Erkenne Format und konvertiere zu deutschem Format (1234,56)
+            has_comma = ',' in price_clean
+            has_dot = '.' in price_clean
+
+            if has_comma and has_dot:
+                # Gemischtes Format - bestimme welches der Dezimaltrenner ist
                 last_comma = price_clean.rfind(',')
-                if last_comma > 0:
-                    # Entferne alle Punkte und Kommas vor dem Dezimalkomma
+                last_dot = price_clean.rfind('.')
+
+                if last_comma > last_dot:
+                    # Deutsches Format: 1.234,56 → Komma ist Dezimaltrenner
                     integer_part = price_clean[:last_comma].replace('.', '').replace(',', '')
-                    decimal_part = price_clean[last_comma:]  # inkl. Komma
+                    decimal_part = price_clean[last_comma:]
                     return integer_part + decimal_part
                 else:
-                    # Kein Komma gefunden, nur Punkte entfernen
-                    return price_clean.replace('.', '').replace(',', '')
+                    # Englisches Format: 1,234.56 → Punkt ist Dezimaltrenner
+                    integer_part = price_clean[:last_dot].replace('.', '').replace(',', '')
+                    decimal_part = price_clean[last_dot:].replace('.', ',')
+                    return integer_part + decimal_part
 
-            return None
+            elif has_comma:
+                # Nur Kommas: könnte 1,234,56 oder 1234,56 sein
+                # Letztes Komma ist Dezimaltrenner
+                last_comma = price_clean.rfind(',')
+                if last_comma > 0:
+                    integer_part = price_clean[:last_comma].replace(',', '')
+                    decimal_part = price_clean[last_comma:]
+                    return integer_part + decimal_part
+                return price_clean
+
+            elif has_dot:
+                # Nur Punkte: könnte 1.234.56 oder 1234.56 sein
+                # Prüfe ob letzter Punkt Dezimaltrenner ist (2 Stellen danach)
+                last_dot = price_clean.rfind('.')
+                after_dot = price_clean[last_dot + 1:]
+                if len(after_dot) == 2:
+                    # Dezimaltrenner → zu Komma konvertieren
+                    integer_part = price_clean[:last_dot].replace('.', '')
+                    return integer_part + ',' + after_dot
+                else:
+                    # Tausender-Trenner entfernen
+                    return price_clean.replace('.', '')
+
+            return price_clean
 
         except Exception as e:
             return None
