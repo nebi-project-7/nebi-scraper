@@ -298,9 +298,12 @@ class HamburgerContainerdienstSpider(Spider):
                 return None
 
             # Bereinige Preis (entferne "EUR" etc.)
+            # Deutsches Format: 1.112,65 EUR -> 1112,65
+            # Punkt ist Tausender-Trenner (entfernen), Komma ist Dezimal-Trenner (behalten)
             price_clean = re.sub(r'[^\d,\.]', '', price_text)
             if price_clean:
-                return price_clean.replace('.', ',')
+                # Entferne Tausender-Punkte, behalte Dezimal-Komma
+                return price_clean.replace('.', '')
 
             return None
 
