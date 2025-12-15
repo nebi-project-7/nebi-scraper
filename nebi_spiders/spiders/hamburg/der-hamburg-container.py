@@ -109,10 +109,14 @@ class DerHamburgContainerSpider(Spider):
                 else:
                     continue
 
-                # URL extrahieren
-                product_url = product.css('a::attr(href)').get()
-                if not product_url:
-                    product_url = product.xpath('.//a/@href').get()
+                # URL extrahieren - nur /produkt/ Links akzeptieren
+                all_links = product.css('a::attr(href)').getall()
+                product_url = None
+                for link in all_links:
+                    if '/produkt/' in link:
+                        product_url = link
+                        break
+                # Fallback: Kategorie-URL statt Liefergebiet
                 if not product_url:
                     product_url = response.url
 
