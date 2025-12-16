@@ -235,7 +235,7 @@ class RedoooHannoverSpider(Spider):
                         seen_sizes.add(size)
 
                         product = {
-                            "source": "Redooo",
+                            "source": "Redooo Hannover",
                             "title": f"{waste_type} {size} m³",
                             "type": waste_type,
                             "city": "Hannover",
