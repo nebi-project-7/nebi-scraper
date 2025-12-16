@@ -1,0 +1,213 @@
+2025-12-16 12:54:00 [scrapy.utils.log] INFO: Scrapy 2.13.4 started (bot: nebi_spiders)
+2025-12-16 12:54:00 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.2',
+ 'libxml2': '2.14.6',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.14 (main, Oct 10 2025, 01:03:14) [GCC 13.3.0]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.4 30 Sep 2025)',
+ 'cryptography': '46.0.3',
+ 'Platform': 'Linux-6.11.0-1018-azure-x86_64-with-glibc2.39'}
+2025-12-16 12:54:06 [scrapy.addons] INFO: Enabled addons:
+[]
+2025-12-16 12:54:06 [asyncio] DEBUG: Using selector: EpollSelector
+2025-12-16 12:54:06 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2025-12-16 12:54:06 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2025-12-16 12:54:06 [scrapy.extensions.telnet] INFO: Telnet Password: 55a1a04bf19a184f
+2025-12-16 12:54:06 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2025-12-16 12:54:06 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'nebi_spiders',
+ 'CONCURRENT_REQUESTS': 1,
+ 'DOWNLOAD_DELAY': 0.5,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'nebi_spiders.spiders',
+ 'SPIDER_MODULES': ['nebi_spiders.spiders.hamburg',
+                    'nebi_spiders.spiders.stuttgart',
+                    'nebi_spiders.spiders.berlin',
+                    'nebi_spiders.spiders.koeln'],
+ 'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, '
+               'like Gecko) Chrome/141.0.0.0 Safari/537.36'}
+2025-12-16 12:54:06 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-12-16 12:54:06 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-12-16 12:54:06 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2025-12-16 12:54:06 [scrapy.core.engine] INFO: Spider opened
+2025-12-16 12:54:06 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-12-16 12:54:06 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2025-12-16 12:54:07 [scrapy.core.engine] DEBUG: Crawled (202) <GET https://shop.kreuz-containerdienst.de/container-bestellen> (referer: None)
+2025-12-16 12:54:07 [kreuz-containerdienst] DEBUG: 
+================================================================================
+2025-12-16 12:54:07 [kreuz-containerdienst] DEBUG: Starte Kreuz Containerdienst Scraping (Köln)
+2025-12-16 12:54:07 [kreuz-containerdienst] DEBUG: ================================================================================
+
+2025-12-16 12:54:07 [kreuz-containerdienst] DEBUG: 
+--- Verarbeite: Baumischabfall ---
+2025-12-16 12:54:19 [kreuz-containerdienst] DEBUG:   ✓ 3m³: 449,00€
+2025-12-16 12:54:19 [kreuz-containerdienst] DEBUG:   ✓ 5m³: 569,00€
+2025-12-16 12:54:19 [kreuz-containerdienst] DEBUG:   ✓ 7m³: 650,00€
+2025-12-16 12:54:19 [kreuz-containerdienst] DEBUG:   ✓ 10m³: 790,00€
+2025-12-16 12:54:19 [kreuz-containerdienst] DEBUG: 
+--- Verarbeite: Bauschutt ---
+2025-12-16 12:54:28 [kreuz-containerdienst] DEBUG:   ✓ 3m³: 435,00€
+2025-12-16 12:54:28 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Baumischabfall 3 m³', 'type': 'Baumischabfall', 'city': 'Köln', 'size': '3', 'price': '449,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-baumischabfall/'}
+2025-12-16 12:54:28 [kreuz-containerdienst] DEBUG:   ✓ 5m³: 500,00€
+2025-12-16 12:54:28 [kreuz-containerdienst] DEBUG:   ✓ 7m³: 560,00€
+2025-12-16 12:54:28 [kreuz-containerdienst] DEBUG: 
+--- Verarbeite: Altholz ---
+2025-12-16 12:54:37 [kreuz-containerdienst] DEBUG:   ✓ 3m³: 299,00€
+2025-12-16 12:54:37 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Baumischabfall 5 m³', 'type': 'Baumischabfall', 'city': 'Köln', 'size': '5', 'price': '569,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-baumischabfall/'}
+2025-12-16 12:54:37 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Baumischabfall 7 m³', 'type': 'Baumischabfall', 'city': 'Köln', 'size': '7', 'price': '650,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-baumischabfall/'}
+2025-12-16 12:54:37 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Baumischabfall 10 m³', 'type': 'Baumischabfall', 'city': 'Köln', 'size': '10', 'price': '790,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-baumischabfall/'}
+2025-12-16 12:54:37 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Bauschutt 3 m³', 'type': 'Bauschutt', 'city': 'Köln', 'size': '3', 'price': '435,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-bauschutt/'}
+2025-12-16 12:54:37 [kreuz-containerdienst] DEBUG:   ✓ 5m³: 350,00€
+2025-12-16 12:54:37 [kreuz-containerdienst] DEBUG:   ✓ 7m³: 390,00€
+2025-12-16 12:54:37 [kreuz-containerdienst] DEBUG:   ✓ 10m³: 480,00€
+2025-12-16 12:54:37 [kreuz-containerdienst] DEBUG: 
+--- Verarbeite: Boden ---
+2025-12-16 12:54:46 [kreuz-containerdienst] DEBUG:   ✓ 3m³: 435,00€
+2025-12-16 12:54:46 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Bauschutt 5 m³', 'type': 'Bauschutt', 'city': 'Köln', 'size': '5', 'price': '500,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-bauschutt/'}
+2025-12-16 12:54:46 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Bauschutt 7 m³', 'type': 'Bauschutt', 'city': 'Köln', 'size': '7', 'price': '560,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-bauschutt/'}
+2025-12-16 12:54:46 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Altholz 3 m³', 'type': 'Altholz', 'city': 'Köln', 'size': '3', 'price': '299,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-altholz/'}
+2025-12-16 12:54:46 [kreuz-containerdienst] DEBUG:   ✓ 5m³: 500,00€
+2025-12-16 12:54:46 [kreuz-containerdienst] DEBUG:   ✓ 7m³: 540,00€
+2025-12-16 12:54:46 [kreuz-containerdienst] DEBUG: 
+--- Verarbeite: Boden verunreinigt ---
+2025-12-16 12:54:54 [kreuz-containerdienst] DEBUG:   ✓ 3m³: 470,00€
+2025-12-16 12:54:54 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Altholz 5 m³', 'type': 'Altholz', 'city': 'Köln', 'size': '5', 'price': '350,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-altholz/'}
+2025-12-16 12:54:54 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Altholz 7 m³', 'type': 'Altholz', 'city': 'Köln', 'size': '7', 'price': '390,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-altholz/'}
+2025-12-16 12:54:54 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Altholz 10 m³', 'type': 'Altholz', 'city': 'Köln', 'size': '10', 'price': '480,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-altholz/'}
+2025-12-16 12:54:54 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Boden 3 m³', 'type': 'Boden', 'city': 'Köln', 'size': '3', 'price': '435,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-erdaushub-sauber/'}
+2025-12-16 12:54:54 [kreuz-containerdienst] DEBUG:   ✓ 5m³: 540,00€
+2025-12-16 12:54:54 [kreuz-containerdienst] DEBUG:   ✓ 7m³: 580,00€
+2025-12-16 12:54:54 [kreuz-containerdienst] DEBUG: 
+--- Verarbeite: Gartenabfälle ---
+2025-12-16 12:55:04 [kreuz-containerdienst] DEBUG:   ✓ 3m³: 299,00€
+2025-12-16 12:55:04 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Boden 5 m³', 'type': 'Boden', 'city': 'Köln', 'size': '5', 'price': '500,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-erdaushub-sauber/'}
+2025-12-16 12:55:04 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Boden 7 m³', 'type': 'Boden', 'city': 'Köln', 'size': '7', 'price': '540,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-erdaushub-sauber/'}
+2025-12-16 12:55:04 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Boden verunreinigt 3 m³', 'type': 'Boden verunreinigt', 'city': 'Köln', 'size': '3', 'price': '470,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-erdaushub-verunreinigt/'}
+2025-12-16 12:55:04 [kreuz-containerdienst] DEBUG:   ✓ 5m³: 360,00€
+2025-12-16 12:55:04 [kreuz-containerdienst] DEBUG:   ✓ 7m³: 420,00€
+2025-12-16 12:55:04 [kreuz-containerdienst] DEBUG:   ✓ 10m³: 570,00€
+2025-12-16 12:55:04 [kreuz-containerdienst] DEBUG: 
+--- Verarbeite: Gips ---
+2025-12-16 12:55:13 [kreuz-containerdienst] DEBUG:   ✓ 3m³: 320,00€
+2025-12-16 12:55:13 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Boden verunreinigt 5 m³', 'type': 'Boden verunreinigt', 'city': 'Köln', 'size': '5', 'price': '540,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-erdaushub-verunreinigt/'}
+2025-12-16 12:55:13 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Boden verunreinigt 7 m³', 'type': 'Boden verunreinigt', 'city': 'Köln', 'size': '7', 'price': '580,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-erdaushub-verunreinigt/'}
+2025-12-16 12:55:13 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Gartenabfälle 3 m³', 'type': 'Gartenabfälle', 'city': 'Köln', 'size': '3', 'price': '299,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-gartenabfaelle/'}
+2025-12-16 12:55:13 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 1 pages/min), scraped 18 items (at 18 items/min)
+2025-12-16 12:55:13 [kreuz-containerdienst] DEBUG:   ✓ 5m³: 390,00€
+2025-12-16 12:55:13 [kreuz-containerdienst] DEBUG:   ✓ 7m³: 470,00€
+2025-12-16 12:55:13 [kreuz-containerdienst] DEBUG:   ✓ 10m³: 570,00€
+2025-12-16 12:55:13 [kreuz-containerdienst] DEBUG: 
+--- Verarbeite: Sperrmüll ---
+2025-12-16 12:55:23 [kreuz-containerdienst] DEBUG:   ✓ 3m³: 449,00€
+2025-12-16 12:55:23 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Gartenabfälle 5 m³', 'type': 'Gartenabfälle', 'city': 'Köln', 'size': '5', 'price': '360,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-gartenabfaelle/'}
+2025-12-16 12:55:23 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Gartenabfälle 7 m³', 'type': 'Gartenabfälle', 'city': 'Köln', 'size': '7', 'price': '420,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-gartenabfaelle/'}
+2025-12-16 12:55:23 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Gartenabfälle 10 m³', 'type': 'Gartenabfälle', 'city': 'Köln', 'size': '10', 'price': '570,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-gartenabfaelle/'}
+2025-12-16 12:55:23 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Gips 3 m³', 'type': 'Gips', 'city': 'Köln', 'size': '3', 'price': '320,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-gipsabfaelle/'}
+2025-12-16 12:55:23 [kreuz-containerdienst] DEBUG:   ✓ 5m³: 569,00€
+2025-12-16 12:55:23 [kreuz-containerdienst] DEBUG:   ✓ 7m³: 650,00€
+2025-12-16 12:55:23 [kreuz-containerdienst] DEBUG:   ✓ 10m³: 790,00€
+2025-12-16 12:55:23 [kreuz-containerdienst] DEBUG: 
+--- Verarbeite: Dachpappe ---
+2025-12-16 12:55:31 [kreuz-containerdienst] DEBUG:   ✓ 3m³: 714,00€
+2025-12-16 12:55:31 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Gips 5 m³', 'type': 'Gips', 'city': 'Köln', 'size': '5', 'price': '390,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-gipsabfaelle/'}
+2025-12-16 12:55:31 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Gips 7 m³', 'type': 'Gips', 'city': 'Köln', 'size': '7', 'price': '470,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-gipsabfaelle/'}
+2025-12-16 12:55:31 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Gips 10 m³', 'type': 'Gips', 'city': 'Köln', 'size': '10', 'price': '570,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-gipsabfaelle/'}
+2025-12-16 12:55:31 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Sperrmüll 3 m³', 'type': 'Sperrmüll', 'city': 'Köln', 'size': '3', 'price': '449,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-sperrmuell/'}
+2025-12-16 12:55:31 [kreuz-containerdienst] DEBUG:   ✓ 5m³: 1071,00€
+2025-12-16 12:55:31 [kreuz-containerdienst] DEBUG:   ✓ 7m³: 1428,00€
+2025-12-16 12:55:31 [kreuz-containerdienst] DEBUG: 
+================================================================================
+2025-12-16 12:55:31 [kreuz-containerdienst] DEBUG: ✓ Gesamt gescrapt: 32 Produkte
+2025-12-16 12:55:31 [kreuz-containerdienst] DEBUG: ================================================================================
+
+2025-12-16 12:55:31 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Sperrmüll 5 m³', 'type': 'Sperrmüll', 'city': 'Köln', 'size': '5', 'price': '569,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-sperrmuell/'}
+2025-12-16 12:55:31 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Sperrmüll 7 m³', 'type': 'Sperrmüll', 'city': 'Köln', 'size': '7', 'price': '650,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-sperrmuell/'}
+2025-12-16 12:55:31 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Sperrmüll 10 m³', 'type': 'Sperrmüll', 'city': 'Köln', 'size': '10', 'price': '790,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-sperrmuell/'}
+2025-12-16 12:55:31 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Dachpappe 3 m³', 'type': 'Dachpappe', 'city': 'Köln', 'size': '3', 'price': '714,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-dachpappe-bitumen/'}
+2025-12-16 12:55:31 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Dachpappe 5 m³', 'type': 'Dachpappe', 'city': 'Köln', 'size': '5', 'price': '1071,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-dachpappe-bitumen/'}
+2025-12-16 12:55:31 [scrapy.core.scraper] DEBUG: Scraped from <202 https://shop.kreuz-containerdienst.de/container-bestellen>
+{'source': 'Kreuz Containerdienst', 'title': 'Dachpappe 7 m³', 'type': 'Dachpappe', 'city': 'Köln', 'size': '7', 'price': '1428,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://shop.kreuz-containerdienst.de/produkt/absetzcontainer-fuer-dachpappe-bitumen/'}
+2025-12-16 12:55:31 [scrapy.core.engine] INFO: Closing spider (finished)
+2025-12-16 12:55:31 [scrapy.extensions.feedexport] INFO: Stored json feed (32 items) in: ../data/kreuz-containerdienst-products.json
+2025-12-16 12:55:31 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 315,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 559,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/202': 1,
+ 'elapsed_time_seconds': 85.125238,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2025, 12, 16, 12, 55, 31, 812047, tzinfo=datetime.timezone.utc),
+ 'item_scraped_count': 32,
+ 'items_per_minute': 22.588235294117645,
+ 'log_count/DEBUG': 83,
+ 'log_count/INFO': 12,
+ 'memusage/max': 80764928,
+ 'memusage/startup': 78344192,
+ 'response_received_count': 1,
+ 'responses_per_minute': 0.7058823529411764,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2025, 12, 16, 12, 54, 6, 686809, tzinfo=datetime.timezone.utc)}
+2025-12-16 12:55:31 [scrapy.core.engine] INFO: Spider closed (finished)
