@@ -19,8 +19,8 @@ class RedoooSpider(Spider):
     allowed_domains = ["redooo.de"]
     start_urls = ["https://www.redooo.de/privatkunden"]
 
-    # PLZ für Köln
-    plz = "50968"
+    # PLZ für Köln (Innenstadt)
+    plz = "50667"
 
     # 9 Müllarten (Website-Name -> Standardisierter Name)
     waste_categories = [
