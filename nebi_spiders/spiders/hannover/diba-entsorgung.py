@@ -30,8 +30,8 @@ class DibaEntsorgungSpider(Spider):
         ("01-03-2025-bauschutt-container", "Bauschutt"),
     ]
 
-    # Container-Größen (ohne BigBag)
-    container_sizes = ["5 cbm", "7 cbm", "10 cbm", "19 cbm", "36 cbm"]
+    # Container-Größen (ohne BigBag/Mülltasche)
+    container_sizes = ["1 cbm", "5 cbm", "7 cbm", "10 cbm", "19 cbm", "36 cbm"]
 
     def __init__(self):
         logging.getLogger("selenium").setLevel(logging.WARNING)
@@ -187,14 +187,16 @@ class DibaEntsorgungSpider(Spider):
             lines = text.split('\n')
 
             for line in lines:
-                # Preis-Zeile finden (nicht Big Bag Preis von 10,00 €)
+                # Preis-Zeile finden (auch mit Tausendertrennzeichen wie 1.029,00 €)
                 line = line.strip()
-                price_match = re.match(r'^(\d+[.,]\d{2})\s*€', line)
+                price_match = re.match(r'^([\d.]+,\d{2})\s*€', line)
                 if price_match:
                     price = price_match.group(1)
+                    # Tausendertrennzeichen für Berechnung entfernen
+                    price_clean = price.replace('.', '').replace(',', '.')
                     # Plausibilitätscheck (> 50€)
                     try:
-                        price_val = float(price.replace(',', '.'))
+                        price_val = float(price_clean)
                         if price_val > 50:
                             return price
                     except ValueError:
