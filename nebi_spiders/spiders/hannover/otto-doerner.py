@@ -34,8 +34,13 @@ class OttoDoernerSpider(Spider):
         ("porenbeton-ytong", "Porenbeton"),
     ]
 
-    # Verfügbare Größen (URL-Suffix)
-    sizes = ["03", "05", "07"]
+    # Container-Typen mit URL-Muster und Größen
+    # (container_type, url_prefix, url_suffix_prefix, sizes)
+    container_types = [
+        ("kleincontainer", "kleincontainer-fuer", "k", ["01"]),  # 1 m³
+        ("absetzcontainer", "absetzcontainer-fuer", "m", ["03", "05", "07"]),  # 3, 5, 7 m³
+        ("abrollcontainer", "abrollcontainer-fuer", "c", ["10", "20", "25", "35"]),  # 10, 20, 25, 35 m³
+    ]
 
     def __init__(self):
         logging.getLogger("selenium").setLevel(logging.WARNING)
@@ -70,7 +75,7 @@ class OttoDoernerSpider(Spider):
             self.log(f"\n--- Verarbeite: {waste_type} ---")
 
             try:
-                # Gehe zur Übersichtsseite und finde Absetzcontainer-Link
+                # Gehe zur Übersichtsseite und finde Produkt-ID
                 url = f"https://www.doerner-shop.de/container-bestellen/{url_slug}/hannover/"
                 self.driver.get(url)
                 sleep(2)
@@ -80,59 +85,66 @@ class OttoDoernerSpider(Spider):
                     self._accept_cookies()
                     self.cookies_accepted = True
 
-                # Finde Absetzcontainer-Link und extrahiere Produkt-ID
+                # Finde Produkt-ID aus beliebigem Container-Link
                 product_id = self._find_product_id(url_slug)
 
                 if not product_id:
-                    self.log(f"  ⚠️ Kein Absetzcontainer gefunden für {waste_type}")
+                    self.log(f"  ⚠️ Keine Produkt-ID gefunden für {waste_type}")
                     continue
 
-                # Für jede Größe
-                for size_code in self.sizes:
-                    try:
-                        # Konstruiere direkte URL für diese Größe
-                        size_url = f"https://www.doerner-shop.de/absetzcontainer-fuer-{url_slug}-in-hannover/cs-h-{product_id}-m{size_code}"
-                        self.driver.get(size_url)
-                        sleep(2)
+                # Für jeden Container-Typ
+                for container_type, url_prefix, suffix_prefix, sizes in self.container_types:
+                    # Für jede Größe
+                    for size_code in sizes:
+                        try:
+                            # Konstruiere direkte URL für diese Größe
+                            size_url = f"https://www.doerner-shop.de/{url_prefix}-{url_slug}-in-hannover/cs-h-{product_id}-{suffix_prefix}{size_code}"
+                            self.driver.get(size_url)
+                            sleep(1.5)
 
-                        # Prüfe ob Seite existiert (404 oder Weiterleitung)
-                        if "404" in self.driver.title.lower() or "nicht gefunden" in self.driver.page_source.lower():
+                            # Prüfe ob Seite existiert (404 oder Weiterleitung)
+                            if "404" in self.driver.title.lower() or "nicht gefunden" in self.driver.page_source.lower():
+                                continue
+
+                            # Prüfe ob wir auf der richtigen Seite sind
+                            current_url = self.driver.current_url.lower()
+                            if container_type not in current_url:
+                                continue
+
+                            # Extrahiere Preis
+                            price = self._get_current_price()
+                            if not price:
+                                continue
+
+                            size = str(int(size_code))  # "03" -> "3", "01" -> "1"
+
+                            product_key = f"{waste_type}|{container_type}|{size}"
+                            if product_key not in self.seen_products:
+                                self.seen_products.add(product_key)
+                                total_products += 1
+
+                                product = {
+                                    "source": "OTTO DÖRNER",
+                                    "title": f"{waste_type} {size} m³",
+                                    "type": waste_type,
+                                    "city": "Hannover",
+                                    "size": size,
+                                    "price": price,
+                                    "lid_price": None,
+                                    "arrival_price": "inklusive",
+                                    "departure_price": "inklusive",
+                                    "max_rental_period": None,
+                                    "fee_after_max": None,
+                                    "cancellation_fee": None,
+                                    "URL": size_url
+                                }
+
+                                self.log(f"  ✓ {container_type} {size}m³: {price}€")
+                                yield product
+
+                        except Exception as e:
+                            self.log(f"  ⚠️ Fehler bei {container_type} {size_code}: {e}")
                             continue
-
-                        # Extrahiere Preis
-                        price = self._get_current_price()
-                        if not price:
-                            continue
-
-                        size = str(int(size_code))  # "03" -> "3"
-
-                        product_key = f"{waste_type}|{size}"
-                        if product_key not in self.seen_products:
-                            self.seen_products.add(product_key)
-                            total_products += 1
-
-                            product = {
-                                "source": "OTTO DÖRNER",
-                                "title": f"{waste_type} {size} m³",
-                                "type": waste_type,
-                                "city": "Hannover",
-                                "size": size,
-                                "price": price,
-                                "lid_price": None,
-                                "arrival_price": "inklusive",
-                                "departure_price": "inklusive",
-                                "max_rental_period": None,
-                                "fee_after_max": None,
-                                "cancellation_fee": None,
-                                "URL": size_url
-                            }
-
-                            self.log(f"  ✓ {size}m³: {price}€")
-                            yield product
-
-                    except Exception as e:
-                        self.log(f"  ⚠️ Fehler bei Größe {size_code}: {e}")
-                        continue
 
             except Exception as e:
                 self.log(f"  ❌ Fehler bei {waste_type}: {e}")
@@ -159,31 +171,19 @@ class OttoDoernerSpider(Spider):
         return False
 
     def _find_product_id(self, url_slug):
-        """Findet die Produkt-ID aus dem Absetzcontainer-Link."""
+        """Findet die Produkt-ID aus einem Container-Link."""
         try:
-            # Finde Absetzcontainer-Link auf der Seite
+            # Finde alle Container-Links auf der Seite
             container_links = self.driver.find_elements(
                 By.CSS_SELECTOR,
-                "a[href*='absetzcontainer']"
+                "a[href*='container']"
             )
 
             for link in container_links:
                 href = link.get_attribute("href") or ""
-                if "absetzcontainer" in href.lower() and "hannover" in href.lower():
+                if "hannover" in href.lower():
                     # Extrahiere Produkt-ID aus URL (z.B. cs-h-1011-m07 -> 1011)
-                    match = re.search(r'cs-h-(\d+)-m\d+', href)
-                    if match:
-                        return match.group(1)
-
-            # Fallback: Versuche Link zu klicken und URL zu prüfen
-            for link in container_links:
-                href = link.get_attribute("href") or ""
-                text = link.text.lower()
-                if "absetzcontainer" in text or "3-10" in text or "3 - 10" in text:
-                    self.driver.get(href)
-                    sleep(2)
-                    current_url = self.driver.current_url
-                    match = re.search(r'cs-h-(\d+)-m\d+', current_url)
+                    match = re.search(r'cs-h-(\d+)-[mck]\d+', href)
                     if match:
                         return match.group(1)
 
@@ -209,17 +209,17 @@ class OttoDoernerSpider(Spider):
                     for price_elem in price_elems:
                         if price_elem.is_displayed():
                             price_text = price_elem.text.strip()
-                            # Preis extrahieren
-                            price_match = re.search(r'([\d.,]+)\s*€?', price_text)
+                            # Preis extrahieren (auch große Preise wie 1.234,56)
+                            price_match = re.search(r'([\d.]+,\d{2})\s*€?', price_text)
                             if price_match:
                                 price = price_match.group(1)
                                 # Tausendertrennzeichen entfernen
                                 if '.' in price and ',' in price:
                                     price = price.replace('.', '')
-                                # Prüfe ob plausibel (> 100€)
+                                # Prüfe ob plausibel (> 50€)
                                 try:
                                     price_val = float(price.replace(',', '.'))
-                                    if price_val > 100:
+                                    if price_val > 50:
                                         return price
                                 except ValueError:
                                     pass
@@ -229,9 +229,13 @@ class OttoDoernerSpider(Spider):
             # Fallback: Suche im gesamten Text
             body = self.driver.find_element(By.TAG_NAME, "body")
             text = body.text
-            price_match = re.search(r'(\d{2,3}[.,]\d{2})\s*€', text)
+            # Auch größere Preise matchen (z.B. 1.234,56€ oder 2.650,01€)
+            price_match = re.search(r'([\d.]+,\d{2})\s*€', text)
             if price_match:
-                return price_match.group(1)
+                price = price_match.group(1)
+                if '.' in price and ',' in price:
+                    price = price.replace('.', '')
+                return price
 
         except Exception:
             pass
