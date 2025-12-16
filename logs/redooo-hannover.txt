@@ -1,0 +1,226 @@
+2025-12-16 20:14:01 [scrapy.utils.log] INFO: Scrapy 2.13.4 started (bot: nebi_spiders)
+2025-12-16 20:14:01 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.2',
+ 'libxml2': '2.14.6',
+ 'cssselect': '1.3.0',
+ 'parsel': '1.10.0',
+ 'w3lib': '2.3.1',
+ 'Twisted': '25.5.0',
+ 'Python': '3.11.14 (main, Oct 10 2025, 01:03:14) [GCC 13.3.0]',
+ 'pyOpenSSL': '25.3.0 (OpenSSL 3.5.4 30 Sep 2025)',
+ 'cryptography': '46.0.3',
+ 'Platform': 'Linux-6.11.0-1018-azure-x86_64-with-glibc2.39'}
+2025-12-16 20:14:08 [scrapy.addons] INFO: Enabled addons:
+[]
+2025-12-16 20:14:08 [asyncio] DEBUG: Using selector: EpollSelector
+2025-12-16 20:14:08 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2025-12-16 20:14:08 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2025-12-16 20:14:08 [scrapy.extensions.telnet] INFO: Telnet Password: 9c4acdaf34da88aa
+2025-12-16 20:14:08 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2025-12-16 20:14:08 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'nebi_spiders',
+ 'CONCURRENT_REQUESTS': 1,
+ 'DOWNLOAD_DELAY': 0.5,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'nebi_spiders.spiders',
+ 'SPIDER_MODULES': ['nebi_spiders.spiders.hamburg',
+                    'nebi_spiders.spiders.stuttgart',
+                    'nebi_spiders.spiders.berlin',
+                    'nebi_spiders.spiders.hannover',
+                    'nebi_spiders.spiders.koeln'],
+ 'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, '
+               'like Gecko) Chrome/141.0.0.0 Safari/537.36'}
+2025-12-16 20:14:08 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-12-16 20:14:08 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-12-16 20:14:08 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2025-12-16 20:14:08 [scrapy.core.engine] INFO: Spider opened
+2025-12-16 20:14:08 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-12-16 20:14:08 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2025-12-16 20:14:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.redooo.de/privatkunden> (referer: None)
+2025-12-16 20:14:10 [redooo-hannover] DEBUG: 
+================================================================================
+2025-12-16 20:14:10 [redooo-hannover] DEBUG: Starte Redooo Scraping (Hannover)
+2025-12-16 20:14:10 [redooo-hannover] DEBUG: ================================================================================
+
+2025-12-16 20:14:26 [redooo-hannover] DEBUG:   ✓ Session eingerichtet (PLZ: 30159)
+2025-12-16 20:14:26 [redooo-hannover] DEBUG: 
+--- Verarbeite: Baumischabfall ---
+2025-12-16 20:14:31 [redooo-hannover] DEBUG:   ✓ 5m³: 719,00€
+2025-12-16 20:14:31 [redooo-hannover] DEBUG:   ✓ 7m³: 924,00€
+2025-12-16 20:14:31 [redooo-hannover] DEBUG:   ✓ 10m³: 1234,00€
+2025-12-16 20:14:31 [redooo-hannover] DEBUG:   ✓ 22m³: 2499,00€
+2025-12-16 20:14:31 [redooo-hannover] DEBUG:   ✓ 36m³: 3959,00€
+2025-12-16 20:14:31 [redooo-hannover] DEBUG: 
+--- Verarbeite: Bauschutt ---
+2025-12-16 20:14:40 [redooo-hannover] DEBUG:   ✓ 5m³: 439,00€
+2025-12-16 20:14:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Baumischabfall 5 m³', 'type': 'Baumischabfall', 'city': 'Hannover', 'size': '5', 'price': '719,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:14:40 [redooo-hannover] DEBUG:   ✓ 7m³: 534,00€
+2025-12-16 20:14:40 [redooo-hannover] DEBUG: 
+--- Verarbeite: Bauschutt verunreinigt ---
+2025-12-16 20:14:48 [redooo-hannover] DEBUG:   ✓ 5m³: 592,90€
+2025-12-16 20:14:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Baumischabfall 7 m³', 'type': 'Baumischabfall', 'city': 'Hannover', 'size': '7', 'price': '924,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:14:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Baumischabfall 10 m³', 'type': 'Baumischabfall', 'city': 'Hannover', 'size': '10', 'price': '1234,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:14:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Baumischabfall 22 m³', 'type': 'Baumischabfall', 'city': 'Hannover', 'size': '22', 'price': '2499,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:14:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Baumischabfall 36 m³', 'type': 'Baumischabfall', 'city': 'Hannover', 'size': '36', 'price': '3959,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:14:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Bauschutt 5 m³', 'type': 'Bauschutt', 'city': 'Hannover', 'size': '5', 'price': '439,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:14:48 [redooo-hannover] DEBUG:   ✓ 7m³: 746,90€
+2025-12-16 20:14:48 [redooo-hannover] DEBUG: 
+--- Verarbeite: Boden ---
+2025-12-16 20:14:56 [redooo-hannover] DEBUG:   ✓ 5m³: 529,00€
+2025-12-16 20:14:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Bauschutt 7 m³', 'type': 'Bauschutt', 'city': 'Hannover', 'size': '7', 'price': '534,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:14:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Bauschutt verunreinigt 5 m³', 'type': 'Bauschutt verunreinigt', 'city': 'Hannover', 'size': '5', 'price': '592,90', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:14:56 [redooo-hannover] DEBUG:   ✓ 7m³: 664,00€
+2025-12-16 20:14:56 [redooo-hannover] DEBUG: 
+--- Verarbeite: Gartenabfälle ---
+2025-12-16 20:15:04 [redooo-hannover] DEBUG:   ✓ 5m³: 279,00€
+2025-12-16 20:15:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Bauschutt verunreinigt 7 m³', 'type': 'Bauschutt verunreinigt', 'city': 'Hannover', 'size': '7', 'price': '746,90', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:15:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Boden 5 m³', 'type': 'Boden', 'city': 'Hannover', 'size': '5', 'price': '529,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:15:04 [redooo-hannover] DEBUG:   ✓ 7m³: 319,00€
+2025-12-16 20:15:04 [redooo-hannover] DEBUG:   ✓ 10m³: 369,00€
+2025-12-16 20:15:04 [redooo-hannover] DEBUG:   ✓ 22m³: 594,00€
+2025-12-16 20:15:04 [redooo-hannover] DEBUG:   ✓ 36m³: 839,00€
+2025-12-16 20:15:04 [redooo-hannover] DEBUG: 
+--- Verarbeite: Metallschrott ---
+2025-12-16 20:15:12 [redooo-hannover] DEBUG:   ✓ 7m³: 89,00€
+2025-12-16 20:15:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Boden 7 m³', 'type': 'Boden', 'city': 'Hannover', 'size': '7', 'price': '664,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:15:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Gartenabfälle 5 m³', 'type': 'Gartenabfälle', 'city': 'Hannover', 'size': '5', 'price': '279,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:15:12 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 1 pages/min), scraped 12 items (at 12 items/min)
+2025-12-16 20:15:12 [redooo-hannover] DEBUG:   ✓ 10m³: 99,00€
+2025-12-16 20:15:12 [redooo-hannover] DEBUG:   ✓ 22m³: 129,00€
+2025-12-16 20:15:12 [redooo-hannover] DEBUG:   ✓ 36m³: 129,00€
+2025-12-16 20:15:12 [redooo-hannover] DEBUG: 
+--- Verarbeite: Holz A1-A3 ---
+2025-12-16 20:15:20 [redooo-hannover] DEBUG:   ✓ 5m³: 459,00€
+2025-12-16 20:15:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Gartenabfälle 7 m³', 'type': 'Gartenabfälle', 'city': 'Hannover', 'size': '7', 'price': '319,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:15:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Gartenabfälle 10 m³', 'type': 'Gartenabfälle', 'city': 'Hannover', 'size': '10', 'price': '369,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:15:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Gartenabfälle 22 m³', 'type': 'Gartenabfälle', 'city': 'Hannover', 'size': '22', 'price': '594,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:15:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Gartenabfälle 36 m³', 'type': 'Gartenabfälle', 'city': 'Hannover', 'size': '36', 'price': '839,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:15:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Metallschrott 7 m³', 'type': 'Metallschrott', 'city': 'Hannover', 'size': '7', 'price': '89,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:15:20 [redooo-hannover] DEBUG:   ✓ 7m³: 564,00€
+2025-12-16 20:15:20 [redooo-hannover] DEBUG:   ✓ 10m³: 724,00€
+2025-12-16 20:15:20 [redooo-hannover] DEBUG:   ✓ 22m³: 1369,00€
+2025-12-16 20:15:20 [redooo-hannover] DEBUG:   ✓ 36m³: 2099,00€
+2025-12-16 20:15:20 [redooo-hannover] DEBUG: 
+--- Verarbeite: Holz A4 ---
+2025-12-16 20:15:28 [redooo-hannover] DEBUG:   ✓ 5m³: 689,00€
+2025-12-16 20:15:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Metallschrott 10 m³', 'type': 'Metallschrott', 'city': 'Hannover', 'size': '10', 'price': '99,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:15:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Metallschrott 22 m³', 'type': 'Metallschrott', 'city': 'Hannover', 'size': '22', 'price': '129,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:15:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Metallschrott 36 m³', 'type': 'Metallschrott', 'city': 'Hannover', 'size': '36', 'price': '129,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:15:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Holz A1-A3 5 m³', 'type': 'Holz A1-A3', 'city': 'Hannover', 'size': '5', 'price': '459,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:15:28 [redooo-hannover] DEBUG:   ✓ 7m³: 889,00€
+2025-12-16 20:15:28 [redooo-hannover] DEBUG:   ✓ 10m³: 1184,00€
+2025-12-16 20:15:28 [redooo-hannover] DEBUG:   ✓ 22m³: 2389,00€
+2025-12-16 20:15:28 [redooo-hannover] DEBUG:   ✓ 36m³: 3779,00€
+2025-12-16 20:15:28 [redooo-hannover] DEBUG: 
+--- Verarbeite: Sperrmüll ---
+2025-12-16 20:15:37 [redooo-hannover] DEBUG:   ✓ 5m³: 584,00€
+2025-12-16 20:15:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Holz A1-A3 7 m³', 'type': 'Holz A1-A3', 'city': 'Hannover', 'size': '7', 'price': '564,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:15:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Holz A1-A3 10 m³', 'type': 'Holz A1-A3', 'city': 'Hannover', 'size': '10', 'price': '724,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:15:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Holz A1-A3 22 m³', 'type': 'Holz A1-A3', 'city': 'Hannover', 'size': '22', 'price': '1369,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:15:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Holz A1-A3 36 m³', 'type': 'Holz A1-A3', 'city': 'Hannover', 'size': '36', 'price': '2099,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:15:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Holz A4 5 m³', 'type': 'Holz A4', 'city': 'Hannover', 'size': '5', 'price': '689,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:15:37 [redooo-hannover] DEBUG:   ✓ 7m³: 739,00€
+2025-12-16 20:15:37 [redooo-hannover] DEBUG:   ✓ 10m³: 979,00€
+2025-12-16 20:15:37 [redooo-hannover] DEBUG:   ✓ 22m³: 1929,00€
+2025-12-16 20:15:37 [redooo-hannover] DEBUG:   ✓ 36m³: 3019,00€
+2025-12-16 20:15:37 [redooo-hannover] DEBUG: 
+================================================================================
+2025-12-16 20:15:37 [redooo-hannover] DEBUG: ✓ Gesamt gescrapt: 35 Produkte
+2025-12-16 20:15:37 [redooo-hannover] DEBUG: ================================================================================
+
+2025-12-16 20:15:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Holz A4 7 m³', 'type': 'Holz A4', 'city': 'Hannover', 'size': '7', 'price': '889,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:15:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Holz A4 10 m³', 'type': 'Holz A4', 'city': 'Hannover', 'size': '10', 'price': '1184,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:15:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Holz A4 22 m³', 'type': 'Holz A4', 'city': 'Hannover', 'size': '22', 'price': '2389,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:15:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Holz A4 36 m³', 'type': 'Holz A4', 'city': 'Hannover', 'size': '36', 'price': '3779,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:15:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Sperrmüll 5 m³', 'type': 'Sperrmüll', 'city': 'Hannover', 'size': '5', 'price': '584,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:15:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Sperrmüll 7 m³', 'type': 'Sperrmüll', 'city': 'Hannover', 'size': '7', 'price': '739,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:15:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Sperrmüll 10 m³', 'type': 'Sperrmüll', 'city': 'Hannover', 'size': '10', 'price': '979,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:15:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Sperrmüll 22 m³', 'type': 'Sperrmüll', 'city': 'Hannover', 'size': '22', 'price': '1929,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:15:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.redooo.de/privatkunden>
+{'source': 'Redooo', 'title': 'Sperrmüll 36 m³', 'type': 'Sperrmüll', 'city': 'Hannover', 'size': '36', 'price': '3019,00', 'lid_price': 'Plane oder Netz möglich', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '21', 'fee_after_max': '1,00', 'cancellation_fee': None, 'URL': 'https://www.redooo.de/shop/containerart'}
+2025-12-16 20:15:37 [scrapy.core.engine] INFO: Closing spider (finished)
+2025-12-16 20:15:37 [scrapy.extensions.feedexport] INFO: Stored json feed (35 items) in: ../data/redooo-hannover-products.json
+2025-12-16 20:15:37 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 292,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 103025,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 88.486067,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2025, 12, 16, 20, 15, 37, 197253, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 831487,
+ 'httpcompression/response_count': 1,
+ 'item_scraped_count': 35,
+ 'items_per_minute': 23.863636363636367,
+ 'log_count/DEBUG': 90,
+ 'log_count/INFO': 12,
+ 'memusage/max': 90349568,
+ 'memusage/startup': 78581760,
+ 'response_received_count': 1,
+ 'responses_per_minute': 0.6818181818181819,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2025, 12, 16, 20, 14, 8, 711186, tzinfo=datetime.timezone.utc)}
+2025-12-16 20:15:37 [scrapy.core.engine] INFO: Spider closed (finished)
