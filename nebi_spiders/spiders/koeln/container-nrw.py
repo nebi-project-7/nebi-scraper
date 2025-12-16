@@ -18,7 +18,7 @@ class ContainerNrwSpider(Spider):
     # WICHTIG: Manche Abfallarten sind über mehrere Paragraphen verteilt
     waste_types_ordered = [
         (r'Baumischabfall.*?10%.*?Mineralik', "Baumischabfall 10% Mineralik"),
-        (r'keine\s*Mineralik.*?Rigips', "Baumischabfall leicht"),  # "keine Mineralik ausser Rigips" in separatem <p>
+        (r'keine\s*Mineralik.*?Rigips', "Baumischabfall keine Mineralik"),  # "keine Mineralik ausser Rigips" in separatem <p>
         (r'Bauschutt\s*sauber', "Bauschutt sauber"),
         (r'^Rigips\s*ohne', "Rigips"),  # "Rigips ohne Tapeten..."
         (r'Holz\s*Bau-?\s*und\s*Abbruchholz', "Bau- und Abbruchholz"),
