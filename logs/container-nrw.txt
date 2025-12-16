@@ -1,5 +1,5 @@
-2025-12-16 18:38:38 [scrapy.utils.log] INFO: Scrapy 2.13.4 started (bot: nebi_spiders)
-2025-12-16 18:38:38 [scrapy.utils.log] INFO: Versions:
+2025-12-16 19:21:21 [scrapy.utils.log] INFO: Scrapy 2.13.4 started (bot: nebi_spiders)
+2025-12-16 19:21:21 [scrapy.utils.log] INFO: Versions:
 {'lxml': '6.0.2',
  'libxml2': '2.14.6',
  'cssselect': '1.3.0',
@@ -10,19 +10,19 @@
  'pyOpenSSL': '25.3.0 (OpenSSL 3.5.4 30 Sep 2025)',
  'cryptography': '46.0.3',
  'Platform': 'Linux-6.11.0-1018-azure-x86_64-with-glibc2.39'}
-2025-12-16 18:38:38 [scrapy.addons] INFO: Enabled addons:
+2025-12-16 19:21:21 [scrapy.addons] INFO: Enabled addons:
 []
-2025-12-16 18:38:38 [asyncio] DEBUG: Using selector: EpollSelector
-2025-12-16 18:38:38 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
-2025-12-16 18:38:38 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
-2025-12-16 18:38:38 [scrapy.extensions.telnet] INFO: Telnet Password: ba73db17490de49f
-2025-12-16 18:38:38 [scrapy.middleware] INFO: Enabled extensions:
+2025-12-16 19:21:21 [asyncio] DEBUG: Using selector: EpollSelector
+2025-12-16 19:21:21 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2025-12-16 19:21:21 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2025-12-16 19:21:21 [scrapy.extensions.telnet] INFO: Telnet Password: da40b99f97756faf
+2025-12-16 19:21:21 [scrapy.middleware] INFO: Enabled extensions:
 ['scrapy.extensions.corestats.CoreStats',
  'scrapy.extensions.telnet.TelnetConsole',
  'scrapy.extensions.memusage.MemoryUsage',
  'scrapy.extensions.feedexport.FeedExporter',
  'scrapy.extensions.logstats.LogStats']
-2025-12-16 18:38:38 [scrapy.crawler] INFO: Overridden settings:
+2025-12-16 19:21:21 [scrapy.crawler] INFO: Overridden settings:
 {'BOT_NAME': 'nebi_spiders',
  'CONCURRENT_REQUESTS': 1,
  'DOWNLOAD_DELAY': 0.5,
@@ -35,7 +35,7 @@
                     'nebi_spiders.spiders.koeln'],
  'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, '
                'like Gecko) Chrome/141.0.0.0 Safari/537.36'}
-2025-12-16 18:38:38 [scrapy.middleware] INFO: Enabled downloader middlewares:
+2025-12-16 19:21:21 [scrapy.middleware] INFO: Enabled downloader middlewares:
 ['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
  'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
@@ -48,182 +48,182 @@
  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
  'scrapy.downloadermiddlewares.stats.DownloaderStats']
-2025-12-16 18:38:38 [scrapy.middleware] INFO: Enabled spider middlewares:
+2025-12-16 19:21:21 [scrapy.middleware] INFO: Enabled spider middlewares:
 ['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
  'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
  'scrapy.spidermiddlewares.referer.RefererMiddleware',
  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
  'scrapy.spidermiddlewares.depth.DepthMiddleware']
-2025-12-16 18:38:38 [scrapy.middleware] INFO: Enabled item pipelines:
+2025-12-16 19:21:21 [scrapy.middleware] INFO: Enabled item pipelines:
 []
-2025-12-16 18:38:38 [scrapy.core.engine] INFO: Spider opened
-2025-12-16 18:38:38 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2025-12-16 18:38:38 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
-2025-12-16 18:38:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.containernrw.de/container_koeln_rechts.html> (referer: None)
-2025-12-16 18:38:39 [container-nrw] DEBUG: 
+2025-12-16 19:21:21 [scrapy.core.engine] INFO: Spider opened
+2025-12-16 19:21:21 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-12-16 19:21:21 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2025-12-16 19:21:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.containernrw.de/container_koeln_rechts.html> (referer: None)
+2025-12-16 19:21:22 [container-nrw] DEBUG: 
 ================================================================================
-2025-12-16 18:38:39 [container-nrw] DEBUG: Starte Container NRW Scraping (Köln)
-2025-12-16 18:38:39 [container-nrw] DEBUG: ================================================================================
+2025-12-16 19:21:22 [container-nrw] DEBUG: Starte Container NRW Scraping (Köln)
+2025-12-16 19:21:22 [container-nrw] DEBUG: ================================================================================
 
-2025-12-16 18:38:39 [container-nrw] DEBUG: 
+2025-12-16 19:21:22 [container-nrw] DEBUG: 
 --- Verarbeite: Baumischabfall 10% Mineralik ---
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 3m³: 420,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 5m³: 560,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 7m³: 700,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 10m³: 910,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG: 
---- Verarbeite: Baumischabfall leicht ---
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 3m³: 360,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 5m³: 480,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 7m³: 580,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 10m³: 715,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG: 
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 3m³: 420,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 5m³: 560,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 7m³: 700,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 10m³: 910,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG: 
+--- Verarbeite: Baumischabfall keine Mineralik ---
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 3m³: 360,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 5m³: 480,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 7m³: 580,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 10m³: 715,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG: 
 --- Verarbeite: Bauschutt sauber ---
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 3m³: 365,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 5m³: 470,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 7m³: 575,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG: 
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 3m³: 365,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 5m³: 470,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 7m³: 575,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG: 
 --- Verarbeite: Rigips ---
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 3m³: 310,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 5m³: 380,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 7m³: 450,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 10m³: 560,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG: 
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 3m³: 310,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 5m³: 380,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 7m³: 450,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 10m³: 560,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG: 
 --- Verarbeite: Bau- und Abbruchholz ---
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 3m³: 255,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 5m³: 285,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 7m³: 315,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 10m³: 360,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG: 
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 3m³: 255,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 5m³: 285,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 7m³: 315,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 10m³: 360,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG: 
 --- Verarbeite: Bauschutt verunreinigt ---
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 3m³: 330,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 5m³: 410,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 7m³: 490,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG: 
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 3m³: 330,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 5m³: 410,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 7m³: 490,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG: 
 --- Verarbeite: Sperrmüll ---
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 3m³: 370,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 5m³: 480,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 7m³: 590,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 10m³: 755,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG: 
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 3m³: 370,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 5m³: 480,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 7m³: 590,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 10m³: 755,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG: 
 --- Verarbeite: Gartenabfälle ---
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 3m³: 240,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 5m³: 270,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 7m³: 334,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 10m³: 334,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG: 
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 3m³: 240,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 5m³: 270,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 7m³: 334,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 10m³: 334,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG: 
 --- Verarbeite: Erdaushub sauber ---
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 3m³: 345,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 5m³: 445,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 7m³: 540,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG: 
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 3m³: 345,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 5m³: 445,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 7m³: 540,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG: 
 --- Verarbeite: Erde + Steine ---
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 3m³: 480,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 5m³: 670,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG:   ✓ 7m³: 855,00€
-2025-12-16 18:38:39 [container-nrw] DEBUG: 
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 3m³: 480,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 5m³: 670,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG:   ✓ 7m³: 855,00€
+2025-12-16 19:21:22 [container-nrw] DEBUG: 
 ================================================================================
-2025-12-16 18:38:39 [container-nrw] DEBUG: ✓ Gesamt gescrapt: 36 Produkte
-2025-12-16 18:38:39 [container-nrw] DEBUG: ================================================================================
+2025-12-16 19:21:22 [container-nrw] DEBUG: ✓ Gesamt gescrapt: 36 Produkte
+2025-12-16 19:21:22 [container-nrw] DEBUG: ================================================================================
 
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Baumischabfall 10% Mineralik 3 m³', 'type': 'Baumischabfall 10% Mineralik', 'city': 'Köln', 'size': '3', 'price': '420,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Baumischabfall 10% Mineralik 5 m³', 'type': 'Baumischabfall 10% Mineralik', 'city': 'Köln', 'size': '5', 'price': '560,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Baumischabfall 10% Mineralik 7 m³', 'type': 'Baumischabfall 10% Mineralik', 'city': 'Köln', 'size': '7', 'price': '700,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Baumischabfall 10% Mineralik 10 m³', 'type': 'Baumischabfall 10% Mineralik', 'city': 'Köln', 'size': '10', 'price': '910,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
-{'source': 'Container NRW', 'title': 'Baumischabfall leicht 3 m³', 'type': 'Baumischabfall leicht', 'city': 'Köln', 'size': '3', 'price': '360,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
-{'source': 'Container NRW', 'title': 'Baumischabfall leicht 5 m³', 'type': 'Baumischabfall leicht', 'city': 'Köln', 'size': '5', 'price': '480,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
-{'source': 'Container NRW', 'title': 'Baumischabfall leicht 7 m³', 'type': 'Baumischabfall leicht', 'city': 'Köln', 'size': '7', 'price': '580,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
-{'source': 'Container NRW', 'title': 'Baumischabfall leicht 10 m³', 'type': 'Baumischabfall leicht', 'city': 'Köln', 'size': '10', 'price': '715,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+{'source': 'Container NRW', 'title': 'Baumischabfall keine Mineralik 3 m³', 'type': 'Baumischabfall keine Mineralik', 'city': 'Köln', 'size': '3', 'price': '360,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+{'source': 'Container NRW', 'title': 'Baumischabfall keine Mineralik 5 m³', 'type': 'Baumischabfall keine Mineralik', 'city': 'Köln', 'size': '5', 'price': '480,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+{'source': 'Container NRW', 'title': 'Baumischabfall keine Mineralik 7 m³', 'type': 'Baumischabfall keine Mineralik', 'city': 'Köln', 'size': '7', 'price': '580,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+{'source': 'Container NRW', 'title': 'Baumischabfall keine Mineralik 10 m³', 'type': 'Baumischabfall keine Mineralik', 'city': 'Köln', 'size': '10', 'price': '715,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Bauschutt sauber 3 m³', 'type': 'Bauschutt sauber', 'city': 'Köln', 'size': '3', 'price': '365,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Bauschutt sauber 5 m³', 'type': 'Bauschutt sauber', 'city': 'Köln', 'size': '5', 'price': '470,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Bauschutt sauber 7 m³', 'type': 'Bauschutt sauber', 'city': 'Köln', 'size': '7', 'price': '575,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Rigips 3 m³', 'type': 'Rigips', 'city': 'Köln', 'size': '3', 'price': '310,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Rigips 5 m³', 'type': 'Rigips', 'city': 'Köln', 'size': '5', 'price': '380,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Rigips 7 m³', 'type': 'Rigips', 'city': 'Köln', 'size': '7', 'price': '450,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Rigips 10 m³', 'type': 'Rigips', 'city': 'Köln', 'size': '10', 'price': '560,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Bau- und Abbruchholz 3 m³', 'type': 'Bau- und Abbruchholz', 'city': 'Köln', 'size': '3', 'price': '255,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Bau- und Abbruchholz 5 m³', 'type': 'Bau- und Abbruchholz', 'city': 'Köln', 'size': '5', 'price': '285,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Bau- und Abbruchholz 7 m³', 'type': 'Bau- und Abbruchholz', 'city': 'Köln', 'size': '7', 'price': '315,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Bau- und Abbruchholz 10 m³', 'type': 'Bau- und Abbruchholz', 'city': 'Köln', 'size': '10', 'price': '360,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Bauschutt verunreinigt 3 m³', 'type': 'Bauschutt verunreinigt', 'city': 'Köln', 'size': '3', 'price': '330,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Bauschutt verunreinigt 5 m³', 'type': 'Bauschutt verunreinigt', 'city': 'Köln', 'size': '5', 'price': '410,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Bauschutt verunreinigt 7 m³', 'type': 'Bauschutt verunreinigt', 'city': 'Köln', 'size': '7', 'price': '490,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Sperrmüll 3 m³', 'type': 'Sperrmüll', 'city': 'Köln', 'size': '3', 'price': '370,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Sperrmüll 5 m³', 'type': 'Sperrmüll', 'city': 'Köln', 'size': '5', 'price': '480,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Sperrmüll 7 m³', 'type': 'Sperrmüll', 'city': 'Köln', 'size': '7', 'price': '590,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Sperrmüll 10 m³', 'type': 'Sperrmüll', 'city': 'Köln', 'size': '10', 'price': '755,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Gartenabfälle 3 m³', 'type': 'Gartenabfälle', 'city': 'Köln', 'size': '3', 'price': '240,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Gartenabfälle 5 m³', 'type': 'Gartenabfälle', 'city': 'Köln', 'size': '5', 'price': '270,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Gartenabfälle 7 m³', 'type': 'Gartenabfälle', 'city': 'Köln', 'size': '7', 'price': '334,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Gartenabfälle 10 m³', 'type': 'Gartenabfälle', 'city': 'Köln', 'size': '10', 'price': '334,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Erdaushub sauber 3 m³', 'type': 'Erdaushub sauber', 'city': 'Köln', 'size': '3', 'price': '345,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Erdaushub sauber 5 m³', 'type': 'Erdaushub sauber', 'city': 'Köln', 'size': '5', 'price': '445,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Erdaushub sauber 7 m³', 'type': 'Erdaushub sauber', 'city': 'Köln', 'size': '7', 'price': '540,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Erde + Steine 3 m³', 'type': 'Erde + Steine', 'city': 'Köln', 'size': '3', 'price': '480,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Erde + Steine 5 m³', 'type': 'Erde + Steine', 'city': 'Köln', 'size': '5', 'price': '670,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
+2025-12-16 19:21:22 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.containernrw.de/container_koeln_rechts.html>
 {'source': 'Container NRW', 'title': 'Erde + Steine 7 m³', 'type': 'Erde + Steine', 'city': 'Köln', 'size': '7', 'price': '855,00', 'lid_price': 'nur wenn vorrätig', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '10,00', 'cancellation_fee': None, 'URL': 'http://www.containernrw.de/container_koeln_rechts.html'}
-2025-12-16 18:38:39 [scrapy.core.engine] INFO: Closing spider (finished)
-2025-12-16 18:38:39 [scrapy.extensions.feedexport] INFO: Stored json feed (36 items) in: ../data/container-nrw-products.json
-2025-12-16 18:38:39 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+2025-12-16 19:21:22 [scrapy.core.engine] INFO: Closing spider (finished)
+2025-12-16 19:21:22 [scrapy.extensions.feedexport] INFO: Stored json feed (36 items) in: ../data/container-nrw-products.json
+2025-12-16 19:21:22 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
 {'downloader/request_bytes': 313,
  'downloader/request_count': 1,
  'downloader/request_method_count/GET': 1,
  'downloader/response_bytes': 10632,
  'downloader/response_count': 1,
  'downloader/response_status_count/200': 1,
- 'elapsed_time_seconds': 0.839489,
+ 'elapsed_time_seconds': 0.796616,
  'feedexport/success_count/FileFeedStorage': 1,
  'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2025, 12, 16, 18, 38, 39, 824788, tzinfo=datetime.timezone.utc),
+ 'finish_time': datetime.datetime(2025, 12, 16, 19, 21, 22, 502379, tzinfo=datetime.timezone.utc),
  'httpcompression/response_bytes': 88456,
  'httpcompression/response_count': 1,
  'item_scraped_count': 36,
  'items_per_minute': None,
  'log_count/DEBUG': 92,
  'log_count/INFO': 11,
- 'memusage/max': 78163968,
- 'memusage/startup': 78163968,
+ 'memusage/max': 78209024,
+ 'memusage/startup': 78209024,
  'response_received_count': 1,
  'responses_per_minute': None,
  'scheduler/dequeued': 1,
  'scheduler/dequeued/memory': 1,
  'scheduler/enqueued': 1,
  'scheduler/enqueued/memory': 1,
- 'start_time': datetime.datetime(2025, 12, 16, 18, 38, 38, 985299, tzinfo=datetime.timezone.utc)}
-2025-12-16 18:38:39 [scrapy.core.engine] INFO: Spider closed (finished)
+ 'start_time': datetime.datetime(2025, 12, 16, 19, 21, 21, 705763, tzinfo=datetime.timezone.utc)}
+2025-12-16 19:21:22 [scrapy.core.engine] INFO: Spider closed (finished)
