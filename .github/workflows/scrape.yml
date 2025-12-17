@@ -168,6 +168,32 @@ jobs:
           print(f"📦 GESAMT: {len(all_products)} Produkte")
           EOF
 
+      - name: 📅 Create Monthly Archive
+        if: github.event.inputs.spiders == 'all' || github.event.inputs.spiders == ''
+        run: |
+          # Aktueller Monat (z.B. 2025-12)
+          CURRENT_MONTH=$(date +'%Y-%m')
+          ARCHIVE_DIR="data/archive/${CURRENT_MONTH}"
+
+          # Prüfe ob Archiv für diesen Monat bereits existiert
+          if [ ! -d "$ARCHIVE_DIR" ]; then
+            echo "📅 Erstelle monatliches Archiv für: $CURRENT_MONTH"
+            mkdir -p "$ARCHIVE_DIR"
+
+            # Kopiere alle JSON-Dateien ins Archiv
+            for json_file in data/*.json; do
+              if [ -f "$json_file" ]; then
+                filename=$(basename "$json_file")
+                cp "$json_file" "$ARCHIVE_DIR/$filename"
+                echo "  ✓ $filename"
+              fi
+            done
+
+            echo "✅ Archiv erstellt: $ARCHIVE_DIR"
+          else
+            echo "📅 Archiv für $CURRENT_MONTH existiert bereits - überspringe"
+          fi
+
       - name: 📤 Commit & Push Results
         run: |
           git config user.name "GitHub Actions Bot"
