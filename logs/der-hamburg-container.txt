@@ -1,5 +1,5 @@
-2025-12-15 14:20:31 [scrapy.utils.log] INFO: Scrapy 2.13.4 started (bot: nebi_spiders)
-2025-12-15 14:20:31 [scrapy.utils.log] INFO: Versions:
+2025-12-17 13:45:51 [scrapy.utils.log] INFO: Scrapy 2.13.4 started (bot: nebi_spiders)
+2025-12-17 13:45:51 [scrapy.utils.log] INFO: Versions:
 {'lxml': '6.0.2',
  'libxml2': '2.14.6',
  'cssselect': '1.3.0',
@@ -10,19 +10,19 @@
  'pyOpenSSL': '25.3.0 (OpenSSL 3.5.4 30 Sep 2025)',
  'cryptography': '46.0.3',
  'Platform': 'Linux-6.11.0-1018-azure-x86_64-with-glibc2.39'}
-2025-12-15 14:20:31 [scrapy.addons] INFO: Enabled addons:
+2025-12-17 13:45:51 [scrapy.addons] INFO: Enabled addons:
 []
-2025-12-15 14:20:31 [asyncio] DEBUG: Using selector: EpollSelector
-2025-12-15 14:20:31 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
-2025-12-15 14:20:31 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
-2025-12-15 14:20:31 [scrapy.extensions.telnet] INFO: Telnet Password: d3770554af1bc1bb
-2025-12-15 14:20:31 [scrapy.middleware] INFO: Enabled extensions:
+2025-12-17 13:45:51 [asyncio] DEBUG: Using selector: EpollSelector
+2025-12-17 13:45:51 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2025-12-17 13:45:51 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2025-12-17 13:45:51 [scrapy.extensions.telnet] INFO: Telnet Password: 964f5e3f427af299
+2025-12-17 13:45:51 [scrapy.middleware] INFO: Enabled extensions:
 ['scrapy.extensions.corestats.CoreStats',
  'scrapy.extensions.telnet.TelnetConsole',
  'scrapy.extensions.memusage.MemoryUsage',
  'scrapy.extensions.feedexport.FeedExporter',
  'scrapy.extensions.logstats.LogStats']
-2025-12-15 14:20:31 [scrapy.crawler] INFO: Overridden settings:
+2025-12-17 13:45:51 [scrapy.crawler] INFO: Overridden settings:
 {'BOT_NAME': 'nebi_spiders',
  'CONCURRENT_REQUESTS': 1,
  'DOWNLOAD_DELAY': 0.5,
@@ -31,10 +31,11 @@
  'SPIDER_MODULES': ['nebi_spiders.spiders.hamburg',
                     'nebi_spiders.spiders.stuttgart',
                     'nebi_spiders.spiders.berlin',
+                    'nebi_spiders.spiders.hannover',
                     'nebi_spiders.spiders.koeln'],
  'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, '
                'like Gecko) Chrome/141.0.0.0 Safari/537.36'}
-2025-12-15 14:20:31 [scrapy.middleware] INFO: Enabled downloader middlewares:
+2025-12-17 13:45:51 [scrapy.middleware] INFO: Enabled downloader middlewares:
 ['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
  'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
@@ -47,366 +48,366 @@
  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
  'scrapy.downloadermiddlewares.stats.DownloaderStats']
-2025-12-15 14:20:31 [scrapy.middleware] INFO: Enabled spider middlewares:
+2025-12-17 13:45:51 [scrapy.middleware] INFO: Enabled spider middlewares:
 ['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
  'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
  'scrapy.spidermiddlewares.referer.RefererMiddleware',
  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
  'scrapy.spidermiddlewares.depth.DepthMiddleware']
-2025-12-15 14:20:31 [scrapy.middleware] INFO: Enabled item pipelines:
+2025-12-17 13:45:51 [scrapy.middleware] INFO: Enabled item pipelines:
 []
-2025-12-15 14:20:31 [scrapy.core.engine] INFO: Spider opened
-2025-12-15 14:20:31 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2025-12-15 14:20:31 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
-2025-12-15 14:20:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://der-hamburg-container.de/abfallbibel/> (referer: None)
-2025-12-15 14:20:32 [der-hamburg-container] DEBUG: 
+2025-12-17 13:45:51 [scrapy.core.engine] INFO: Spider opened
+2025-12-17 13:45:51 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-12-17 13:45:51 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2025-12-17 13:45:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://der-hamburg-container.de/abfallbibel/> (referer: None)
+2025-12-17 13:45:52 [der-hamburg-container] DEBUG: 
 ================================================================================
-2025-12-15 14:20:32 [der-hamburg-container] DEBUG: Starte DER HAMBURG CONTAINER Scraping
-2025-12-15 14:20:32 [der-hamburg-container] DEBUG: ================================================================================
+2025-12-17 13:45:52 [der-hamburg-container] DEBUG: Starte DER HAMBURG CONTAINER Scraping
+2025-12-17 13:45:52 [der-hamburg-container] DEBUG: ================================================================================
 
-2025-12-15 14:20:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://der-hamburg-container.de/glaswolle-steinwolle-entsorgen/> (referer: https://der-hamburg-container.de/abfallbibel/)
-2025-12-15 14:20:32 [der-hamburg-container] DEBUG: 
+2025-12-17 13:45:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://der-hamburg-container.de/glaswolle-steinwolle-entsorgen/> (referer: https://der-hamburg-container.de/abfallbibel/)
+2025-12-17 13:45:53 [der-hamburg-container] DEBUG: 
 --- Verarbeite: Dämmstoffe ---
-2025-12-15 14:20:32 [der-hamburg-container] DEBUG:   ✓ 1m³: 199€
-2025-12-15 14:20:32 [der-hamburg-container] DEBUG:   ✓ 3m³: 369€
-2025-12-15 14:20:32 [der-hamburg-container] DEBUG:   ✓ 5m³: 459€
-2025-12-15 14:20:32 [der-hamburg-container] DEBUG:   ✓ 7m³: 569€
-2025-12-15 14:20:32 [der-hamburg-container] DEBUG:   ✓ 10m³: 709€
-2025-12-15 14:20:32 [der-hamburg-container] DEBUG:   ✓ 8m³: 749€
-2025-12-15 14:20:32 [der-hamburg-container] DEBUG:   ✓ 11m³: 999€
-2025-12-15 14:20:32 [der-hamburg-container] DEBUG:   ✓ 18m³: 1349€
-2025-12-15 14:20:32 [der-hamburg-container] DEBUG:   ✓ 24m³: 1799€
-2025-12-15 14:20:32 [der-hamburg-container] DEBUG:   ✓ 36m³: 2199€
-2025-12-15 14:20:32 [der-hamburg-container] DEBUG:   ✓ 10 Produkte extrahiert
-2025-12-15 14:20:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/glaswolle-steinwolle-entsorgen/>
+2025-12-17 13:45:53 [der-hamburg-container] DEBUG:   ✓ 1m³: 199€
+2025-12-17 13:45:53 [der-hamburg-container] DEBUG:   ✓ 3m³: 369€
+2025-12-17 13:45:53 [der-hamburg-container] DEBUG:   ✓ 5m³: 459€
+2025-12-17 13:45:53 [der-hamburg-container] DEBUG:   ✓ 7m³: 569€
+2025-12-17 13:45:53 [der-hamburg-container] DEBUG:   ✓ 10m³: 709€
+2025-12-17 13:45:53 [der-hamburg-container] DEBUG:   ✓ 8m³: 749€
+2025-12-17 13:45:53 [der-hamburg-container] DEBUG:   ✓ 11m³: 999€
+2025-12-17 13:45:53 [der-hamburg-container] DEBUG:   ✓ 18m³: 1349€
+2025-12-17 13:45:53 [der-hamburg-container] DEBUG:   ✓ 24m³: 1799€
+2025-12-17 13:45:53 [der-hamburg-container] DEBUG:   ✓ 36m³: 2199€
+2025-12-17 13:45:53 [der-hamburg-container] DEBUG:   ✓ 10 Produkte extrahiert
+2025-12-17 13:45:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/glaswolle-steinwolle-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Dämmstoffe 1 m³', 'type': 'Dämmstoffe', 'city': 'Hamburg', 'size': '1', 'price': '199', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/1-m³-absetzmulde-fuer-kmf/'}
-2025-12-15 14:20:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/glaswolle-steinwolle-entsorgen/>
+2025-12-17 13:45:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/glaswolle-steinwolle-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Dämmstoffe 3 m³', 'type': 'Dämmstoffe', 'city': 'Hamburg', 'size': '3', 'price': '369', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/3-m³-absetzmulde-fuer-kmf/'}
-2025-12-15 14:20:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/glaswolle-steinwolle-entsorgen/>
+2025-12-17 13:45:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/glaswolle-steinwolle-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Dämmstoffe 5 m³', 'type': 'Dämmstoffe', 'city': 'Hamburg', 'size': '5', 'price': '459', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/5-m³-absetzmulde-fuer-kmf/'}
-2025-12-15 14:20:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/glaswolle-steinwolle-entsorgen/>
+2025-12-17 13:45:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/glaswolle-steinwolle-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Dämmstoffe 7 m³', 'type': 'Dämmstoffe', 'city': 'Hamburg', 'size': '7', 'price': '569', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/7-m³-absetzmulde-fuer-kmf/'}
-2025-12-15 14:20:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/glaswolle-steinwolle-entsorgen/>
+2025-12-17 13:45:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/glaswolle-steinwolle-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Dämmstoffe 10 m³', 'type': 'Dämmstoffe', 'city': 'Hamburg', 'size': '10', 'price': '709', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/10-m³-absetzmulde-fuer-kmf/'}
-2025-12-15 14:20:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/glaswolle-steinwolle-entsorgen/>
+2025-12-17 13:45:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/glaswolle-steinwolle-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Dämmstoffe 8 m³', 'type': 'Dämmstoffe', 'city': 'Hamburg', 'size': '8', 'price': '749', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/8-m³-abrollcontainer-fuer-kmf/'}
-2025-12-15 14:20:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/glaswolle-steinwolle-entsorgen/>
+2025-12-17 13:45:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/glaswolle-steinwolle-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Dämmstoffe 11 m³', 'type': 'Dämmstoffe', 'city': 'Hamburg', 'size': '11', 'price': '999', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/11-m³-abrollcontainer-fuer-kmf/'}
-2025-12-15 14:20:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/glaswolle-steinwolle-entsorgen/>
+2025-12-17 13:45:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/glaswolle-steinwolle-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Dämmstoffe 18 m³', 'type': 'Dämmstoffe', 'city': 'Hamburg', 'size': '18', 'price': '1349', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/18-m³-abrollcontainer-fuer-kmf/'}
-2025-12-15 14:20:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/glaswolle-steinwolle-entsorgen/>
+2025-12-17 13:45:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/glaswolle-steinwolle-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Dämmstoffe 24 m³', 'type': 'Dämmstoffe', 'city': 'Hamburg', 'size': '24', 'price': '1799', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/24-m³-abrollcontainer-fuer-kmf/'}
-2025-12-15 14:20:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/glaswolle-steinwolle-entsorgen/>
+2025-12-17 13:45:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/glaswolle-steinwolle-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Dämmstoffe 36 m³', 'type': 'Dämmstoffe', 'city': 'Hamburg', 'size': '36', 'price': '2199', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/36-m³-abrollcontainer-fuer-kmf/'}
-2025-12-15 14:20:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://der-hamburg-container.de/dachpappe-entsorgen/> (referer: https://der-hamburg-container.de/abfallbibel/)
-2025-12-15 14:20:33 [der-hamburg-container] DEBUG: 
+2025-12-17 13:45:53 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://der-hamburg-container.de/dachpappe-entsorgen/> (referer: https://der-hamburg-container.de/abfallbibel/)
+2025-12-17 13:45:53 [der-hamburg-container] DEBUG: 
 --- Verarbeite: Dachpappe ---
-2025-12-15 14:20:33 [der-hamburg-container] DEBUG:   ✓ 1m³: 299€
-2025-12-15 14:20:33 [der-hamburg-container] DEBUG:   ✓ 3m³: 899€
-2025-12-15 14:20:33 [der-hamburg-container] DEBUG:   ✓ 5m³: 1299€
-2025-12-15 14:20:33 [der-hamburg-container] DEBUG:   ✓ 7m³: 1679€
-2025-12-15 14:20:33 [der-hamburg-container] DEBUG:   ✓ 10m³: 2249€
-2025-12-15 14:20:33 [der-hamburg-container] DEBUG:   ✓ 8m³: 2099€
-2025-12-15 14:20:33 [der-hamburg-container] DEBUG:   ✓ 11m³: 2599€
-2025-12-15 14:20:33 [der-hamburg-container] DEBUG:   ✓ 18m³: 4449€
-2025-12-15 14:20:33 [der-hamburg-container] DEBUG:   ✓ 24m³: 5699€
-2025-12-15 14:20:33 [der-hamburg-container] DEBUG:   ✓ 36m³: 8649€
-2025-12-15 14:20:33 [der-hamburg-container] DEBUG:   ✓ 10 Produkte extrahiert
-2025-12-15 14:20:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/dachpappe-entsorgen/>
+2025-12-17 13:45:53 [der-hamburg-container] DEBUG:   ✓ 1m³: 299€
+2025-12-17 13:45:53 [der-hamburg-container] DEBUG:   ✓ 3m³: 899€
+2025-12-17 13:45:53 [der-hamburg-container] DEBUG:   ✓ 5m³: 1299€
+2025-12-17 13:45:53 [der-hamburg-container] DEBUG:   ✓ 7m³: 1679€
+2025-12-17 13:45:53 [der-hamburg-container] DEBUG:   ✓ 10m³: 2249€
+2025-12-17 13:45:53 [der-hamburg-container] DEBUG:   ✓ 8m³: 2099€
+2025-12-17 13:45:53 [der-hamburg-container] DEBUG:   ✓ 11m³: 2599€
+2025-12-17 13:45:53 [der-hamburg-container] DEBUG:   ✓ 18m³: 4449€
+2025-12-17 13:45:53 [der-hamburg-container] DEBUG:   ✓ 24m³: 5699€
+2025-12-17 13:45:53 [der-hamburg-container] DEBUG:   ✓ 36m³: 8649€
+2025-12-17 13:45:53 [der-hamburg-container] DEBUG:   ✓ 10 Produkte extrahiert
+2025-12-17 13:45:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/dachpappe-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Dachpappe 1 m³', 'type': 'Dachpappe', 'city': 'Hamburg', 'size': '1', 'price': '299', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/1-m³-absetzmulde-fuer-dachpappe/'}
-2025-12-15 14:20:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/dachpappe-entsorgen/>
+2025-12-17 13:45:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/dachpappe-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Dachpappe 3 m³', 'type': 'Dachpappe', 'city': 'Hamburg', 'size': '3', 'price': '899', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/3-m³-absetzmulde-fuer-dachpappe/'}
-2025-12-15 14:20:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/dachpappe-entsorgen/>
+2025-12-17 13:45:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/dachpappe-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Dachpappe 5 m³', 'type': 'Dachpappe', 'city': 'Hamburg', 'size': '5', 'price': '1299', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/5-m³-absetzmulde-fuer-dachpappe/'}
-2025-12-15 14:20:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/dachpappe-entsorgen/>
+2025-12-17 13:45:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/dachpappe-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Dachpappe 7 m³', 'type': 'Dachpappe', 'city': 'Hamburg', 'size': '7', 'price': '1679', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/7-m³-absetzmulde-fuer-dachpappe/'}
-2025-12-15 14:20:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/dachpappe-entsorgen/>
+2025-12-17 13:45:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/dachpappe-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Dachpappe 10 m³', 'type': 'Dachpappe', 'city': 'Hamburg', 'size': '10', 'price': '2249', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/10-m³-absetzmulde-fuer-dachpappe/'}
-2025-12-15 14:20:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/dachpappe-entsorgen/>
+2025-12-17 13:45:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/dachpappe-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Dachpappe 8 m³', 'type': 'Dachpappe', 'city': 'Hamburg', 'size': '8', 'price': '2099', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/8-m³-abrollcontainer-fuer-dachpappe/'}
-2025-12-15 14:20:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/dachpappe-entsorgen/>
+2025-12-17 13:45:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/dachpappe-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Dachpappe 11 m³', 'type': 'Dachpappe', 'city': 'Hamburg', 'size': '11', 'price': '2599', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/11-m³-abrollcontainer-fuer-dachpappe/'}
-2025-12-15 14:20:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/dachpappe-entsorgen/>
+2025-12-17 13:45:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/dachpappe-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Dachpappe 18 m³', 'type': 'Dachpappe', 'city': 'Hamburg', 'size': '18', 'price': '4449', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/18-m³-abrollcontainer-fuer-dachpappe/'}
-2025-12-15 14:20:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/dachpappe-entsorgen/>
+2025-12-17 13:45:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/dachpappe-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Dachpappe 24 m³', 'type': 'Dachpappe', 'city': 'Hamburg', 'size': '24', 'price': '5699', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/24-m³-abrollcontainer-dachpappe/'}
-2025-12-15 14:20:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/dachpappe-entsorgen/>
+2025-12-17 13:45:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/dachpappe-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Dachpappe 36 m³', 'type': 'Dachpappe', 'city': 'Hamburg', 'size': '36', 'price': '8649', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/36-m³-abrollcontainer-fuer-dachpappe/'}
-2025-12-15 14:20:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://der-hamburg-container.de/boden-und-steine-entsorgen/> (referer: https://der-hamburg-container.de/abfallbibel/)
-2025-12-15 14:20:33 [der-hamburg-container] DEBUG: 
+2025-12-17 13:45:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://der-hamburg-container.de/boden-und-steine-entsorgen/> (referer: https://der-hamburg-container.de/abfallbibel/)
+2025-12-17 13:45:54 [der-hamburg-container] DEBUG: 
 --- Verarbeite: Boden ---
-2025-12-15 14:20:33 [der-hamburg-container] DEBUG:   ✓ 1m³: 119€
-2025-12-15 14:20:33 [der-hamburg-container] DEBUG:   ✓ 3m³: 359€
-2025-12-15 14:20:33 [der-hamburg-container] DEBUG:   ✓ 5m³: 459€
-2025-12-15 14:20:33 [der-hamburg-container] DEBUG:   ✓ 7m³: 559€
-2025-12-15 14:20:33 [der-hamburg-container] DEBUG:   ✓ 8m³: 799€
-2025-12-15 14:20:33 [der-hamburg-container] DEBUG:   ✓ 5 Produkte extrahiert
-2025-12-15 14:20:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/boden-und-steine-entsorgen/>
+2025-12-17 13:45:54 [der-hamburg-container] DEBUG:   ✓ 1m³: 119€
+2025-12-17 13:45:54 [der-hamburg-container] DEBUG:   ✓ 3m³: 359€
+2025-12-17 13:45:54 [der-hamburg-container] DEBUG:   ✓ 5m³: 459€
+2025-12-17 13:45:54 [der-hamburg-container] DEBUG:   ✓ 7m³: 559€
+2025-12-17 13:45:54 [der-hamburg-container] DEBUG:   ✓ 8m³: 799€
+2025-12-17 13:45:54 [der-hamburg-container] DEBUG:   ✓ 5 Produkte extrahiert
+2025-12-17 13:45:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/boden-und-steine-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Boden 1 m³', 'type': 'Boden', 'city': 'Hamburg', 'size': '1', 'price': '119', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/1-m³-absetzmulde-fuer-boden-und-steine/'}
-2025-12-15 14:20:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/boden-und-steine-entsorgen/>
+2025-12-17 13:45:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/boden-und-steine-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Boden 3 m³', 'type': 'Boden', 'city': 'Hamburg', 'size': '3', 'price': '359', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/3-m³-absetzmulde-fuer-boden-und-steine/'}
-2025-12-15 14:20:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/boden-und-steine-entsorgen/>
+2025-12-17 13:45:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/boden-und-steine-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Boden 5 m³', 'type': 'Boden', 'city': 'Hamburg', 'size': '5', 'price': '459', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/5-m³-absetzmulde-fuer-boden-und-steine/'}
-2025-12-15 14:20:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/boden-und-steine-entsorgen/>
+2025-12-17 13:45:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/boden-und-steine-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Boden 7 m³', 'type': 'Boden', 'city': 'Hamburg', 'size': '7', 'price': '559', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/7-m³-absetzmulde-fuer-boden-und-steine/'}
-2025-12-15 14:20:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/boden-und-steine-entsorgen/>
+2025-12-17 13:45:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/boden-und-steine-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Boden 8 m³', 'type': 'Boden', 'city': 'Hamburg', 'size': '8', 'price': '799', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/8-m³-abrollcontainer-fuer-boden-und-steine/'}
-2025-12-15 14:20:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://der-hamburg-container.de/gips-entsorgen/> (referer: https://der-hamburg-container.de/abfallbibel/)
-2025-12-15 14:20:34 [der-hamburg-container] DEBUG: 
+2025-12-17 13:45:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://der-hamburg-container.de/gips-entsorgen/> (referer: https://der-hamburg-container.de/abfallbibel/)
+2025-12-17 13:45:55 [der-hamburg-container] DEBUG: 
 --- Verarbeite: Gips ---
-2025-12-15 14:20:34 [der-hamburg-container] DEBUG:   ✓ 1m³: 129€
-2025-12-15 14:20:34 [der-hamburg-container] DEBUG:   ✓ 3m³: 329€
-2025-12-15 14:20:34 [der-hamburg-container] DEBUG:   ✓ 5m³: 519€
-2025-12-15 14:20:34 [der-hamburg-container] DEBUG:   ✓ 7m³: 679€
-2025-12-15 14:20:34 [der-hamburg-container] DEBUG:   ✓ 10m³: 979€
-2025-12-15 14:20:34 [der-hamburg-container] DEBUG:   ✓ 8m³: 739€
-2025-12-15 14:20:34 [der-hamburg-container] DEBUG:   ✓ 11m³: 999€
-2025-12-15 14:20:34 [der-hamburg-container] DEBUG:   ✓ 18m³: 1399€
-2025-12-15 14:20:34 [der-hamburg-container] DEBUG:   ✓ 24m³: 1599€
-2025-12-15 14:20:34 [der-hamburg-container] DEBUG:   ✓ 36m³: 2849€
-2025-12-15 14:20:34 [der-hamburg-container] DEBUG:   ✓ 10 Produkte extrahiert
-2025-12-15 14:20:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gips-entsorgen/>
+2025-12-17 13:45:55 [der-hamburg-container] DEBUG:   ✓ 1m³: 129€
+2025-12-17 13:45:55 [der-hamburg-container] DEBUG:   ✓ 3m³: 329€
+2025-12-17 13:45:55 [der-hamburg-container] DEBUG:   ✓ 5m³: 519€
+2025-12-17 13:45:55 [der-hamburg-container] DEBUG:   ✓ 7m³: 679€
+2025-12-17 13:45:55 [der-hamburg-container] DEBUG:   ✓ 10m³: 979€
+2025-12-17 13:45:55 [der-hamburg-container] DEBUG:   ✓ 8m³: 739€
+2025-12-17 13:45:55 [der-hamburg-container] DEBUG:   ✓ 11m³: 999€
+2025-12-17 13:45:55 [der-hamburg-container] DEBUG:   ✓ 18m³: 1399€
+2025-12-17 13:45:55 [der-hamburg-container] DEBUG:   ✓ 24m³: 1599€
+2025-12-17 13:45:55 [der-hamburg-container] DEBUG:   ✓ 36m³: 2849€
+2025-12-17 13:45:55 [der-hamburg-container] DEBUG:   ✓ 10 Produkte extrahiert
+2025-12-17 13:45:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gips-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Gips 1 m³', 'type': 'Gips', 'city': 'Hamburg', 'size': '1', 'price': '129', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/1-m³-absetzmulde-fuer-gipsabfall/'}
-2025-12-15 14:20:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gips-entsorgen/>
+2025-12-17 13:45:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gips-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Gips 3 m³', 'type': 'Gips', 'city': 'Hamburg', 'size': '3', 'price': '329', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/3-m³-absetzmulde-fuer-gipsabfall/'}
-2025-12-15 14:20:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gips-entsorgen/>
+2025-12-17 13:45:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gips-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Gips 5 m³', 'type': 'Gips', 'city': 'Hamburg', 'size': '5', 'price': '519', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/5-m³-absetzmulde-fuer-gips/'}
-2025-12-15 14:20:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gips-entsorgen/>
+2025-12-17 13:45:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gips-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Gips 7 m³', 'type': 'Gips', 'city': 'Hamburg', 'size': '7', 'price': '679', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/7-m³-absetzmulde-fuer-gipsabfall/'}
-2025-12-15 14:20:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gips-entsorgen/>
+2025-12-17 13:45:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gips-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Gips 10 m³', 'type': 'Gips', 'city': 'Hamburg', 'size': '10', 'price': '979', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/10-m³-absetzmulde-fuer-gips/'}
-2025-12-15 14:20:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gips-entsorgen/>
+2025-12-17 13:45:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gips-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Gips 8 m³', 'type': 'Gips', 'city': 'Hamburg', 'size': '8', 'price': '739', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/8-m³-abrollcontainer-fuer-gipsabfall/'}
-2025-12-15 14:20:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gips-entsorgen/>
+2025-12-17 13:45:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gips-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Gips 11 m³', 'type': 'Gips', 'city': 'Hamburg', 'size': '11', 'price': '999', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/11-m³-abrollcontainer-fuer-gipsabfall/'}
-2025-12-15 14:20:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gips-entsorgen/>
+2025-12-17 13:45:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gips-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Gips 18 m³', 'type': 'Gips', 'city': 'Hamburg', 'size': '18', 'price': '1399', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/18-m³-abrollcontainer-fuer-gipsabfall/'}
-2025-12-15 14:20:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gips-entsorgen/>
+2025-12-17 13:45:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gips-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Gips 24 m³', 'type': 'Gips', 'city': 'Hamburg', 'size': '24', 'price': '1599', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/24-m³-abrollcontainer-fuer-gips/'}
-2025-12-15 14:20:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gips-entsorgen/>
+2025-12-17 13:45:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gips-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Gips 36 m³', 'type': 'Gips', 'city': 'Hamburg', 'size': '36', 'price': '2849', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/36-m³-abrollcontainer-fuer-gips/'}
-2025-12-15 14:20:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://der-hamburg-container.de/gartenabfall-entsorgen/> (referer: https://der-hamburg-container.de/abfallbibel/)
-2025-12-15 14:20:34 [der-hamburg-container] DEBUG: 
+2025-12-17 13:45:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://der-hamburg-container.de/gartenabfall-entsorgen/> (referer: https://der-hamburg-container.de/abfallbibel/)
+2025-12-17 13:45:55 [der-hamburg-container] DEBUG: 
 --- Verarbeite: Gartenabfälle ---
-2025-12-15 14:20:34 [der-hamburg-container] DEBUG:   ✓ 1m³: 109€
-2025-12-15 14:20:34 [der-hamburg-container] DEBUG:   ✓ 3m³: 229€
-2025-12-15 14:20:34 [der-hamburg-container] DEBUG:   ✓ 5m³: 279€
-2025-12-15 14:20:34 [der-hamburg-container] DEBUG:   ✓ 7m³: 329€
-2025-12-15 14:20:34 [der-hamburg-container] DEBUG:   ✓ 10m³: 419€
-2025-12-15 14:20:34 [der-hamburg-container] DEBUG:   ✓ 8m³: 369€
-2025-12-15 14:20:34 [der-hamburg-container] DEBUG:   ✓ 11m³: 449€
-2025-12-15 14:20:34 [der-hamburg-container] DEBUG:   ✓ 18m³: 649€
-2025-12-15 14:20:34 [der-hamburg-container] DEBUG:   ✓ 24m³: 819€
-2025-12-15 14:20:34 [der-hamburg-container] DEBUG:   ✓ 36m³: 1149€
-2025-12-15 14:20:34 [der-hamburg-container] DEBUG:   ✓ 10 Produkte extrahiert
-2025-12-15 14:20:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gartenabfall-entsorgen/>
+2025-12-17 13:45:55 [der-hamburg-container] DEBUG:   ✓ 1m³: 109€
+2025-12-17 13:45:55 [der-hamburg-container] DEBUG:   ✓ 3m³: 229€
+2025-12-17 13:45:55 [der-hamburg-container] DEBUG:   ✓ 5m³: 279€
+2025-12-17 13:45:55 [der-hamburg-container] DEBUG:   ✓ 7m³: 329€
+2025-12-17 13:45:55 [der-hamburg-container] DEBUG:   ✓ 10m³: 419€
+2025-12-17 13:45:55 [der-hamburg-container] DEBUG:   ✓ 8m³: 369€
+2025-12-17 13:45:55 [der-hamburg-container] DEBUG:   ✓ 11m³: 449€
+2025-12-17 13:45:55 [der-hamburg-container] DEBUG:   ✓ 18m³: 649€
+2025-12-17 13:45:55 [der-hamburg-container] DEBUG:   ✓ 24m³: 819€
+2025-12-17 13:45:55 [der-hamburg-container] DEBUG:   ✓ 36m³: 1149€
+2025-12-17 13:45:55 [der-hamburg-container] DEBUG:   ✓ 10 Produkte extrahiert
+2025-12-17 13:45:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gartenabfall-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Gartenabfälle 1 m³', 'type': 'Gartenabfälle', 'city': 'Hamburg', 'size': '1', 'price': '109', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/1-m³-absetzmulde-fuer-gartenabfall/'}
-2025-12-15 14:20:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gartenabfall-entsorgen/>
+2025-12-17 13:45:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gartenabfall-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Gartenabfälle 3 m³', 'type': 'Gartenabfälle', 'city': 'Hamburg', 'size': '3', 'price': '229', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/3-m³-absetzmulde-fuer-gartenabfall/'}
-2025-12-15 14:20:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gartenabfall-entsorgen/>
+2025-12-17 13:45:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gartenabfall-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Gartenabfälle 5 m³', 'type': 'Gartenabfälle', 'city': 'Hamburg', 'size': '5', 'price': '279', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/5-m³-absetzmulde-fuer-gartenabfall/'}
-2025-12-15 14:20:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gartenabfall-entsorgen/>
+2025-12-17 13:45:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gartenabfall-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Gartenabfälle 7 m³', 'type': 'Gartenabfälle', 'city': 'Hamburg', 'size': '7', 'price': '329', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/7-m³-absetzmulde-fuer-gartenabfall/'}
-2025-12-15 14:20:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gartenabfall-entsorgen/>
+2025-12-17 13:45:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gartenabfall-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Gartenabfälle 10 m³', 'type': 'Gartenabfälle', 'city': 'Hamburg', 'size': '10', 'price': '419', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/10-m³-absetzmulde-fuer-gartenabfall/'}
-2025-12-15 14:20:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gartenabfall-entsorgen/>
+2025-12-17 13:45:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gartenabfall-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Gartenabfälle 8 m³', 'type': 'Gartenabfälle', 'city': 'Hamburg', 'size': '8', 'price': '369', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/8-m³-abrollcontainer-fuer-gartenabfall/'}
-2025-12-15 14:20:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gartenabfall-entsorgen/>
+2025-12-17 13:45:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gartenabfall-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Gartenabfälle 11 m³', 'type': 'Gartenabfälle', 'city': 'Hamburg', 'size': '11', 'price': '449', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/11-m³-abrollcontainer-fuer-gartenabfall/'}
-2025-12-15 14:20:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gartenabfall-entsorgen/>
+2025-12-17 13:45:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gartenabfall-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Gartenabfälle 18 m³', 'type': 'Gartenabfälle', 'city': 'Hamburg', 'size': '18', 'price': '649', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/18-m³-abrollcontainer-fuer-gartenabfall/'}
-2025-12-15 14:20:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gartenabfall-entsorgen/>
+2025-12-17 13:45:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gartenabfall-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Gartenabfälle 24 m³', 'type': 'Gartenabfälle', 'city': 'Hamburg', 'size': '24', 'price': '819', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/24-m³-abrollcontainer-fuer-gartenabfall/'}
-2025-12-15 14:20:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gartenabfall-entsorgen/>
+2025-12-17 13:45:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/gartenabfall-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Gartenabfälle 36 m³', 'type': 'Gartenabfälle', 'city': 'Hamburg', 'size': '36', 'price': '1149', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/36-m³-abrollcontainer-fuer-gartenabfall/'}
-2025-12-15 14:20:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://der-hamburg-container.de/sperrmuell-entsorgen/> (referer: https://der-hamburg-container.de/abfallbibel/)
-2025-12-15 14:20:35 [der-hamburg-container] DEBUG: 
+2025-12-17 13:45:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://der-hamburg-container.de/sperrmuell-entsorgen/> (referer: https://der-hamburg-container.de/abfallbibel/)
+2025-12-17 13:45:56 [der-hamburg-container] DEBUG: 
 --- Verarbeite: Sperrmüll ---
-2025-12-15 14:20:35 [der-hamburg-container] DEBUG:   ✓ 1m³: 129€
-2025-12-15 14:20:35 [der-hamburg-container] DEBUG:   ✓ 3m³: 319€
-2025-12-15 14:20:35 [der-hamburg-container] DEBUG:   ✓ 5m³: 429€
-2025-12-15 14:20:35 [der-hamburg-container] DEBUG:   ✓ 7m³: 519€
-2025-12-15 14:20:35 [der-hamburg-container] DEBUG:   ✓ 10m³: 659€
-2025-12-15 14:20:35 [der-hamburg-container] DEBUG:   ✓ 8m³: 659€
-2025-12-15 14:20:35 [der-hamburg-container] DEBUG:   ✓ 11m³: 859€
-2025-12-15 14:20:35 [der-hamburg-container] DEBUG:   ✓ 18m³: 1269€
-2025-12-15 14:20:35 [der-hamburg-container] DEBUG:   ✓ 24m³: 1449€
-2025-12-15 14:20:35 [der-hamburg-container] DEBUG:   ✓ 36m³: 1999€
-2025-12-15 14:20:35 [der-hamburg-container] DEBUG:   ✓ 10 Produkte extrahiert
-2025-12-15 14:20:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/sperrmuell-entsorgen/>
+2025-12-17 13:45:56 [der-hamburg-container] DEBUG:   ✓ 1m³: 129€
+2025-12-17 13:45:56 [der-hamburg-container] DEBUG:   ✓ 3m³: 319€
+2025-12-17 13:45:56 [der-hamburg-container] DEBUG:   ✓ 5m³: 429€
+2025-12-17 13:45:56 [der-hamburg-container] DEBUG:   ✓ 7m³: 519€
+2025-12-17 13:45:56 [der-hamburg-container] DEBUG:   ✓ 10m³: 659€
+2025-12-17 13:45:56 [der-hamburg-container] DEBUG:   ✓ 8m³: 659€
+2025-12-17 13:45:56 [der-hamburg-container] DEBUG:   ✓ 11m³: 859€
+2025-12-17 13:45:56 [der-hamburg-container] DEBUG:   ✓ 18m³: 1269€
+2025-12-17 13:45:56 [der-hamburg-container] DEBUG:   ✓ 24m³: 1449€
+2025-12-17 13:45:56 [der-hamburg-container] DEBUG:   ✓ 36m³: 1999€
+2025-12-17 13:45:56 [der-hamburg-container] DEBUG:   ✓ 10 Produkte extrahiert
+2025-12-17 13:45:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/sperrmuell-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Sperrmüll 1 m³', 'type': 'Sperrmüll', 'city': 'Hamburg', 'size': '1', 'price': '129', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/1-kubikmeter-absetzmulde-fuer-sperrmuell/'}
-2025-12-15 14:20:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/sperrmuell-entsorgen/>
+2025-12-17 13:45:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/sperrmuell-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Sperrmüll 3 m³', 'type': 'Sperrmüll', 'city': 'Hamburg', 'size': '3', 'price': '319', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/3-kubikmeter-absetzmulde-fuer-sperrmuell/'}
-2025-12-15 14:20:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/sperrmuell-entsorgen/>
+2025-12-17 13:45:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/sperrmuell-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Sperrmüll 5 m³', 'type': 'Sperrmüll', 'city': 'Hamburg', 'size': '5', 'price': '429', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/5-kubikmeter-absetzmulde-fuer-sperrmuell/'}
-2025-12-15 14:20:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/sperrmuell-entsorgen/>
+2025-12-17 13:45:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/sperrmuell-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Sperrmüll 7 m³', 'type': 'Sperrmüll', 'city': 'Hamburg', 'size': '7', 'price': '519', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/7-kubikmeter-absetzmulde-fuer-sperrmuell/'}
-2025-12-15 14:20:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/sperrmuell-entsorgen/>
+2025-12-17 13:45:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/sperrmuell-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Sperrmüll 10 m³', 'type': 'Sperrmüll', 'city': 'Hamburg', 'size': '10', 'price': '659', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/10-kubikmeter-absetzmulde-fuer-sperrmuell/'}
-2025-12-15 14:20:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/sperrmuell-entsorgen/>
+2025-12-17 13:45:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/sperrmuell-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Sperrmüll 8 m³', 'type': 'Sperrmüll', 'city': 'Hamburg', 'size': '8', 'price': '659', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/8-kubikmeter-abrollcontainer-fuer-sperrmuell/'}
-2025-12-15 14:20:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/sperrmuell-entsorgen/>
+2025-12-17 13:45:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/sperrmuell-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Sperrmüll 11 m³', 'type': 'Sperrmüll', 'city': 'Hamburg', 'size': '11', 'price': '859', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/11-kubikmeter-abrollcontainer-fuer-sperrmuell/'}
-2025-12-15 14:20:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/sperrmuell-entsorgen/>
+2025-12-17 13:45:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/sperrmuell-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Sperrmüll 18 m³', 'type': 'Sperrmüll', 'city': 'Hamburg', 'size': '18', 'price': '1269', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/18-m³-abrollcontainer-fuer-sperrmuell/'}
-2025-12-15 14:20:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/sperrmuell-entsorgen/>
+2025-12-17 13:45:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/sperrmuell-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Sperrmüll 24 m³', 'type': 'Sperrmüll', 'city': 'Hamburg', 'size': '24', 'price': '1449', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/24-m³-abrollcontainer-fuer-sperrmuell/'}
-2025-12-15 14:20:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/sperrmuell-entsorgen/>
+2025-12-17 13:45:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/sperrmuell-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Sperrmüll 36 m³', 'type': 'Sperrmüll', 'city': 'Hamburg', 'size': '36', 'price': '1999', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/36-m³-abrollcontainer-fuer-sperrmuell/'}
-2025-12-15 14:20:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://der-hamburg-container.de/holz-a4-entsorgen/> (referer: https://der-hamburg-container.de/abfallbibel/)
-2025-12-15 14:20:36 [der-hamburg-container] DEBUG: 
+2025-12-17 13:45:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://der-hamburg-container.de/holz-a4-entsorgen/> (referer: https://der-hamburg-container.de/abfallbibel/)
+2025-12-17 13:45:57 [der-hamburg-container] DEBUG: 
 --- Verarbeite: Holz A4 ---
-2025-12-15 14:20:36 [der-hamburg-container] DEBUG:   ✓ 1m³: 149€
-2025-12-15 14:20:36 [der-hamburg-container] DEBUG:   ✓ 3m³: 309€
-2025-12-15 14:20:36 [der-hamburg-container] DEBUG:   ✓ 5m³: 399€
-2025-12-15 14:20:36 [der-hamburg-container] DEBUG:   ✓ 7m³: 469€
-2025-12-15 14:20:36 [der-hamburg-container] DEBUG:   ✓ 10m³: 629€
-2025-12-15 14:20:36 [der-hamburg-container] DEBUG:   ✓ 8m³: 599€
-2025-12-15 14:20:36 [der-hamburg-container] DEBUG:   ✓ 11m³: 679€
-2025-12-15 14:20:36 [der-hamburg-container] DEBUG:   ✓ 18m³: 999€
-2025-12-15 14:20:36 [der-hamburg-container] DEBUG:   ✓ 24m³: 1299€
-2025-12-15 14:20:36 [der-hamburg-container] DEBUG:   ✓ 36m³: 1999€
-2025-12-15 14:20:36 [der-hamburg-container] DEBUG:   ✓ 10 Produkte extrahiert
-2025-12-15 14:20:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a4-entsorgen/>
+2025-12-17 13:45:57 [der-hamburg-container] DEBUG:   ✓ 1m³: 149€
+2025-12-17 13:45:57 [der-hamburg-container] DEBUG:   ✓ 3m³: 309€
+2025-12-17 13:45:57 [der-hamburg-container] DEBUG:   ✓ 5m³: 399€
+2025-12-17 13:45:57 [der-hamburg-container] DEBUG:   ✓ 7m³: 469€
+2025-12-17 13:45:57 [der-hamburg-container] DEBUG:   ✓ 10m³: 629€
+2025-12-17 13:45:57 [der-hamburg-container] DEBUG:   ✓ 8m³: 599€
+2025-12-17 13:45:57 [der-hamburg-container] DEBUG:   ✓ 11m³: 679€
+2025-12-17 13:45:57 [der-hamburg-container] DEBUG:   ✓ 18m³: 999€
+2025-12-17 13:45:57 [der-hamburg-container] DEBUG:   ✓ 24m³: 1299€
+2025-12-17 13:45:57 [der-hamburg-container] DEBUG:   ✓ 36m³: 1999€
+2025-12-17 13:45:57 [der-hamburg-container] DEBUG:   ✓ 10 Produkte extrahiert
+2025-12-17 13:45:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a4-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Holz A4 1 m³', 'type': 'Holz A4', 'city': 'Hamburg', 'size': '1', 'price': '149', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/1-m³-absetzmulde-fuer-holz-a4/'}
-2025-12-15 14:20:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a4-entsorgen/>
+2025-12-17 13:45:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a4-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Holz A4 3 m³', 'type': 'Holz A4', 'city': 'Hamburg', 'size': '3', 'price': '309', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/3-m³-absetzmulde-fuer-holz-a4/'}
-2025-12-15 14:20:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a4-entsorgen/>
+2025-12-17 13:45:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a4-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Holz A4 5 m³', 'type': 'Holz A4', 'city': 'Hamburg', 'size': '5', 'price': '399', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/5-m³-absetzmulde-fuer-holz-a4/'}
-2025-12-15 14:20:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a4-entsorgen/>
+2025-12-17 13:45:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a4-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Holz A4 7 m³', 'type': 'Holz A4', 'city': 'Hamburg', 'size': '7', 'price': '469', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/7-m³-absetzmulde-fuer-holz-a4/'}
-2025-12-15 14:20:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a4-entsorgen/>
+2025-12-17 13:45:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a4-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Holz A4 10 m³', 'type': 'Holz A4', 'city': 'Hamburg', 'size': '10', 'price': '629', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/10-m³-absetzmulde-fuer-holz-a4/'}
-2025-12-15 14:20:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a4-entsorgen/>
+2025-12-17 13:45:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a4-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Holz A4 8 m³', 'type': 'Holz A4', 'city': 'Hamburg', 'size': '8', 'price': '599', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/8-m³-abrollcontainer-fuer-holz-a4/'}
-2025-12-15 14:20:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a4-entsorgen/>
+2025-12-17 13:45:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a4-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Holz A4 11 m³', 'type': 'Holz A4', 'city': 'Hamburg', 'size': '11', 'price': '679', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/11-m³-abrollcontainer-fuer-holz-a4/'}
-2025-12-15 14:20:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a4-entsorgen/>
+2025-12-17 13:45:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a4-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Holz A4 18 m³', 'type': 'Holz A4', 'city': 'Hamburg', 'size': '18', 'price': '999', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/18-m³-abrollcontainer-fuer-holz-a4/'}
-2025-12-15 14:20:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a4-entsorgen/>
+2025-12-17 13:45:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a4-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Holz A4 24 m³', 'type': 'Holz A4', 'city': 'Hamburg', 'size': '24', 'price': '1299', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/24-m³-abrollcontainer-fuer-holz-a4/'}
-2025-12-15 14:20:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a4-entsorgen/>
+2025-12-17 13:45:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a4-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Holz A4 36 m³', 'type': 'Holz A4', 'city': 'Hamburg', 'size': '36', 'price': '1999', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/36-m³-abrollcontainer-fuer-holz-a4/'}
-2025-12-15 14:20:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://der-hamburg-container.de/holz-a1-a3-entsorgen/> (referer: https://der-hamburg-container.de/abfallbibel/)
-2025-12-15 14:20:36 [der-hamburg-container] DEBUG: 
+2025-12-17 13:45:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://der-hamburg-container.de/holz-a1-a3-entsorgen/> (referer: https://der-hamburg-container.de/abfallbibel/)
+2025-12-17 13:45:57 [der-hamburg-container] DEBUG: 
 --- Verarbeite: Holz A1-A3 ---
-2025-12-15 14:20:36 [der-hamburg-container] DEBUG:   ✓ 1m³: 119€
-2025-12-15 14:20:36 [der-hamburg-container] DEBUG:   ✓ 3m³: 229€
-2025-12-15 14:20:36 [der-hamburg-container] DEBUG:   ✓ 5m³: 289€
-2025-12-15 14:20:36 [der-hamburg-container] DEBUG:   ✓ 7m³: 349€
-2025-12-15 14:20:36 [der-hamburg-container] DEBUG:   ✓ 10m³: 439€
-2025-12-15 14:20:36 [der-hamburg-container] DEBUG:   ✓ 8m³: 459€
-2025-12-15 14:20:36 [der-hamburg-container] DEBUG:   ✓ 11m³: 549€
-2025-12-15 14:20:36 [der-hamburg-container] DEBUG:   ✓ 18m³: 789€
-2025-12-15 14:20:36 [der-hamburg-container] DEBUG:   ✓ 24m³: 999€
-2025-12-15 14:20:36 [der-hamburg-container] DEBUG:   ✓ 36m³: 1299€
-2025-12-15 14:20:36 [der-hamburg-container] DEBUG:   ✓ 10 Produkte extrahiert
-2025-12-15 14:20:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a1-a3-entsorgen/>
+2025-12-17 13:45:57 [der-hamburg-container] DEBUG:   ✓ 1m³: 119€
+2025-12-17 13:45:57 [der-hamburg-container] DEBUG:   ✓ 3m³: 229€
+2025-12-17 13:45:57 [der-hamburg-container] DEBUG:   ✓ 5m³: 289€
+2025-12-17 13:45:57 [der-hamburg-container] DEBUG:   ✓ 7m³: 349€
+2025-12-17 13:45:57 [der-hamburg-container] DEBUG:   ✓ 10m³: 439€
+2025-12-17 13:45:57 [der-hamburg-container] DEBUG:   ✓ 8m³: 459€
+2025-12-17 13:45:57 [der-hamburg-container] DEBUG:   ✓ 11m³: 549€
+2025-12-17 13:45:57 [der-hamburg-container] DEBUG:   ✓ 18m³: 789€
+2025-12-17 13:45:57 [der-hamburg-container] DEBUG:   ✓ 24m³: 999€
+2025-12-17 13:45:57 [der-hamburg-container] DEBUG:   ✓ 36m³: 1299€
+2025-12-17 13:45:57 [der-hamburg-container] DEBUG:   ✓ 10 Produkte extrahiert
+2025-12-17 13:45:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a1-a3-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Holz A1-A3 1 m³', 'type': 'Holz A1-A3', 'city': 'Hamburg', 'size': '1', 'price': '119', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/1-m³-absetzmulde-fuer-holz-a1-a3/'}
-2025-12-15 14:20:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a1-a3-entsorgen/>
+2025-12-17 13:45:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a1-a3-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Holz A1-A3 3 m³', 'type': 'Holz A1-A3', 'city': 'Hamburg', 'size': '3', 'price': '229', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/3-m³-absetzmulde-fuer-holz-a1-a3/'}
-2025-12-15 14:20:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a1-a3-entsorgen/>
+2025-12-17 13:45:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a1-a3-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Holz A1-A3 5 m³', 'type': 'Holz A1-A3', 'city': 'Hamburg', 'size': '5', 'price': '289', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/5-m³-absetzmulde-fuer-holz-a1-a3/'}
-2025-12-15 14:20:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a1-a3-entsorgen/>
+2025-12-17 13:45:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a1-a3-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Holz A1-A3 7 m³', 'type': 'Holz A1-A3', 'city': 'Hamburg', 'size': '7', 'price': '349', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/7-m³-absetzmulde-fuer-holz-a1-a3/'}
-2025-12-15 14:20:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a1-a3-entsorgen/>
+2025-12-17 13:45:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a1-a3-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Holz A1-A3 10 m³', 'type': 'Holz A1-A3', 'city': 'Hamburg', 'size': '10', 'price': '439', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/10-m³-absetzmulde-fuer-holz-a1-a3/'}
-2025-12-15 14:20:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a1-a3-entsorgen/>
+2025-12-17 13:45:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a1-a3-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Holz A1-A3 8 m³', 'type': 'Holz A1-A3', 'city': 'Hamburg', 'size': '8', 'price': '459', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/8-m³-abrollcontainer-fuer-holz-a1-a3/'}
-2025-12-15 14:20:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a1-a3-entsorgen/>
+2025-12-17 13:45:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a1-a3-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Holz A1-A3 11 m³', 'type': 'Holz A1-A3', 'city': 'Hamburg', 'size': '11', 'price': '549', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/11-m³-abrollcontainer-fuer-holz-a1-a3/'}
-2025-12-15 14:20:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a1-a3-entsorgen/>
+2025-12-17 13:45:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a1-a3-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Holz A1-A3 18 m³', 'type': 'Holz A1-A3', 'city': 'Hamburg', 'size': '18', 'price': '789', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/18-m³-abrollcontainer-fuer-holz-a1-a3/'}
-2025-12-15 14:20:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a1-a3-entsorgen/>
+2025-12-17 13:45:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a1-a3-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Holz A1-A3 24 m³', 'type': 'Holz A1-A3', 'city': 'Hamburg', 'size': '24', 'price': '999', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/24-m³-abrollcontainer-fuer-holz-a1-a3/'}
-2025-12-15 14:20:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a1-a3-entsorgen/>
+2025-12-17 13:45:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/holz-a1-a3-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Holz A1-A3 36 m³', 'type': 'Holz A1-A3', 'city': 'Hamburg', 'size': '36', 'price': '1299', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/36-m³-abrollcontainer-fuer-holz-a1-a3/'}
-2025-12-15 14:20:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://der-hamburg-container.de/baumischabfaelle-entsorgen/> (referer: https://der-hamburg-container.de/abfallbibel/)
-2025-12-15 14:20:37 [der-hamburg-container] DEBUG: 
+2025-12-17 13:45:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://der-hamburg-container.de/baumischabfaelle-entsorgen/> (referer: https://der-hamburg-container.de/abfallbibel/)
+2025-12-17 13:45:58 [der-hamburg-container] DEBUG: 
 --- Verarbeite: Baumischabfall ---
-2025-12-15 14:20:37 [der-hamburg-container] DEBUG:   ✓ 1m³: 129€
-2025-12-15 14:20:37 [der-hamburg-container] DEBUG:   ✓ 3m³: 399€
-2025-12-15 14:20:37 [der-hamburg-container] DEBUG:   ✓ 5m³: 559€
-2025-12-15 14:20:37 [der-hamburg-container] DEBUG:   ✓ 7m³: 699€
-2025-12-15 14:20:37 [der-hamburg-container] DEBUG:   ✓ 10m³: 929€
-2025-12-15 14:20:37 [der-hamburg-container] DEBUG:   ✓ 8m³: 829€
-2025-12-15 14:20:37 [der-hamburg-container] DEBUG:   ✓ 11m³: 1019€
-2025-12-15 14:20:37 [der-hamburg-container] DEBUG:   ✓ 18m³: 1519€
-2025-12-15 14:20:37 [der-hamburg-container] DEBUG:   ✓ 24m³: 1999€
-2025-12-15 14:20:37 [der-hamburg-container] DEBUG:   ✓ 36m³: 2899€
-2025-12-15 14:20:37 [der-hamburg-container] DEBUG:   ✓ 10 Produkte extrahiert
-2025-12-15 14:20:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/baumischabfaelle-entsorgen/>
+2025-12-17 13:45:58 [der-hamburg-container] DEBUG:   ✓ 1m³: 129€
+2025-12-17 13:45:58 [der-hamburg-container] DEBUG:   ✓ 3m³: 399€
+2025-12-17 13:45:58 [der-hamburg-container] DEBUG:   ✓ 5m³: 559€
+2025-12-17 13:45:58 [der-hamburg-container] DEBUG:   ✓ 7m³: 699€
+2025-12-17 13:45:58 [der-hamburg-container] DEBUG:   ✓ 10m³: 929€
+2025-12-17 13:45:58 [der-hamburg-container] DEBUG:   ✓ 8m³: 829€
+2025-12-17 13:45:58 [der-hamburg-container] DEBUG:   ✓ 11m³: 1019€
+2025-12-17 13:45:58 [der-hamburg-container] DEBUG:   ✓ 18m³: 1519€
+2025-12-17 13:45:58 [der-hamburg-container] DEBUG:   ✓ 24m³: 1999€
+2025-12-17 13:45:58 [der-hamburg-container] DEBUG:   ✓ 36m³: 2899€
+2025-12-17 13:45:58 [der-hamburg-container] DEBUG:   ✓ 10 Produkte extrahiert
+2025-12-17 13:45:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/baumischabfaelle-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Baumischabfall 1 m³', 'type': 'Baumischabfall', 'city': 'Hamburg', 'size': '1', 'price': '129', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/1-m³-absetzmulde-fuer-baumischabfall/'}
-2025-12-15 14:20:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/baumischabfaelle-entsorgen/>
+2025-12-17 13:45:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/baumischabfaelle-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Baumischabfall 3 m³', 'type': 'Baumischabfall', 'city': 'Hamburg', 'size': '3', 'price': '399', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/3-m³-absetzmulde-fuer-baumischabfall/'}
-2025-12-15 14:20:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/baumischabfaelle-entsorgen/>
+2025-12-17 13:45:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/baumischabfaelle-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Baumischabfall 5 m³', 'type': 'Baumischabfall', 'city': 'Hamburg', 'size': '5', 'price': '559', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/5-m³-absetzmulde-fuer-baumischabfall/'}
-2025-12-15 14:20:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/baumischabfaelle-entsorgen/>
+2025-12-17 13:45:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/baumischabfaelle-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Baumischabfall 7 m³', 'type': 'Baumischabfall', 'city': 'Hamburg', 'size': '7', 'price': '699', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/7-m³-absetzmulde-fuer-baumischabfall/'}
-2025-12-15 14:20:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/baumischabfaelle-entsorgen/>
+2025-12-17 13:45:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/baumischabfaelle-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Baumischabfall 10 m³', 'type': 'Baumischabfall', 'city': 'Hamburg', 'size': '10', 'price': '929', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/10-m³-absetzmulde-fuer-baumischabfall/'}
-2025-12-15 14:20:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/baumischabfaelle-entsorgen/>
+2025-12-17 13:45:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/baumischabfaelle-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Baumischabfall 8 m³', 'type': 'Baumischabfall', 'city': 'Hamburg', 'size': '8', 'price': '829', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/8-m³-abrollcontainer-fuer-baumischabfall/'}
-2025-12-15 14:20:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/baumischabfaelle-entsorgen/>
+2025-12-17 13:45:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/baumischabfaelle-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Baumischabfall 11 m³', 'type': 'Baumischabfall', 'city': 'Hamburg', 'size': '11', 'price': '1019', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/11-m³-abrollcontainer-fuer-baumischabfall/'}
-2025-12-15 14:20:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/baumischabfaelle-entsorgen/>
+2025-12-17 13:45:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/baumischabfaelle-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Baumischabfall 18 m³', 'type': 'Baumischabfall', 'city': 'Hamburg', 'size': '18', 'price': '1519', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/18-m³-abrollcontainer-fuer-baumischabfall/'}
-2025-12-15 14:20:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/baumischabfaelle-entsorgen/>
+2025-12-17 13:45:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/baumischabfaelle-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Baumischabfall 24 m³', 'type': 'Baumischabfall', 'city': 'Hamburg', 'size': '24', 'price': '1999', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/24-m³-abrollcontainer-fuer-baumischabfall/'}
-2025-12-15 14:20:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/baumischabfaelle-entsorgen/>
+2025-12-17 13:45:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/baumischabfaelle-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Baumischabfall 36 m³', 'type': 'Baumischabfall', 'city': 'Hamburg', 'size': '36', 'price': '2899', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/36-m³-abrollcontainer-fuer-baumischabfall/'}
-2025-12-15 14:20:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://der-hamburg-container.de/bauschutt-entsorgen/> (referer: https://der-hamburg-container.de/abfallbibel/)
-2025-12-15 14:20:38 [der-hamburg-container] DEBUG: 
+2025-12-17 13:45:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://der-hamburg-container.de/bauschutt-entsorgen/> (referer: https://der-hamburg-container.de/abfallbibel/)
+2025-12-17 13:45:58 [der-hamburg-container] DEBUG: 
 --- Verarbeite: Bauschutt ---
-2025-12-15 14:20:38 [der-hamburg-container] DEBUG:   ✓ 1m³: 119€
-2025-12-15 14:20:38 [der-hamburg-container] DEBUG:   ✓ 3m³: 279€
-2025-12-15 14:20:38 [der-hamburg-container] DEBUG:   ✓ 5m³: 379€
-2025-12-15 14:20:38 [der-hamburg-container] DEBUG:   ✓ 7m³: 489€
-2025-12-15 14:20:38 [der-hamburg-container] DEBUG:   ✓ 10m³: 689€
-2025-12-15 14:20:38 [der-hamburg-container] DEBUG:   ✓ 8m³: 699€
-2025-12-15 14:20:38 [der-hamburg-container] DEBUG:   ✓ 11m³: 759€
-2025-12-15 14:20:38 [der-hamburg-container] DEBUG:   ✓ 7 Produkte extrahiert
-2025-12-15 14:20:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/bauschutt-entsorgen/>
+2025-12-17 13:45:58 [der-hamburg-container] DEBUG:   ✓ 1m³: 119€
+2025-12-17 13:45:58 [der-hamburg-container] DEBUG:   ✓ 3m³: 279€
+2025-12-17 13:45:58 [der-hamburg-container] DEBUG:   ✓ 5m³: 379€
+2025-12-17 13:45:58 [der-hamburg-container] DEBUG:   ✓ 7m³: 489€
+2025-12-17 13:45:58 [der-hamburg-container] DEBUG:   ✓ 10m³: 689€
+2025-12-17 13:45:58 [der-hamburg-container] DEBUG:   ✓ 8m³: 699€
+2025-12-17 13:45:58 [der-hamburg-container] DEBUG:   ✓ 11m³: 759€
+2025-12-17 13:45:58 [der-hamburg-container] DEBUG:   ✓ 7 Produkte extrahiert
+2025-12-17 13:45:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/bauschutt-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Bauschutt 1 m³', 'type': 'Bauschutt', 'city': 'Hamburg', 'size': '1', 'price': '119', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/1-kubikmeter-absetzmulde-fuer-bauschutt/'}
-2025-12-15 14:20:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/bauschutt-entsorgen/>
+2025-12-17 13:45:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/bauschutt-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Bauschutt 3 m³', 'type': 'Bauschutt', 'city': 'Hamburg', 'size': '3', 'price': '279', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/3-m³-absetzmulde-fuer-bauschutt/'}
-2025-12-15 14:20:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/bauschutt-entsorgen/>
+2025-12-17 13:45:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/bauschutt-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Bauschutt 5 m³', 'type': 'Bauschutt', 'city': 'Hamburg', 'size': '5', 'price': '379', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/5-m³-absetzmulde-fuer-bauschutt/'}
-2025-12-15 14:20:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/bauschutt-entsorgen/>
+2025-12-17 13:45:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/bauschutt-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Bauschutt 7 m³', 'type': 'Bauschutt', 'city': 'Hamburg', 'size': '7', 'price': '489', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/bauschutt-absetzmulde-7-kubikmeter/'}
-2025-12-15 14:20:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/bauschutt-entsorgen/>
+2025-12-17 13:45:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/bauschutt-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Bauschutt 10 m³', 'type': 'Bauschutt', 'city': 'Hamburg', 'size': '10', 'price': '689', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/10-m³-absetzmulde-fuer-bauschutt/'}
-2025-12-15 14:20:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/bauschutt-entsorgen/>
+2025-12-17 13:45:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/bauschutt-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Bauschutt 8 m³', 'type': 'Bauschutt', 'city': 'Hamburg', 'size': '8', 'price': '699', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/8-kubikmeter-abrollcontainer-fuer-bauschutt/'}
-2025-12-15 14:20:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/bauschutt-entsorgen/>
+2025-12-17 13:45:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://der-hamburg-container.de/bauschutt-entsorgen/>
 {'source': 'Der Hamburg Container', 'title': 'Bauschutt 11 m³', 'type': 'Bauschutt', 'city': 'Hamburg', 'size': '11', 'price': '759', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': None, 'cancellation_fee': None, 'URL': 'https://der-hamburg-container.de/produkt/11-kubikmeter-abrollcontainer-fuer-bauschutt/'}
-2025-12-15 14:20:38 [scrapy.core.engine] INFO: Closing spider (finished)
-2025-12-15 14:20:38 [scrapy.extensions.feedexport] INFO: Stored json feed (92 items) in: ../data/der-hamburg-container-products.json
-2025-12-15 14:20:38 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+2025-12-17 13:45:58 [scrapy.core.engine] INFO: Closing spider (finished)
+2025-12-17 13:45:58 [scrapy.extensions.feedexport] INFO: Stored json feed (92 items) in: ../data/der-hamburg-container-products.json
+2025-12-17 13:45:58 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
 {'downloader/request_bytes': 3996,
  'downloader/request_count': 11,
  'downloader/request_method_count/GET': 11,
- 'downloader/response_bytes': 1170432,
+ 'downloader/response_bytes': 1170544,
  'downloader/response_count': 11,
  'downloader/response_status_count/200': 11,
- 'elapsed_time_seconds': 6.911673,
+ 'elapsed_time_seconds': 7.28722,
  'feedexport/success_count/FileFeedStorage': 1,
  'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2025, 12, 15, 14, 20, 38, 295928, tzinfo=datetime.timezone.utc),
+ 'finish_time': datetime.datetime(2025, 12, 17, 13, 45, 58, 923004, tzinfo=datetime.timezone.utc),
  'httpcompression/response_bytes': 5691221,
  'httpcompression/response_count': 11,
  'item_scraped_count': 92,
- 'items_per_minute': 920.0,
+ 'items_per_minute': 788.5714285714286,
  'log_count/DEBUG': 221,
  'log_count/INFO': 11,
- 'memusage/max': 77824000,
- 'memusage/startup': 77824000,
+ 'memusage/max': 74235904,
+ 'memusage/startup': 74235904,
  'request_depth_max': 1,
  'response_received_count': 11,
- 'responses_per_minute': 110.0,
+ 'responses_per_minute': 94.28571428571428,
  'scheduler/dequeued': 11,
  'scheduler/dequeued/memory': 11,
  'scheduler/enqueued': 11,
  'scheduler/enqueued/memory': 11,
- 'start_time': datetime.datetime(2025, 12, 15, 14, 20, 31, 384255, tzinfo=datetime.timezone.utc)}
-2025-12-15 14:20:38 [scrapy.core.engine] INFO: Spider closed (finished)
+ 'start_time': datetime.datetime(2025, 12, 17, 13, 45, 51, 635784, tzinfo=datetime.timezone.utc)}
+2025-12-17 13:45:58 [scrapy.core.engine] INFO: Spider closed (finished)
