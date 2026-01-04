@@ -1,5 +1,5 @@
-2025-12-28 06:41:10 [scrapy.utils.log] INFO: Scrapy 2.13.4 started (bot: nebi_spiders)
-2025-12-28 06:41:10 [scrapy.utils.log] INFO: Versions:
+2026-01-04 06:43:11 [scrapy.utils.log] INFO: Scrapy 2.13.4 started (bot: nebi_spiders)
+2026-01-04 06:43:11 [scrapy.utils.log] INFO: Versions:
 {'lxml': '6.0.2',
  'libxml2': '2.14.6',
  'cssselect': '1.3.0',
@@ -10,10 +10,10 @@
  'pyOpenSSL': '25.3.0 (OpenSSL 3.5.4 30 Sep 2025)',
  'cryptography': '46.0.3',
  'Platform': 'Linux-6.11.0-1018-azure-x86_64-with-glibc2.39'}
-2025-12-28 06:41:10 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): cdz-berlin.de:443
-2025-12-28 06:41:13 [urllib3.connectionpool] DEBUG: https://cdz-berlin.de:443 "GET /allgemeine_geschaeftsbedingungen HTTP/1.1" 503 None
+2026-01-04 06:43:11 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): cdz-berlin.de:443
+2026-01-04 06:43:14 [urllib3.connectionpool] DEBUG: https://cdz-berlin.de:443 "GET /allgemeine_geschaeftsbedingungen HTTP/1.1" 404 None
 Unhandled error in Deferred:
-2025-12-28 06:41:13 [twisted] CRITICAL: Unhandled error in Deferred:
+2026-01-04 06:43:14 [twisted] CRITICAL: Unhandled error in Deferred:
 
 Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/twisted/internet/defer.py", line 1857, in _inlineCallbacks
@@ -28,7 +28,7 @@ Traceback (most recent call last):
     self.max_rental_period = re.findall(r'(?<=bis zu )(\d+)(?= Tagen)', page.text)[0]
 builtins.IndexError: list index out of range
 
-2025-12-28 06:41:13 [twisted] CRITICAL: 
+2026-01-04 06:43:14 [twisted] CRITICAL: 
 Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/twisted/internet/defer.py", line 1857, in _inlineCallbacks
     result = context.run(gen.send, result)
