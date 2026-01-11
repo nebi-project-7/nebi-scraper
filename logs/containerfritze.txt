@@ -1,5 +1,5 @@
-2026-01-04 06:43:15 [scrapy.utils.log] INFO: Scrapy 2.13.4 started (bot: nebi_spiders)
-2026-01-04 06:43:15 [scrapy.utils.log] INFO: Versions:
+2026-01-11 06:39:45 [scrapy.utils.log] INFO: Scrapy 2.14.0 started (bot: nebi_spiders)
+2026-01-11 06:39:45 [scrapy.utils.log] INFO: Versions:
 {'lxml': '6.0.2',
  'libxml2': '2.14.6',
  'cssselect': '1.3.0',
@@ -10,29 +10,31 @@
  'pyOpenSSL': '25.3.0 (OpenSSL 3.5.4 30 Sep 2025)',
  'cryptography': '46.0.3',
  'Platform': 'Linux-6.11.0-1018-azure-x86_64-with-glibc2.39'}
-2026-01-04 06:43:15 [selenium.webdriver.common.selenium_manager] DEBUG: Selenium Manager binary found at: /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/selenium/webdriver/common/linux/selenium-manager
-2026-01-04 06:43:15 [selenium.webdriver.common.selenium_manager] DEBUG: Executing process: /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/selenium/webdriver/common/linux/selenium-manager --browser chrome --language-binding python --output json
-2026-01-04 06:43:15 [selenium.webdriver.common.selenium_manager] DEBUG: Driver path: /usr/bin/chromedriver
-2026-01-04 06:43:15 [selenium.webdriver.common.selenium_manager] DEBUG: Browser path: /usr/bin/google-chrome
-2026-01-04 06:43:15 [selenium.webdriver.common.service] DEBUG: Started executable: `/usr/bin/chromedriver` in a child process with pid: 4453 using 0 to output -3
-2026-01-04 06:43:15 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://localhost:58203/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': '/usr/bin/google-chrome', 'args': ['--headless', '--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu', '--window-size=1920,1080']}}}}
-2026-01-04 06:43:15 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): localhost:58203
-2026-01-04 06:43:15 [urllib3.connectionpool] DEBUG: http://localhost:58203 "POST /session HTTP/1.1" 200 0
-2026-01-04 06:43:15 [selenium.webdriver.remote.remote_connection] DEBUG: Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"143.0.7499.109","chrome":{"chromedriverVersion":"143.0.7499.42 (24bdc8c48a0c8c2cd7780deb48bd92b9ed57a490-refs/branch-heads/7499@{#2390})","userDataDir":"/tmp/.org.chromium.Chromium.scoped_dir.9oGxGr"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:40153"},"goog:processID":4459,"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"linux","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"fdb26f49c4e1a5864daec3b64a8bff6c"}} | headers=HTTPHeaderDict({'Content-Length': '882', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
-2026-01-04 06:43:15 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
-2026-01-04 06:43:15 [scrapy.addons] INFO: Enabled addons:
+2026-01-11 06:39:45 [scrapy.crawler] DEBUG: Using AsyncCrawlerProcess
+2026-01-11 06:39:45 [asyncio] DEBUG: Using selector: EpollSelector
+2026-01-11 06:39:45 [selenium.webdriver.common.selenium_manager] DEBUG: Selenium Manager binary found at: /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/selenium/webdriver/common/linux/selenium-manager
+2026-01-11 06:39:45 [selenium.webdriver.common.selenium_manager] DEBUG: Executing process: /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/selenium/webdriver/common/linux/selenium-manager --browser chrome --language-binding python --output json
+2026-01-11 06:39:45 [selenium.webdriver.common.selenium_manager] DEBUG: Driver path: /usr/bin/chromedriver
+2026-01-11 06:39:45 [selenium.webdriver.common.selenium_manager] DEBUG: Browser path: /usr/bin/google-chrome
+2026-01-11 06:39:45 [selenium.webdriver.common.service] DEBUG: Started executable: `/usr/bin/chromedriver` in a child process with pid: 4401 using 0 to output -3
+2026-01-11 06:39:45 [selenium.webdriver.remote.remote_connection] DEBUG: POST http://localhost:33109/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': '/usr/bin/google-chrome', 'args': ['--headless', '--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu', '--window-size=1920,1080']}}}}
+2026-01-11 06:39:45 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): localhost:33109
+2026-01-11 06:39:45 [urllib3.connectionpool] DEBUG: http://localhost:33109 "POST /session HTTP/1.1" 200 0
+2026-01-11 06:39:45 [selenium.webdriver.remote.remote_connection] DEBUG: Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"143.0.7499.169","chrome":{"chromedriverVersion":"143.0.7499.169 (164b20aab62509dad21fd46383951aeec084ad1e-refs/branch-heads/7499@{#3399})","userDataDir":"/tmp/.org.chromium.Chromium.scoped_dir.D0ZJjP"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:40967"},"goog:processID":4407,"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"linux","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"ea2ff1d1d0fc8f829b1188dda556309c"}} | headers=HTTPHeaderDict({'Content-Length': '883', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-01-11 06:39:45 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2026-01-11 06:39:45 [scrapy.addons] INFO: Enabled addons:
 []
-2026-01-04 06:43:15 [asyncio] DEBUG: Using selector: EpollSelector
-2026-01-04 06:43:15 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
-2026-01-04 06:43:15 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
-2026-01-04 06:43:15 [scrapy.extensions.telnet] INFO: Telnet Password: 6b1b92a02b1d6e39
-2026-01-04 06:43:15 [scrapy.middleware] INFO: Enabled extensions:
+2026-01-11 06:39:45 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2026-01-11 06:39:45 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2026-01-11 06:39:45 [scrapy.extensions.telnet] INFO: Telnet Password: 3bd5e171a5d9f750
+2026-01-11 06:39:45 [scrapy.middleware] INFO: Enabled extensions:
 ['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logcount.LogCount',
  'scrapy.extensions.telnet.TelnetConsole',
  'scrapy.extensions.memusage.MemoryUsage',
  'scrapy.extensions.feedexport.FeedExporter',
  'scrapy.extensions.logstats.LogStats']
-2026-01-04 06:43:15 [scrapy.crawler] INFO: Overridden settings:
+2026-01-11 06:39:45 [scrapy.crawler] INFO: Overridden settings:
 {'BOT_NAME': 'nebi_spiders',
  'CONCURRENT_REQUESTS': 1,
  'DOWNLOAD_DELAY': 0.5,
@@ -45,7 +47,7 @@
                     'nebi_spiders.spiders.koeln'],
  'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, '
                'like Gecko) Chrome/141.0.0.0 Safari/537.36'}
-2026-01-04 06:43:15 [scrapy.middleware] INFO: Enabled downloader middlewares:
+2026-01-11 06:39:45 [scrapy.middleware] INFO: Enabled downloader middlewares:
 ['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
  'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
@@ -58,1144 +60,420 @@
  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
  'scrapy.downloadermiddlewares.stats.DownloaderStats']
-2026-01-04 06:43:15 [scrapy.middleware] INFO: Enabled spider middlewares:
+2026-01-11 06:39:45 [scrapy.middleware] INFO: Enabled spider middlewares:
 ['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
  'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
  'scrapy.spidermiddlewares.referer.RefererMiddleware',
  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
  'scrapy.spidermiddlewares.depth.DepthMiddleware']
-2026-01-04 06:43:15 [scrapy.middleware] INFO: Enabled item pipelines:
+2026-01-11 06:39:45 [scrapy.middleware] INFO: Enabled item pipelines:
 []
-2026-01-04 06:43:15 [scrapy.core.engine] INFO: Spider opened
-2026-01-04 06:43:15 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2026-01-04 06:43:15 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
-2026-01-04 06:43:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://containerfritze.de/> (referer: None)
-2026-01-04 06:44:12 [containerfritze] DEBUG: Klick fehlgeschlagen für //li/a[text()="Privat"]: Message: 
+2026-01-11 06:39:45 [scrapy.core.engine] INFO: Spider opened
+2026-01-11 06:39:45 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2026-01-11 06:39:45 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2026-01-11 06:39:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://containerfritze.de/> (referer: None)
+2026-01-11 06:40:38 [containerfritze] DEBUG: Klick fehlgeschlagen für //li/a[text()="Privat"]: Message: 
 Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
+#0 0x5562232b161a <unknown>
+#1 0x556222d2e20b <unknown>
+#2 0x556222d7f90f <unknown>
+#3 0x556222d7fb51 <unknown>
+#4 0x556222dcdd84 <unknown>
+#5 0x556222dcb20e <unknown>
+#6 0x556222d72232 <unknown>
+#7 0x556222d72ee1 <unknown>
+#8 0x55622327a3f9 <unknown>
+#9 0x55622327d34d <unknown>
+#10 0x556223263122 <unknown>
+#11 0x55622327df2b <unknown>
+#12 0x556223249c30 <unknown>
+#13 0x55622329ed78 <unknown>
+#14 0x55622329ef4c <unknown>
+#15 0x5562232b0973 <unknown>
+#16 0x7fb0e249caa4 <unknown>
+#17 0x7fb0e2529c6c <unknown>
 
-2026-01-04 06:44:26 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
+2026-01-11 06:41:21 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
 Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
+#0 0x5562232b161a <unknown>
+#1 0x556222d2e20b <unknown>
+#2 0x556222d7f90f <unknown>
+#3 0x556222d7fb51 <unknown>
+#4 0x556222dcdd84 <unknown>
+#5 0x556222dcb20e <unknown>
+#6 0x556222d72232 <unknown>
+#7 0x556222d72ee1 <unknown>
+#8 0x55622327a3f9 <unknown>
+#9 0x55622327d34d <unknown>
+#10 0x556223263122 <unknown>
+#11 0x55622327df2b <unknown>
+#12 0x556223249c30 <unknown>
+#13 0x55622329ed78 <unknown>
+#14 0x55622329ef4c <unknown>
+#15 0x5562232b0973 <unknown>
+#16 0x7fb0e249caa4 <unknown>
+#17 0x7fb0e2529c6c <unknown>
 
-2026-01-04 06:45:08 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
+2026-01-11 06:42:23 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
 Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
+#0 0x5562232b161a <unknown>
+#1 0x556222d2e20b <unknown>
+#2 0x556222d7f90f <unknown>
+#3 0x556222d7fb51 <unknown>
+#4 0x556222dcdd84 <unknown>
+#5 0x556222dcb20e <unknown>
+#6 0x556222d72232 <unknown>
+#7 0x556222d72ee1 <unknown>
+#8 0x55622327a3f9 <unknown>
+#9 0x55622327d34d <unknown>
+#10 0x556223263122 <unknown>
+#11 0x55622327df2b <unknown>
+#12 0x556223249c30 <unknown>
+#13 0x55622329ed78 <unknown>
+#14 0x55622329ef4c <unknown>
+#15 0x5562232b0973 <unknown>
+#16 0x7fb0e249caa4 <unknown>
+#17 0x7fb0e2529c6c <unknown>
 
-2026-01-04 06:45:16 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 1 pages/min), scraped 0 items (at 0 items/min)
-2026-01-04 06:45:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '3 m³ Absetzcontainer', 'type': 'Beton bewehrt mit Stahl', 'city': 'Berlin', 'size': '3 m³', 'price': '303,45', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/betonbruch-bewehrt-mit-stahl-container/'}
-2026-01-04 06:45:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '5 m³ Absetzcontainer', 'type': 'Beton bewehrt mit Stahl', 'city': 'Berlin', 'size': '5 m³', 'price': '357', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/betonbruch-bewehrt-mit-stahl-container/'}
-2026-01-04 06:45:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '7 m³ Absetzcontainer', 'type': 'Beton bewehrt mit Stahl', 'city': 'Berlin', 'size': '7 m³', 'price': '416,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/betonbruch-bewehrt-mit-stahl-container/'}
-2026-01-04 06:46:04 [containerfritze] DEBUG: Klick fehlgeschlagen für //li/a[text()="Privat"]: Message: 
+2026-01-11 06:43:19 [containerfritze] DEBUG: Klick fehlgeschlagen für //li/a[text()="Privat"]: Message: 
 Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
+#0 0x5562232b161a <unknown>
+#1 0x556222d2e20b <unknown>
+#2 0x556222d7f90f <unknown>
+#3 0x556222d7fb51 <unknown>
+#4 0x556222dcdd84 <unknown>
+#5 0x556222dcb20e <unknown>
+#6 0x556222d72232 <unknown>
+#7 0x556222d72ee1 <unknown>
+#8 0x55622327a3f9 <unknown>
+#9 0x55622327d34d <unknown>
+#10 0x556223263122 <unknown>
+#11 0x55622327df2b <unknown>
+#12 0x556223249c30 <unknown>
+#13 0x55622329ed78 <unknown>
+#14 0x55622329ef4c <unknown>
+#15 0x5562232b0973 <unknown>
+#16 0x7fb0e249caa4 <unknown>
+#17 0x7fb0e2529c6c <unknown>
 
-2026-01-04 06:46:18 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
+2026-01-11 06:44:13 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
 Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
+#0 0x5562232b161a <unknown>
+#1 0x556222d2e20b <unknown>
+#2 0x556222d7f90f <unknown>
+#3 0x556222d7fb51 <unknown>
+#4 0x556222dcdd84 <unknown>
+#5 0x556222dcb20e <unknown>
+#6 0x556222d72232 <unknown>
+#7 0x556222d72ee1 <unknown>
+#8 0x55622327a3f9 <unknown>
+#9 0x55622327d34d <unknown>
+#10 0x556223263122 <unknown>
+#11 0x55622327df2b <unknown>
+#12 0x556223249c30 <unknown>
+#13 0x55622329ed78 <unknown>
+#14 0x55622329ef4c <unknown>
+#15 0x5562232b0973 <unknown>
+#16 0x7fb0e249caa4 <unknown>
+#17 0x7fb0e2529c6c <unknown>
 
-2026-01-04 06:47:01 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
+2026-01-11 06:45:29 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
 Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
+#0 0x5562232b161a <unknown>
+#1 0x556222d2e20b <unknown>
+#2 0x556222d7f90f <unknown>
+#3 0x556222d7fb51 <unknown>
+#4 0x556222dcdd84 <unknown>
+#5 0x556222dcb20e <unknown>
+#6 0x556222d72232 <unknown>
+#7 0x556222d72ee1 <unknown>
+#8 0x55622327a3f9 <unknown>
+#9 0x55622327d34d <unknown>
+#10 0x556223263122 <unknown>
+#11 0x55622327df2b <unknown>
+#12 0x556223249c30 <unknown>
+#13 0x55622329ed78 <unknown>
+#14 0x55622329ef4c <unknown>
+#15 0x5562232b0973 <unknown>
+#16 0x7fb0e249caa4 <unknown>
+#17 0x7fb0e2529c6c <unknown>
 
-2026-01-04 06:47:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '10 m³ Absetzcontainer', 'type': 'Beton bewehrt mit Stahl', 'city': 'Berlin', 'size': '10 m³', 'price': '476', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/betonbruch-bewehrt-mit-stahl-container/'}
-2026-01-04 06:47:08 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 4 items (at 4 items/min)
-2026-01-04 06:47:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '3 m³ Absetzcontainer', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '3 m³', 'price': '321,30', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/holz-a1-a3-container/'}
-2026-01-04 06:47:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '5 m³ Absetzcontainer', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '5 m³', 'price': '357', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/holz-a1-a3-container/'}
-2026-01-04 06:47:16 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 6 items (at 2 items/min)
-2026-01-04 06:47:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '7 m³ Absetzcontainer', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '7 m³', 'price': '416,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/holz-a1-a3-container/'}
-2026-01-04 06:47:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '10 m³ Absetzcontainer', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '10 m³', 'price': '476', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/holz-a1-a3-container/'}
-2026-01-04 06:47:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '15 m³ Abrollcontainer', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '15 m³', 'price': '624,75', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/holz-a1-a3-container/'}
-2026-01-04 06:47:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '30 m³ Abrollcontainer', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '30 m³', 'price': '1071', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/holz-a1-a3-container/'}
-2026-01-04 06:48:13 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
+2026-01-11 06:46:31 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
 Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
+#0 0x5562232b161a <unknown>
+#1 0x556222d2e20b <unknown>
+#2 0x556222d7f90f <unknown>
+#3 0x556222d7fb51 <unknown>
+#4 0x556222dcdd84 <unknown>
+#5 0x556222dcb20e <unknown>
+#6 0x556222d72232 <unknown>
+#7 0x556222d72ee1 <unknown>
+#8 0x55622327a3f9 <unknown>
+#9 0x55622327d34d <unknown>
+#10 0x556223263122 <unknown>
+#11 0x55622327df2b <unknown>
+#12 0x556223249c30 <unknown>
+#13 0x55622329ed78 <unknown>
+#14 0x55622329ef4c <unknown>
+#15 0x5562232b0973 <unknown>
+#16 0x7fb0e249caa4 <unknown>
+#17 0x7fb0e2529c6c <unknown>
 
-2026-01-04 06:48:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '36 m³ Abrollcontainer', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '36 m³', 'price': '1285,20', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/holz-a1-a3-container/'}
-2026-01-04 06:48:20 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 11 items (at 5 items/min)
-2026-01-04 06:48:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '3 m³ Absetzcontainer', 'type': 'Sand', 'city': 'Berlin', 'size': '3 m³', 'price': '321,30', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/sand-container/'}
-2026-01-04 06:48:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '5 m³ Absetzcontainer', 'type': 'Sand', 'city': 'Berlin', 'size': '5 m³', 'price': '386,75', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/sand-container/'}
-2026-01-04 06:48:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '7 m³ Absetzcontainer', 'type': 'Sand', 'city': 'Berlin', 'size': '7 m³', 'price': '458,15', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/sand-container/'}
-2026-01-04 06:49:09 [containerfritze] DEBUG: Klick fehlgeschlagen für //li/a[text()="Privat"]: Message: 
+2026-01-11 06:47:43 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
 Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
+#0 0x5562232b161a <unknown>
+#1 0x556222d2e20b <unknown>
+#2 0x556222d7f90f <unknown>
+#3 0x556222d7fb51 <unknown>
+#4 0x556222dcdd84 <unknown>
+#5 0x556222dcb20e <unknown>
+#6 0x556222d72232 <unknown>
+#7 0x556222d72ee1 <unknown>
+#8 0x55622327a3f9 <unknown>
+#9 0x55622327d34d <unknown>
+#10 0x556223263122 <unknown>
+#11 0x55622327df2b <unknown>
+#12 0x556223249c30 <unknown>
+#13 0x55622329ed78 <unknown>
+#14 0x55622329ef4c <unknown>
+#15 0x5562232b0973 <unknown>
+#16 0x7fb0e249caa4 <unknown>
+#17 0x7fb0e2529c6c <unknown>
 
-2026-01-04 06:49:22 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
+2026-01-11 06:48:34 [containerfritze] DEBUG: Klick fehlgeschlagen für //li/a[text()="Privat"]: Message: 
 Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
+#0 0x5562232b161a <unknown>
+#1 0x556222d2e20b <unknown>
+#2 0x556222d7f90f <unknown>
+#3 0x556222d7fb51 <unknown>
+#4 0x556222dcdd84 <unknown>
+#5 0x556222dcb20e <unknown>
+#6 0x556222d72232 <unknown>
+#7 0x556222d72ee1 <unknown>
+#8 0x55622327a3f9 <unknown>
+#9 0x55622327d34d <unknown>
+#10 0x556223263122 <unknown>
+#11 0x55622327df2b <unknown>
+#12 0x556223249c30 <unknown>
+#13 0x55622329ed78 <unknown>
+#14 0x55622329ef4c <unknown>
+#15 0x5562232b0973 <unknown>
+#16 0x7fb0e249caa4 <unknown>
+#17 0x7fb0e2529c6c <unknown>
 
-2026-01-04 06:50:05 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
+2026-01-11 06:49:33 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
 Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
+#0 0x5562232b161a <unknown>
+#1 0x556222d2e20b <unknown>
+#2 0x556222d7f90f <unknown>
+#3 0x556222d7fb51 <unknown>
+#4 0x556222dcdd84 <unknown>
+#5 0x556222dcb20e <unknown>
+#6 0x556222d72232 <unknown>
+#7 0x556222d72ee1 <unknown>
+#8 0x55622327a3f9 <unknown>
+#9 0x55622327d34d <unknown>
+#10 0x556223263122 <unknown>
+#11 0x55622327df2b <unknown>
+#12 0x556223249c30 <unknown>
+#13 0x55622329ed78 <unknown>
+#14 0x55622329ef4c <unknown>
+#15 0x5562232b0973 <unknown>
+#16 0x7fb0e249caa4 <unknown>
+#17 0x7fb0e2529c6c <unknown>
 
-2026-01-04 06:50:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '10 m³ Absetzcontainer', 'type': 'Sand', 'city': 'Berlin', 'size': '10 m³', 'price': '595', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/sand-container/'}
-2026-01-04 06:50:12 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 15 items (at 4 items/min)
-2026-01-04 06:50:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '3 m³ Absetzcontainer', 'type': 'Lehmboden', 'city': 'Berlin', 'size': '3 m³', 'price': '571,20', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/lehmboden-container/'}
-2026-01-04 06:50:16 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 16 items (at 1 items/min)
-2026-01-04 06:50:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '5 m³ Absetzcontainer', 'type': 'Lehmboden', 'city': 'Berlin', 'size': '5 m³', 'price': '773,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/lehmboden-container/'}
-2026-01-04 06:51:00 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
+2026-01-11 06:50:46 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
 Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
+#0 0x5562232b161a <unknown>
+#1 0x556222d2e20b <unknown>
+#2 0x556222d7f90f <unknown>
+#3 0x556222d7fb51 <unknown>
+#4 0x556222dcdd84 <unknown>
+#5 0x556222dcb20e <unknown>
+#6 0x556222d72232 <unknown>
+#7 0x556222d72ee1 <unknown>
+#8 0x55622327a3f9 <unknown>
+#9 0x55622327d34d <unknown>
+#10 0x556223263122 <unknown>
+#11 0x55622327df2b <unknown>
+#12 0x556223249c30 <unknown>
+#13 0x55622329ed78 <unknown>
+#14 0x55622329ef4c <unknown>
+#15 0x5562232b0973 <unknown>
+#16 0x7fb0e249caa4 <unknown>
+#17 0x7fb0e2529c6c <unknown>
 
-2026-01-04 06:51:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '7 m³ Absetzcontainer', 'type': 'Lehmboden', 'city': 'Berlin', 'size': '7 m³', 'price': '999,60', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/lehmboden-container/'}
-2026-01-04 06:51:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '3 m³ Absetzcontainer', 'type': 'Erdaushub mit Grasnarbe', 'city': 'Berlin', 'size': '3 m³', 'price': '481,95', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/erdaushub-mit-grasnarbe-container/'}
-2026-01-04 06:51:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '5 m³ Absetzcontainer', 'type': 'Erdaushub mit Grasnarbe', 'city': 'Berlin', 'size': '5 m³', 'price': '624,75', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/erdaushub-mit-grasnarbe-container/'}
-2026-01-04 06:51:16 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 20 items (at 4 items/min)
-2026-01-04 06:51:20 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '7 m³ Absetzcontainer', 'type': 'Erdaushub mit Grasnarbe', 'city': 'Berlin', 'size': '7 m³', 'price': '791,35', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/erdaushub-mit-grasnarbe-container/'}
-2026-01-04 06:52:00 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
+2026-01-11 06:51:41 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
 Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
+#0 0x5562232b161a <unknown>
+#1 0x556222d2e20b <unknown>
+#2 0x556222d7f90f <unknown>
+#3 0x556222d7fb51 <unknown>
+#4 0x556222dcdd84 <unknown>
+#5 0x556222dcb20e <unknown>
+#6 0x556222d72232 <unknown>
+#7 0x556222d72ee1 <unknown>
+#8 0x55622327a3f9 <unknown>
+#9 0x55622327d34d <unknown>
+#10 0x556223263122 <unknown>
+#11 0x55622327df2b <unknown>
+#12 0x556223249c30 <unknown>
+#13 0x55622329ed78 <unknown>
+#14 0x55622329ef4c <unknown>
+#15 0x5562232b0973 <unknown>
+#16 0x7fb0e249caa4 <unknown>
+#17 0x7fb0e2529c6c <unknown>
 
-2026-01-04 06:52:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '10 m³ Absetzcontainer', 'type': 'Erdaushub mit Grasnarbe', 'city': 'Berlin', 'size': '10 m³', 'price': '1011,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/erdaushub-mit-grasnarbe-container/'}
-2026-01-04 06:52:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '3 m³ Absetzcontainer', 'type': 'Flachglas', 'city': 'Berlin', 'size': '3 m³', 'price': '892,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/flachglas-container/'}
-2026-01-04 06:52:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '5 m³ Absetzcontainer', 'type': 'Flachglas', 'city': 'Berlin', 'size': '5 m³', 'price': '1428', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/flachglas-container/'}
-2026-01-04 06:52:55 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
+2026-01-11 06:52:31 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
 Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
+#0 0x5562232b161a <unknown>
+#1 0x556222d2e20b <unknown>
+#2 0x556222d7f90f <unknown>
+#3 0x556222d7fb51 <unknown>
+#4 0x556222dcdd84 <unknown>
+#5 0x556222dcb20e <unknown>
+#6 0x556222d72232 <unknown>
+#7 0x556222d72ee1 <unknown>
+#8 0x55622327a3f9 <unknown>
+#9 0x55622327d34d <unknown>
+#10 0x556223263122 <unknown>
+#11 0x55622327df2b <unknown>
+#12 0x556223249c30 <unknown>
+#13 0x55622329ed78 <unknown>
+#14 0x55622329ef4c <unknown>
+#15 0x5562232b0973 <unknown>
+#16 0x7fb0e249caa4 <unknown>
+#17 0x7fb0e2529c6c <unknown>
 
-2026-01-04 06:53:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '7 m³ Absetzcontainer', 'type': 'Flachglas', 'city': 'Berlin', 'size': '7 m³', 'price': '1915,90', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/flachglas-container/'}
-2026-01-04 06:53:02 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 25 items (at 5 items/min)
-2026-01-04 06:53:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '3 m³ Absetzcontainer', 'type': 'Erdaushub mit Steinen', 'city': 'Berlin', 'size': '3 m³', 'price': '464,10', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/erdaushub-mit-steinen-container/'}
-2026-01-04 06:53:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '5 m³ Absetzcontainer', 'type': 'Erdaushub mit Steinen', 'city': 'Berlin', 'size': '5 m³', 'price': '595', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/erdaushub-mit-steinen-container/'}
-2026-01-04 06:53:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '7 m³ Absetzcontainer', 'type': 'Erdaushub mit Steinen', 'city': 'Berlin', 'size': '7 m³', 'price': '749,70', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/erdaushub-mit-steinen-container/'}
-2026-01-04 06:53:54 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
-Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
-
-2026-01-04 06:54:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '10 m³ Absetzcontainer', 'type': 'Erdaushub mit Steinen', 'city': 'Berlin', 'size': '10 m³', 'price': '952', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/erdaushub-mit-steinen-container/'}
-2026-01-04 06:54:01 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 29 items (at 4 items/min)
-2026-01-04 06:54:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '3 m³ Absetzcontainer', 'type': 'Porenbeton', 'city': 'Berlin', 'size': '3 m³', 'price': '428,40', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/porenbeton-container/'}
-2026-01-04 06:54:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '5 m³ Absetzcontainer', 'type': 'Porenbeton', 'city': 'Berlin', 'size': '5 m³', 'price': '535,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/porenbeton-container/'}
-2026-01-04 06:54:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '7 m³ Absetzcontainer', 'type': 'Porenbeton', 'city': 'Berlin', 'size': '7 m³', 'price': '666,40', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/porenbeton-container/'}
-2026-01-04 06:54:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '10 m³ Absetzcontainer', 'type': 'Porenbeton', 'city': 'Berlin', 'size': '10 m³', 'price': '833', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/porenbeton-container/'}
-2026-01-04 06:54:18 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 33 items (at 4 items/min)
-2026-01-04 06:54:58 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
-Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
-
-2026-01-04 06:55:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '15 m³ Abrollcontainer', 'type': 'Porenbeton', 'city': 'Berlin', 'size': '15 m³', 'price': '1160,25', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/porenbeton-container/'}
-2026-01-04 06:55:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '3 m³ Absetzcontainer', 'type': 'Gewerbeabfälle', 'city': 'Berlin', 'size': '3 m³', 'price': '357', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gewerbeabfall-gemischt-container/'}
-2026-01-04 06:55:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '5 m³ Absetzcontainer', 'type': 'Gewerbeabfälle', 'city': 'Berlin', 'size': '5 m³', 'price': '476', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gewerbeabfall-gemischt-container/'}
-2026-01-04 06:55:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '7 m³ Absetzcontainer', 'type': 'Gewerbeabfälle', 'city': 'Berlin', 'size': '7 m³', 'price': '583,10', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gewerbeabfall-gemischt-container/'}
-2026-01-04 06:55:17 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 37 items (at 4 items/min)
-2026-01-04 06:55:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '10 m³ Absetzcontainer', 'type': 'Gewerbeabfälle', 'city': 'Berlin', 'size': '10 m³', 'price': '773,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gewerbeabfall-gemischt-container/'}
-2026-01-04 06:55:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '15 m³ Abrollcontainer', 'type': 'Gewerbeabfälle', 'city': 'Berlin', 'size': '15 m³', 'price': '1071', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gewerbeabfall-gemischt-container/'}
-2026-01-04 06:55:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '30 m³ Abrollcontainer', 'type': 'Gewerbeabfälle', 'city': 'Berlin', 'size': '30 m³', 'price': '1963,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gewerbeabfall-gemischt-container/'}
-2026-01-04 06:56:06 [containerfritze] DEBUG: Klick fehlgeschlagen für //li/a[text()="Privat"]: Message: 
-Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
-
-2026-01-04 06:56:19 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
-Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
-
-2026-01-04 06:56:59 [containerfritze] DEBUG: Klick fehlgeschlagen für //li/a[text()="Privat"]: Message: 
-Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
-
-2026-01-04 06:57:12 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
-Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
-
-2026-01-04 06:57:46 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
-Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
-
-2026-01-04 06:57:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '36 m³ Abrollcontainer', 'type': 'Gewerbeabfälle', 'city': 'Berlin', 'size': '36 m³', 'price': '2142', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gewerbeabfall-gemischt-container/'}
-2026-01-04 06:57:53 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 41 items (at 4 items/min)
-2026-01-04 06:57:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '3 m³ Absetzcontainer', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '3 m³', 'price': '339,15', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/sperrmuell-gemischt-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
-2026-01-04 06:58:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '5 m³ Absetzcontainer', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '5 m³', 'price': '416,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/sperrmuell-gemischt-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
-2026-01-04 06:58:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '7 m³ Absetzcontainer', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '7 m³', 'price': '541,45', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/sperrmuell-gemischt-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
-2026-01-04 06:58:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '10 m³ Absetzcontainer', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '10 m³', 'price': '714', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/sperrmuell-gemischt-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
-2026-01-04 06:58:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '15 m³ Abrollcontainer', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '15 m³', 'price': '981,75', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/sperrmuell-gemischt-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
-2026-01-04 06:58:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '30 m³ Abrollcontainer', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '30 m³', 'price': '1785', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/sperrmuell-gemischt-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
-2026-01-04 06:58:18 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 47 items (at 6 items/min)
-2026-01-04 06:58:57 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
-Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
-
-2026-01-04 06:59:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '36 m³ Abrollcontainer', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '36 m³', 'price': '1927,80', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/sperrmuell-gemischt-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
-2026-01-04 06:59:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '3 m³ Absetzcontainer', 'type': 'Grünschnitt', 'city': 'Berlin', 'size': '3 m³', 'price': '321,30', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gruenschnitt-container/'}
-2026-01-04 06:59:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '5 m³ Absetzcontainer', 'type': 'Grünschnitt', 'city': 'Berlin', 'size': '5 m³', 'price': '416,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gruenschnitt-container/'}
-2026-01-04 06:59:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '7 m³ Absetzcontainer', 'type': 'Grünschnitt', 'city': 'Berlin', 'size': '7 m³', 'price': '499,80', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gruenschnitt-container/'}
-2026-01-04 06:59:17 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 51 items (at 4 items/min)
-2026-01-04 06:59:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '10 m³ Absetzcontainer', 'type': 'Grünschnitt', 'city': 'Berlin', 'size': '10 m³', 'price': '654,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gruenschnitt-container/'}
-2026-01-04 06:59:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '15 m³ Abrollcontainer', 'type': 'Grünschnitt', 'city': 'Berlin', 'size': '15 m³', 'price': '892,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gruenschnitt-container/'}
-2026-01-04 06:59:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '30 m³ Abrollcontainer', 'type': 'Grünschnitt', 'city': 'Berlin', 'size': '30 m³', 'price': '1428', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gruenschnitt-container/'}
-2026-01-04 07:00:00 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
-Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
-
-2026-01-04 07:00:07 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '36 m³ Abrollcontainer', 'type': 'Grünschnitt', 'city': 'Berlin', 'size': '36 m³', 'price': '1499,40', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gruenschnitt-container/'}
-2026-01-04 07:00:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '3 m³ Absetzcontainer', 'type': 'Baumischabfall schwer', 'city': 'Berlin', 'size': '3 m³', 'price': '464,10', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/baumischabfall-schwer-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
-2026-01-04 07:00:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '5 m³ Absetzcontainer', 'type': 'Baumischabfall schwer', 'city': 'Berlin', 'size': '5 m³', 'price': '654,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/baumischabfall-schwer-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
-2026-01-04 07:00:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '7 m³ Absetzcontainer', 'type': 'Baumischabfall schwer', 'city': 'Berlin', 'size': '7 m³', 'price': '833', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/baumischabfall-schwer-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
-2026-01-04 07:00:19 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 58 items (at 7 items/min)
-2026-01-04 07:00:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '10 m³ Absetzcontainer', 'type': 'Baumischabfall schwer', 'city': 'Berlin', 'size': '10 m³', 'price': '1071', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/baumischabfall-schwer-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
-2026-01-04 07:01:03 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
-Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
-
-2026-01-04 07:01:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '15 m³ Abrollcontainer', 'type': 'Baumischabfall schwer', 'city': 'Berlin', 'size': '15 m³', 'price': '1428', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/baumischabfall-schwer-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
-2026-01-04 07:01:14 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '3 m³ Absetzcontainer', 'type': 'Styropor ohne Anhaftungen', 'city': 'Berlin', 'size': '3 m³', 'price': '357', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/styropor-ohne-anhaftungen-container/'}
-2026-01-04 07:01:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '5 m³ Absetzcontainer', 'type': 'Styropor ohne Anhaftungen', 'city': 'Berlin', 'size': '5 m³', 'price': '476', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/styropor-ohne-anhaftungen-container/'}
-2026-01-04 07:01:18 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 62 items (at 4 items/min)
-2026-01-04 07:01:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '7 m³ Absetzcontainer', 'type': 'Styropor ohne Anhaftungen', 'city': 'Berlin', 'size': '7 m³', 'price': '583,10', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/styropor-ohne-anhaftungen-container/'}
-2026-01-04 07:01:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '10 m³ Absetzcontainer', 'type': 'Styropor ohne Anhaftungen', 'city': 'Berlin', 'size': '10 m³', 'price': '714', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/styropor-ohne-anhaftungen-container/'}
-2026-01-04 07:01:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '15 m³ Abrollcontainer', 'type': 'Styropor ohne Anhaftungen', 'city': 'Berlin', 'size': '15 m³', 'price': '892,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/styropor-ohne-anhaftungen-container/'}
-2026-01-04 07:01:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '30 m³ Abrollcontainer', 'type': 'Styropor ohne Anhaftungen', 'city': 'Berlin', 'size': '30 m³', 'price': '1606,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/styropor-ohne-anhaftungen-container/'}
-2026-01-04 07:02:05 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
-Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
-
-2026-01-04 07:02:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '36 m³ Abrollcontainer', 'type': 'Styropor ohne Anhaftungen', 'city': 'Berlin', 'size': '36 m³', 'price': '1713,60', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/styropor-ohne-anhaftungen-container/'}
-2026-01-04 07:02:17 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
 {'source': 'containerfritze', 'title': '3 m³ Absetzcontainer', 'type': 'Baumischabfall leicht', 'city': 'Berlin', 'size': '3 m³', 'price': '357', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/baumischabfall-leicht-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
-2026-01-04 07:02:17 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 68 items (at 6 items/min)
-2026-01-04 07:02:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
 {'source': 'containerfritze', 'title': '5 m³ Absetzcontainer', 'type': 'Baumischabfall leicht', 'city': 'Berlin', 'size': '5 m³', 'price': '476', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/baumischabfall-leicht-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
-2026-01-04 07:02:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
 {'source': 'containerfritze', 'title': '7 m³ Absetzcontainer', 'type': 'Baumischabfall leicht', 'city': 'Berlin', 'size': '7 m³', 'price': '583,10', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/baumischabfall-leicht-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
-2026-01-04 07:02:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
 {'source': 'containerfritze', 'title': '10 m³ Absetzcontainer', 'type': 'Baumischabfall leicht', 'city': 'Berlin', 'size': '10 m³', 'price': '773,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/baumischabfall-leicht-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
-2026-01-04 07:02:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
 {'source': 'containerfritze', 'title': '15 m³ Abrollcontainer', 'type': 'Baumischabfall leicht', 'city': 'Berlin', 'size': '15 m³', 'price': '1071', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/baumischabfall-leicht-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
-2026-01-04 07:02:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
 {'source': 'containerfritze', 'title': '30 m³ Abrollcontainer', 'type': 'Baumischabfall leicht', 'city': 'Berlin', 'size': '30 m³', 'price': '1963,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/baumischabfall-leicht-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
-2026-01-04 07:03:18 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
-Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
-
-2026-01-04 07:03:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
 {'source': 'containerfritze', 'title': '36 m³ Abrollcontainer', 'type': 'Baumischabfall leicht', 'city': 'Berlin', 'size': '36 m³', 'price': '2142', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/baumischabfall-leicht-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
-2026-01-04 07:03:25 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 74 items (at 6 items/min)
-2026-01-04 07:03:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '3 m³ Absetzcontainer', 'type': 'Steine', 'city': 'Berlin', 'size': '3 m³', 'price': '392,70', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/steine-container-mieten/'}
-2026-01-04 07:03:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '5 m³ Absetzcontainer', 'type': 'Steine', 'city': 'Berlin', 'size': '5 m³', 'price': '535,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/steine-container-mieten/'}
-2026-01-04 07:03:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '7 m³ Absetzcontainer', 'type': 'Steine', 'city': 'Berlin', 'size': '7 m³', 'price': '666,40', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/steine-container-mieten/'}
-2026-01-04 07:03:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '10 m³ Absetzcontainer', 'type': 'Steine', 'city': 'Berlin', 'size': '10 m³', 'price': '833', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/steine-container-mieten/'}
-2026-01-04 07:04:21 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
-Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
-
-2026-01-04 07:04:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '15 m³ Abrollcontainer', 'type': 'Steine', 'city': 'Berlin', 'size': '15 m³', 'price': '1160,25', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/steine-container-mieten/'}
-2026-01-04 07:04:28 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 79 items (at 5 items/min)
-2026-01-04 07:04:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '3 m³ Absetzcontainer', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '3 m³', 'price': '321,30', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gartenabfall-gemischt-container/'}
-2026-01-04 07:04:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '5 m³ Absetzcontainer', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '5 m³', 'price': '416,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gartenabfall-gemischt-container/'}
-2026-01-04 07:04:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '7 m³ Absetzcontainer', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '7 m³', 'price': '499,80', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gartenabfall-gemischt-container/'}
-2026-01-04 07:04:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '10 m³ Absetzcontainer', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '10 m³', 'price': '654,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gartenabfall-gemischt-container/'}
-2026-01-04 07:04:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '15 m³ Abrollcontainer', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '15 m³', 'price': '892,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gartenabfall-gemischt-container/'}
-2026-01-04 07:04:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '30 m³ Abrollcontainer', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '30 m³', 'price': '1428', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gartenabfall-gemischt-container/'}
-2026-01-04 07:05:33 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
-Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
-
-2026-01-04 07:05:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '36 m³ Abrollcontainer', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '36 m³', 'price': '1499,40', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gartenabfall-gemischt-container/'}
-2026-01-04 07:05:41 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 86 items (at 7 items/min)
-2026-01-04 07:05:45 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '3 m³ Absetzcontainer', 'type': 'Glasverpackungen', 'city': 'Berlin', 'size': '3 m³', 'price': '357', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/glasverpackungen-container/'}
-2026-01-04 07:05:49 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '5 m³ Absetzcontainer', 'type': 'Glasverpackungen', 'city': 'Berlin', 'size': '5 m³', 'price': '476', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/glasverpackungen-container/'}
-2026-01-04 07:05:53 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '7 m³ Absetzcontainer', 'type': 'Glasverpackungen', 'city': 'Berlin', 'size': '7 m³', 'price': '541,45', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/glasverpackungen-container/'}
-2026-01-04 07:05:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '10 m³ Absetzcontainer', 'type': 'Glasverpackungen', 'city': 'Berlin', 'size': '10 m³', 'price': '654,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/glasverpackungen-container/'}
-2026-01-04 07:06:34 [containerfritze] DEBUG: Klick fehlgeschlagen für //li/a[text()="Privat"]: Message: 
-Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
-
-2026-01-04 07:06:47 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
-Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
-
-2026-01-04 07:07:27 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
-Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
-
-2026-01-04 07:07:34 [containerfritze] DEBUG: ⚠️ Duplikat übersprungen: Holz A1-A3 3 m³
-2026-01-04 07:07:38 [containerfritze] DEBUG: ⚠️ Duplikat übersprungen: Holz A1-A3 5 m³
-2026-01-04 07:07:42 [containerfritze] DEBUG: ⚠️ Duplikat übersprungen: Holz A1-A3 7 m³
-2026-01-04 07:07:46 [containerfritze] DEBUG: ⚠️ Duplikat übersprungen: Holz A1-A3 10 m³
-2026-01-04 07:07:50 [containerfritze] DEBUG: ⚠️ Duplikat übersprungen: Holz A1-A3 15 m³
-2026-01-04 07:07:55 [containerfritze] DEBUG: ⚠️ Duplikat übersprungen: Holz A1-A3 30 m³
-2026-01-04 07:07:59 [containerfritze] DEBUG: ⚠️ Duplikat übersprungen: Holz A1-A3 36 m³
-2026-01-04 07:08:39 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
-Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
-
-2026-01-04 07:08:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '15 m³ Abrollcontainer', 'type': 'Glasverpackungen', 'city': 'Berlin', 'size': '15 m³', 'price': '803,25', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/glasverpackungen-container/'}
-2026-01-04 07:08:46 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 91 items (at 5 items/min)
-2026-01-04 07:08:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '3 m³ Absetzcontainer', 'type': 'Erdaushub ohne Fremdanteil', 'city': 'Berlin', 'size': '3 m³', 'price': '357', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/erdaushub-ohne-fremdanteil-container/'}
-2026-01-04 07:08:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '5 m³ Absetzcontainer', 'type': 'Erdaushub ohne Fremdanteil', 'city': 'Berlin', 'size': '5 m³', 'price': '476', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/erdaushub-ohne-fremdanteil-container/'}
-2026-01-04 07:08:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '7 m³ Absetzcontainer', 'type': 'Erdaushub ohne Fremdanteil', 'city': 'Berlin', 'size': '7 m³', 'price': '583,10', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/erdaushub-ohne-fremdanteil-container/'}
-2026-01-04 07:09:34 [containerfritze] DEBUG: Klick fehlgeschlagen für //li/a[text()="Privat"]: Message: 
-Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
-
-2026-01-04 07:09:47 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
-Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
-
-2026-01-04 07:10:27 [containerfritze] DEBUG: Klick fehlgeschlagen für //li/a[text()="Privat"]: Message: 
-Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
-
-2026-01-04 07:10:40 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
-Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
-
-2026-01-04 07:11:23 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
-Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
-
-2026-01-04 07:11:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '10 m³ Absetzcontainer', 'type': 'Erdaushub ohne Fremdanteil', 'city': 'Berlin', 'size': '10 m³', 'price': '773,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/erdaushub-ohne-fremdanteil-container/'}
-2026-01-04 07:11:31 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 95 items (at 4 items/min)
-2026-01-04 07:11:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '3 m³ Absetzcontainer', 'type': 'Dämmstoffe', 'city': 'Berlin', 'size': '3 m³', 'price': '428,40', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/daemmwolle-container/'}
-2026-01-04 07:11:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '5 m³ Absetzcontainer', 'type': 'Dämmstoffe', 'city': 'Berlin', 'size': '5 m³', 'price': '595', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/daemmwolle-container/'}
-2026-01-04 07:11:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '7 m³ Absetzcontainer', 'type': 'Dämmstoffe', 'city': 'Berlin', 'size': '7 m³', 'price': '749,70', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/daemmwolle-container/'}
-2026-01-04 07:11:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '10 m³ Absetzcontainer', 'type': 'Dämmstoffe', 'city': 'Berlin', 'size': '10 m³', 'price': '1011,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/daemmwolle-container/'}
-2026-01-04 07:11:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '15 m³ Abrollcontainer', 'type': 'Dämmstoffe', 'city': 'Berlin', 'size': '15 m³', 'price': '1428', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/daemmwolle-container/'}
-2026-01-04 07:11:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '30 m³ Abrollcontainer', 'type': 'Dämmstoffe', 'city': 'Berlin', 'size': '30 m³', 'price': '2677,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/daemmwolle-container/'}
-2026-01-04 07:12:28 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
-Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
-
-2026-01-04 07:13:49 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
-Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
-
-2026-01-04 07:13:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '36 m³ Abrollcontainer', 'type': 'Dämmstoffe', 'city': 'Berlin', 'size': '36 m³', 'price': '2998,80', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/daemmwolle-container/'}
-2026-01-04 07:13:56 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 102 items (at 7 items/min)
-2026-01-04 07:14:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '3 m³ Absetzcontainer', 'type': 'Verpackungsstyropor', 'city': 'Berlin', 'size': '3 m³', 'price': '403,41', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/verpackungsstyropor-container/'}
-2026-01-04 07:14:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '5 m³ Absetzcontainer', 'type': 'Verpackungsstyropor', 'city': 'Berlin', 'size': '5 m³', 'price': '498,61', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/verpackungsstyropor-container/'}
-2026-01-04 07:14:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '7 m³ Absetzcontainer', 'type': 'Verpackungsstyropor', 'city': 'Berlin', 'size': '7 m³', 'price': '534,31', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/verpackungsstyropor-container/'}
-2026-01-04 07:14:12 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '10 m³ Absetzcontainer', 'type': 'Verpackungsstyropor', 'city': 'Berlin', 'size': '10 m³', 'price': '712,81', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/verpackungsstyropor-container/'}
-2026-01-04 07:14:16 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '15 m³ Abrollcontainer', 'type': 'Verpackungsstyropor', 'city': 'Berlin', 'size': '15 m³', 'price': '831,81', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/verpackungsstyropor-container/'}
-2026-01-04 07:14:16 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 107 items (at 5 items/min)
-2026-01-04 07:14:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '30 m³ Abrollcontainer', 'type': 'Verpackungsstyropor', 'city': 'Berlin', 'size': '30 m³', 'price': '1379,21', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/verpackungsstyropor-container/'}
-2026-01-04 07:14:47 [containerfritze] DEBUG: Klick fehlgeschlagen für //li/a[text()="Privat"]: Message: 
-Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
-
-2026-01-04 07:15:39 [containerfritze] DEBUG: Klick fehlgeschlagen für //span[text()="Brutto"]: Message: 
-Stacktrace:
-#0 0x5620f5e0819a <unknown>
-#1 0x5620f5885c4b <unknown>
-#2 0x5620f58d7318 <unknown>
-#3 0x5620f58d7551 <unknown>
-#4 0x5620f5925764 <unknown>
-#5 0x5620f5922bee <unknown>
-#6 0x5620f58c9c42 <unknown>
-#7 0x5620f58ca8f1 <unknown>
-#8 0x5620f5dd0f39 <unknown>
-#9 0x5620f5dd3e7d <unknown>
-#10 0x5620f5db9c81 <unknown>
-#11 0x5620f5dd4a5b <unknown>
-#12 0x5620f5da0a50 <unknown>
-#13 0x5620f5df5aa8 <unknown>
-#14 0x5620f5df5c79 <unknown>
-#15 0x5620f5e074f3 <unknown>
-#16 0x7fa5bb49caa4 <unknown>
-#17 0x7fa5bb529c6c <unknown>
-
-2026-01-04 07:15:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '36 m³ Abrollcontainer', 'type': 'Verpackungsstyropor', 'city': 'Berlin', 'size': '36 m³', 'price': '1641,01', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/verpackungsstyropor-container/'}
-2026-01-04 07:15:46 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 0 pages/min), scraped 109 items (at 2 items/min)
-2026-01-04 07:15:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '3 m³ Absetzcontainer', 'type': 'Gips', 'city': 'Berlin', 'size': '3 m³', 'price': '339,15', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gipsabfaelle-container/'}
-2026-01-04 07:15:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '5 m³ Absetzcontainer', 'type': 'Gips', 'city': 'Berlin', 'size': '5 m³', 'price': '416,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gipsabfaelle-container/'}
-2026-01-04 07:15:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '7 m³ Absetzcontainer', 'type': 'Gips', 'city': 'Berlin', 'size': '7 m³', 'price': '499,80', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gipsabfaelle-container/'}
-2026-01-04 07:16:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '10 m³ Absetzcontainer', 'type': 'Gips', 'city': 'Berlin', 'size': '10 m³', 'price': '654,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gipsabfaelle-container/'}
-2026-01-04 07:16:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
-{'source': 'containerfritze', 'title': '15 m³ Abrollcontainer', 'type': 'Gips', 'city': 'Berlin', 'size': '15 m³', 'price': '892,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gipsabfaelle-container/'}
-2026-01-04 07:16:03 [scrapy.core.engine] INFO: Closing spider (finished)
-2026-01-04 07:16:03 [scrapy.extensions.feedexport] INFO: Stored json feed (114 items) in: ../data/containerfritze-products.json
-2026-01-04 07:16:03 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '3 m³ Absetzcontainer', 'type': 'Glasverpackungen', 'city': 'Berlin', 'size': '3 m³', 'price': '357', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/glasverpackungen-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '5 m³ Absetzcontainer', 'type': 'Glasverpackungen', 'city': 'Berlin', 'size': '5 m³', 'price': '476', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/glasverpackungen-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '7 m³ Absetzcontainer', 'type': 'Glasverpackungen', 'city': 'Berlin', 'size': '7 m³', 'price': '541,45', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/glasverpackungen-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '10 m³ Absetzcontainer', 'type': 'Glasverpackungen', 'city': 'Berlin', 'size': '10 m³', 'price': '654,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/glasverpackungen-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '15 m³ Abrollcontainer', 'type': 'Glasverpackungen', 'city': 'Berlin', 'size': '15 m³', 'price': '803,25', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/glasverpackungen-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '3 m³ Absetzcontainer', 'type': 'Gewerbeabfälle', 'city': 'Berlin', 'size': '3 m³', 'price': '357', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gewerbeabfall-gemischt-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '5 m³ Absetzcontainer', 'type': 'Gewerbeabfälle', 'city': 'Berlin', 'size': '5 m³', 'price': '476', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gewerbeabfall-gemischt-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '7 m³ Absetzcontainer', 'type': 'Gewerbeabfälle', 'city': 'Berlin', 'size': '7 m³', 'price': '583,10', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gewerbeabfall-gemischt-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '10 m³ Absetzcontainer', 'type': 'Gewerbeabfälle', 'city': 'Berlin', 'size': '10 m³', 'price': '773,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gewerbeabfall-gemischt-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '15 m³ Abrollcontainer', 'type': 'Gewerbeabfälle', 'city': 'Berlin', 'size': '15 m³', 'price': '1071', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gewerbeabfall-gemischt-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '30 m³ Abrollcontainer', 'type': 'Gewerbeabfälle', 'city': 'Berlin', 'size': '30 m³', 'price': '1963,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gewerbeabfall-gemischt-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '36 m³ Abrollcontainer', 'type': 'Gewerbeabfälle', 'city': 'Berlin', 'size': '36 m³', 'price': '2142', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gewerbeabfall-gemischt-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '3 m³ Absetzcontainer', 'type': 'Sand', 'city': 'Berlin', 'size': '3 m³', 'price': '321,30', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/sand-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '5 m³ Absetzcontainer', 'type': 'Sand', 'city': 'Berlin', 'size': '5 m³', 'price': '386,75', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/sand-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '7 m³ Absetzcontainer', 'type': 'Sand', 'city': 'Berlin', 'size': '7 m³', 'price': '458,15', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/sand-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '10 m³ Absetzcontainer', 'type': 'Sand', 'city': 'Berlin', 'size': '10 m³', 'price': '595', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/sand-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '3 m³ Absetzcontainer', 'type': 'Gips', 'city': 'Berlin', 'size': '3 m³', 'price': '339,15', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gipsabfaelle-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '5 m³ Absetzcontainer', 'type': 'Gips', 'city': 'Berlin', 'size': '5 m³', 'price': '416,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gipsabfaelle-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '7 m³ Absetzcontainer', 'type': 'Gips', 'city': 'Berlin', 'size': '7 m³', 'price': '499,80', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gipsabfaelle-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '10 m³ Absetzcontainer', 'type': 'Gips', 'city': 'Berlin', 'size': '10 m³', 'price': '654,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gipsabfaelle-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '15 m³ Abrollcontainer', 'type': 'Gips', 'city': 'Berlin', 'size': '15 m³', 'price': '892,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/gipsabfaelle-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '3 m³ Absetzcontainer', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '3 m³', 'price': '321,30', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/holz-a1-a3-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '5 m³ Absetzcontainer', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '5 m³', 'price': '357', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/holz-a1-a3-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '7 m³ Absetzcontainer', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '7 m³', 'price': '416,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/holz-a1-a3-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '10 m³ Absetzcontainer', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '10 m³', 'price': '476', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/holz-a1-a3-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '15 m³ Abrollcontainer', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '15 m³', 'price': '624,75', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/holz-a1-a3-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '30 m³ Abrollcontainer', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '30 m³', 'price': '1071', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/holz-a1-a3-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '36 m³ Abrollcontainer', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '36 m³', 'price': '1285,20', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/holz-a1-a3-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '3 m³ Absetzcontainer', 'type': 'Baumischabfall schwer', 'city': 'Berlin', 'size': '3 m³', 'price': '464,10', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/baumischabfall-schwer-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '5 m³ Absetzcontainer', 'type': 'Baumischabfall schwer', 'city': 'Berlin', 'size': '5 m³', 'price': '654,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/baumischabfall-schwer-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '7 m³ Absetzcontainer', 'type': 'Baumischabfall schwer', 'city': 'Berlin', 'size': '7 m³', 'price': '833', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/baumischabfall-schwer-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '10 m³ Absetzcontainer', 'type': 'Baumischabfall schwer', 'city': 'Berlin', 'size': '10 m³', 'price': '1071', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/baumischabfall-schwer-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '15 m³ Abrollcontainer', 'type': 'Baumischabfall schwer', 'city': 'Berlin', 'size': '15 m³', 'price': '1428', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/baumischabfall-schwer-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '3 m³ Absetzcontainer', 'type': 'Erdaushub mit Steinen', 'city': 'Berlin', 'size': '3 m³', 'price': '464,10', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/erdaushub-mit-steinen-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '5 m³ Absetzcontainer', 'type': 'Erdaushub mit Steinen', 'city': 'Berlin', 'size': '5 m³', 'price': '595', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/erdaushub-mit-steinen-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '7 m³ Absetzcontainer', 'type': 'Erdaushub mit Steinen', 'city': 'Berlin', 'size': '7 m³', 'price': '749,70', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/erdaushub-mit-steinen-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '10 m³ Absetzcontainer', 'type': 'Erdaushub mit Steinen', 'city': 'Berlin', 'size': '10 m³', 'price': '952', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/erdaushub-mit-steinen-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '3 m³ Absetzcontainer', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '3 m³', 'price': '339,15', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/sperrmuell-gemischt-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '5 m³ Absetzcontainer', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '5 m³', 'price': '416,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/sperrmuell-gemischt-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '7 m³ Absetzcontainer', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '7 m³', 'price': '541,45', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/sperrmuell-gemischt-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '10 m³ Absetzcontainer', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '10 m³', 'price': '714', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/sperrmuell-gemischt-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '15 m³ Abrollcontainer', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '15 m³', 'price': '981,75', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/sperrmuell-gemischt-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '30 m³ Abrollcontainer', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '30 m³', 'price': '1785', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/sperrmuell-gemischt-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.core.scraper] DEBUG: Scraped from <200 https://containerfritze.de/>
+{'source': 'containerfritze', 'title': '36 m³ Abrollcontainer', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '36 m³', 'price': '1927,80', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '5,95€', 'cancellation_fee': '180', 'URL': 'https://shop.containerfritze.de/mieten/sperrmuell-gemischt-container/#elementor-action%3Aaction%3Dpopup%3Aclose%26settings%3DeyJkb19ub3Rfc2hvd19hZ2FpbiI6IiJ9'}
+2026-01-11 06:53:26 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 1 pages/min), scraped 51 items (at 51 items/min)
+2026-01-11 06:53:26 [scrapy.core.engine] INFO: Closing spider (finished)
+2026-01-11 06:53:26 [scrapy.extensions.feedexport] INFO: Stored json feed (51 items) in: ../data/containerfritze-products.json
+2026-01-11 06:53:26 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
 {'downloader/request_bytes': 285,
  'downloader/request_count': 1,
  'downloader/request_method_count/GET': 1,
  'downloader/response_bytes': 110620,
  'downloader/response_count': 1,
  'downloader/response_status_count/200': 1,
- 'elapsed_time_seconds': 1967.468258,
+ 'elapsed_time_seconds': 820.474593,
  'feedexport/success_count/FileFeedStorage': 1,
  'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2026, 1, 4, 7, 16, 3, 429947, tzinfo=datetime.timezone.utc),
+ 'finish_time': datetime.datetime(2026, 1, 11, 6, 53, 26, 251581, tzinfo=datetime.timezone.utc),
  'httpcompression/response_bytes': 883844,
  'httpcompression/response_count': 1,
- 'item_scraped_count': 114,
- 'items_per_minute': 3.47737671581088,
- 'log_count/DEBUG': 165,
- 'log_count/INFO': 36,
- 'memusage/max': 97001472,
- 'memusage/startup': 74645504,
+ 'item_scraped_count': 51,
+ 'items_per_minute': 3.731707317073171,
+ 'log_count/DEBUG': 65,
+ 'log_count/INFO': 4,
+ 'memusage/max': 102383616,
+ 'memusage/startup': 77348864,
  'response_received_count': 1,
- 'responses_per_minute': 0.03050330452465684,
+ 'responses_per_minute': 0.07317073170731708,
  'scheduler/dequeued': 1,
  'scheduler/dequeued/memory': 1,
  'scheduler/enqueued': 1,
  'scheduler/enqueued/memory': 1,
- 'start_time': datetime.datetime(2026, 1, 4, 6, 43, 15, 961689, tzinfo=datetime.timezone.utc)}
-2026-01-04 07:16:03 [scrapy.core.engine] INFO: Spider closed (finished)
+ 'start_time': datetime.datetime(2026, 1, 11, 6, 39, 45, 776988, tzinfo=datetime.timezone.utc)}
+2026-01-11 06:53:26 [scrapy.core.engine] INFO: Spider closed (finished)
