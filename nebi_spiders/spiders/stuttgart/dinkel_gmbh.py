@@ -113,28 +113,30 @@ class DinkelGmbHSpider(Spider):
 
                 self.log(f"\n--- Verarbeite: {article_name} ---")
 
+                # Zur Artikelseite (frisch laden für jeden Artikel)
+                self.driver.get("https://shop.dinkel-gmbh.de/order/article/index")
+                sleep(3)
+
                 # Artikel auswählen
                 if not self._select_article(article_name):
                     self.log(f"  FEHLER: Konnte {article_name} nicht auswählen")
                     continue
 
                 sleep(3)
+                self.log(f"  URL nach Auswahl: {self.driver.current_url}")
 
                 # Container-Optionen extrahieren
                 waste_type = self._map_waste_type(article_name)
                 products = self._extract_containers(waste_type)
 
                 for product in products:
-                    product_key = f"{product['type']}|{product['size']}"
+                    # Verwende Titel als Key um Absetzmulde/Deckelmulde zu unterscheiden
+                    product_key = product['title']
                     if product_key not in self.seen_products:
                         self.seen_products.add(product_key)
                         total_products += 1
                         self.log(f"  ✓ {product['size']}: {product['price']} EUR")
                         yield product
-
-                # Zurück zur Artikelseite
-                self.driver.get("https://shop.dinkel-gmbh.de/order/article/index")
-                sleep(3)
 
         except Exception as e:
             self.log(f"FEHLER: {e}")
@@ -228,7 +230,11 @@ class DinkelGmbHSpider(Spider):
             for item in items:
                 try:
                     title = item.find_element(By.CSS_SELECTOR, "h3.info-btn-wrapper, h3")
-                    if article_name in title.text:
+                    title_text = title.text
+                    # Überspringe DINKEL SACK Artikel
+                    if "DINKEL" in title_text.upper():
+                        continue
+                    if article_name in title_text:
                         # Finde den Auswählen-Button in diesem Item
                         btn = item.find_element(By.CSS_SELECTOR, "button[name='Article_Add']")
                         self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", btn)
