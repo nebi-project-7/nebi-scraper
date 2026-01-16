@@ -38,6 +38,7 @@ class AlbaclickSpider(Spider):
             'E-Geräte (Kleingeräte)': 'Elektrokleingeräte',
             'E-Geräte (Großgeräte)': 'Elektrogroßgeräte',
             'Baumisch (leicht)': 'Baumischabfall (leicht)',
+            'Holz A1 - A3': 'Holz A1-A3',
         }
 
     def _dismiss_cookie_banner(self):
