@@ -35,7 +35,7 @@ class DinkelGmbHSpider(Spider):
         'baustellenmischabfälle': 'Baumischabfall',
         'baustellenmischabfall': 'Baumischabfall',
         'sperrmüll': 'Sperrmüll',
-        'grünschnitt': 'Grünschnitt',
+        'grünschnitt': 'Gartenabfälle',
         'gartenabfälle': 'Gartenabfälle',
         'gartenabfall': 'Gartenabfälle',
         'mischholz': 'Holz A1-A3',
@@ -43,6 +43,14 @@ class DinkelGmbHSpider(Spider):
         'erdaushub': 'Erdaushub',
         'sand': 'Sand',
     }
+
+    # Abfalltypen bei denen NUR Absetzmulde erlaubt ist (keine Deckelmulde)
+    ONLY_ABSETZMULDE = [
+        'Papier/Pappe',
+        'Baumischabfall',
+        'Holz A1-A3',
+        'Sperrmüll',
+    ]
 
     # Artikel die übersprungen werden sollen
     SKIP_ARTICLES = [
@@ -252,6 +260,9 @@ class DinkelGmbHSpider(Spider):
         """Extrahiert Container-Größen und Preise."""
         products = []
 
+        # Prüfe ob nur Absetzmulde erlaubt ist
+        only_absetzmulde = waste_type in self.ONLY_ABSETZMULDE
+
         try:
             # Container sind in .container-size Elementen
             containers = self.driver.find_elements(By.CSS_SELECTOR, ".container-size, a.card[onclick*='container.select']")
@@ -276,10 +287,16 @@ class DinkelGmbHSpider(Spider):
 
                     # Container-Typ
                     container_type = ""
-                    if "deckelmulde" in title.lower():
+                    is_deckelmulde = "deckelmulde" in title.lower()
+                    if is_deckelmulde:
                         container_type = " Deckelmulde"
                     elif "absetzmulde" in title.lower():
                         container_type = " Absetzmulde"
+
+                    # Überspringe Deckelmulde wenn nur Absetzmulde erlaubt
+                    if only_absetzmulde and is_deckelmulde:
+                        self.log(f"  Überspringe Deckelmulde für {waste_type}")
+                        continue
 
                     # Preis extrahieren
                     try:
@@ -296,8 +313,9 @@ class DinkelGmbHSpider(Spider):
                     if not price_match:
                         continue
 
-                    # Entferne Tausendertrennzeichen für einheitliches Format
-                    price = price_match.group(1).replace('.', '')
+                    # Entferne Tausendertrennzeichen und füge "ab " hinzu
+                    price_value = price_match.group(1).replace('.', '')
+                    price = f"ab {price_value}"
 
                     # Produkt erstellen
                     product = {
@@ -310,8 +328,8 @@ class DinkelGmbHSpider(Spider):
                         "lid_price": None if "Absetzmulde" in container_type else "inklusive",
                         "arrival_price": "inklusive",
                         "departure_price": "inklusive",
-                        "max_rental_period": None,
-                        "fee_after_max": None,
+                        "max_rental_period": "3 Tage",
+                        "fee_after_max": "2,00 EUR/Tag",
                         "cancellation_fee": None,
                         "URL": self.driver.current_url
                     }
