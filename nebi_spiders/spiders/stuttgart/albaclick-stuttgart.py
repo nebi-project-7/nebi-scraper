@@ -160,7 +160,7 @@ class AlbaclickStuttgartSpider(Spider):
                     price = price.replace('€', '').strip()
 
                 item = {
-                    'source': 'Alba Click',
+                    'source': 'Alba Click Stuttgart',
                     'title': title,
                     'type': waste_type_mapped,
                     'city': self.CITY,
