@@ -35,7 +35,7 @@ class HamburgerContainerdienstSpider(Spider):
         ("Boden mit Bauschutt", "Boden", []),  # Boden mit Bauschutt ist verfügbar
         ("KMF-Wolle", "Dämmstoffe", []),
         ("Teer- und bitumhaltige", "Dachpappe", []),
-        ("Gewerbeabfall</strong>", "Gewerbeabfall", []),
+        ("Gewerbeabfall</strong>", "Gewerbeabfälle", []),
         ("Mutterboden / Oberboden", "Mutterboden", ["Grassoden"]),
     ]
 

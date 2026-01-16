@@ -13,13 +13,17 @@ class PlatzMeisterSpider(Spider):
     allowed_domains = ["containerdienst.platz-meister.de"]
     start_urls = ["https://containerdienst.platz-meister.de/preise-containerdienst/"]
 
+    # Abfallarten die übersprungen werden sollen
+    SKIP_WASTE_TYPES = [
+        'Fenster-Altholz A IV',
+    ]
+
     # Mapping von Website-Namen zu standardisierten Abfalltypen
     waste_type_mapping = {
-        'Fenster-Altholz A IV': 'Holz A4',
         'Erde unbelastet': 'Erde unbelastet',
         'Bauschutt-Erde-Gemischt': 'Bauschutt-Erde-Gemisch',
         'Metallschrott': 'Metallschrott',
-        'Gewerbeabfall': 'Gewerbeabfall',
+        'Gewerbeabfall': 'Gewerbeabfälle',
         'Sperrmüll': 'Sperrmüll',
         'Siedlungsabfall / Restmüll': 'Siedlungsabfall',
         'Flachglas': 'Flachglas',
@@ -27,7 +31,7 @@ class PlatzMeisterSpider(Spider):
         'Bauschutt / Beton': 'Bauschutt',
         'Holz A4': 'Holz A4',
         'Baumischabfall': 'Baumischabfall',
-        'Altpapier': 'Altpapier',
+        'Altpapier': 'Papier/Pappe',
         'Altholz': 'Holz A1-A3',
     }
 
@@ -73,6 +77,11 @@ class PlatzMeisterSpider(Spider):
             if not waste_type_raw:
                 continue
             waste_type_raw = waste_type_raw.strip()
+
+            # Überspringe bestimmte Abfallarten
+            if waste_type_raw in self.SKIP_WASTE_TYPES:
+                self.log(f"\n--- Überspringe: {waste_type_raw} ---")
+                continue
 
             # Mapping anwenden
             waste_type = self.waste_type_mapping.get(waste_type_raw, waste_type_raw)
