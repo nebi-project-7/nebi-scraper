@@ -45,6 +45,7 @@ class AlbaclickStuttgartSpider(Spider):
             'E-Geräte (Großgeräte)': 'Elektrogroßgeräte',
             'Baumisch (leicht)': 'Baumischabfall (leicht)',
             'Holz A1 - A3': 'Holz A1-A3',
+            'Mischabfall | Gewerbeabfall': 'Gewerbeabfälle',
         }
 
     def _dismiss_cookie_banner(self):
@@ -105,7 +106,9 @@ class AlbaclickStuttgartSpider(Spider):
             'gruenschnitt-gartenabfaelle',
             'kunststoff-verpackungen',
             'elektro-kleingeraete',
-            'elektro-grossgeraete'
+            'elektro-grossgeraete',
+            'mischabfall-gewerbeabfall',
+            'dachpappe',
         ]
 
         self.log(f"\n{'='*80}")
@@ -147,8 +150,8 @@ class AlbaclickStuttgartSpider(Spider):
             for option in options:
                 title = option.xpath('.//div[@class="variant-configuration-variants-item__variant"]/span/text()').get()
 
-                # Überspringe "Flexibler" und "240 Liter" (Umleerbehälter)
-                if not title or 'Flexibler' in title or '240 Liter' in title:
+                # Überspringe "Flexibler", "240 Liter" und "FrontumleerBehälter" (keine Preise)
+                if not title or 'Flexibler' in title or '240 Liter' in title or 'FrontumleerBehälter' in title:
                     continue
 
                 type_raw = sel.xpath('//div[@itemprop="itemListElement"]')[1].xpath('.//span/text()').get()
@@ -177,6 +180,11 @@ class AlbaclickStuttgartSpider(Spider):
 
             # Jetzt Container ausgeben, Abrollcontainer nur wenn kein Absetzcontainer in gleicher Größe
             for container in containers:
+                # Überspringe Einträge ohne echten Preis
+                if container['price'] == 'auf Anfrage' or not container['price']:
+                    self.log(f"  Überspringe {container['title']} (kein Preis)")
+                    continue
+
                 # Überspringe Abrollcontainer wenn Absetzcontainer in gleicher Größe existiert
                 if container['is_abrollcontainer'] and container['size'] in absetz_sizes:
                     self.log(f"  Überspringe Abrollcontainer {container['size']} (Absetzcontainer vorhanden)")
