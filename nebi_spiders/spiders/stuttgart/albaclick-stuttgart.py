@@ -140,6 +140,10 @@ class AlbaclickStuttgartSpider(Spider):
 
             options = sel.xpath('//div[@class="variant-configuration-variants"]/button')
 
+            # Erst alle Container sammeln
+            containers = []
+            absetz_sizes = set()
+
             for option in options:
                 title = option.xpath('.//div[@class="variant-configuration-variants-item__variant"]/span/text()').get()
 
@@ -148,8 +152,6 @@ class AlbaclickStuttgartSpider(Spider):
                     continue
 
                 type_raw = sel.xpath('//div[@itemprop="itemListElement"]')[1].xpath('.//span/text()').get()
-
-                # Wende Mapping an für Umbenennungen
                 waste_type_mapped = self.waste_type_mapping.get(type_raw, type_raw)
 
                 regex_match = re.search(r'\b\d+(?:[.,]\d+)?\s?(?:m³|m3|liter|litre)\b', title, re.IGNORECASE)
@@ -159,13 +161,34 @@ class AlbaclickStuttgartSpider(Spider):
                 if price:
                     price = price.replace('€', '').strip()
 
-                item = {
-                    'source': 'Alba Click Stuttgart',
+                is_abrollcontainer = 'Abrollcontainer' in title
+
+                # Merke Größen für die es Absetzcontainer gibt
+                if not is_abrollcontainer and size:
+                    absetz_sizes.add(size)
+
+                containers.append({
                     'title': title,
                     'type': waste_type_mapped,
-                    'city': self.CITY,
                     'size': size,
                     'price': price,
+                    'is_abrollcontainer': is_abrollcontainer
+                })
+
+            # Jetzt Container ausgeben, Abrollcontainer nur wenn kein Absetzcontainer in gleicher Größe
+            for container in containers:
+                # Überspringe Abrollcontainer wenn Absetzcontainer in gleicher Größe existiert
+                if container['is_abrollcontainer'] and container['size'] in absetz_sizes:
+                    self.log(f"  Überspringe Abrollcontainer {container['size']} (Absetzcontainer vorhanden)")
+                    continue
+
+                item = {
+                    'source': 'Alba Click Stuttgart',
+                    'title': container['title'],
+                    'type': container['type'],
+                    'city': self.CITY,
+                    'size': container['size'],
+                    'price': container['price'],
                     'lid_price': '17,85',
                     'arrival_price': 'inklusive',
                     'departure_price': 'inklusive',
@@ -176,7 +199,7 @@ class AlbaclickStuttgartSpider(Spider):
                 }
 
                 total_products += 1
-                self.log(f"  ✓ {size}: {price} EUR")
+                self.log(f"  ✓ {container['size']}: {container['price']} EUR")
                 yield item
 
         self.log(f"\n{'='*80}")
