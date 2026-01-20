@@ -21,16 +21,16 @@ class AgrdarContainerSpider(Spider):
     allowed_domains = ["agrdar-container.de"]
     start_urls = ["https://www.agrdar-container.de/"]
 
-    # Abfallarten mit URLs
+    # Bochum-spezifische URLs mit korrekten Preisen
     WASTE_PAGES = [
-        ("https://www.agrdar-container.de/container-fuer-bauschutt", "Bauschutt"),
-        ("https://www.agrdar-container.de/container-fuer-baumisch", "Baumischabfall"),
-        ("https://www.agrdar-container.de/container-fuer-holz-aii", "Holz A1-A3"),
-        ("https://www.agrdar-container.de/container-fuer-holz-aiv", "Holz A4"),
-        ("https://www.agrdar-container.de/container-fuer-gips", "Gips"),
-        ("https://www.agrdar-container.de/container-fuer-gruenabfaelle", "Gartenabfälle"),
-        ("https://www.agrdar-container.de/container-fuer-sperrmuell", "Sperrmüll"),
-        ("https://www.agrdar-container.de/container-fuer-boden-steine", "Boden/Steine"),
+        ("https://www.agrdar-container.de/bochum_bauschutt", "Bauschutt"),
+        ("https://www.agrdar-container.de/bochum_baumisch", "Baumischabfall"),
+        ("https://www.agrdar-container.de/bochum_holz-aii", "Holz A1-A3"),
+        ("https://www.agrdar-container.de/bochum_holz-aiv", "Holz A4"),
+        ("https://www.agrdar-container.de/bochum_gips", "Gips"),
+        ("https://www.agrdar-container.de/bochum_gruenabfaelle", "Gartenabfälle"),
+        ("https://www.agrdar-container.de/bochum_sperrmuell", "Sperrmüll"),
+        ("https://www.agrdar-container.de/bochum_boden-steine", "Boden/Steine"),
     ]
 
     def __init__(self):
@@ -65,52 +65,47 @@ class AgrdarContainerSpider(Spider):
                 self.log(f"\n--- {waste_type} ---")
 
                 self.driver.get(url)
-                sleep(2)
+                sleep(3)
 
-                # Suche nach Tabelle mit Preisen
-                tables = self.driver.find_elements(By.TAG_NAME, "table")
+                body_text = self.driver.find_element(By.TAG_NAME, "body").text
+                lines = body_text.split('\n')
 
-                for table in tables:
-                    rows = table.find_elements(By.TAG_NAME, "tr")
+                current_size = None
 
-                    for row in rows:
-                        text = row.text.strip()
+                for i, line in enumerate(lines):
+                    line = line.strip()
 
-                        if '€' in text and 'm³' in text:
-                            # Extrahiere Größe und Preis
-                            size_match = re.search(r'(\d+)\s*m³', text)
-                            price_match = re.search(r'ab\s*([\d.,]+)\s*€', text)
+                    # Suche nach Größenangaben wie "4m3 Container"
+                    size_match = re.search(r'(\d+)m3 Container', line)
+                    if size_match:
+                        current_size = f"{size_match.group(1)} m³"
 
-                            if size_match and price_match:
-                                size = f"{size_match.group(1)} m³"
-                                price_raw = price_match.group(1)
+                    # Suche nach Preisen wie "442,03 €"
+                    price_match = re.match(r'^(\d{1,3}[.,]\d{2})\s*€$', line)
+                    if price_match and current_size:
+                        price = price_match.group(1)
 
-                                # Überspringe 0,00 € Preise
-                                if price_raw == "0,00":
-                                    continue
+                        product = {
+                            "source": "Agrdar Container",
+                            "title": f"{current_size} {waste_type}",
+                            "type": waste_type,
+                            "city": "Bochum",
+                            "size": current_size,
+                            "price": price,
+                            "lid_price": "auf Anfrage",
+                            "arrival_price": "inklusive",
+                            "departure_price": "inklusive",
+                            "max_rental_period": "14 Tage",
+                            "fee_after_max": "1,26 EUR/Tag",
+                            "cancellation_fee": None,
+                            "URL": url
+                        }
 
-                                # Preis formatieren (Punkt als Tausendertrennzeichen entfernen)
-                                price = f"ab {price_raw.replace('.', '')}"
+                        total_products += 1
+                        self.log(f"  ✓ {current_size}: {price} EUR")
+                        yield product
 
-                                product = {
-                                    "source": "Agrdar Container",
-                                    "title": f"{size} {waste_type}",
-                                    "type": waste_type,
-                                    "city": "Bochum",
-                                    "size": size,
-                                    "price": price,
-                                    "lid_price": "auf Anfrage",
-                                    "arrival_price": "inklusive",
-                                    "departure_price": "inklusive",
-                                    "max_rental_period": "14 Tage",
-                                    "fee_after_max": "1,26 EUR/Tag",
-                                    "cancellation_fee": None,
-                                    "URL": url
-                                }
-
-                                total_products += 1
-                                self.log(f"  ✓ {size}: {price} EUR")
-                                yield product
+                        current_size = None  # Reset für nächsten Container
 
         except Exception as e:
             self.log(f"FEHLER: {e}")
