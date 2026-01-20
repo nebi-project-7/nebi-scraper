@@ -25,7 +25,7 @@ class FischerSohneSpider(Spider):
     # Mapping der Abfallarten (Website-Name → Standard-Name)
     WASTE_TYPE_MAPPING = {
         "Gartenabfälle": "Gartenabfälle",
-        "Altholz, Kategorie AI-AIII": "Altholz AI-AIII",
+        "Altholz, Kategorie AI-AIII": "Holz A1-A3",
         "Gemischte Materialien / Sperrmüll": "Sperrmüll",
         "Bauschutt, sauber (mineralisch)": "Bauschutt rein",
         "Bauschutt, unsauber": "Bauschutt unrein",
