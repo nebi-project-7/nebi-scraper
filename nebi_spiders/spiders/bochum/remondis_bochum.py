@@ -30,7 +30,7 @@ class RemondisBochumSpider(Spider):
         ("bauschutt", "Bauschutt"),
         ("baumischabfaelle", "Baumischabfall"),
         ("garten-und-parkabfaelle", "Gartenabfälle"),
-        ("holzabfaelle", "Holz"),
+        ("holzabfaelle", "Holz A1-A3"),
         ("sperrmuell", "Sperrmüll"),
     ]
 
