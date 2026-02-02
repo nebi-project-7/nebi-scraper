@@ -127,6 +127,84 @@ jobs:
 
           echo "✅ All selected spiders completed!"
 
+      - name: ⚠️ Check for Empty Results
+        run: |
+          EMPTY_SPIDERS=""
+          TOTAL_FILES=0
+          EMPTY_FILES=0
+
+          for json_file in data/*-products.json; do
+            [ -f "$json_file" ] || continue
+            TOTAL_FILES=$((TOTAL_FILES + 1))
+            filename=$(basename "$json_file" .json)
+            spider_name="${filename%-products}"
+
+            # Check if file is empty array or has 0 items
+            item_count=$(python3 -c "
+          import json, sys
+          try:
+              with open('$json_file') as f:
+                  data = json.load(f)
+              print(len(data) if isinstance(data, list) else 0)
+          except:
+              print(0)
+          ")
+
+            if [ "$item_count" -eq 0 ]; then
+              EMPTY_FILES=$((EMPTY_FILES + 1))
+              EMPTY_SPIDERS="$EMPTY_SPIDERS $spider_name"
+              echo "::warning::Spider '$spider_name' lieferte 0 Produkte — $json_file ist leer"
+
+              # Check log for error hints
+              log_file="logs/${spider_name}.txt"
+              if [ -f "$log_file" ]; then
+                timeout_count=$(grep -c "TCPTimedOutError\|TimeoutError\|connection timed out" "$log_file" 2>/dev/null || echo 0)
+                if [ "$timeout_count" -gt 0 ]; then
+                  echo "::warning::Spider '$spider_name': ${timeout_count}x Timeout im Log — Website vermutlich nicht erreichbar"
+                fi
+              fi
+            else
+              echo "✅ $spider_name: $item_count Produkte"
+            fi
+          done
+
+          echo ""
+          echo "=========================================="
+          echo "📊 Ergebnis: $TOTAL_FILES Spider, $EMPTY_FILES ohne Daten"
+          if [ -n "$EMPTY_SPIDERS" ]; then
+            echo "⚠️ Leere Spider:$EMPTY_SPIDERS"
+          fi
+          echo "=========================================="
+
+          # Write summary to GitHub Actions Job Summary
+          echo "## Scraper-Ergebnis" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Spider | Produkte | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|--------|----------|--------|" >> $GITHUB_STEP_SUMMARY
+
+          for json_file in data/*-products.json; do
+            [ -f "$json_file" ] || continue
+            filename=$(basename "$json_file" .json)
+            spider_name="${filename%-products}"
+            item_count=$(python3 -c "
+          import json
+          try:
+              with open('$json_file') as f:
+                  data = json.load(f)
+              print(len(data) if isinstance(data, list) else 0)
+          except:
+              print(0)
+          ")
+            if [ "$item_count" -eq 0 ]; then
+              echo "| $spider_name | 0 | ⚠️ LEER |" >> $GITHUB_STEP_SUMMARY
+            else
+              echo "| $spider_name | $item_count | ✅ OK |" >> $GITHUB_STEP_SUMMARY
+            fi
+          done
+
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Gesamt:** $TOTAL_FILES Spider, $EMPTY_FILES ohne Daten" >> $GITHUB_STEP_SUMMARY
+
       - name: 📊 Create Combined JSON
         if: github.event.inputs.spiders == 'all' || github.event.inputs.spiders == ''
         run: |
