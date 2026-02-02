@@ -2,25 +2,29 @@
 FischerSöhne Spider
 Extrahiert Preise für Container-Entsorgung in Bochum
 Website: https://www.fischersoehne.de/preise/containerbereitstellung.htm
+
+Hinweis: fischersoehne.de blockiert Verbindungen von Cloud-Providern (Azure/GitHub Actions)
+auf TCP-Ebene. Daher wird Scrapy's Downloader umgangen und Selenium direkt genutzt.
 """
 
 import re
 import logging
 
-from scrapy import Spider
+import scrapy
 from scrapy.http import HtmlResponse
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
+from selenium.common.exceptions import TimeoutException, WebDriverException
 from webdriver_manager.chrome import ChromeDriverManager
 from time import sleep
 
 
-class FischerSohneSpider(Spider):
+class FischerSohneSpider(scrapy.Spider):
     name = "fischersohne"
-    allowed_domains = ["fischersoehne.de"]
-    start_urls = ["https://www.fischersoehne.de/preise/containerbereitstellung.htm"]
+
+    TARGET_URL = "https://www.fischersoehne.de/preise/containerbereitstellung.htm"
 
     # Mapping der Abfallarten (Website-Name → Standard-Name)
     WASTE_TYPE_MAPPING = {
@@ -46,6 +50,7 @@ class FischerSohneSpider(Spider):
 
         service = Service(ChromeDriverManager().install())
         self.driver = webdriver.Chrome(service=service, options=options)
+        self.driver.set_page_load_timeout(30)
 
     def closed(self, reason):
         try:
@@ -53,16 +58,35 @@ class FischerSohneSpider(Spider):
         except Exception:
             pass
 
+    def start_requests(self):
+        """Bypass Scrapy's Downloader — die Zielseite blockiert Cloud-IPs auf TCP-Ebene.
+        Wir routen Scrapy durch example.com (immer erreichbar), damit parse() aufgerufen wird.
+        Die eigentliche Seitenladung erfolgt in parse() über Selenium."""
+        yield scrapy.Request(
+            url='https://example.com',
+            callback=self.parse,
+            dont_filter=True,
+        )
+
     def parse(self, response):
         self.log(f"\n{'='*80}")
         self.log(f"Starte FischerSöhne Scraping für Bochum")
+        self.log(f"URL: {self.TARGET_URL}")
         self.log(f"{'='*80}\n")
 
         total_products = 0
 
         try:
-            self.driver.get(self.start_urls[0])
+            self.driver.get(self.TARGET_URL)
             sleep(3)
+
+            # Prüfe ob Seite geladen wurde
+            page_title = self.driver.title
+            self.log(f"Seite geladen: '{page_title}'")
+
+            if not page_title or "error" in page_title.lower():
+                self.log("WARNUNG: Seite konnte nicht korrekt geladen werden")
+                return
 
             # Finde alle Tabellen
             tables = self.driver.find_elements(By.TAG_NAME, "table")
@@ -119,13 +143,18 @@ class FischerSohneSpider(Spider):
                             "max_rental_period": "14 Tage",
                             "fee_after_max": "1,70 EUR/Tag",
                             "cancellation_fee": None,
-                            "URL": self.start_urls[0]
+                            "URL": self.TARGET_URL
                         }
 
                         total_products += 1
                         self.log(f"  ✓ {size}: {price} EUR")
                         yield product
 
+        except TimeoutException:
+            self.log("FEHLER: Selenium Timeout — Seite nicht erreichbar (30s)")
+            self.log("Die Website blockiert möglicherweise Cloud-Provider-IPs.")
+        except WebDriverException as e:
+            self.log(f"FEHLER: WebDriver-Problem: {e}")
         except Exception as e:
             self.log(f"FEHLER: {e}")
             import traceback
