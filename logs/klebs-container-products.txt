@@ -1,5 +1,5 @@
-2026-02-22 07:46:37 [scrapy.utils.log] INFO: Scrapy 2.14.1 started (bot: nebi_spiders)
-2026-02-22 07:46:37 [scrapy.utils.log] INFO: Versions:
+2026-03-01 07:44:47 [scrapy.utils.log] INFO: Scrapy 2.14.1 started (bot: nebi_spiders)
+2026-03-01 07:44:47 [scrapy.utils.log] INFO: Versions:
 {'lxml': '6.0.2',
  'libxml2': '2.14.6',
  'cssselect': '1.4.0',
@@ -9,36 +9,36 @@
  'Python': '3.11.14 (main, Oct 10 2025, 01:03:14) [GCC 13.3.0]',
  'pyOpenSSL': '25.3.0 (OpenSSL 3.5.5 27 Jan 2026)',
  'cryptography': '46.0.5',
- 'Platform': 'Linux-6.11.0-1018-azure-x86_64-with-glibc2.39'}
-2026-02-22 07:46:37 [scrapy.crawler] DEBUG: Using AsyncCrawlerProcess
-2026-02-22 07:46:37 [asyncio] DEBUG: Using selector: EpollSelector
-2026-02-22 07:46:37 [scrapy.addons] INFO: Enabled addons:
+ 'Platform': 'Linux-6.14.0-1017-azure-x86_64-with-glibc2.39'}
+2026-03-01 07:44:47 [scrapy.crawler] DEBUG: Using AsyncCrawlerProcess
+2026-03-01 07:44:47 [asyncio] DEBUG: Using selector: EpollSelector
+2026-03-01 07:44:48 [scrapy.addons] INFO: Enabled addons:
 []
-2026-02-22 07:46:37 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
-2026-02-22 07:46:37 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
-2026-02-22 07:46:37 [scrapy.extensions.telnet] INFO: Telnet Password: 0a15e713a43d7454
-2026-02-22 07:46:37 [scrapy.middleware] INFO: Enabled extensions:
+2026-03-01 07:44:48 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2026-03-01 07:44:48 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2026-03-01 07:44:48 [scrapy.extensions.telnet] INFO: Telnet Password: bb6532173db6a903
+2026-03-01 07:44:48 [scrapy.middleware] INFO: Enabled extensions:
 ['scrapy.extensions.corestats.CoreStats',
  'scrapy.extensions.logcount.LogCount',
  'scrapy.extensions.telnet.TelnetConsole',
  'scrapy.extensions.memusage.MemoryUsage',
  'scrapy.extensions.feedexport.FeedExporter',
  'scrapy.extensions.logstats.LogStats']
-2026-02-22 07:46:37 [scrapy.crawler] INFO: Overridden settings:
+2026-03-01 07:44:48 [scrapy.crawler] INFO: Overridden settings:
 {'BOT_NAME': 'nebi_spiders',
  'CONCURRENT_REQUESTS': 1,
  'DOWNLOAD_DELAY': 0.5,
  'FEED_EXPORT_ENCODING': 'utf-8',
  'NEWSPIDER_MODULE': 'nebi_spiders.spiders',
- 'SPIDER_MODULES': ['nebi_spiders.spiders.hamburg',
-                    'nebi_spiders.spiders.stuttgart',
-                    'nebi_spiders.spiders.berlin',
+ 'SPIDER_MODULES': ['nebi_spiders.spiders.stuttgart',
+                    'nebi_spiders.spiders.hamburg',
+                    'nebi_spiders.spiders.bochum',
                     'nebi_spiders.spiders.hannover',
-                    'nebi_spiders.spiders.koeln',
-                    'nebi_spiders.spiders.bochum'],
+                    'nebi_spiders.spiders.berlin',
+                    'nebi_spiders.spiders.koeln'],
  'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, '
                'like Gecko) Chrome/141.0.0.0 Safari/537.36'}
-2026-02-22 07:46:37 [scrapy.middleware] INFO: Enabled downloader middlewares:
+2026-03-01 07:44:48 [scrapy.middleware] INFO: Enabled downloader middlewares:
 ['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
  'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
@@ -51,193 +51,193 @@
  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
  'scrapy.downloadermiddlewares.stats.DownloaderStats']
-2026-02-22 07:46:37 [scrapy.middleware] INFO: Enabled spider middlewares:
+2026-03-01 07:44:48 [scrapy.middleware] INFO: Enabled spider middlewares:
 ['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
  'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
  'scrapy.spidermiddlewares.referer.RefererMiddleware',
  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
  'scrapy.spidermiddlewares.depth.DepthMiddleware']
-2026-02-22 07:46:37 [scrapy.middleware] INFO: Enabled item pipelines:
+2026-03-01 07:44:48 [scrapy.middleware] INFO: Enabled item pipelines:
 []
-2026-02-22 07:46:37 [scrapy.core.engine] INFO: Spider opened
-2026-02-22 07:46:37 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2026-02-22 07:46:37 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
-2026-02-22 07:46:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.klebs.info/abfaelle/> (referer: None)
-2026-02-22 07:46:40 [klebs-container-products] DEBUG: 
+2026-03-01 07:44:48 [scrapy.core.engine] INFO: Spider opened
+2026-03-01 07:44:48 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2026-03-01 07:44:48 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2026-03-01 07:44:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.klebs.info/abfaelle/> (referer: None)
+2026-03-01 07:44:50 [klebs-container-products] DEBUG: 
 ================================================================================
-2026-02-22 07:46:40 [klebs-container-products] DEBUG: Starte Klebs Container Scraping
-2026-02-22 07:46:40 [klebs-container-products] DEBUG: ================================================================================
+2026-03-01 07:44:50 [klebs-container-products] DEBUG: Starte Klebs Container Scraping
+2026-03-01 07:44:50 [klebs-container-products] DEBUG: ================================================================================
 
-2026-02-22 07:46:40 [klebs-container-products] DEBUG: 
+2026-03-01 07:44:50 [klebs-container-products] DEBUG: 
 --- Verarbeite: Holz A1-A3 ---
-2026-02-22 07:46:46 [klebs-container-products] DEBUG:   Gefunden: 5 Container-Links
-2026-02-22 07:46:50 [klebs-container-products] DEBUG:   ✓ 10m³: 678,30€
-2026-02-22 07:46:54 [klebs-container-products] DEBUG:   ✓ 8m³: 542,64€
-2026-02-22 07:46:58 [klebs-container-products] DEBUG:   ✓ 7m³: 474,81€
-2026-02-22 07:47:02 [klebs-container-products] DEBUG:   ✓ 5.5m³: 436,73€
-2026-02-22 07:47:06 [klebs-container-products] DEBUG:   ✓ 3m³: 321,30€
-2026-02-22 07:47:06 [klebs-container-products] DEBUG: 
+2026-03-01 07:44:55 [klebs-container-products] DEBUG:   Gefunden: 5 Container-Links
+2026-03-01 07:44:59 [klebs-container-products] DEBUG:   ✓ 8m³: 542,64€
+2026-03-01 07:45:04 [klebs-container-products] DEBUG:   ✓ 10m³: 678,30€
+2026-03-01 07:45:08 [klebs-container-products] DEBUG:   ✓ 3m³: 321,30€
+2026-03-01 07:45:12 [klebs-container-products] DEBUG:   ✓ 5.5m³: 436,73€
+2026-03-01 07:45:17 [klebs-container-products] DEBUG:   ✓ 7m³: 474,81€
+2026-03-01 07:45:17 [klebs-container-products] DEBUG: 
 --- Verarbeite: Asbest ---
-2026-02-22 07:47:11 [klebs-container-products] DEBUG:   ⚠️ Keine Container-Links gefunden
-2026-02-22 07:47:11 [klebs-container-products] DEBUG: 
+2026-03-01 07:45:23 [klebs-container-products] DEBUG:   ⚠️ Keine Container-Links gefunden
+2026-03-01 07:45:23 [klebs-container-products] DEBUG: 
 --- Verarbeite: Baumischabfall ---
-2026-02-22 07:47:16 [klebs-container-products] DEBUG:   Gefunden: 5 Container-Links
-2026-02-22 07:47:21 [klebs-container-products] DEBUG:   ✓ 5.5m³: 644,98€
-2026-02-22 07:47:25 [klebs-container-products] DEBUG:   ✓ 3m³: 464,10€
-2026-02-22 07:47:28 [klebs-container-products] DEBUG:   ✓ 10m³: 1071,00€
-2026-02-22 07:47:32 [klebs-container-products] DEBUG:   ✓ 7m³: 749,70€
-2026-02-22 07:47:35 [klebs-container-products] DEBUG:   ✓ 8m³: 856,80€
-2026-02-22 07:47:35 [klebs-container-products] DEBUG: 
+2026-03-01 07:45:29 [klebs-container-products] DEBUG:   Gefunden: 5 Container-Links
+2026-03-01 07:45:32 [klebs-container-products] DEBUG:   ✓ 5.5m³: 644,98€
+2026-03-01 07:45:36 [klebs-container-products] DEBUG:   ✓ 3m³: 464,10€
+2026-03-01 07:45:40 [klebs-container-products] DEBUG:   ✓ 8m³: 856,80€
+2026-03-01 07:45:43 [klebs-container-products] DEBUG:   ✓ 7m³: 749,70€
+2026-03-01 07:45:47 [klebs-container-products] DEBUG:   ✓ 10m³: 1071,00€
+2026-03-01 07:45:47 [klebs-container-products] DEBUG: 
 --- Verarbeite: Bauschutt ---
-2026-02-22 07:47:40 [klebs-container-products] DEBUG:   Gefunden: 5 Container-Links
-2026-02-22 07:47:44 [klebs-container-products] DEBUG:   ✓ 8m³: 752,08€
-2026-02-22 07:47:48 [klebs-container-products] DEBUG:   ✓ 3m³: 386,75€
-2026-02-22 07:47:51 [klebs-container-products] DEBUG:   ✓ 10m³: 940,01€
-2026-02-22 07:47:55 [klebs-container-products] DEBUG:   ✓ 5.5m³: 534,31€
-2026-02-22 07:47:58 [klebs-container-products] DEBUG:   ✓ 7m³: 658,07€
-2026-02-22 07:47:58 [klebs-container-products] DEBUG: 
+2026-03-01 07:45:52 [klebs-container-products] DEBUG:   Gefunden: 5 Container-Links
+2026-03-01 07:45:56 [klebs-container-products] DEBUG:   ✓ 5.5m³: 534,31€
+2026-03-01 07:45:59 [klebs-container-products] DEBUG:   ✓ 8m³: 752,08€
+2026-03-01 07:46:03 [klebs-container-products] DEBUG:   ✓ 10m³: 940,01€
+2026-03-01 07:46:06 [klebs-container-products] DEBUG:   ✓ 7m³: 658,07€
+2026-03-01 07:46:10 [klebs-container-products] DEBUG:   ✓ 3m³: 386,75€
+2026-03-01 07:46:10 [klebs-container-products] DEBUG: 
 --- Verarbeite: Gips ---
-2026-02-22 07:48:03 [klebs-container-products] DEBUG:   Gefunden: 5 Container-Links
-2026-02-22 07:48:07 [klebs-container-products] DEBUG:   ✓ 3m³: 374,85€
-2026-02-22 07:48:10 [klebs-container-products] DEBUG:   ✓ 10m³: 850,16€
-2026-02-22 07:48:14 [klebs-container-products] DEBUG:   ✓ 5.5m³: 546,53€
-2026-02-22 07:48:17 [klebs-container-products] DEBUG:   ✓ 8m³: 680,13€
-2026-02-22 07:48:22 [klebs-container-products] DEBUG:   ✓ 7m³: 595,11€
-2026-02-22 07:48:22 [klebs-container-products] DEBUG: 
+2026-03-01 07:46:15 [klebs-container-products] DEBUG:   Gefunden: 5 Container-Links
+2026-03-01 07:46:19 [klebs-container-products] DEBUG:   ✓ 3m³: 374,85€
+2026-03-01 07:46:23 [klebs-container-products] DEBUG:   ✓ 10m³: 850,16€
+2026-03-01 07:46:26 [klebs-container-products] DEBUG:   ✓ 7m³: 595,11€
+2026-03-01 07:46:29 [klebs-container-products] DEBUG:   ✓ 5.5m³: 546,53€
+2026-03-01 07:46:33 [klebs-container-products] DEBUG:   ✓ 8m³: 680,13€
+2026-03-01 07:46:33 [klebs-container-products] DEBUG: 
 --- Verarbeite: Holz A4 ---
-2026-02-22 07:48:27 [klebs-container-products] DEBUG:   Gefunden: 5 Container-Links
-2026-02-22 07:48:31 [klebs-container-products] DEBUG:   ✓ 3m³: 434,35€
-2026-02-22 07:48:35 [klebs-container-products] DEBUG:   ✓ 7m³: 653,91€
-2026-02-22 07:48:38 [klebs-container-products] DEBUG:   ✓ 10m³: 934,15€
-2026-02-22 07:48:42 [klebs-container-products] DEBUG:   ✓ 5.5m³: 636,65€
-2026-02-22 07:48:45 [klebs-container-products] DEBUG:   ✓ 8m³: 747,32€
-2026-02-22 07:48:45 [klebs-container-products] DEBUG: 
+2026-03-01 07:46:38 [klebs-container-products] DEBUG:   Gefunden: 5 Container-Links
+2026-03-01 07:46:42 [klebs-container-products] DEBUG:   ✓ 5.5m³: 636,65€
+2026-03-01 07:46:46 [klebs-container-products] DEBUG:   ✓ 7m³: 653,91€
+2026-03-01 07:46:49 [klebs-container-products] DEBUG:   ✓ 10m³: 934,15€
+2026-03-01 07:46:52 [klebs-container-products] DEBUG:   ✓ 3m³: 434,35€
+2026-03-01 07:46:56 [klebs-container-products] DEBUG:   ✓ 8m³: 747,32€
+2026-03-01 07:46:56 [klebs-container-products] DEBUG: 
 --- Verarbeite: Dachpappe ---
-2026-02-22 07:48:51 [klebs-container-products] DEBUG:   ⚠️ Keine Container-Links gefunden
-2026-02-22 07:48:51 [klebs-container-products] DEBUG: 
+2026-03-01 07:47:01 [klebs-container-products] DEBUG:   ⚠️ Keine Container-Links gefunden
+2026-03-01 07:47:01 [klebs-container-products] DEBUG: 
 --- Verarbeite: Dämmstoffe ---
-2026-02-22 07:48:57 [klebs-container-products] DEBUG:   ⚠️ Keine Container-Links gefunden
-2026-02-22 07:48:57 [klebs-container-products] DEBUG: 
+2026-03-01 07:47:06 [klebs-container-products] DEBUG:   ⚠️ Keine Container-Links gefunden
+2026-03-01 07:47:06 [klebs-container-products] DEBUG: 
 --- Verarbeite: Gartenabfälle ---
-2026-02-22 07:49:02 [klebs-container-products] DEBUG:   Gefunden: 5 Container-Links
-2026-02-22 07:49:06 [klebs-container-products] DEBUG:   ✓ 8m³: 571,20€
-2026-02-22 07:49:10 [klebs-container-products] DEBUG:   ✓ 10m³: 714,00€
-2026-02-22 07:49:13 [klebs-container-products] DEBUG:   ✓ 3m³: 345,10€
-2026-02-22 07:49:17 [klebs-container-products] DEBUG:   ✓ 7m³: 499,80€
-2026-02-22 07:49:20 [klebs-container-products] DEBUG:   ✓ 5.5m³: 458,15€
-2026-02-22 07:49:20 [klebs-container-products] DEBUG: 
+2026-03-01 07:47:12 [klebs-container-products] DEBUG:   Gefunden: 5 Container-Links
+2026-03-01 07:47:15 [klebs-container-products] DEBUG:   ✓ 3m³: 345,10€
+2026-03-01 07:47:19 [klebs-container-products] DEBUG:   ✓ 5.5m³: 458,15€
+2026-03-01 07:47:23 [klebs-container-products] DEBUG:   ✓ 7m³: 499,80€
+2026-03-01 07:47:26 [klebs-container-products] DEBUG:   ✓ 10m³: 714,00€
+2026-03-01 07:47:30 [klebs-container-products] DEBUG:   ✓ 8m³: 571,20€
+2026-03-01 07:47:30 [klebs-container-products] DEBUG: 
 --- Verarbeite: Gewerbeabfall ---
-2026-02-22 07:49:27 [klebs-container-products] DEBUG:   ⚠️ Keine Container-Links gefunden
-2026-02-22 07:49:27 [klebs-container-products] DEBUG: 
+2026-03-01 07:47:36 [klebs-container-products] DEBUG:   ⚠️ Keine Container-Links gefunden
+2026-03-01 07:47:36 [klebs-container-products] DEBUG: 
 --- Verarbeite: Sperrmüll ---
-2026-02-22 07:49:32 [klebs-container-products] DEBUG:   Gefunden: 5 Container-Links
-2026-02-22 07:49:36 [klebs-container-products] DEBUG:   ✓ 8m³: 656,88€
-2026-02-22 07:49:39 [klebs-container-products] DEBUG:   ✓ 10m³: 821,10€
-2026-02-22 07:49:43 [klebs-container-products] DEBUG:   ✓ 5.5m³: 523,60€
-2026-02-22 07:49:46 [klebs-container-products] DEBUG:   ✓ 7m³: 574,77€
-2026-02-22 07:49:50 [klebs-container-products] DEBUG:   ✓ 3m³: 345,10€
-2026-02-22 07:49:50 [klebs-container-products] DEBUG: 
+2026-03-01 07:47:41 [klebs-container-products] DEBUG:   Gefunden: 5 Container-Links
+2026-03-01 07:47:45 [klebs-container-products] DEBUG:   ✓ 5.5m³: 523,60€
+2026-03-01 07:47:49 [klebs-container-products] DEBUG:   ✓ 3m³: 345,10€
+2026-03-01 07:47:52 [klebs-container-products] DEBUG:   ✓ 7m³: 574,77€
+2026-03-01 07:47:55 [klebs-container-products] DEBUG:   ✓ 10m³: 821,10€
+2026-03-01 07:47:59 [klebs-container-products] DEBUG:   ✓ 8m³: 656,88€
+2026-03-01 07:47:59 [klebs-container-products] DEBUG: 
 ================================================================================
-2026-02-22 07:49:50 [klebs-container-products] DEBUG: ✓ Gesamt gescrapt: 35 Produkte
-2026-02-22 07:49:50 [klebs-container-products] DEBUG: ================================================================================
+2026-03-01 07:47:59 [klebs-container-products] DEBUG: ✓ Gesamt gescrapt: 35 Produkte
+2026-03-01 07:47:59 [klebs-container-products] DEBUG: ================================================================================
 
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
-{'source': 'Bernd Klebs', 'title': '10 m³ Holz A1-A3', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '10', 'price': '678,30', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/10cbm-altholz-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
 {'source': 'Bernd Klebs', 'title': '8 m³ Holz A1-A3', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '8', 'price': '542,64', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/8cbm-altholz-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
-{'source': 'Bernd Klebs', 'title': '7 m³ Holz A1-A3', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '7', 'price': '474,81', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/7cbm-altholz-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
-{'source': 'Bernd Klebs', 'title': '5.5 m³ Holz A1-A3', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '5.5', 'price': '436,73', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/5cbm-altholz-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+{'source': 'Bernd Klebs', 'title': '10 m³ Holz A1-A3', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '10', 'price': '678,30', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/10cbm-altholz-container/'}
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
 {'source': 'Bernd Klebs', 'title': '3 m³ Holz A1-A3', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '3', 'price': '321,30', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/3m3-altholz-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+{'source': 'Bernd Klebs', 'title': '5.5 m³ Holz A1-A3', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '5.5', 'price': '436,73', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/5cbm-altholz-container/'}
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+{'source': 'Bernd Klebs', 'title': '7 m³ Holz A1-A3', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '7', 'price': '474,81', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/7cbm-altholz-container/'}
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
 {'source': 'Bernd Klebs', 'title': '5.5 m³ Baumischabfall', 'type': 'Baumischabfall', 'city': 'Berlin', 'size': '5.5', 'price': '644,98', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/5-5cbm-kubikmeter-bauabfall-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
 {'source': 'Bernd Klebs', 'title': '3 m³ Baumischabfall', 'type': 'Baumischabfall', 'city': 'Berlin', 'size': '3', 'price': '464,10', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/3cbm-bauabfall-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
-{'source': 'Bernd Klebs', 'title': '10 m³ Baumischabfall', 'type': 'Baumischabfall', 'city': 'Berlin', 'size': '10', 'price': '1071,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/10cbm-kubikmeter-bauabfall-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
-{'source': 'Bernd Klebs', 'title': '7 m³ Baumischabfall', 'type': 'Baumischabfall', 'city': 'Berlin', 'size': '7', 'price': '749,70', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/7cbm-kubikmeter-bauabfall-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
 {'source': 'Bernd Klebs', 'title': '8 m³ Baumischabfall', 'type': 'Baumischabfall', 'city': 'Berlin', 'size': '8', 'price': '856,80', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/8cbm-kubikmeter-bauabfall-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
-{'source': 'Bernd Klebs', 'title': '8 m³ Bauschutt', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '8', 'price': '752,08', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/8cbm-kubikmeter-bauschutt-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
-{'source': 'Bernd Klebs', 'title': '3 m³ Bauschutt', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '3', 'price': '386,75', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/3cbm-bauschutt-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
-{'source': 'Bernd Klebs', 'title': '10 m³ Bauschutt', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '10', 'price': '940,01', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/10cbm-kubikmeter-bauschutt-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+{'source': 'Bernd Klebs', 'title': '7 m³ Baumischabfall', 'type': 'Baumischabfall', 'city': 'Berlin', 'size': '7', 'price': '749,70', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/7cbm-kubikmeter-bauabfall-container/'}
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+{'source': 'Bernd Klebs', 'title': '10 m³ Baumischabfall', 'type': 'Baumischabfall', 'city': 'Berlin', 'size': '10', 'price': '1071,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/10cbm-kubikmeter-bauabfall-container/'}
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
 {'source': 'Bernd Klebs', 'title': '5.5 m³ Bauschutt', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '5.5', 'price': '534,31', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/5-5cbm-kubikmeter-bauschutt-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+{'source': 'Bernd Klebs', 'title': '8 m³ Bauschutt', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '8', 'price': '752,08', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/8cbm-kubikmeter-bauschutt-container/'}
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+{'source': 'Bernd Klebs', 'title': '10 m³ Bauschutt', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '10', 'price': '940,01', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/10cbm-kubikmeter-bauschutt-container/'}
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
 {'source': 'Bernd Klebs', 'title': '7 m³ Bauschutt', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '7', 'price': '658,07', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/7cbm-kubikmeter-bauschutt-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+{'source': 'Bernd Klebs', 'title': '3 m³ Bauschutt', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '3', 'price': '386,75', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/3cbm-bauschutt-container/'}
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
 {'source': 'Bernd Klebs', 'title': '3 m³ Gips', 'type': 'Gips', 'city': 'Berlin', 'size': '3', 'price': '374,85', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/3m3-gips-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
 {'source': 'Bernd Klebs', 'title': '10 m³ Gips', 'type': 'Gips', 'city': 'Berlin', 'size': '10', 'price': '850,16', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/10cbm-gipsabfall-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
-{'source': 'Bernd Klebs', 'title': '5.5 m³ Gips', 'type': 'Gips', 'city': 'Berlin', 'size': '5.5', 'price': '546,53', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/5cbm-gipsabfall-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
-{'source': 'Bernd Klebs', 'title': '8 m³ Gips', 'type': 'Gips', 'city': 'Berlin', 'size': '8', 'price': '680,13', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/8cbm-gipsabfall-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
 {'source': 'Bernd Klebs', 'title': '7 m³ Gips', 'type': 'Gips', 'city': 'Berlin', 'size': '7', 'price': '595,11', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/7cbm-gipsabfall-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
-{'source': 'Bernd Klebs', 'title': '3 m³ Holz A4', 'type': 'Holz A4', 'city': 'Berlin', 'size': '3', 'price': '434,35', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/3m3-behandeltes-holz-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
-{'source': 'Bernd Klebs', 'title': '7 m³ Holz A4', 'type': 'Holz A4', 'city': 'Berlin', 'size': '7', 'price': '653,91', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/7cbm-behandeltes-holz-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
-{'source': 'Bernd Klebs', 'title': '10 m³ Holz A4', 'type': 'Holz A4', 'city': 'Berlin', 'size': '10', 'price': '934,15', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/10cbm-behandeltes-holz-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+{'source': 'Bernd Klebs', 'title': '5.5 m³ Gips', 'type': 'Gips', 'city': 'Berlin', 'size': '5.5', 'price': '546,53', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/5cbm-gipsabfall-container/'}
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+{'source': 'Bernd Klebs', 'title': '8 m³ Gips', 'type': 'Gips', 'city': 'Berlin', 'size': '8', 'price': '680,13', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/8cbm-gipsabfall-container/'}
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
 {'source': 'Bernd Klebs', 'title': '5.5 m³ Holz A4', 'type': 'Holz A4', 'city': 'Berlin', 'size': '5.5', 'price': '636,65', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/5-5cbm-behandeltes-holz-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+{'source': 'Bernd Klebs', 'title': '7 m³ Holz A4', 'type': 'Holz A4', 'city': 'Berlin', 'size': '7', 'price': '653,91', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/7cbm-behandeltes-holz-container/'}
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+{'source': 'Bernd Klebs', 'title': '10 m³ Holz A4', 'type': 'Holz A4', 'city': 'Berlin', 'size': '10', 'price': '934,15', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/10cbm-behandeltes-holz-container/'}
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+{'source': 'Bernd Klebs', 'title': '3 m³ Holz A4', 'type': 'Holz A4', 'city': 'Berlin', 'size': '3', 'price': '434,35', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/3m3-behandeltes-holz-container/'}
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
 {'source': 'Bernd Klebs', 'title': '8 m³ Holz A4', 'type': 'Holz A4', 'city': 'Berlin', 'size': '8', 'price': '747,32', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/8cbm-behandeltes-holz-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
-{'source': 'Bernd Klebs', 'title': '8 m³ Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '8', 'price': '571,20', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/8m3-gartenabfall-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
-{'source': 'Bernd Klebs', 'title': '10 m³ Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '10', 'price': '714,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/10m3-gartenabfall-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
 {'source': 'Bernd Klebs', 'title': '3 m³ Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '3', 'price': '345,10', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/3m3-gartenabfall-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
-{'source': 'Bernd Klebs', 'title': '7 m³ Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '7', 'price': '499,80', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/7m3-gartenabfall-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
 {'source': 'Bernd Klebs', 'title': '5.5 m³ Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '5.5', 'price': '458,15', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/5m3-gartenabfall-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
-{'source': 'Bernd Klebs', 'title': '8 m³ Sperrmüll', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '8', 'price': '656,88', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/8cbm-sperrmuell-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
-{'source': 'Bernd Klebs', 'title': '10 m³ Sperrmüll', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '10', 'price': '821,10', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/10cbm-sperrmuell-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+{'source': 'Bernd Klebs', 'title': '7 m³ Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '7', 'price': '499,80', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/7m3-gartenabfall-container/'}
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+{'source': 'Bernd Klebs', 'title': '10 m³ Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '10', 'price': '714,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/10m3-gartenabfall-container/'}
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+{'source': 'Bernd Klebs', 'title': '8 m³ Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '8', 'price': '571,20', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/8m3-gartenabfall-container/'}
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
 {'source': 'Bernd Klebs', 'title': '5.5 m³ Sperrmüll', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '5.5', 'price': '523,60', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/5cbm-sperrmuell-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
-{'source': 'Bernd Klebs', 'title': '7 m³ Sperrmüll', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '7', 'price': '574,77', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/7cbm-sperrmuell-container/'}
-2026-02-22 07:49:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
 {'source': 'Bernd Klebs', 'title': '3 m³ Sperrmüll', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '3', 'price': '345,10', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/3cbm-sperrmuell-container/'}
-2026-02-22 07:49:50 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 1 pages/min), scraped 35 items (at 35 items/min)
-2026-02-22 07:49:50 [scrapy.core.engine] INFO: Closing spider (finished)
-2026-02-22 07:49:50 [scrapy.extensions.feedexport] INFO: Stored json feed (35 items) in: ../data/klebs-container-products-products.json
-2026-02-22 07:49:50 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+{'source': 'Bernd Klebs', 'title': '7 m³ Sperrmüll', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '7', 'price': '574,77', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/7cbm-sperrmuell-container/'}
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+{'source': 'Bernd Klebs', 'title': '10 m³ Sperrmüll', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '10', 'price': '821,10', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/10cbm-sperrmuell-container/'}
+2026-03-01 07:47:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.klebs.info/abfaelle/>
+{'source': 'Bernd Klebs', 'title': '8 m³ Sperrmüll', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '8', 'price': '656,88', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '15', 'fee_after_max': '6,54€', 'cancellation_fee': '', 'URL': 'https://www.klebs.info/containerdienst/8cbm-sperrmuell-container/'}
+2026-03-01 07:47:59 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 1 pages/min), scraped 35 items (at 35 items/min)
+2026-03-01 07:47:59 [scrapy.core.engine] INFO: Closing spider (finished)
+2026-03-01 07:47:59 [scrapy.extensions.feedexport] INFO: Stored json feed (35 items) in: ../data/klebs-container-products-products.json
+2026-03-01 07:47:59 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
 {'downloader/request_bytes': 290,
  'downloader/request_count': 1,
  'downloader/request_method_count/GET': 1,
- 'downloader/response_bytes': 14026,
+ 'downloader/response_bytes': 14027,
  'downloader/response_count': 1,
  'downloader/response_status_count/200': 1,
- 'elapsed_time_seconds': 193.21089,
+ 'elapsed_time_seconds': 191.381932,
  'feedexport/success_count/FileFeedStorage': 1,
  'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2026, 2, 22, 7, 49, 50, 634224, tzinfo=datetime.timezone.utc),
- 'httpcompression/response_bytes': 83279,
+ 'finish_time': datetime.datetime(2026, 3, 1, 7, 47, 59, 527457, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 83254,
  'httpcompression/response_count': 1,
  'item_scraped_count': 35,
- 'items_per_minute': 10.880829015544041,
+ 'items_per_minute': 10.99476439790576,
  'log_count/DEBUG': 99,
  'log_count/INFO': 4,
- 'memusage/max': 86556672,
- 'memusage/startup': 77623296,
+ 'memusage/max': 87207936,
+ 'memusage/startup': 77881344,
  'response_received_count': 1,
- 'responses_per_minute': 0.31088082901554404,
+ 'responses_per_minute': 0.31413612565445026,
  'scheduler/dequeued': 1,
  'scheduler/dequeued/memory': 1,
  'scheduler/enqueued': 1,
  'scheduler/enqueued/memory': 1,
- 'start_time': datetime.datetime(2026, 2, 22, 7, 46, 37, 423334, tzinfo=datetime.timezone.utc)}
-2026-02-22 07:49:50 [scrapy.core.engine] INFO: Spider closed (finished)
+ 'start_time': datetime.datetime(2026, 3, 1, 7, 44, 48, 145525, tzinfo=datetime.timezone.utc)}
+2026-03-01 07:47:59 [scrapy.core.engine] INFO: Spider closed (finished)
