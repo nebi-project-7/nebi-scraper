@@ -1,44 +1,44 @@
-2026-04-05 07:51:20 [scrapy.utils.log] INFO: Scrapy 2.14.2 started (bot: nebi_spiders)
-2026-04-05 07:51:20 [scrapy.utils.log] INFO: Versions:
-{'lxml': '6.0.2',
+2026-04-12 07:59:59 [scrapy.utils.log] INFO: Scrapy 2.15.0 started (bot: nebi_spiders)
+2026-04-12 07:59:59 [scrapy.utils.log] INFO: Versions:
+{'lxml': '6.0.3',
  'libxml2': '2.14.6',
  'cssselect': '1.4.0',
  'parsel': '1.11.0',
  'w3lib': '2.4.1',
  'Twisted': '25.5.0',
  'Python': '3.11.15 (main, Mar  3 2026, 16:10:12) [GCC 13.3.0]',
- 'pyOpenSSL': '26.0.0 (OpenSSL 3.5.5 27 Jan 2026)',
- 'cryptography': '46.0.6',
- 'Platform': 'Linux-6.17.0-1008-azure-x86_64-with-glibc2.39'}
-2026-04-05 07:51:20 [scrapy.crawler] DEBUG: Using AsyncCrawlerProcess
-2026-04-05 07:51:20 [asyncio] DEBUG: Using selector: EpollSelector
-2026-04-05 07:51:20 [scrapy.addons] INFO: Enabled addons:
+ 'pyOpenSSL': '26.0.0 (OpenSSL 3.5.6 7 Apr 2026)',
+ 'cryptography': '46.0.7',
+ 'Platform': 'Linux-6.17.0-1010-azure-x86_64-with-glibc2.39'}
+2026-04-12 07:59:59 [scrapy.crawler] DEBUG: Using AsyncCrawlerProcess
+2026-04-12 07:59:59 [asyncio] DEBUG: Using selector: EpollSelector
+2026-04-12 08:00:00 [scrapy.addons] INFO: Enabled addons:
 []
-2026-04-05 07:51:20 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
-2026-04-05 07:51:20 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
-2026-04-05 07:51:20 [scrapy.extensions.telnet] INFO: Telnet Password: 52d12a9b9f043229
-2026-04-05 07:51:20 [scrapy.middleware] INFO: Enabled extensions:
+2026-04-12 08:00:00 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2026-04-12 08:00:00 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2026-04-12 08:00:00 [scrapy.extensions.telnet] INFO: Telnet Password: fff76f1c2959f6f6
+2026-04-12 08:00:00 [scrapy.middleware] INFO: Enabled extensions:
 ['scrapy.extensions.corestats.CoreStats',
  'scrapy.extensions.logcount.LogCount',
  'scrapy.extensions.telnet.TelnetConsole',
  'scrapy.extensions.memusage.MemoryUsage',
  'scrapy.extensions.feedexport.FeedExporter',
  'scrapy.extensions.logstats.LogStats']
-2026-04-05 07:51:20 [scrapy.crawler] INFO: Overridden settings:
+2026-04-12 08:00:00 [scrapy.crawler] INFO: Overridden settings:
 {'BOT_NAME': 'nebi_spiders',
  'CONCURRENT_REQUESTS': 1,
  'DOWNLOAD_DELAY': 0.5,
  'FEED_EXPORT_ENCODING': 'utf-8',
  'NEWSPIDER_MODULE': 'nebi_spiders.spiders',
- 'SPIDER_MODULES': ['nebi_spiders.spiders.koeln',
+ 'SPIDER_MODULES': ['nebi_spiders.spiders.stuttgart',
+                    'nebi_spiders.spiders.hamburg',
                     'nebi_spiders.spiders.bochum',
                     'nebi_spiders.spiders.hannover',
-                    'nebi_spiders.spiders.berlin',
-                    'nebi_spiders.spiders.stuttgart',
-                    'nebi_spiders.spiders.hamburg'],
+                    'nebi_spiders.spiders.koeln',
+                    'nebi_spiders.spiders.berlin'],
  'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, '
                'like Gecko) Chrome/141.0.0.0 Safari/537.36'}
-2026-04-05 07:51:20 [scrapy.middleware] INFO: Enabled downloader middlewares:
+2026-04-12 08:00:00 [scrapy.middleware] INFO: Enabled downloader middlewares:
 ['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
  'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
@@ -51,163 +51,163 @@
  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
  'scrapy.downloadermiddlewares.stats.DownloaderStats']
-2026-04-05 07:51:20 [scrapy.middleware] INFO: Enabled spider middlewares:
+2026-04-12 08:00:00 [scrapy.middleware] INFO: Enabled spider middlewares:
 ['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
  'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
  'scrapy.spidermiddlewares.referer.RefererMiddleware',
  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
  'scrapy.spidermiddlewares.depth.DepthMiddleware']
-2026-04-05 07:51:20 [scrapy.middleware] INFO: Enabled item pipelines:
+2026-04-12 08:00:00 [scrapy.middleware] INFO: Enabled item pipelines:
 []
-2026-04-05 07:51:20 [scrapy.core.engine] INFO: Spider opened
-2026-04-05 07:51:20 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2026-04-05 07:51:20 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
-2026-04-05 07:51:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.diba-entsorgung.de/shop> (referer: None)
-2026-04-05 07:51:22 [diba-entsorgung] DEBUG: 
+2026-04-12 08:00:00 [scrapy.core.engine] INFO: Spider opened
+2026-04-12 08:00:00 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2026-04-12 08:00:00 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2026-04-12 08:00:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.diba-entsorgung.de/shop> (referer: None)
+2026-04-12 08:00:00 [diba-entsorgung] DEBUG: 
 ================================================================================
-2026-04-05 07:51:22 [diba-entsorgung] DEBUG: Starte DIBA Entsorgung Scraping (Hannover)
-2026-04-05 07:51:22 [diba-entsorgung] DEBUG: ================================================================================
+2026-04-12 08:00:00 [diba-entsorgung] DEBUG: Starte DIBA Entsorgung Scraping (Hannover)
+2026-04-12 08:00:00 [diba-entsorgung] DEBUG: ================================================================================
 
-2026-04-05 07:51:22 [diba-entsorgung] DEBUG: 
+2026-04-12 08:00:00 [diba-entsorgung] DEBUG: 
 --- Verarbeite: Sperrmüll ---
-2026-04-05 07:51:30 [diba-entsorgung] DEBUG:   ✓ 1m³: 139,00€
-2026-04-05 07:51:36 [diba-entsorgung] DEBUG:   ✓ 5m³: 469,00€
-2026-04-05 07:51:42 [diba-entsorgung] DEBUG:   ✓ 7m³: 499,00€
-2026-04-05 07:51:48 [diba-entsorgung] DEBUG:   ✓ 10m³: 579,00€
-2026-04-05 07:51:54 [diba-entsorgung] DEBUG:   ✓ 19m³: 1.029,00€
-2026-04-05 07:52:00 [diba-entsorgung] DEBUG:   ✓ 36m³: 1.619,00€
-2026-04-05 07:52:00 [diba-entsorgung] DEBUG: 
+2026-04-12 08:00:09 [diba-entsorgung] DEBUG:   ✓ 1m³: 139,00€
+2026-04-12 08:00:15 [diba-entsorgung] DEBUG:   ✓ 5m³: 469,00€
+2026-04-12 08:00:21 [diba-entsorgung] DEBUG:   ✓ 7m³: 499,00€
+2026-04-12 08:00:27 [diba-entsorgung] DEBUG:   ✓ 10m³: 579,00€
+2026-04-12 08:00:32 [diba-entsorgung] DEBUG:   ✓ 19m³: 1.029,00€
+2026-04-12 08:00:38 [diba-entsorgung] DEBUG:   ✓ 36m³: 1.619,00€
+2026-04-12 08:00:38 [diba-entsorgung] DEBUG: 
 --- Verarbeite: Gartenabfälle ---
-2026-04-05 07:52:07 [diba-entsorgung] DEBUG:   ✓ 1m³: 129,00€
-2026-04-05 07:52:12 [diba-entsorgung] DEBUG:   ✓ 5m³: 199,00€
-2026-04-05 07:52:18 [diba-entsorgung] DEBUG:   ✓ 7m³: 219,00€
-2026-04-05 07:52:24 [diba-entsorgung] DEBUG:   ✓ 10m³: 249,00€
-2026-04-05 07:52:30 [diba-entsorgung] DEBUG:   ✓ 19m³: 429,00€
-2026-04-05 07:52:36 [diba-entsorgung] DEBUG:   ✓ 36m³: 499,00€
-2026-04-05 07:52:36 [diba-entsorgung] DEBUG: 
+2026-04-12 08:00:46 [diba-entsorgung] DEBUG:   ✓ 1m³: 129,00€
+2026-04-12 08:00:52 [diba-entsorgung] DEBUG:   ✓ 5m³: 199,00€
+2026-04-12 08:00:58 [diba-entsorgung] DEBUG:   ✓ 7m³: 219,00€
+2026-04-12 08:01:04 [diba-entsorgung] DEBUG:   ✓ 10m³: 249,00€
+2026-04-12 08:01:10 [diba-entsorgung] DEBUG:   ✓ 19m³: 429,00€
+2026-04-12 08:01:15 [diba-entsorgung] DEBUG:   ✓ 36m³: 499,00€
+2026-04-12 08:01:15 [diba-entsorgung] DEBUG: 
 --- Verarbeite: Holz A2-A3 ---
-2026-04-05 07:52:43 [diba-entsorgung] DEBUG:   ✓ 1m³: 119,00€
-2026-04-05 07:52:49 [diba-entsorgung] DEBUG:   ✓ 5m³: 199,00€
-2026-04-05 07:52:55 [diba-entsorgung] DEBUG:   ✓ 7m³: 219,00€
-2026-04-05 07:53:01 [diba-entsorgung] DEBUG:   ✓ 10m³: 249,00€
-2026-04-05 07:53:06 [diba-entsorgung] DEBUG:   ✓ 19m³: 399,00€
-2026-04-05 07:53:12 [diba-entsorgung] DEBUG:   ✓ 36m³: 439,00€
-2026-04-05 07:53:12 [diba-entsorgung] DEBUG: 
+2026-04-12 08:01:23 [diba-entsorgung] DEBUG:   ✓ 1m³: 119,00€
+2026-04-12 08:01:29 [diba-entsorgung] DEBUG:   ✓ 5m³: 199,00€
+2026-04-12 08:01:35 [diba-entsorgung] DEBUG:   ✓ 7m³: 219,00€
+2026-04-12 08:01:40 [diba-entsorgung] DEBUG:   ✓ 10m³: 249,00€
+2026-04-12 08:01:46 [diba-entsorgung] DEBUG:   ✓ 19m³: 399,00€
+2026-04-12 08:01:52 [diba-entsorgung] DEBUG:   ✓ 36m³: 439,00€
+2026-04-12 08:01:52 [diba-entsorgung] DEBUG: 
 --- Verarbeite: Baumischabfall ---
-2026-04-05 07:53:19 [diba-entsorgung] DEBUG:   ✓ 1m³: 139,00€
-2026-04-05 07:53:25 [diba-entsorgung] DEBUG:   ✓ 5m³: 469,00€
-2026-04-05 07:53:31 [diba-entsorgung] DEBUG:   ✓ 7m³: 499,00€
-2026-04-05 07:53:36 [diba-entsorgung] DEBUG:   ✓ 10m³: 579,00€
-2026-04-05 07:53:42 [diba-entsorgung] DEBUG:   ✓ 19m³: 1.029,00€
-2026-04-05 07:53:48 [diba-entsorgung] DEBUG:   ✓ 36m³: 1.619,00€
-2026-04-05 07:53:48 [diba-entsorgung] DEBUG: 
+2026-04-12 08:01:59 [diba-entsorgung] DEBUG:   ✓ 1m³: 139,00€
+2026-04-12 08:02:05 [diba-entsorgung] DEBUG:   ✓ 5m³: 469,00€
+2026-04-12 08:02:11 [diba-entsorgung] DEBUG:   ✓ 7m³: 499,00€
+2026-04-12 08:02:17 [diba-entsorgung] DEBUG:   ✓ 10m³: 579,00€
+2026-04-12 08:02:23 [diba-entsorgung] DEBUG:   ✓ 19m³: 1.029,00€
+2026-04-12 08:02:29 [diba-entsorgung] DEBUG:   ✓ 36m³: 1.619,00€
+2026-04-12 08:02:29 [diba-entsorgung] DEBUG: 
 --- Verarbeite: Boden ---
-2026-04-05 07:53:55 [diba-entsorgung] DEBUG:   ✓ 1m³: 139,00€
-2026-04-05 07:54:01 [diba-entsorgung] DEBUG:   ✓ 5m³: 299,00€
-2026-04-05 07:54:07 [diba-entsorgung] DEBUG:   ✓ 7m³: 399,00€
-2026-04-05 07:54:13 [diba-entsorgung] DEBUG:   ✓ 10m³: 549,00€
-2026-04-05 07:54:21 [diba-entsorgung] DEBUG: 
+2026-04-12 08:02:36 [diba-entsorgung] DEBUG:   ✓ 1m³: 139,00€
+2026-04-12 08:02:42 [diba-entsorgung] DEBUG:   ✓ 5m³: 299,00€
+2026-04-12 08:02:48 [diba-entsorgung] DEBUG:   ✓ 7m³: 399,00€
+2026-04-12 08:02:54 [diba-entsorgung] DEBUG:   ✓ 10m³: 549,00€
+2026-04-12 08:03:02 [diba-entsorgung] DEBUG: 
 --- Verarbeite: Bauschutt ---
-2026-04-05 07:54:28 [diba-entsorgung] DEBUG:   ✓ 1m³: 139,00€
-2026-04-05 07:54:34 [diba-entsorgung] DEBUG:   ✓ 5m³: 299,00€
-2026-04-05 07:54:40 [diba-entsorgung] DEBUG:   ✓ 7m³: 369,00€
-2026-04-05 07:54:46 [diba-entsorgung] DEBUG:   ✓ 10m³: 519,00€
-2026-04-05 07:54:54 [diba-entsorgung] DEBUG: 
+2026-04-12 08:03:10 [diba-entsorgung] DEBUG:   ✓ 1m³: 139,00€
+2026-04-12 08:03:16 [diba-entsorgung] DEBUG:   ✓ 5m³: 299,00€
+2026-04-12 08:03:22 [diba-entsorgung] DEBUG:   ✓ 7m³: 369,00€
+2026-04-12 08:03:27 [diba-entsorgung] DEBUG:   ✓ 10m³: 519,00€
+2026-04-12 08:03:36 [diba-entsorgung] DEBUG: 
 ================================================================================
-2026-04-05 07:54:54 [diba-entsorgung] DEBUG: ✓ Gesamt gescrapt: 32 Produkte
-2026-04-05 07:54:54 [diba-entsorgung] DEBUG: ================================================================================
+2026-04-12 08:03:36 [diba-entsorgung] DEBUG: ✓ Gesamt gescrapt: 32 Produkte
+2026-04-12 08:03:36 [diba-entsorgung] DEBUG: ================================================================================
 
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Sperrmüll 1 m³', 'type': 'Sperrmüll', 'city': 'Hannover', 'size': '1', 'price': '139,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/01-03-2025-sperrm%C3%BCll-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Sperrmüll 5 m³', 'type': 'Sperrmüll', 'city': 'Hannover', 'size': '5', 'price': '469,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/01-03-2025-sperrm%C3%BCll-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Sperrmüll 7 m³', 'type': 'Sperrmüll', 'city': 'Hannover', 'size': '7', 'price': '499,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/01-03-2025-sperrm%C3%BCll-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Sperrmüll 10 m³', 'type': 'Sperrmüll', 'city': 'Hannover', 'size': '10', 'price': '579,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/01-03-2025-sperrm%C3%BCll-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Sperrmüll 19 m³', 'type': 'Sperrmüll', 'city': 'Hannover', 'size': '19', 'price': '1.029,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/01-03-2025-sperrm%C3%BCll-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Sperrmüll 36 m³', 'type': 'Sperrmüll', 'city': 'Hannover', 'size': '36', 'price': '1.619,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/01-03-2025-sperrm%C3%BCll-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Gartenabfälle 1 m³', 'type': 'Gartenabfälle', 'city': 'Hannover', 'size': '1', 'price': '129,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/kopie-von-buschwerk-und-gartenabfall-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Gartenabfälle 5 m³', 'type': 'Gartenabfälle', 'city': 'Hannover', 'size': '5', 'price': '199,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/kopie-von-buschwerk-und-gartenabfall-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Gartenabfälle 7 m³', 'type': 'Gartenabfälle', 'city': 'Hannover', 'size': '7', 'price': '219,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/kopie-von-buschwerk-und-gartenabfall-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Gartenabfälle 10 m³', 'type': 'Gartenabfälle', 'city': 'Hannover', 'size': '10', 'price': '249,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/kopie-von-buschwerk-und-gartenabfall-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Gartenabfälle 19 m³', 'type': 'Gartenabfälle', 'city': 'Hannover', 'size': '19', 'price': '429,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/kopie-von-buschwerk-und-gartenabfall-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Gartenabfälle 36 m³', 'type': 'Gartenabfälle', 'city': 'Hannover', 'size': '36', 'price': '499,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/kopie-von-buschwerk-und-gartenabfall-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Holz A2-A3 1 m³', 'type': 'Holz A2-A3', 'city': 'Hannover', 'size': '1', 'price': '119,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/01-03-2025-alt-und-bauholz-behandelt-aii-aiii-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Holz A2-A3 5 m³', 'type': 'Holz A2-A3', 'city': 'Hannover', 'size': '5', 'price': '199,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/01-03-2025-alt-und-bauholz-behandelt-aii-aiii-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Holz A2-A3 7 m³', 'type': 'Holz A2-A3', 'city': 'Hannover', 'size': '7', 'price': '219,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/01-03-2025-alt-und-bauholz-behandelt-aii-aiii-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Holz A2-A3 10 m³', 'type': 'Holz A2-A3', 'city': 'Hannover', 'size': '10', 'price': '249,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/01-03-2025-alt-und-bauholz-behandelt-aii-aiii-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Holz A2-A3 19 m³', 'type': 'Holz A2-A3', 'city': 'Hannover', 'size': '19', 'price': '399,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/01-03-2025-alt-und-bauholz-behandelt-aii-aiii-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Holz A2-A3 36 m³', 'type': 'Holz A2-A3', 'city': 'Hannover', 'size': '36', 'price': '439,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/01-03-2025-alt-und-bauholz-behandelt-aii-aiii-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Baumischabfall 1 m³', 'type': 'Baumischabfall', 'city': 'Hannover', 'size': '1', 'price': '139,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/01-03-2025-baustellenmischabfall-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Baumischabfall 5 m³', 'type': 'Baumischabfall', 'city': 'Hannover', 'size': '5', 'price': '469,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/01-03-2025-baustellenmischabfall-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Baumischabfall 7 m³', 'type': 'Baumischabfall', 'city': 'Hannover', 'size': '7', 'price': '499,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/01-03-2025-baustellenmischabfall-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Baumischabfall 10 m³', 'type': 'Baumischabfall', 'city': 'Hannover', 'size': '10', 'price': '579,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/01-03-2025-baustellenmischabfall-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Baumischabfall 19 m³', 'type': 'Baumischabfall', 'city': 'Hannover', 'size': '19', 'price': '1.029,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/01-03-2025-baustellenmischabfall-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Baumischabfall 36 m³', 'type': 'Baumischabfall', 'city': 'Hannover', 'size': '36', 'price': '1.619,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/01-03-2025-baustellenmischabfall-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Boden 1 m³', 'type': 'Boden', 'city': 'Hannover', 'size': '1', 'price': '139,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/01-03-2025-boden-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Boden 5 m³', 'type': 'Boden', 'city': 'Hannover', 'size': '5', 'price': '299,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/01-03-2025-boden-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Boden 7 m³', 'type': 'Boden', 'city': 'Hannover', 'size': '7', 'price': '399,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/01-03-2025-boden-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Boden 10 m³', 'type': 'Boden', 'city': 'Hannover', 'size': '10', 'price': '549,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/01-03-2025-boden-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Bauschutt 1 m³', 'type': 'Bauschutt', 'city': 'Hannover', 'size': '1', 'price': '139,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/01-03-2025-bauschutt-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Bauschutt 5 m³', 'type': 'Bauschutt', 'city': 'Hannover', 'size': '5', 'price': '299,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/01-03-2025-bauschutt-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Bauschutt 7 m³', 'type': 'Bauschutt', 'city': 'Hannover', 'size': '7', 'price': '369,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/01-03-2025-bauschutt-container'}
-2026-04-05 07:54:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
+2026-04-12 08:03:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diba-entsorgung.de/shop>
 {'source': 'DIBA Entsorgung', 'title': 'Bauschutt 10 m³', 'type': 'Bauschutt', 'city': 'Hannover', 'size': '10', 'price': '519,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7', 'fee_after_max': '2,50', 'cancellation_fee': None, 'URL': 'https://www.diba-entsorgung.de/product-page/01-03-2025-bauschutt-container'}
-2026-04-05 07:54:54 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 1 pages/min), scraped 32 items (at 32 items/min)
-2026-04-05 07:54:54 [scrapy.core.engine] INFO: Closing spider (finished)
-2026-04-05 07:54:54 [scrapy.extensions.feedexport] INFO: Stored json feed (32 items) in: ../data/diba-entsorgung-products.json
-2026-04-05 07:54:54 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+2026-04-12 08:03:36 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 1 pages/min), scraped 32 items (at 32 items/min)
+2026-04-12 08:03:36 [scrapy.core.engine] INFO: Closing spider (finished)
+2026-04-12 08:03:36 [scrapy.extensions.feedexport] INFO: Stored json feed (32 items) in: ../data/diba-entsorgung-products.json
+2026-04-12 08:03:36 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
 {'downloader/request_bytes': 293,
  'downloader/request_count': 1,
  'downloader/request_method_count/GET': 1,
- 'downloader/response_bytes': 238785,
+ 'downloader/response_bytes': 238707,
  'downloader/response_count': 1,
  'downloader/response_status_count/200': 1,
- 'elapsed_time_seconds': 213.790832,
+ 'elapsed_time_seconds': 216.413624,
  'feedexport/success_count/FileFeedStorage': 1,
  'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2026, 4, 5, 7, 54, 54, 593525, tzinfo=datetime.timezone.utc),
- 'httpcompression/response_bytes': 1155630,
+ 'finish_time': datetime.datetime(2026, 4, 12, 8, 3, 36, 558545, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 1155588,
  'httpcompression/response_count': 1,
  'item_scraped_count': 32,
- 'items_per_minute': 9.014084507042254,
+ 'items_per_minute': 8.88888888888889,
  'log_count/DEBUG': 77,
  'log_count/INFO': 4,
- 'memusage/max': 93392896,
- 'memusage/startup': 80527360,
+ 'memusage/max': 94547968,
+ 'memusage/startup': 80592896,
  'response_received_count': 1,
- 'responses_per_minute': 0.28169014084507044,
+ 'responses_per_minute': 0.2777777777777778,
  'scheduler/dequeued': 1,
  'scheduler/dequeued/memory': 1,
  'scheduler/enqueued': 1,
  'scheduler/enqueued/memory': 1,
- 'start_time': datetime.datetime(2026, 4, 5, 7, 51, 20, 802693, tzinfo=datetime.timezone.utc)}
-2026-04-05 07:54:54 [scrapy.core.engine] INFO: Spider closed (finished)
+ 'start_time': datetime.datetime(2026, 4, 12, 8, 0, 0, 144921, tzinfo=datetime.timezone.utc)}
+2026-04-12 08:03:36 [scrapy.core.engine] INFO: Spider closed (finished)
