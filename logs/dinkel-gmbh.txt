@@ -1,5 +1,5 @@
-2026-05-03 08:53:21 [scrapy.utils.log] INFO: Scrapy 2.15.2 started (bot: nebi_spiders)
-2026-05-03 08:53:21 [scrapy.utils.log] INFO: Versions:
+2026-05-10 08:35:58 [scrapy.utils.log] INFO: Scrapy 2.15.2 started (bot: nebi_spiders)
+2026-05-10 08:35:58 [scrapy.utils.log] INFO: Versions:
 {'lxml': '6.1.0',
  'libxml2': '2.14.6',
  'cssselect': '1.4.0',
@@ -7,28 +7,28 @@
  'w3lib': '2.4.1',
  'Twisted': '25.5.0',
  'Python': '3.11.15 (main, Mar  3 2026, 16:10:12) [GCC 13.3.0]',
- 'pyOpenSSL': '26.1.0 (OpenSSL 4.0.0 14 Apr 2026)',
- 'cryptography': '47.0.0',
+ 'pyOpenSSL': '26.2.0 (OpenSSL 4.0.0 14 Apr 2026)',
+ 'cryptography': '48.0.0',
  'Platform': 'Linux-6.17.0-1010-azure-x86_64-with-glibc2.39'}
-2026-05-03 08:53:21 [scrapy.crawler] DEBUG: Using AsyncCrawlerProcess
-2026-05-03 08:53:21 [asyncio] DEBUG: Using selector: EpollSelector
-2026-05-03 08:53:21 [WDM] INFO: ====== WebDriver manager ======
-2026-05-03 08:53:21 [WDM] INFO: Get LATEST chromedriver version for google-chrome
-2026-05-03 08:53:21 [WDM] INFO: Get LATEST chromedriver version for google-chrome
-2026-05-03 08:53:21 [WDM] INFO: Driver [/home/runner/.wdm/drivers/chromedriver/linux64/147.0.7727.117/chromedriver-linux64/chromedriver] found in cache
-2026-05-03 08:53:21 [scrapy.addons] INFO: Enabled addons:
+2026-05-10 08:35:58 [scrapy.crawler] DEBUG: Using AsyncCrawlerProcess
+2026-05-10 08:35:58 [asyncio] DEBUG: Using selector: EpollSelector
+2026-05-10 08:35:58 [WDM] INFO: ====== WebDriver manager ======
+2026-05-10 08:35:58 [WDM] INFO: Get LATEST chromedriver version for google-chrome
+2026-05-10 08:35:58 [WDM] INFO: Get LATEST chromedriver version for google-chrome
+2026-05-10 08:35:58 [WDM] INFO: Driver [/home/runner/.wdm/drivers/chromedriver/linux64/147.0.7727.117/chromedriver-linux64/chromedriver] found in cache
+2026-05-10 08:35:58 [scrapy.addons] INFO: Enabled addons:
 []
-2026-05-03 08:53:21 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
-2026-05-03 08:53:21 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
-2026-05-03 08:53:21 [scrapy.extensions.telnet] INFO: Telnet Password: 5cd1048c78255b6b
-2026-05-03 08:53:21 [scrapy.middleware] INFO: Enabled extensions:
+2026-05-10 08:35:58 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2026-05-10 08:35:58 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2026-05-10 08:35:58 [scrapy.extensions.telnet] INFO: Telnet Password: b15e0046c8616ae6
+2026-05-10 08:35:58 [scrapy.middleware] INFO: Enabled extensions:
 ['scrapy.extensions.corestats.CoreStats',
  'scrapy.extensions.logcount.LogCount',
  'scrapy.extensions.telnet.TelnetConsole',
  'scrapy.extensions.memusage.MemoryUsage',
  'scrapy.extensions.feedexport.FeedExporter',
  'scrapy.extensions.logstats.LogStats']
-2026-05-03 08:53:21 [scrapy.crawler] INFO: Overridden settings:
+2026-05-10 08:35:58 [scrapy.crawler] INFO: Overridden settings:
 {'BOT_NAME': 'nebi_spiders',
  'CONCURRENT_REQUESTS': 1,
  'DOWNLOAD_DELAY': 0.5,
@@ -42,7 +42,7 @@
                     'nebi_spiders.spiders.berlin'],
  'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, '
                'like Gecko) Chrome/141.0.0.0 Safari/537.36'}
-2026-05-03 08:53:21 [scrapy.middleware] INFO: Enabled downloader middlewares:
+2026-05-10 08:35:58 [scrapy.middleware] INFO: Enabled downloader middlewares:
 ['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
  'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
@@ -55,159 +55,159 @@
  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
  'scrapy.downloadermiddlewares.stats.DownloaderStats']
-2026-05-03 08:53:21 [scrapy.middleware] INFO: Enabled spider middlewares:
+2026-05-10 08:35:58 [scrapy.middleware] INFO: Enabled spider middlewares:
 ['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
  'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
  'scrapy.spidermiddlewares.referer.RefererMiddleware',
  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
  'scrapy.spidermiddlewares.depth.DepthMiddleware']
-2026-05-03 08:53:21 [scrapy.middleware] INFO: Enabled item pipelines:
+2026-05-10 08:35:58 [scrapy.middleware] INFO: Enabled item pipelines:
 []
-2026-05-03 08:53:21 [scrapy.core.engine] INFO: Spider opened
-2026-05-03 08:53:21 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2026-05-03 08:53:21 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
-2026-05-03 08:53:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://shop.dinkel-gmbh.de/> (referer: None)
-2026-05-03 08:53:22 [dinkel-gmbh] DEBUG: 
+2026-05-10 08:35:58 [scrapy.core.engine] INFO: Spider opened
+2026-05-10 08:35:58 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2026-05-10 08:35:58 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2026-05-10 08:35:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://shop.dinkel-gmbh.de/> (referer: None)
+2026-05-10 08:35:59 [dinkel-gmbh] DEBUG: 
 ================================================================================
-2026-05-03 08:53:22 [dinkel-gmbh] DEBUG: Starte Dinkel GmbH Scraping für Stuttgart
-2026-05-03 08:53:22 [dinkel-gmbh] DEBUG: ================================================================================
+2026-05-10 08:35:59 [dinkel-gmbh] DEBUG: Starte Dinkel GmbH Scraping für Stuttgart
+2026-05-10 08:35:59 [dinkel-gmbh] DEBUG: ================================================================================
 
-2026-05-03 08:53:27 [dinkel-gmbh] DEBUG: Cookie-Banner geschlossen
-2026-05-03 08:53:29 [dinkel-gmbh] DEBUG: PLZ 70191 eingegeben
-2026-05-03 08:53:31 [dinkel-gmbh] DEBUG: Wähle: 70191 Stuttgart, Deutschland
-2026-05-03 08:53:32 [dinkel-gmbh] DEBUG: PLZ bestätigt
-2026-05-03 08:53:41 [dinkel-gmbh] DEBUG: Artikelseite geladen: https://shop.dinkel-gmbh.de/order/article/index
-2026-05-03 08:53:41 [dinkel-gmbh] DEBUG: Gefundene Artikel: 9
-2026-05-03 08:53:41 [dinkel-gmbh] DEBUG: 
+2026-05-10 08:36:03 [dinkel-gmbh] DEBUG: Cookie-Banner geschlossen
+2026-05-10 08:36:05 [dinkel-gmbh] DEBUG: PLZ 70191 eingegeben
+2026-05-10 08:36:07 [dinkel-gmbh] DEBUG: Wähle: 70191 Stuttgart, Deutschland
+2026-05-10 08:36:09 [dinkel-gmbh] DEBUG: PLZ bestätigt
+2026-05-10 08:36:17 [dinkel-gmbh] DEBUG: Artikelseite geladen: https://shop.dinkel-gmbh.de/order/article/index
+2026-05-10 08:36:18 [dinkel-gmbh] DEBUG: Gefundene Artikel: 9
+2026-05-10 08:36:18 [dinkel-gmbh] DEBUG: 
 --- Verarbeite: 1.02 Mischpapier B12 ---
-2026-05-03 08:53:48 [dinkel-gmbh] DEBUG:   URL nach Auswahl: https://shop.dinkel-gmbh.de/order/container
-2026-05-03 08:53:48 [dinkel-gmbh] DEBUG:   Container-Elemente gefunden: 4
-2026-05-03 08:53:48 [dinkel-gmbh] DEBUG:   Überspringe Deckelmulde für Papier/Pappe
-2026-05-03 08:53:48 [dinkel-gmbh] DEBUG:   Überspringe Deckelmulde für Papier/Pappe
-2026-05-03 08:53:48 [dinkel-gmbh] DEBUG:   ✓ 7 m³: ab 165,00 EUR
-2026-05-03 08:53:48 [dinkel-gmbh] DEBUG:   ✓ 10 m³: ab 175,00 EUR
-2026-05-03 08:53:48 [dinkel-gmbh] DEBUG: 
+2026-05-10 08:36:25 [dinkel-gmbh] DEBUG:   URL nach Auswahl: https://shop.dinkel-gmbh.de/order/container
+2026-05-10 08:36:25 [dinkel-gmbh] DEBUG:   Container-Elemente gefunden: 4
+2026-05-10 08:36:25 [dinkel-gmbh] DEBUG:   Überspringe Deckelmulde für Papier/Pappe
+2026-05-10 08:36:25 [dinkel-gmbh] DEBUG:   Überspringe Deckelmulde für Papier/Pappe
+2026-05-10 08:36:25 [dinkel-gmbh] DEBUG:   ✓ 7 m³: ab 165,00 EUR
+2026-05-10 08:36:25 [dinkel-gmbh] DEBUG:   ✓ 10 m³: ab 175,00 EUR
+2026-05-10 08:36:25 [dinkel-gmbh] DEBUG: 
 --- Verarbeite: Bauschutt - mineralisch ohne Störstoffe ---
-2026-05-03 08:53:56 [dinkel-gmbh] DEBUG:   URL nach Auswahl: https://shop.dinkel-gmbh.de/order/container
-2026-05-03 08:53:56 [dinkel-gmbh] DEBUG:   Container-Elemente gefunden: 2
-2026-05-03 08:53:56 [dinkel-gmbh] DEBUG:   ✓ 5 m³: ab 414,00 EUR
-2026-05-03 08:53:56 [dinkel-gmbh] DEBUG:   ✓ 7 m³: ab 533,00 EUR
-2026-05-03 08:53:56 [dinkel-gmbh] DEBUG: 
+2026-05-10 08:36:32 [dinkel-gmbh] DEBUG:   URL nach Auswahl: https://shop.dinkel-gmbh.de/order/container
+2026-05-10 08:36:32 [dinkel-gmbh] DEBUG:   Container-Elemente gefunden: 2
+2026-05-10 08:36:32 [dinkel-gmbh] DEBUG:   ✓ 5 m³: ab 414,00 EUR
+2026-05-10 08:36:32 [dinkel-gmbh] DEBUG:   ✓ 7 m³: ab 533,00 EUR
+2026-05-10 08:36:32 [dinkel-gmbh] DEBUG: 
 --- Verarbeite: Baustellenmischabfälle ---
-2026-05-03 08:54:03 [dinkel-gmbh] DEBUG:   URL nach Auswahl: https://shop.dinkel-gmbh.de/order/container
-2026-05-03 08:54:03 [dinkel-gmbh] DEBUG:   Container-Elemente gefunden: 5
-2026-05-03 08:54:03 [dinkel-gmbh] DEBUG:   Überspringe Deckelmulde für Baumischabfall
-2026-05-03 08:54:03 [dinkel-gmbh] DEBUG:   Überspringe Deckelmulde für Baumischabfall
-2026-05-03 08:54:03 [dinkel-gmbh] DEBUG:   ✓ 5 m³: ab 715,00 EUR
-2026-05-03 08:54:03 [dinkel-gmbh] DEBUG:   ✓ 7 m³: ab 875,00 EUR
-2026-05-03 08:54:03 [dinkel-gmbh] DEBUG:   ✓ 10 m³: ab 1095,00 EUR
-2026-05-03 08:54:03 [dinkel-gmbh] DEBUG:   Überspringe: DINKEL SACK - Baumüll / Sperrmüll
-2026-05-03 08:54:03 [dinkel-gmbh] DEBUG: 
+2026-05-10 08:36:40 [dinkel-gmbh] DEBUG:   URL nach Auswahl: https://shop.dinkel-gmbh.de/order/container
+2026-05-10 08:36:40 [dinkel-gmbh] DEBUG:   Container-Elemente gefunden: 5
+2026-05-10 08:36:40 [dinkel-gmbh] DEBUG:   Überspringe Deckelmulde für Baumischabfall
+2026-05-10 08:36:40 [dinkel-gmbh] DEBUG:   Überspringe Deckelmulde für Baumischabfall
+2026-05-10 08:36:40 [dinkel-gmbh] DEBUG:   ✓ 5 m³: ab 715,00 EUR
+2026-05-10 08:36:40 [dinkel-gmbh] DEBUG:   ✓ 7 m³: ab 875,00 EUR
+2026-05-10 08:36:40 [dinkel-gmbh] DEBUG:   ✓ 10 m³: ab 1095,00 EUR
+2026-05-10 08:36:40 [dinkel-gmbh] DEBUG:   Überspringe: DINKEL SACK - Baumüll / Sperrmüll
+2026-05-10 08:36:40 [dinkel-gmbh] DEBUG: 
 --- Verarbeite: Erdaushub unbelastet (ohne Störstoffe) ---
-2026-05-03 08:54:11 [dinkel-gmbh] DEBUG:   URL nach Auswahl: https://shop.dinkel-gmbh.de/order/container
-2026-05-03 08:54:11 [dinkel-gmbh] DEBUG:   Container-Elemente gefunden: 1
-2026-05-03 08:54:11 [dinkel-gmbh] DEBUG:   ✓ 5 m³: ab 340,00 EUR
-2026-05-03 08:54:11 [dinkel-gmbh] DEBUG: 
+2026-05-10 08:36:47 [dinkel-gmbh] DEBUG:   URL nach Auswahl: https://shop.dinkel-gmbh.de/order/container
+2026-05-10 08:36:47 [dinkel-gmbh] DEBUG:   Container-Elemente gefunden: 1
+2026-05-10 08:36:48 [dinkel-gmbh] DEBUG:   ✓ 5 m³: ab 340,00 EUR
+2026-05-10 08:36:48 [dinkel-gmbh] DEBUG: 
 --- Verarbeite: Grünschnitt & Gartenabfälle ---
-2026-05-03 08:54:18 [dinkel-gmbh] DEBUG:   URL nach Auswahl: https://shop.dinkel-gmbh.de/order/container
-2026-05-03 08:54:18 [dinkel-gmbh] DEBUG:   Container-Elemente gefunden: 3
-2026-05-03 08:54:18 [dinkel-gmbh] DEBUG:   ✓ 5 m³: ab 345,00 EUR
-2026-05-03 08:54:18 [dinkel-gmbh] DEBUG:   ✓ 7 m³: ab 395,00 EUR
-2026-05-03 08:54:18 [dinkel-gmbh] DEBUG:   ✓ 10 m³: ab 505,00 EUR
-2026-05-03 08:54:18 [dinkel-gmbh] DEBUG: 
+2026-05-10 08:36:55 [dinkel-gmbh] DEBUG:   URL nach Auswahl: https://shop.dinkel-gmbh.de/order/container
+2026-05-10 08:36:55 [dinkel-gmbh] DEBUG:   Container-Elemente gefunden: 3
+2026-05-10 08:36:55 [dinkel-gmbh] DEBUG:   ✓ 5 m³: ab 345,00 EUR
+2026-05-10 08:36:55 [dinkel-gmbh] DEBUG:   ✓ 7 m³: ab 395,00 EUR
+2026-05-10 08:36:55 [dinkel-gmbh] DEBUG:   ✓ 10 m³: ab 505,00 EUR
+2026-05-10 08:36:55 [dinkel-gmbh] DEBUG: 
 --- Verarbeite: Mischholz A1 - A3 ---
-2026-05-03 08:54:26 [dinkel-gmbh] DEBUG:   URL nach Auswahl: https://shop.dinkel-gmbh.de/order/container
-2026-05-03 08:54:26 [dinkel-gmbh] DEBUG:   Container-Elemente gefunden: 5
-2026-05-03 08:54:26 [dinkel-gmbh] DEBUG:   Überspringe Deckelmulde für Holz A1-A3
-2026-05-03 08:54:26 [dinkel-gmbh] DEBUG:   Überspringe Deckelmulde für Holz A1-A3
-2026-05-03 08:54:26 [dinkel-gmbh] DEBUG:   ✓ 5 m³: ab 275,00 EUR
-2026-05-03 08:54:26 [dinkel-gmbh] DEBUG:   ✓ 7 m³: ab 345,00 EUR
-2026-05-03 08:54:26 [dinkel-gmbh] DEBUG:   ✓ 10 m³: ab 400,00 EUR
-2026-05-03 08:54:26 [dinkel-gmbh] DEBUG: 
+2026-05-10 08:37:03 [dinkel-gmbh] DEBUG:   URL nach Auswahl: https://shop.dinkel-gmbh.de/order/container
+2026-05-10 08:37:03 [dinkel-gmbh] DEBUG:   Container-Elemente gefunden: 5
+2026-05-10 08:37:03 [dinkel-gmbh] DEBUG:   Überspringe Deckelmulde für Holz A1-A3
+2026-05-10 08:37:03 [dinkel-gmbh] DEBUG:   Überspringe Deckelmulde für Holz A1-A3
+2026-05-10 08:37:03 [dinkel-gmbh] DEBUG:   ✓ 5 m³: ab 275,00 EUR
+2026-05-10 08:37:03 [dinkel-gmbh] DEBUG:   ✓ 7 m³: ab 345,00 EUR
+2026-05-10 08:37:03 [dinkel-gmbh] DEBUG:   ✓ 10 m³: ab 400,00 EUR
+2026-05-10 08:37:03 [dinkel-gmbh] DEBUG: 
 --- Verarbeite: Sand 0-2 ---
-2026-05-03 08:54:33 [dinkel-gmbh] DEBUG:   URL nach Auswahl: https://shop.dinkel-gmbh.de/order/container
-2026-05-03 08:54:33 [dinkel-gmbh] DEBUG:   Container-Elemente gefunden: 2
-2026-05-03 08:54:33 [dinkel-gmbh] DEBUG:   ✓ 5 m³: ab 350,00 EUR
-2026-05-03 08:54:33 [dinkel-gmbh] DEBUG:   ✓ 7 m³: ab 420,00 EUR
-2026-05-03 08:54:33 [dinkel-gmbh] DEBUG: 
+2026-05-10 08:37:12 [dinkel-gmbh] DEBUG:   URL nach Auswahl: https://shop.dinkel-gmbh.de/order/container
+2026-05-10 08:37:12 [dinkel-gmbh] DEBUG:   Container-Elemente gefunden: 2
+2026-05-10 08:37:12 [dinkel-gmbh] DEBUG:   ✓ 5 m³: ab 350,00 EUR
+2026-05-10 08:37:12 [dinkel-gmbh] DEBUG:   ✓ 7 m³: ab 420,00 EUR
+2026-05-10 08:37:12 [dinkel-gmbh] DEBUG: 
 --- Verarbeite: Sperrmüll ---
-2026-05-03 08:54:40 [dinkel-gmbh] DEBUG:   URL nach Auswahl: https://shop.dinkel-gmbh.de/order/container
-2026-05-03 08:54:40 [dinkel-gmbh] DEBUG:   Container-Elemente gefunden: 5
-2026-05-03 08:54:40 [dinkel-gmbh] DEBUG:   Überspringe Deckelmulde für Sperrmüll
-2026-05-03 08:54:40 [dinkel-gmbh] DEBUG:   Überspringe Deckelmulde für Sperrmüll
-2026-05-03 08:54:40 [dinkel-gmbh] DEBUG:   ✓ 5 m³: ab 461,00 EUR
-2026-05-03 08:54:40 [dinkel-gmbh] DEBUG:   ✓ 7 m³: ab 630,00 EUR
-2026-05-03 08:54:40 [dinkel-gmbh] DEBUG:   ✓ 10 m³: ab 780,00 EUR
-2026-05-03 08:54:40 [dinkel-gmbh] DEBUG: 
+2026-05-10 08:37:19 [dinkel-gmbh] DEBUG:   URL nach Auswahl: https://shop.dinkel-gmbh.de/order/container
+2026-05-10 08:37:19 [dinkel-gmbh] DEBUG:   Container-Elemente gefunden: 5
+2026-05-10 08:37:19 [dinkel-gmbh] DEBUG:   Überspringe Deckelmulde für Sperrmüll
+2026-05-10 08:37:19 [dinkel-gmbh] DEBUG:   Überspringe Deckelmulde für Sperrmüll
+2026-05-10 08:37:19 [dinkel-gmbh] DEBUG:   ✓ 5 m³: ab 461,00 EUR
+2026-05-10 08:37:19 [dinkel-gmbh] DEBUG:   ✓ 7 m³: ab 630,00 EUR
+2026-05-10 08:37:19 [dinkel-gmbh] DEBUG:   ✓ 10 m³: ab 780,00 EUR
+2026-05-10 08:37:19 [dinkel-gmbh] DEBUG: 
 ================================================================================
-2026-05-03 08:54:40 [dinkel-gmbh] DEBUG: Gesamt gescrapt: 19 Produkte
-2026-05-03 08:54:40 [dinkel-gmbh] DEBUG: ================================================================================
+2026-05-10 08:37:19 [dinkel-gmbh] DEBUG: Gesamt gescrapt: 19 Produkte
+2026-05-10 08:37:19 [dinkel-gmbh] DEBUG: ================================================================================
 
-2026-05-03 08:54:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
+2026-05-10 08:37:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
 {'source': 'Dinkel GmbH', 'title': '7 m³ Absetzmulde Papier/Pappe', 'type': 'Papier/Pappe', 'city': 'Stuttgart', 'size': '7 m³', 'price': 'ab 165,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '3 Tage', 'fee_after_max': '2,00 EUR/Tag', 'cancellation_fee': None, 'URL': 'https://shop.dinkel-gmbh.de/order/container'}
-2026-05-03 08:54:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
+2026-05-10 08:37:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
 {'source': 'Dinkel GmbH', 'title': '10 m³ Absetzmulde Papier/Pappe', 'type': 'Papier/Pappe', 'city': 'Stuttgart', 'size': '10 m³', 'price': 'ab 175,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '3 Tage', 'fee_after_max': '2,00 EUR/Tag', 'cancellation_fee': None, 'URL': 'https://shop.dinkel-gmbh.de/order/container'}
-2026-05-03 08:54:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
+2026-05-10 08:37:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
 {'source': 'Dinkel GmbH', 'title': '5 m³ Absetzmulde Bauschutt', 'type': 'Bauschutt', 'city': 'Stuttgart', 'size': '5 m³', 'price': 'ab 414,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '3 Tage', 'fee_after_max': '2,00 EUR/Tag', 'cancellation_fee': None, 'URL': 'https://shop.dinkel-gmbh.de/order/container'}
-2026-05-03 08:54:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
+2026-05-10 08:37:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
 {'source': 'Dinkel GmbH', 'title': '7 m³ Absetzmulde Bauschutt', 'type': 'Bauschutt', 'city': 'Stuttgart', 'size': '7 m³', 'price': 'ab 533,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '3 Tage', 'fee_after_max': '2,00 EUR/Tag', 'cancellation_fee': None, 'URL': 'https://shop.dinkel-gmbh.de/order/container'}
-2026-05-03 08:54:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
+2026-05-10 08:37:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
 {'source': 'Dinkel GmbH', 'title': '5 m³ Absetzmulde Baumischabfall', 'type': 'Baumischabfall', 'city': 'Stuttgart', 'size': '5 m³', 'price': 'ab 715,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '3 Tage', 'fee_after_max': '2,00 EUR/Tag', 'cancellation_fee': None, 'URL': 'https://shop.dinkel-gmbh.de/order/container'}
-2026-05-03 08:54:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
+2026-05-10 08:37:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
 {'source': 'Dinkel GmbH', 'title': '7 m³ Absetzmulde Baumischabfall', 'type': 'Baumischabfall', 'city': 'Stuttgart', 'size': '7 m³', 'price': 'ab 875,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '3 Tage', 'fee_after_max': '2,00 EUR/Tag', 'cancellation_fee': None, 'URL': 'https://shop.dinkel-gmbh.de/order/container'}
-2026-05-03 08:54:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
+2026-05-10 08:37:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
 {'source': 'Dinkel GmbH', 'title': '10 m³ Absetzmulde Baumischabfall', 'type': 'Baumischabfall', 'city': 'Stuttgart', 'size': '10 m³', 'price': 'ab 1095,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '3 Tage', 'fee_after_max': '2,00 EUR/Tag', 'cancellation_fee': None, 'URL': 'https://shop.dinkel-gmbh.de/order/container'}
-2026-05-03 08:54:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
+2026-05-10 08:37:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
 {'source': 'Dinkel GmbH', 'title': '5 m³ Absetzmulde Erdaushub', 'type': 'Erdaushub', 'city': 'Stuttgart', 'size': '5 m³', 'price': 'ab 340,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '3 Tage', 'fee_after_max': '2,00 EUR/Tag', 'cancellation_fee': None, 'URL': 'https://shop.dinkel-gmbh.de/order/container'}
-2026-05-03 08:54:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
+2026-05-10 08:37:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
 {'source': 'Dinkel GmbH', 'title': '5 m³ Absetzmulde Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Stuttgart', 'size': '5 m³', 'price': 'ab 345,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '3 Tage', 'fee_after_max': '2,00 EUR/Tag', 'cancellation_fee': None, 'URL': 'https://shop.dinkel-gmbh.de/order/container'}
-2026-05-03 08:54:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
+2026-05-10 08:37:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
 {'source': 'Dinkel GmbH', 'title': '7 m³ Absetzmulde Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Stuttgart', 'size': '7 m³', 'price': 'ab 395,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '3 Tage', 'fee_after_max': '2,00 EUR/Tag', 'cancellation_fee': None, 'URL': 'https://shop.dinkel-gmbh.de/order/container'}
-2026-05-03 08:54:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
+2026-05-10 08:37:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
 {'source': 'Dinkel GmbH', 'title': '10 m³ Absetzmulde Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Stuttgart', 'size': '10 m³', 'price': 'ab 505,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '3 Tage', 'fee_after_max': '2,00 EUR/Tag', 'cancellation_fee': None, 'URL': 'https://shop.dinkel-gmbh.de/order/container'}
-2026-05-03 08:54:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
+2026-05-10 08:37:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
 {'source': 'Dinkel GmbH', 'title': '5 m³ Absetzmulde Holz A1-A3', 'type': 'Holz A1-A3', 'city': 'Stuttgart', 'size': '5 m³', 'price': 'ab 275,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '3 Tage', 'fee_after_max': '2,00 EUR/Tag', 'cancellation_fee': None, 'URL': 'https://shop.dinkel-gmbh.de/order/container'}
-2026-05-03 08:54:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
+2026-05-10 08:37:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
 {'source': 'Dinkel GmbH', 'title': '7 m³ Absetzmulde Holz A1-A3', 'type': 'Holz A1-A3', 'city': 'Stuttgart', 'size': '7 m³', 'price': 'ab 345,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '3 Tage', 'fee_after_max': '2,00 EUR/Tag', 'cancellation_fee': None, 'URL': 'https://shop.dinkel-gmbh.de/order/container'}
-2026-05-03 08:54:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
+2026-05-10 08:37:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
 {'source': 'Dinkel GmbH', 'title': '10 m³ Absetzmulde Holz A1-A3', 'type': 'Holz A1-A3', 'city': 'Stuttgart', 'size': '10 m³', 'price': 'ab 400,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '3 Tage', 'fee_after_max': '2,00 EUR/Tag', 'cancellation_fee': None, 'URL': 'https://shop.dinkel-gmbh.de/order/container'}
-2026-05-03 08:54:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
+2026-05-10 08:37:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
 {'source': 'Dinkel GmbH', 'title': '5 m³ Absetzmulde Sand', 'type': 'Sand', 'city': 'Stuttgart', 'size': '5 m³', 'price': 'ab 350,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '3 Tage', 'fee_after_max': '2,00 EUR/Tag', 'cancellation_fee': None, 'URL': 'https://shop.dinkel-gmbh.de/order/container'}
-2026-05-03 08:54:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
+2026-05-10 08:37:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
 {'source': 'Dinkel GmbH', 'title': '7 m³ Absetzmulde Sand', 'type': 'Sand', 'city': 'Stuttgart', 'size': '7 m³', 'price': 'ab 420,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '3 Tage', 'fee_after_max': '2,00 EUR/Tag', 'cancellation_fee': None, 'URL': 'https://shop.dinkel-gmbh.de/order/container'}
-2026-05-03 08:54:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
+2026-05-10 08:37:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
 {'source': 'Dinkel GmbH', 'title': '5 m³ Absetzmulde Sperrmüll', 'type': 'Sperrmüll', 'city': 'Stuttgart', 'size': '5 m³', 'price': 'ab 461,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '3 Tage', 'fee_after_max': '2,00 EUR/Tag', 'cancellation_fee': None, 'URL': 'https://shop.dinkel-gmbh.de/order/container'}
-2026-05-03 08:54:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
+2026-05-10 08:37:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
 {'source': 'Dinkel GmbH', 'title': '7 m³ Absetzmulde Sperrmüll', 'type': 'Sperrmüll', 'city': 'Stuttgart', 'size': '7 m³', 'price': 'ab 630,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '3 Tage', 'fee_after_max': '2,00 EUR/Tag', 'cancellation_fee': None, 'URL': 'https://shop.dinkel-gmbh.de/order/container'}
-2026-05-03 08:54:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
+2026-05-10 08:37:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.dinkel-gmbh.de/>
 {'source': 'Dinkel GmbH', 'title': '10 m³ Absetzmulde Sperrmüll', 'type': 'Sperrmüll', 'city': 'Stuttgart', 'size': '10 m³', 'price': 'ab 780,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '3 Tage', 'fee_after_max': '2,00 EUR/Tag', 'cancellation_fee': None, 'URL': 'https://shop.dinkel-gmbh.de/order/container'}
-2026-05-03 08:54:40 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 1 pages/min), scraped 19 items (at 19 items/min)
-2026-05-03 08:54:40 [scrapy.core.engine] INFO: Closing spider (finished)
-2026-05-03 08:54:40 [scrapy.extensions.feedexport] INFO: Stored json feed (19 items) in: ../data/dinkel-gmbh-products.json
-2026-05-03 08:54:40 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+2026-05-10 08:37:19 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 1 pages/min), scraped 19 items (at 19 items/min)
+2026-05-10 08:37:19 [scrapy.core.engine] INFO: Closing spider (finished)
+2026-05-10 08:37:19 [scrapy.extensions.feedexport] INFO: Stored json feed (19 items) in: ../data/dinkel-gmbh-products.json
+2026-05-10 08:37:19 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
 {'downloader/request_bytes': 286,
  'downloader/request_count': 1,
  'downloader/request_method_count/GET': 1,
- 'downloader/response_bytes': 7650,
+ 'downloader/response_bytes': 7649,
  'downloader/response_count': 1,
  'downloader/response_status_count/200': 1,
- 'elapsed_time_seconds': 79.097146,
+ 'elapsed_time_seconds': 81.178123,
  'feedexport/success_count/FileFeedStorage': 1,
  'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2026, 5, 3, 8, 54, 40, 970693, tzinfo=datetime.timezone.utc),
+ 'finish_time': datetime.datetime(2026, 5, 10, 8, 37, 19, 686524, tzinfo=datetime.timezone.utc),
  'httpcompression/response_bytes': 25759,
  'httpcompression/response_count': 1,
  'item_scraped_count': 19,
- 'items_per_minute': 14.430379746835444,
+ 'items_per_minute': 14.074074074074073,
  'log_count/DEBUG': 84,
  'log_count/INFO': 4,
- 'memusage/max': 91762688,
- 'memusage/startup': 83156992,
+ 'memusage/max': 91951104,
+ 'memusage/startup': 83124224,
  'response_received_count': 1,
- 'responses_per_minute': 0.759493670886076,
+ 'responses_per_minute': 0.7407407407407407,
  'scheduler/dequeued': 1,
  'scheduler/dequeued/memory': 1,
  'scheduler/enqueued': 1,
  'scheduler/enqueued/memory': 1,
- 'start_time': datetime.datetime(2026, 5, 3, 8, 53, 21, 873547, tzinfo=datetime.timezone.utc)}
-2026-05-03 08:54:40 [scrapy.core.engine] INFO: Spider closed (finished)
+ 'start_time': datetime.datetime(2026, 5, 10, 8, 35, 58, 508401, tzinfo=datetime.timezone.utc)}
+2026-05-10 08:37:19 [scrapy.core.engine] INFO: Spider closed (finished)
