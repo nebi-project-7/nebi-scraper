@@ -58,10 +58,13 @@ class FischerSohneSpider(scrapy.Spider):
         except Exception:
             pass
 
-    def start_requests(self):
+    async def start(self):
         """Bypass Scrapy's Downloader — die Zielseite blockiert Cloud-IPs auf TCP-Ebene.
         Wir routen Scrapy durch example.com (immer erreichbar), damit parse() aufgerufen wird.
-        Die eigentliche Seitenladung erfolgt in parse() über Selenium."""
+        Die eigentliche Seitenladung erfolgt in parse() über Selenium.
+
+        Scrapy 2.13+: start_requests() wurde durch die async-Methode start() ersetzt.
+        Da wir start() überschreiben, wird nie auf das nicht vorhandene start_urls zugegriffen."""
         yield scrapy.Request(
             url='https://example.com',
             callback=self.parse,
