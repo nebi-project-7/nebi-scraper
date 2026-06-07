@@ -1,5 +1,5 @@
-2026-05-31 08:43:10 [scrapy.utils.log] INFO: Scrapy 2.16.0 started (bot: nebi_spiders)
-2026-05-31 08:43:10 [scrapy.utils.log] INFO: Versions:
+2026-06-07 08:53:22 [scrapy.utils.log] INFO: Scrapy 2.16.0 started (bot: nebi_spiders)
+2026-06-07 08:53:22 [scrapy.utils.log] INFO: Versions:
 {'lxml': '6.1.1',
  'libxml2': '2.14.6',
  'cssselect': '1.4.0',
@@ -10,21 +10,21 @@
  'pyOpenSSL': '26.2.0 (OpenSSL 4.0.0 14 Apr 2026)',
  'cryptography': '48.0.0',
  'Platform': 'Linux-6.17.0-1015-azure-x86_64-with-glibc2.39'}
-2026-05-31 08:43:10 [scrapy.crawler] DEBUG: Using AsyncCrawlerProcess
-2026-05-31 08:43:10 [asyncio] DEBUG: Using selector: EpollSelector
-2026-05-31 08:43:11 [scrapy.addons] INFO: Enabled addons:
+2026-06-07 08:53:22 [scrapy.crawler] DEBUG: Using AsyncCrawlerProcess
+2026-06-07 08:53:22 [asyncio] DEBUG: Using selector: EpollSelector
+2026-06-07 08:53:23 [scrapy.addons] INFO: Enabled addons:
 []
-2026-05-31 08:43:11 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
-2026-05-31 08:43:11 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
-2026-05-31 08:43:11 [scrapy.extensions.telnet] INFO: Telnet Password: 7fdbdd1e94dd4e65
-2026-05-31 08:43:11 [scrapy.middleware] INFO: Enabled extensions:
+2026-06-07 08:53:23 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2026-06-07 08:53:23 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2026-06-07 08:53:23 [scrapy.extensions.telnet] INFO: Telnet Password: eaa499da9f080771
+2026-06-07 08:53:23 [scrapy.middleware] INFO: Enabled extensions:
 ['scrapy.extensions.corestats.CoreStats',
  'scrapy.extensions.logcount.LogCount',
  'scrapy.extensions.telnet.TelnetConsole',
  'scrapy.extensions.memusage.MemoryUsage',
  'scrapy.extensions.feedexport.FeedExporter',
  'scrapy.extensions.logstats.LogStats']
-2026-05-31 08:43:11 [scrapy.crawler] INFO: Overridden settings:
+2026-06-07 08:53:23 [scrapy.crawler] INFO: Overridden settings:
 {'BOT_NAME': 'nebi_spiders',
  'CONCURRENT_REQUESTS': 1,
  'DOWNLOAD_DELAY': 0.5,
@@ -38,7 +38,7 @@
                     'nebi_spiders.spiders.koeln'],
  'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, '
                'like Gecko) Chrome/141.0.0.0 Safari/537.36'}
-2026-05-31 08:43:11 [scrapy.middleware] INFO: Enabled downloader middlewares:
+2026-06-07 08:53:23 [scrapy.middleware] INFO: Enabled downloader middlewares:
 ['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
  'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
@@ -51,276 +51,276 @@
  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
  'scrapy.downloadermiddlewares.stats.DownloaderStats']
-2026-05-31 08:43:11 [scrapy.middleware] INFO: Enabled spider middlewares:
+2026-06-07 08:53:23 [scrapy.middleware] INFO: Enabled spider middlewares:
 ['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
  'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
  'scrapy.spidermiddlewares.referer.RefererMiddleware',
  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
  'scrapy.spidermiddlewares.depth.DepthMiddleware']
-2026-05-31 08:43:11 [scrapy.middleware] INFO: Enabled item pipelines:
+2026-06-07 08:53:23 [scrapy.middleware] INFO: Enabled item pipelines:
 []
-2026-05-31 08:43:11 [scrapy.core.engine] INFO: Spider opened
-2026-05-31 08:43:11 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2026-05-31 08:43:11 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
-2026-05-31 08:43:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://shop.albaclick.de/> (referer: None)
-2026-05-31 08:43:13 [albaclick-stuttgart] DEBUG: 
+2026-06-07 08:53:23 [scrapy.core.engine] INFO: Spider opened
+2026-06-07 08:53:23 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2026-06-07 08:53:23 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2026-06-07 08:53:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://shop.albaclick.de/> (referer: None)
+2026-06-07 08:53:23 [albaclick-stuttgart] DEBUG: 
 ================================================================================
-2026-05-31 08:43:13 [albaclick-stuttgart] DEBUG: Starte Alba Click Scraping für Stuttgart (PLZ: 70193)
-2026-05-31 08:43:13 [albaclick-stuttgart] DEBUG: ================================================================================
+2026-06-07 08:53:23 [albaclick-stuttgart] DEBUG: Starte Alba Click Scraping für Stuttgart (PLZ: 70193)
+2026-06-07 08:53:23 [albaclick-stuttgart] DEBUG: ================================================================================
 
-2026-05-31 08:43:21 [albaclick-stuttgart] DEBUG: 
+2026-06-07 08:53:30 [albaclick-stuttgart] DEBUG: 
 --- Verarbeite: pappe-papier ---
-2026-05-31 08:43:22 [albaclick-stuttgart] DEBUG: URL: https://shop.albaclick.de/pappe-papier/70193-Stuttgart/privat/produkt?postCode=70193
-2026-05-31 08:43:22 [albaclick-stuttgart] DEBUG: ✓ Cookie-Banner geschlossen
-2026-05-31 08:43:26 [albaclick-stuttgart] DEBUG:   ✓ 1.100 Liter: 1.397,42 EUR
-2026-05-31 08:43:26 [albaclick-stuttgart] DEBUG:   ✓ 5m³: 271,32 EUR
-2026-05-31 08:43:26 [albaclick-stuttgart] DEBUG:   ✓ 7m³: 274,18 EUR
-2026-05-31 08:43:26 [albaclick-stuttgart] DEBUG:   ✓ 10m³: 278,46 EUR
-2026-05-31 08:43:26 [albaclick-stuttgart] DEBUG:   Überspringe Abrollcontainer 10m³ (Absetzcontainer vorhanden)
-2026-05-31 08:43:26 [albaclick-stuttgart] DEBUG:   ✓ 20m³: 309,64 EUR
-2026-05-31 08:43:26 [albaclick-stuttgart] DEBUG:   ✓ 24m³: 314,16 EUR
-2026-05-31 08:43:26 [albaclick-stuttgart] DEBUG:   ✓ 36m³: 327,96 EUR
-2026-05-31 08:43:32 [albaclick-stuttgart] DEBUG: 
+2026-06-07 08:53:30 [albaclick-stuttgart] DEBUG: URL: https://shop.albaclick.de/pappe-papier/70193-Stuttgart/privat/produkt?postCode=70193
+2026-06-07 08:53:30 [albaclick-stuttgart] DEBUG: ✓ Cookie-Banner geschlossen
+2026-06-07 08:53:35 [albaclick-stuttgart] DEBUG:   ✓ 1.100 Liter: 1.397,42 EUR
+2026-06-07 08:53:35 [albaclick-stuttgart] DEBUG:   ✓ 5m³: 271,32 EUR
+2026-06-07 08:53:35 [albaclick-stuttgart] DEBUG:   ✓ 7m³: 274,18 EUR
+2026-06-07 08:53:35 [albaclick-stuttgart] DEBUG:   ✓ 10m³: 278,46 EUR
+2026-06-07 08:53:35 [albaclick-stuttgart] DEBUG:   Überspringe Abrollcontainer 10m³ (Absetzcontainer vorhanden)
+2026-06-07 08:53:35 [albaclick-stuttgart] DEBUG:   ✓ 20m³: 309,64 EUR
+2026-06-07 08:53:35 [albaclick-stuttgart] DEBUG:   ✓ 24m³: 314,16 EUR
+2026-06-07 08:53:35 [albaclick-stuttgart] DEBUG:   ✓ 36m³: 327,96 EUR
+2026-06-07 08:53:40 [albaclick-stuttgart] DEBUG: 
 --- Verarbeite: sperrmuell ---
-2026-05-31 08:43:32 [albaclick-stuttgart] DEBUG: URL: https://shop.albaclick.de/sperrmuell/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=SPER_10m3_as&availability=yes&publicContainerFootprint=PRIVATE
-2026-05-31 08:43:36 [albaclick-stuttgart] DEBUG:   ✓ 5m³: 477,31 EUR
-2026-05-31 08:43:36 [albaclick-stuttgart] DEBUG:   ✓ 7m³: 562,51 EUR
-2026-05-31 08:43:36 [albaclick-stuttgart] DEBUG:   ✓ 10m³: 690,44 EUR
-2026-05-31 08:43:36 [albaclick-stuttgart] DEBUG:   ✓ 20m³: 968,78 EUR
-2026-05-31 08:43:36 [albaclick-stuttgart] DEBUG:   ✓ 24m³: 1.105,15 EUR
-2026-05-31 08:43:36 [albaclick-stuttgart] DEBUG:   ✓ 36m³: 1.437,64 EUR
-2026-05-31 08:43:41 [albaclick-stuttgart] DEBUG: 
+2026-06-07 08:53:40 [albaclick-stuttgart] DEBUG: URL: https://shop.albaclick.de/sperrmuell/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=SPER_10m3_as&availability=yes&publicContainerFootprint=PRIVATE
+2026-06-07 08:53:44 [albaclick-stuttgart] DEBUG:   ✓ 5m³: 477,31 EUR
+2026-06-07 08:53:44 [albaclick-stuttgart] DEBUG:   ✓ 7m³: 562,51 EUR
+2026-06-07 08:53:44 [albaclick-stuttgart] DEBUG:   ✓ 10m³: 690,44 EUR
+2026-06-07 08:53:44 [albaclick-stuttgart] DEBUG:   ✓ 20m³: 968,78 EUR
+2026-06-07 08:53:44 [albaclick-stuttgart] DEBUG:   ✓ 24m³: 1.105,15 EUR
+2026-06-07 08:53:44 [albaclick-stuttgart] DEBUG:   ✓ 36m³: 1.437,64 EUR
+2026-06-07 08:53:49 [albaclick-stuttgart] DEBUG: 
 --- Verarbeite: baumischabfall ---
-2026-05-31 08:43:41 [albaclick-stuttgart] DEBUG: URL: https://shop.albaclick.de/baumischabfall/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=BAUM_10m3_as&availability=yes&publicContainerFootprint=PRIVATE
-2026-05-31 08:43:45 [albaclick-stuttgart] DEBUG:   ✓ 5m³: 881,19 EUR
-2026-05-31 08:43:45 [albaclick-stuttgart] DEBUG:   ✓ 7m³: 1.128,00 EUR
-2026-05-31 08:43:45 [albaclick-stuttgart] DEBUG:   ✓ 10m³: 1.374,81 EUR
-2026-05-31 08:43:45 [albaclick-stuttgart] DEBUG:   Überspringe Abrollcontainer 10m³ (Absetzcontainer vorhanden)
-2026-05-31 08:43:45 [albaclick-stuttgart] DEBUG:   ✓ 20m³: 2.014,55 EUR
-2026-05-31 08:43:45 [albaclick-stuttgart] DEBUG:   ✓ 24m³: 2.360,01 EUR
-2026-05-31 08:43:45 [albaclick-stuttgart] DEBUG:   ✓ 36m³: 3.396,62 EUR
-2026-05-31 08:43:50 [albaclick-stuttgart] DEBUG: 
+2026-06-07 08:53:49 [albaclick-stuttgart] DEBUG: URL: https://shop.albaclick.de/baumischabfall/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=BAUM_10m3_as&availability=yes&publicContainerFootprint=PRIVATE
+2026-06-07 08:53:52 [albaclick-stuttgart] DEBUG:   ✓ 5m³: 881,19 EUR
+2026-06-07 08:53:52 [albaclick-stuttgart] DEBUG:   ✓ 7m³: 1.128,00 EUR
+2026-06-07 08:53:52 [albaclick-stuttgart] DEBUG:   ✓ 10m³: 1.374,81 EUR
+2026-06-07 08:53:52 [albaclick-stuttgart] DEBUG:   Überspringe Abrollcontainer 10m³ (Absetzcontainer vorhanden)
+2026-06-07 08:53:52 [albaclick-stuttgart] DEBUG:   ✓ 20m³: 2.014,55 EUR
+2026-06-07 08:53:52 [albaclick-stuttgart] DEBUG:   ✓ 24m³: 2.360,01 EUR
+2026-06-07 08:53:52 [albaclick-stuttgart] DEBUG:   ✓ 36m³: 3.396,62 EUR
+2026-06-07 08:53:57 [albaclick-stuttgart] DEBUG: 
 --- Verarbeite: bauschutt ---
-2026-05-31 08:43:50 [albaclick-stuttgart] DEBUG: URL: https://shop.albaclick.de/bauschutt/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=BAUS_5m3_as&availability=yes&publicContainerFootprint=PRIVATE
-2026-05-31 08:43:54 [albaclick-stuttgart] DEBUG:   ✓ 5m³: 505,16 EUR
-2026-05-31 08:43:54 [albaclick-stuttgart] DEBUG:   ✓ 10m³: 768,74 EUR
-2026-05-31 08:43:59 [albaclick-stuttgart] DEBUG: 
+2026-06-07 08:53:57 [albaclick-stuttgart] DEBUG: URL: https://shop.albaclick.de/bauschutt/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=BAUS_5m3_as&availability=yes&publicContainerFootprint=PRIVATE
+2026-06-07 08:54:01 [albaclick-stuttgart] DEBUG:   ✓ 5m³: 505,16 EUR
+2026-06-07 08:54:01 [albaclick-stuttgart] DEBUG:   ✓ 10m³: 768,74 EUR
+2026-06-07 08:54:06 [albaclick-stuttgart] DEBUG: 
 --- Verarbeite: holz-A1-A3 ---
-2026-05-31 08:43:59 [albaclick-stuttgart] DEBUG: URL: https://shop.albaclick.de/holz-A1-A3/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=HA1-3_5m3_as&availability=yes&publicContainerFootprint=PRIVATE
-2026-05-31 08:44:03 [albaclick-stuttgart] DEBUG:   ✓ 5m³: 332,01 EUR
-2026-05-31 08:44:03 [albaclick-stuttgart] DEBUG:   ✓ 7m³: 359,14 EUR
-2026-05-31 08:44:03 [albaclick-stuttgart] DEBUG:   ✓ 10m³: 386,27 EUR
-2026-05-31 08:44:03 [albaclick-stuttgart] DEBUG:   Überspringe Abrollcontainer 10m³ (Absetzcontainer vorhanden)
-2026-05-31 08:44:03 [albaclick-stuttgart] DEBUG:   ✓ 20m³: 503,85 EUR
-2026-05-31 08:44:03 [albaclick-stuttgart] DEBUG:   ✓ 24m³: 547,28 EUR
-2026-05-31 08:44:03 [albaclick-stuttgart] DEBUG:   ✓ 36m³: 653,07 EUR
-2026-05-31 08:44:08 [albaclick-stuttgart] DEBUG: 
+2026-06-07 08:54:06 [albaclick-stuttgart] DEBUG: URL: https://shop.albaclick.de/holz-A1-A3/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=HA1-3_5m3_as&availability=yes&publicContainerFootprint=PRIVATE
+2026-06-07 08:54:10 [albaclick-stuttgart] DEBUG:   ✓ 5m³: 332,01 EUR
+2026-06-07 08:54:10 [albaclick-stuttgart] DEBUG:   ✓ 7m³: 359,14 EUR
+2026-06-07 08:54:10 [albaclick-stuttgart] DEBUG:   ✓ 10m³: 386,27 EUR
+2026-06-07 08:54:10 [albaclick-stuttgart] DEBUG:   Überspringe Abrollcontainer 10m³ (Absetzcontainer vorhanden)
+2026-06-07 08:54:10 [albaclick-stuttgart] DEBUG:   ✓ 20m³: 503,85 EUR
+2026-06-07 08:54:10 [albaclick-stuttgart] DEBUG:   ✓ 24m³: 547,28 EUR
+2026-06-07 08:54:10 [albaclick-stuttgart] DEBUG:   ✓ 36m³: 653,07 EUR
+2026-06-07 08:54:15 [albaclick-stuttgart] DEBUG: 
 --- Verarbeite: holz-A4 ---
-2026-05-31 08:44:08 [albaclick-stuttgart] DEBUG: URL: https://shop.albaclick.de/holz-A4/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=HA4_5m3_as&availability=yes&publicContainerFootprint=PRIVATE
-2026-05-31 08:44:12 [albaclick-stuttgart] DEBUG:   ✓ 5m³: 397,46 EUR
-2026-05-31 08:44:12 [albaclick-stuttgart] DEBUG:   ✓ 7m³: 2.014,55 EUR
-2026-05-31 08:44:12 [albaclick-stuttgart] DEBUG:   ✓ 10m³: 480,28 EUR
-2026-05-31 08:44:12 [albaclick-stuttgart] DEBUG:   Überspringe Abrollcontainer 10m³ (Absetzcontainer vorhanden)
-2026-05-31 08:44:12 [albaclick-stuttgart] DEBUG:   ✓ 20m³: 647,84 EUR
-2026-05-31 08:44:12 [albaclick-stuttgart] DEBUG:   ✓ 24m³: 881,19 EUR
-2026-05-31 08:44:12 [albaclick-stuttgart] DEBUG:   ✓ 36m³: 875,60 EUR
-2026-05-31 08:44:17 [albaclick-stuttgart] DEBUG: 
+2026-06-07 08:54:15 [albaclick-stuttgart] DEBUG: URL: https://shop.albaclick.de/holz-A4/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=HA4_5m3_as&availability=yes&publicContainerFootprint=PRIVATE
+2026-06-07 08:54:19 [albaclick-stuttgart] DEBUG:   ✓ 5m³: 397,46 EUR
+2026-06-07 08:54:19 [albaclick-stuttgart] DEBUG:   ✓ 7m³: 2.014,55 EUR
+2026-06-07 08:54:19 [albaclick-stuttgart] DEBUG:   ✓ 10m³: 480,28 EUR
+2026-06-07 08:54:19 [albaclick-stuttgart] DEBUG:   Überspringe Abrollcontainer 10m³ (Absetzcontainer vorhanden)
+2026-06-07 08:54:19 [albaclick-stuttgart] DEBUG:   ✓ 20m³: 647,84 EUR
+2026-06-07 08:54:19 [albaclick-stuttgart] DEBUG:   ✓ 24m³: 881,19 EUR
+2026-06-07 08:54:19 [albaclick-stuttgart] DEBUG:   ✓ 36m³: 875,60 EUR
+2026-06-07 08:54:23 [albaclick-stuttgart] DEBUG: 
 --- Verarbeite: gruenschnitt-gartenabfaelle ---
-2026-05-31 08:44:17 [albaclick-stuttgart] DEBUG: URL: https://shop.albaclick.de/gruenschnitt-gartenabfaelle/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=GART_5m3_as&availability=yes&publicContainerFootprint=PRIVATE
-2026-05-31 08:44:20 [albaclick-stuttgart] DEBUG:   ✓ 5m³: 381,99 EUR
-2026-05-31 08:44:20 [albaclick-stuttgart] DEBUG:   ✓ 7m³: 429,11 EUR
-2026-05-31 08:44:20 [albaclick-stuttgart] DEBUG:   ✓ 10m³: 499,80 EUR
-2026-05-31 08:44:20 [albaclick-stuttgart] DEBUG:   Überspringe Abrollcontainer 10m³ (Absetzcontainer vorhanden)
-2026-05-31 08:44:20 [albaclick-stuttgart] DEBUG:   ✓ 20m³: 2.360,01 EUR
-2026-05-31 08:44:20 [albaclick-stuttgart] DEBUG:   ✓ 24m³: 1.128,00 EUR
-2026-05-31 08:44:20 [albaclick-stuttgart] DEBUG:   ✓ 36m³: 922,96 EUR
-2026-05-31 08:44:26 [albaclick-stuttgart] DEBUG: 
+2026-06-07 08:54:23 [albaclick-stuttgart] DEBUG: URL: https://shop.albaclick.de/gruenschnitt-gartenabfaelle/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=GART_5m3_as&availability=yes&publicContainerFootprint=PRIVATE
+2026-06-07 08:54:27 [albaclick-stuttgart] DEBUG:   ✓ 5m³: 381,99 EUR
+2026-06-07 08:54:27 [albaclick-stuttgart] DEBUG:   ✓ 7m³: 429,11 EUR
+2026-06-07 08:54:27 [albaclick-stuttgart] DEBUG:   ✓ 10m³: 499,80 EUR
+2026-06-07 08:54:27 [albaclick-stuttgart] DEBUG:   Überspringe Abrollcontainer 10m³ (Absetzcontainer vorhanden)
+2026-06-07 08:54:27 [albaclick-stuttgart] DEBUG:   ✓ 20m³: 2.360,01 EUR
+2026-06-07 08:54:27 [albaclick-stuttgart] DEBUG:   ✓ 24m³: 1.128,00 EUR
+2026-06-07 08:54:27 [albaclick-stuttgart] DEBUG:   ✓ 36m³: 922,96 EUR
+2026-06-07 08:54:32 [albaclick-stuttgart] DEBUG: 
 --- Verarbeite: kunststoff-verpackungen ---
-2026-05-31 08:44:26 [albaclick-stuttgart] DEBUG: URL: https://shop.albaclick.de/kunststoff-verpackungen/70193-Stuttgart/privat/produkt?postCode=70193
-2026-05-31 08:44:30 [albaclick-stuttgart] DEBUG:   ✓ 1.100 Liter: 1.128,00 EUR
-2026-05-31 08:44:30 [albaclick-stuttgart] DEBUG:   ✓ 5m³: 354,62 EUR
-2026-05-31 08:44:30 [albaclick-stuttgart] DEBUG:   ✓ 7m³: 1.374,81 EUR
-2026-05-31 08:44:30 [albaclick-stuttgart] DEBUG:   ✓ 10m³: 444,94 EUR
-2026-05-31 08:44:30 [albaclick-stuttgart] DEBUG:   ✓ 20m³: 575,96 EUR
-2026-05-31 08:44:30 [albaclick-stuttgart] DEBUG:   ✓ 24m³: 633,79 EUR
-2026-05-31 08:44:30 [albaclick-stuttgart] DEBUG:   ✓ 36m³: 774,81 EUR
-2026-05-31 08:44:35 [albaclick-stuttgart] DEBUG: 
+2026-06-07 08:54:32 [albaclick-stuttgart] DEBUG: URL: https://shop.albaclick.de/kunststoff-verpackungen/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=GEMI_10m3_as&availability=yes&publicContainerFootprint=PRIVATE
+2026-06-07 08:54:36 [albaclick-stuttgart] DEBUG:   ✓ 1.100 Liter: 1.128,00 EUR
+2026-06-07 08:54:36 [albaclick-stuttgart] DEBUG:   ✓ 5m³: 354,62 EUR
+2026-06-07 08:54:36 [albaclick-stuttgart] DEBUG:   ✓ 7m³: 1.374,81 EUR
+2026-06-07 08:54:36 [albaclick-stuttgart] DEBUG:   ✓ 10m³: 444,94 EUR
+2026-06-07 08:54:36 [albaclick-stuttgart] DEBUG:   ✓ 20m³: 575,96 EUR
+2026-06-07 08:54:36 [albaclick-stuttgart] DEBUG:   ✓ 24m³: 633,79 EUR
+2026-06-07 08:54:36 [albaclick-stuttgart] DEBUG:   ✓ 36m³: 774,81 EUR
+2026-06-07 08:54:41 [albaclick-stuttgart] DEBUG: 
 --- Verarbeite: elektro-kleingeraete ---
-2026-05-31 08:44:35 [albaclick-stuttgart] DEBUG: URL: https://shop.albaclick.de/kein-service?fraction=true&show=info&time1780217071804=
-2026-05-31 08:44:35 [albaclick-stuttgart] DEBUG:   Nicht verfügbar für Stuttgart
-2026-05-31 08:44:40 [albaclick-stuttgart] DEBUG: 
+2026-06-07 08:54:41 [albaclick-stuttgart] DEBUG: URL: https://shop.albaclick.de/kein-service?fraction=true&show=info&time1780822477688=
+2026-06-07 08:54:41 [albaclick-stuttgart] DEBUG:   Nicht verfügbar für Stuttgart
+2026-06-07 08:54:46 [albaclick-stuttgart] DEBUG: 
 --- Verarbeite: elektro-grossgeraete ---
-2026-05-31 08:44:40 [albaclick-stuttgart] DEBUG: URL: https://shop.albaclick.de/kein-service?fraction=true&show=info&time1780217076605=
-2026-05-31 08:44:40 [albaclick-stuttgart] DEBUG:   Nicht verfügbar für Stuttgart
-2026-05-31 08:44:45 [albaclick-stuttgart] DEBUG: 
+2026-06-07 08:54:46 [albaclick-stuttgart] DEBUG: URL: https://shop.albaclick.de/kein-service?fraction=true&show=info&time1780822482404=
+2026-06-07 08:54:46 [albaclick-stuttgart] DEBUG:   Nicht verfügbar für Stuttgart
+2026-06-07 08:54:51 [albaclick-stuttgart] DEBUG: 
 --- Verarbeite: mischabfall-gewerbeabfall ---
-2026-05-31 08:44:45 [albaclick-stuttgart] DEBUG: URL: https://shop.albaclick.de/mischabfall-gewerbeabfall/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=GEWE_10m3_as&availability=yes&publicContainerFootprint=PRIVATE
-2026-05-31 08:44:49 [albaclick-stuttgart] DEBUG:   Überspringe Umleerbehälter 1.100 Liter (kein Preis)
-2026-05-31 08:44:49 [albaclick-stuttgart] DEBUG:   ✓ 5m³: 471,24 EUR
-2026-05-31 08:44:49 [albaclick-stuttgart] DEBUG:   ✓ 7m³: 554,06 EUR
-2026-05-31 08:44:49 [albaclick-stuttgart] DEBUG:   ✓ 10m³: 678,30 EUR
-2026-05-31 08:44:49 [albaclick-stuttgart] DEBUG:   Überspringe Abrollcontainer 10m³ (Absetzcontainer vorhanden)
-2026-05-31 08:44:49 [albaclick-stuttgart] DEBUG:   ✓ 20m³: 949,38 EUR
-2026-05-31 08:44:49 [albaclick-stuttgart] DEBUG:   ✓ 24m³: 1.081,95 EUR
-2026-05-31 08:44:49 [albaclick-stuttgart] DEBUG:   ✓ 36m³: 1.404,91 EUR
-2026-05-31 08:44:54 [albaclick-stuttgart] DEBUG: 
+2026-06-07 08:54:51 [albaclick-stuttgart] DEBUG: URL: https://shop.albaclick.de/mischabfall-gewerbeabfall/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=GEWE_10m3_as&availability=yes&publicContainerFootprint=PRIVATE
+2026-06-07 08:54:54 [albaclick-stuttgart] DEBUG:   Überspringe Umleerbehälter 1.100 Liter (kein Preis)
+2026-06-07 08:54:54 [albaclick-stuttgart] DEBUG:   ✓ 5m³: 471,24 EUR
+2026-06-07 08:54:54 [albaclick-stuttgart] DEBUG:   ✓ 7m³: 554,06 EUR
+2026-06-07 08:54:54 [albaclick-stuttgart] DEBUG:   ✓ 10m³: 678,30 EUR
+2026-06-07 08:54:54 [albaclick-stuttgart] DEBUG:   Überspringe Abrollcontainer 10m³ (Absetzcontainer vorhanden)
+2026-06-07 08:54:54 [albaclick-stuttgart] DEBUG:   ✓ 20m³: 949,38 EUR
+2026-06-07 08:54:54 [albaclick-stuttgart] DEBUG:   ✓ 24m³: 1.081,95 EUR
+2026-06-07 08:54:54 [albaclick-stuttgart] DEBUG:   ✓ 36m³: 1.404,91 EUR
+2026-06-07 08:55:00 [albaclick-stuttgart] DEBUG: 
 --- Verarbeite: dachpappe ---
-2026-05-31 08:44:54 [albaclick-stuttgart] DEBUG: URL: https://shop.albaclick.de/dachpappe/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=DACH_10m3_ar&availability=yes&publicContainerFootprint=PRIVATE
-2026-05-31 08:44:58 [albaclick-stuttgart] DEBUG:   ✓ 5m³: 1.061,48 EUR
-2026-05-31 08:44:58 [albaclick-stuttgart] DEBUG:   ✓ 7m³: 1.368,50 EUR
-2026-05-31 08:44:58 [albaclick-stuttgart] DEBUG:   ✓ 10m³: 1.829,03 EUR
-2026-05-31 08:44:58 [albaclick-stuttgart] DEBUG:   Überspringe Abrollcontainer 10m³ (Absetzcontainer vorhanden)
-2026-05-31 08:44:58 [albaclick-stuttgart] DEBUG:   ✓ 20m³: 3.079,72 EUR
-2026-05-31 08:44:58 [albaclick-stuttgart] DEBUG:   ✓ 24m³: 3.632,36 EUR
-2026-05-31 08:44:58 [albaclick-stuttgart] DEBUG:   ✓ 36m³: 2.360,01 EUR
-2026-05-31 08:44:58 [albaclick-stuttgart] DEBUG: 
+2026-06-07 08:55:00 [albaclick-stuttgart] DEBUG: URL: https://shop.albaclick.de/dachpappe/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=DACH_10m3_ar&availability=yes&publicContainerFootprint=PRIVATE
+2026-06-07 08:55:03 [albaclick-stuttgart] DEBUG:   ✓ 5m³: 1.061,48 EUR
+2026-06-07 08:55:03 [albaclick-stuttgart] DEBUG:   ✓ 7m³: 1.368,50 EUR
+2026-06-07 08:55:03 [albaclick-stuttgart] DEBUG:   ✓ 10m³: 1.829,03 EUR
+2026-06-07 08:55:03 [albaclick-stuttgart] DEBUG:   Überspringe Abrollcontainer 10m³ (Absetzcontainer vorhanden)
+2026-06-07 08:55:03 [albaclick-stuttgart] DEBUG:   ✓ 20m³: 3.079,72 EUR
+2026-06-07 08:55:03 [albaclick-stuttgart] DEBUG:   ✓ 24m³: 3.632,36 EUR
+2026-06-07 08:55:03 [albaclick-stuttgart] DEBUG:   ✓ 36m³: 2.360,01 EUR
+2026-06-07 08:55:03 [albaclick-stuttgart] DEBUG: 
 ================================================================================
-2026-05-31 08:44:58 [albaclick-stuttgart] DEBUG: Gesamt gescrapt: 58 Produkte
-2026-05-31 08:44:58 [albaclick-stuttgart] DEBUG: ================================================================================
+2026-06-07 08:55:03 [albaclick-stuttgart] DEBUG: Gesamt gescrapt: 58 Produkte
+2026-06-07 08:55:03 [albaclick-stuttgart] DEBUG: ================================================================================
 
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Umleerbehälter 1.100 Liter', 'type': 'Papier/Pappe', 'city': 'Stuttgart', 'size': '1.100 Liter', 'price': '1.397,42', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/pappe-papier/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=PAPP_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Absetzcontainer 5m³', 'type': 'Papier/Pappe', 'city': 'Stuttgart', 'size': '5m³', 'price': '271,32', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/pappe-papier/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=PAPP_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Absetzcontainer 7m³', 'type': 'Papier/Pappe', 'city': 'Stuttgart', 'size': '7m³', 'price': '274,18', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/pappe-papier/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=PAPP_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Absetzcontainer 10m³', 'type': 'Papier/Pappe', 'city': 'Stuttgart', 'size': '10m³', 'price': '278,46', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/pappe-papier/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=PAPP_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Abrollcontainer 20m³', 'type': 'Papier/Pappe', 'city': 'Stuttgart', 'size': '20m³', 'price': '309,64', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/pappe-papier/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=PAPP_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Abrollcontainer 24m³', 'type': 'Papier/Pappe', 'city': 'Stuttgart', 'size': '24m³', 'price': '314,16', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/pappe-papier/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=PAPP_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Abrollcontainer 36m³', 'type': 'Papier/Pappe', 'city': 'Stuttgart', 'size': '36m³', 'price': '327,96', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/pappe-papier/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=PAPP_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Absetzcontainer 5m³', 'type': 'Sperrmüll', 'city': 'Stuttgart', 'size': '5m³', 'price': '477,31', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/sperrmuell/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=SPER_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Absetzcontainer 7m³', 'type': 'Sperrmüll', 'city': 'Stuttgart', 'size': '7m³', 'price': '562,51', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/sperrmuell/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=SPER_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Absetzcontainer 10m³', 'type': 'Sperrmüll', 'city': 'Stuttgart', 'size': '10m³', 'price': '690,44', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/sperrmuell/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=SPER_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Abrollcontainer 20m³', 'type': 'Sperrmüll', 'city': 'Stuttgart', 'size': '20m³', 'price': '968,78', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/sperrmuell/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=SPER_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Abrollcontainer 24m³', 'type': 'Sperrmüll', 'city': 'Stuttgart', 'size': '24m³', 'price': '1.105,15', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/sperrmuell/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=SPER_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Abrollcontainer 36m³', 'type': 'Sperrmüll', 'city': 'Stuttgart', 'size': '36m³', 'price': '1.437,64', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/sperrmuell/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=SPER_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Absetzcontainer 5m³', 'type': 'Baumischabfall', 'city': 'Stuttgart', 'size': '5m³', 'price': '881,19', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/baumischabfall/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=BAUM_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Absetzcontainer 7m³', 'type': 'Baumischabfall', 'city': 'Stuttgart', 'size': '7m³', 'price': '1.128,00', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/baumischabfall/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=BAUM_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Absetzcontainer 10m³', 'type': 'Baumischabfall', 'city': 'Stuttgart', 'size': '10m³', 'price': '1.374,81', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/baumischabfall/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=BAUM_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Abrollcontainer 20m³', 'type': 'Baumischabfall', 'city': 'Stuttgart', 'size': '20m³', 'price': '2.014,55', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/baumischabfall/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=BAUM_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Abrollcontainer 24m³', 'type': 'Baumischabfall', 'city': 'Stuttgart', 'size': '24m³', 'price': '2.360,01', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/baumischabfall/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=BAUM_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Abrollcontainer 36m³', 'type': 'Baumischabfall', 'city': 'Stuttgart', 'size': '36m³', 'price': '3.396,62', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/baumischabfall/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=BAUM_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Absetzcontainer 5m³', 'type': 'Bauschutt', 'city': 'Stuttgart', 'size': '5m³', 'price': '505,16', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/bauschutt/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=BAUS_5m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Abrollcontainer 10m³', 'type': 'Bauschutt', 'city': 'Stuttgart', 'size': '10m³', 'price': '768,74', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/bauschutt/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=BAUS_5m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Absetzcontainer 5m³', 'type': 'Holz A1-A3', 'city': 'Stuttgart', 'size': '5m³', 'price': '332,01', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/holz-A1-A3/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=HA1-3_5m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Absetzcontainer 7m³', 'type': 'Holz A1-A3', 'city': 'Stuttgart', 'size': '7m³', 'price': '359,14', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/holz-A1-A3/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=HA1-3_5m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Absetzcontainer 10m³', 'type': 'Holz A1-A3', 'city': 'Stuttgart', 'size': '10m³', 'price': '386,27', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/holz-A1-A3/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=HA1-3_5m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Abrollcontainer 20m³', 'type': 'Holz A1-A3', 'city': 'Stuttgart', 'size': '20m³', 'price': '503,85', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/holz-A1-A3/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=HA1-3_5m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Abrollcontainer 24m³', 'type': 'Holz A1-A3', 'city': 'Stuttgart', 'size': '24m³', 'price': '547,28', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/holz-A1-A3/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=HA1-3_5m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Abrollcontainer 36m³', 'type': 'Holz A1-A3', 'city': 'Stuttgart', 'size': '36m³', 'price': '653,07', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/holz-A1-A3/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=HA1-3_5m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Absetzcontainer 5m³', 'type': 'Holz A4', 'city': 'Stuttgart', 'size': '5m³', 'price': '397,46', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/holz-A4/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=HA4_5m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Absetzcontainer 7m³', 'type': 'Holz A4', 'city': 'Stuttgart', 'size': '7m³', 'price': '2.014,55', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/holz-A4/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=HA4_5m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Absetzcontainer 10m³', 'type': 'Holz A4', 'city': 'Stuttgart', 'size': '10m³', 'price': '480,28', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/holz-A4/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=HA4_5m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Abrollcontainer 20m³', 'type': 'Holz A4', 'city': 'Stuttgart', 'size': '20m³', 'price': '647,84', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/holz-A4/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=HA4_5m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Abrollcontainer 24m³', 'type': 'Holz A4', 'city': 'Stuttgart', 'size': '24m³', 'price': '881,19', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/holz-A4/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=HA4_5m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Abrollcontainer 36m³', 'type': 'Holz A4', 'city': 'Stuttgart', 'size': '36m³', 'price': '875,60', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/holz-A4/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=HA4_5m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Absetzcontainer 5m³', 'type': 'Gartenabfälle', 'city': 'Stuttgart', 'size': '5m³', 'price': '381,99', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/gruenschnitt-gartenabfaelle/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=GART_5m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Absetzcontainer 7m³', 'type': 'Gartenabfälle', 'city': 'Stuttgart', 'size': '7m³', 'price': '429,11', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/gruenschnitt-gartenabfaelle/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=GART_5m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Absetzcontainer 10m³', 'type': 'Gartenabfälle', 'city': 'Stuttgart', 'size': '10m³', 'price': '499,80', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/gruenschnitt-gartenabfaelle/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=GART_5m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Abrollcontainer 20m³', 'type': 'Gartenabfälle', 'city': 'Stuttgart', 'size': '20m³', 'price': '2.360,01', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/gruenschnitt-gartenabfaelle/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=GART_5m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Abrollcontainer 24m³', 'type': 'Gartenabfälle', 'city': 'Stuttgart', 'size': '24m³', 'price': '1.128,00', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/gruenschnitt-gartenabfaelle/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=GART_5m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Abrollcontainer 36m³', 'type': 'Gartenabfälle', 'city': 'Stuttgart', 'size': '36m³', 'price': '922,96', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/gruenschnitt-gartenabfaelle/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=GART_5m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Umleerbehälter 1.100 Liter', 'type': 'Kunststoff | Verpackungen', 'city': 'Stuttgart', 'size': '1.100 Liter', 'price': '1.128,00', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/kunststoff-verpackungen/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=GEMI_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Absetzcontainer 5m³', 'type': 'Kunststoff | Verpackungen', 'city': 'Stuttgart', 'size': '5m³', 'price': '354,62', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/kunststoff-verpackungen/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=GEMI_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Absetzcontainer 7m³', 'type': 'Kunststoff | Verpackungen', 'city': 'Stuttgart', 'size': '7m³', 'price': '1.374,81', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/kunststoff-verpackungen/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=GEMI_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Absetzcontainer 10m³', 'type': 'Kunststoff | Verpackungen', 'city': 'Stuttgart', 'size': '10m³', 'price': '444,94', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/kunststoff-verpackungen/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=GEMI_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Abrollcontainer 20m³', 'type': 'Kunststoff | Verpackungen', 'city': 'Stuttgart', 'size': '20m³', 'price': '575,96', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/kunststoff-verpackungen/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=GEMI_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Abrollcontainer 24m³', 'type': 'Kunststoff | Verpackungen', 'city': 'Stuttgart', 'size': '24m³', 'price': '633,79', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/kunststoff-verpackungen/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=GEMI_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Abrollcontainer 36m³', 'type': 'Kunststoff | Verpackungen', 'city': 'Stuttgart', 'size': '36m³', 'price': '774,81', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/kunststoff-verpackungen/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=GEMI_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Absetzcontainer 5m³', 'type': 'Gewerbeabfälle', 'city': 'Stuttgart', 'size': '5m³', 'price': '471,24', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/mischabfall-gewerbeabfall/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=GEWE_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Absetzcontainer 7m³', 'type': 'Gewerbeabfälle', 'city': 'Stuttgart', 'size': '7m³', 'price': '554,06', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/mischabfall-gewerbeabfall/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=GEWE_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Absetzcontainer 10m³', 'type': 'Gewerbeabfälle', 'city': 'Stuttgart', 'size': '10m³', 'price': '678,30', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/mischabfall-gewerbeabfall/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=GEWE_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Abrollcontainer 20m³', 'type': 'Gewerbeabfälle', 'city': 'Stuttgart', 'size': '20m³', 'price': '949,38', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/mischabfall-gewerbeabfall/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=GEWE_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Abrollcontainer 24m³', 'type': 'Gewerbeabfälle', 'city': 'Stuttgart', 'size': '24m³', 'price': '1.081,95', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/mischabfall-gewerbeabfall/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=GEWE_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Abrollcontainer 36m³', 'type': 'Gewerbeabfälle', 'city': 'Stuttgart', 'size': '36m³', 'price': '1.404,91', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/mischabfall-gewerbeabfall/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=GEWE_10m3_as&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Absetzcontainer 5m³', 'type': 'Dachpappe', 'city': 'Stuttgart', 'size': '5m³', 'price': '1.061,48', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/dachpappe/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=DACH_10m3_ar&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Absetzcontainer 7m³', 'type': 'Dachpappe', 'city': 'Stuttgart', 'size': '7m³', 'price': '1.368,50', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/dachpappe/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=DACH_10m3_ar&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Absetzcontainer 10m³', 'type': 'Dachpappe', 'city': 'Stuttgart', 'size': '10m³', 'price': '1.829,03', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/dachpappe/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=DACH_10m3_ar&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Abrollcontainer 20m³', 'type': 'Dachpappe', 'city': 'Stuttgart', 'size': '20m³', 'price': '3.079,72', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/dachpappe/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=DACH_10m3_ar&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Abrollcontainer 24m³', 'type': 'Dachpappe', 'city': 'Stuttgart', 'size': '24m³', 'price': '3.632,36', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/dachpappe/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=DACH_10m3_ar&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
+2026-06-07 08:55:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://shop.albaclick.de/>
 {'source': 'Alba Click Stuttgart', 'title': 'Abrollcontainer 36m³', 'type': 'Dachpappe', 'city': 'Stuttgart', 'size': '36m³', 'price': '2.360,01', 'lid_price': '17,85', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '7 Tage', 'fee_after_max': None, 'cancellation_fee': '151,00', 'URL': 'https://shop.albaclick.de/dachpappe/70193-Stuttgart/privat/produkt?postCode=70193&turnus=ONCE&variant=DACH_10m3_ar&availability=yes&publicContainerFootprint=PRIVATE'}
-2026-05-31 08:44:58 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 1 pages/min), scraped 58 items (at 58 items/min)
-2026-05-31 08:44:58 [scrapy.core.engine] INFO: Closing spider (finished)
-2026-05-31 08:44:58 [scrapy.extensions.feedexport] INFO: Stored json feed (58 items) in: ../data/albaclick-stuttgart-products.json
-2026-05-31 08:44:58 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+2026-06-07 08:55:03 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 1 pages/min), scraped 58 items (at 58 items/min)
+2026-06-07 08:55:03 [scrapy.core.engine] INFO: Closing spider (finished)
+2026-06-07 08:55:04 [scrapy.extensions.feedexport] INFO: Stored json feed (58 items) in: ../data/albaclick-stuttgart-products.json
+2026-06-07 08:55:04 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
 {'downloader/request_bytes': 284,
  'downloader/request_count': 1,
  'downloader/request_method_count/GET': 1,
  'downloader/response_bytes': 41193,
  'downloader/response_count': 1,
  'downloader/response_status_count/200': 1,
- 'elapsed_time_seconds': 106.88260532999999,
+ 'elapsed_time_seconds': 100.909978389,
  'feedexport/success_count/FileFeedStorage': 1,
  'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2026, 5, 31, 8, 44, 58, 148658, tzinfo=datetime.timezone.utc),
+ 'finish_time': datetime.datetime(2026, 6, 7, 8, 55, 4, 46389, tzinfo=datetime.timezone.utc),
  'httpcompression/response_bytes': 241848,
  'httpcompression/response_count': 1,
  'item_scraped_count': 58,
- 'items_per_minute': 32.83018867924528,
+ 'items_per_minute': 34.8,
  'log_count/DEBUG': 158,
  'log_count/INFO': 4,
- 'memusage/max': 112140288,
- 'memusage/startup': 80846848,
+ 'memusage/max': 112828416,
+ 'memusage/startup': 80781312,
  'response_received_count': 1,
- 'responses_per_minute': 0.5660377358490566,
+ 'responses_per_minute': 0.6,
  'scheduler/dequeued': 1,
  'scheduler/dequeued/memory': 1,
  'scheduler/enqueued': 1,
  'scheduler/enqueued/memory': 1,
- 'start_time': datetime.datetime(2026, 5, 31, 8, 43, 11, 266044, tzinfo=datetime.timezone.utc)}
-2026-05-31 08:44:58 [scrapy.core.engine] INFO: Spider closed (finished)
+ 'start_time': datetime.datetime(2026, 6, 7, 8, 53, 23, 136407, tzinfo=datetime.timezone.utc)}
+2026-06-07 08:55:04 [scrapy.core.engine] INFO: Spider closed (finished)
