@@ -1,32 +1,32 @@
-2026-06-21 10:47:13 [scrapy.utils.log] INFO: Scrapy 2.16.0 started (bot: nebi_spiders)
-2026-06-21 10:47:13 [scrapy.utils.log] INFO: Versions:
+2026-06-28 09:50:35 [scrapy.utils.log] INFO: Scrapy 2.16.0 started (bot: nebi_spiders)
+2026-06-28 09:50:35 [scrapy.utils.log] INFO: Versions:
 {'lxml': '6.1.1',
  'libxml2': '2.14.6',
  'cssselect': '1.4.0',
  'parsel': '1.11.0',
  'w3lib': '2.4.1',
  'Twisted': '26.4.0',
- 'Python': '3.11.15 (main, Mar  3 2026, 16:10:12) [GCC 13.3.0]',
+ 'Python': '3.11.15 (main, Jun 16 2026, 21:41:52) [GCC 13.3.0]',
  'pyOpenSSL': '26.3.0 (OpenSSL 4.0.1 9 Jun 2026)',
  'cryptography': '49.0.0',
  'Platform': 'Linux-6.17.0-1018-azure-x86_64-with-glibc2.39'}
-2026-06-21 10:47:13 [scrapy.crawler] DEBUG: Using AsyncCrawlerProcess
-2026-06-21 10:47:13 [asyncio] DEBUG: Using selector: EpollSelector
-2026-06-21 10:47:13 [WDM] INFO: ====== WebDriver manager ======
-2026-06-21 10:47:13 [WDM] INFO: Driver [/home/runner/.wdm/drivers/chromedriver/linux64/149.0.7827.155/chromedriver-linux64/chromedriver] found in cache by browser version
-2026-06-21 10:47:13 [scrapy.addons] INFO: Enabled addons:
+2026-06-28 09:50:35 [scrapy.crawler] DEBUG: Using AsyncCrawlerProcess
+2026-06-28 09:50:35 [asyncio] DEBUG: Using selector: EpollSelector
+2026-06-28 09:50:35 [WDM] INFO: ====== WebDriver manager ======
+2026-06-28 09:50:35 [WDM] INFO: Driver [/home/runner/.wdm/drivers/chromedriver/linux64/149.0.7827.155/chromedriver-linux64/chromedriver] found in cache by browser version
+2026-06-28 09:50:35 [scrapy.addons] INFO: Enabled addons:
 []
-2026-06-21 10:47:13 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
-2026-06-21 10:47:13 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
-2026-06-21 10:47:13 [scrapy.extensions.telnet] INFO: Telnet Password: a21adf751462e444
-2026-06-21 10:47:13 [scrapy.middleware] INFO: Enabled extensions:
+2026-06-28 09:50:35 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2026-06-28 09:50:35 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2026-06-28 09:50:35 [scrapy.extensions.telnet] INFO: Telnet Password: ed00bb71ee06203e
+2026-06-28 09:50:35 [scrapy.middleware] INFO: Enabled extensions:
 ['scrapy.extensions.corestats.CoreStats',
  'scrapy.extensions.logcount.LogCount',
  'scrapy.extensions.telnet.TelnetConsole',
  'scrapy.extensions.memusage.MemoryUsage',
  'scrapy.extensions.feedexport.FeedExporter',
  'scrapy.extensions.logstats.LogStats']
-2026-06-21 10:47:13 [scrapy.crawler] INFO: Overridden settings:
+2026-06-28 09:50:35 [scrapy.crawler] INFO: Overridden settings:
 {'BOT_NAME': 'nebi_spiders',
  'CONCURRENT_REQUESTS': 1,
  'DOWNLOAD_DELAY': 0.5,
@@ -40,7 +40,7 @@
                     'nebi_spiders.spiders.stuttgart'],
  'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, '
                'like Gecko) Chrome/141.0.0.0 Safari/537.36'}
-2026-06-21 10:47:14 [scrapy.middleware] INFO: Enabled downloader middlewares:
+2026-06-28 09:50:36 [scrapy.middleware] INFO: Enabled downloader middlewares:
 ['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
  'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
@@ -53,143 +53,143 @@
  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
  'scrapy.downloadermiddlewares.stats.DownloaderStats']
-2026-06-21 10:47:14 [scrapy.middleware] INFO: Enabled spider middlewares:
+2026-06-28 09:50:36 [scrapy.middleware] INFO: Enabled spider middlewares:
 ['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
  'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
  'scrapy.spidermiddlewares.referer.RefererMiddleware',
  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
  'scrapy.spidermiddlewares.depth.DepthMiddleware']
-2026-06-21 10:47:14 [scrapy.middleware] INFO: Enabled item pipelines:
+2026-06-28 09:50:36 [scrapy.middleware] INFO: Enabled item pipelines:
 []
-2026-06-21 10:47:14 [scrapy.core.engine] INFO: Spider opened
-2026-06-21 10:47:14 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2026-06-21 10:47:14 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
-2026-06-21 10:47:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.containerdienst-kemper.de/container-online-bestellen/> (referer: None)
-2026-06-21 10:47:18 [kemper] DEBUG: 
+2026-06-28 09:50:36 [scrapy.core.engine] INFO: Spider opened
+2026-06-28 09:50:36 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2026-06-28 09:50:36 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2026-06-28 09:50:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.containerdienst-kemper.de/container-online-bestellen/> (referer: None)
+2026-06-28 09:50:40 [kemper] DEBUG: 
 ================================================================================
-2026-06-21 10:47:18 [kemper] DEBUG: Starte Kemper Containerdienst Scraping für Bochum
-2026-06-21 10:47:18 [kemper] DEBUG: ================================================================================
+2026-06-28 09:50:40 [kemper] DEBUG: Starte Kemper Containerdienst Scraping für Bochum
+2026-06-28 09:50:40 [kemper] DEBUG: ================================================================================
 
-2026-06-21 10:47:18 [kemper] DEBUG: 
+2026-06-28 09:50:40 [kemper] DEBUG: 
 --- Baumischabfall ---
-2026-06-21 10:47:24 [kemper] DEBUG:   ✓ 3 m³: 440,30 EUR
-2026-06-21 10:47:24 [kemper] DEBUG:   ✓ 5,5 m³: 526,71 EUR
-2026-06-21 10:47:24 [kemper] DEBUG:   ✓ 7 m³: 690,20 EUR
-2026-06-21 10:47:24 [kemper] DEBUG:   ✓ 10 m³: 809,20 EUR
-2026-06-21 10:47:24 [kemper] DEBUG: 
+2026-06-28 09:50:46 [kemper] DEBUG:   ✓ 3 m³: 440,30 EUR
+2026-06-28 09:50:46 [kemper] DEBUG:   ✓ 5,5 m³: 526,71 EUR
+2026-06-28 09:50:46 [kemper] DEBUG:   ✓ 7 m³: 690,20 EUR
+2026-06-28 09:50:46 [kemper] DEBUG:   ✓ 10 m³: 809,20 EUR
+2026-06-28 09:50:46 [kemper] DEBUG: 
 --- Bauschutt ---
-2026-06-21 10:47:27 [kemper] DEBUG:   ✓ 3 m³: 290,10 EUR
-2026-06-21 10:47:27 [kemper] DEBUG:   ✓ 5,5 m³: 325,80 EUR
-2026-06-21 10:47:27 [kemper] DEBUG:   ✓ 7 m³: 343,65 EUR
-2026-06-21 10:47:27 [kemper] DEBUG: 
+2026-06-28 09:50:50 [kemper] DEBUG:   ✓ 3 m³: 290,10 EUR
+2026-06-28 09:50:50 [kemper] DEBUG:   ✓ 5,5 m³: 325,80 EUR
+2026-06-28 09:50:50 [kemper] DEBUG:   ✓ 7 m³: 343,65 EUR
+2026-06-28 09:50:50 [kemper] DEBUG: 
 --- Gips ---
-2026-06-21 10:47:31 [kemper] DEBUG:   ✓ 3 m³: 397,83 EUR
-2026-06-21 10:47:31 [kemper] DEBUG:   ✓ 5,5 m³: 576,33 EUR
-2026-06-21 10:47:31 [kemper] DEBUG:   ✓ 7 m³: 673,43 EUR
-2026-06-21 10:47:31 [kemper] DEBUG: 
+2026-06-28 09:50:54 [kemper] DEBUG:   ✓ 3 m³: 397,83 EUR
+2026-06-28 09:50:54 [kemper] DEBUG:   ✓ 5,5 m³: 576,33 EUR
+2026-06-28 09:50:54 [kemper] DEBUG:   ✓ 7 m³: 673,43 EUR
+2026-06-28 09:50:54 [kemper] DEBUG: 
 --- Boden ---
-2026-06-21 10:47:36 [kemper] DEBUG:   ✓ 3 m³: 311,52 EUR
-2026-06-21 10:47:36 [kemper] DEBUG:   ✓ 5,5 m³: 501,92 EUR
-2026-06-21 10:47:36 [kemper] DEBUG:   ✓ 7 m³: 597,12 EUR
-2026-06-21 10:47:36 [kemper] DEBUG: 
+2026-06-28 09:50:58 [kemper] DEBUG:   ✓ 3 m³: 311,52 EUR
+2026-06-28 09:50:58 [kemper] DEBUG:   ✓ 5,5 m³: 501,92 EUR
+2026-06-28 09:50:58 [kemper] DEBUG:   ✓ 7 m³: 597,12 EUR
+2026-06-28 09:50:58 [kemper] DEBUG: 
 --- Gartenabfälle ---
-2026-06-21 10:47:40 [kemper] DEBUG:   ✓ 3 m³: 216,32 EUR
-2026-06-21 10:47:40 [kemper] DEBUG:   ✓ 5,5 m³: 246,07 EUR
-2026-06-21 10:47:40 [kemper] DEBUG:   ✓ 7 m³: 263,92 EUR
-2026-06-21 10:47:40 [kemper] DEBUG:   ✓ 10 m³: 299,62 EUR
-2026-06-21 10:47:40 [kemper] DEBUG: 
+2026-06-28 09:51:02 [kemper] DEBUG:   ✓ 3 m³: 216,32 EUR
+2026-06-28 09:51:02 [kemper] DEBUG:   ✓ 5,5 m³: 246,07 EUR
+2026-06-28 09:51:02 [kemper] DEBUG:   ✓ 7 m³: 263,92 EUR
+2026-06-28 09:51:02 [kemper] DEBUG:   ✓ 10 m³: 299,62 EUR
+2026-06-28 09:51:02 [kemper] DEBUG: 
 --- Holz A4 ---
-2026-06-21 10:47:44 [kemper] DEBUG:   ✓ 3 m³: 436,85 EUR
-2026-06-21 10:47:44 [kemper] DEBUG:   ✓ 5,5 m³: 665,33 EUR
-2026-06-21 10:47:44 [kemper] DEBUG:   ✓ 7 m³: 852,16 EUR
-2026-06-21 10:47:44 [kemper] DEBUG:   ✓ 10 m³: 1081,83 EUR
-2026-06-21 10:47:44 [kemper] DEBUG: 
+2026-06-28 09:51:06 [kemper] DEBUG:   ✓ 3 m³: 436,85 EUR
+2026-06-28 09:51:06 [kemper] DEBUG:   ✓ 5,5 m³: 665,33 EUR
+2026-06-28 09:51:06 [kemper] DEBUG:   ✓ 7 m³: 852,16 EUR
+2026-06-28 09:51:06 [kemper] DEBUG:   ✓ 10 m³: 1081,83 EUR
+2026-06-28 09:51:06 [kemper] DEBUG: 
 --- Holz A1-A3 ---
-2026-06-21 10:47:48 [kemper] DEBUG:   ✓ 3 m³: 246,07 EUR
-2026-06-21 10:47:48 [kemper] DEBUG:   ✓ 5,5 m³: 293,67 EUR
-2026-06-21 10:47:48 [kemper] DEBUG:   ✓ 7 m³: 305,57 EUR
-2026-06-21 10:47:48 [kemper] DEBUG:   ✓ 10 m³: 341,27 EUR
-2026-06-21 10:47:48 [kemper] DEBUG: 
+2026-06-28 09:51:10 [kemper] DEBUG:   ✓ 3 m³: 246,07 EUR
+2026-06-28 09:51:10 [kemper] DEBUG:   ✓ 5,5 m³: 293,67 EUR
+2026-06-28 09:51:10 [kemper] DEBUG:   ✓ 7 m³: 305,57 EUR
+2026-06-28 09:51:10 [kemper] DEBUG:   ✓ 10 m³: 341,27 EUR
+2026-06-28 09:51:10 [kemper] DEBUG: 
 ================================================================================
-2026-06-21 10:47:48 [kemper] DEBUG: Gesamt gescrapt: 25 Produkte
-2026-06-21 10:47:48 [kemper] DEBUG: ================================================================================
+2026-06-28 09:51:10 [kemper] DEBUG: Gesamt gescrapt: 25 Produkte
+2026-06-28 09:51:10 [kemper] DEBUG: ================================================================================
 
-2026-06-21 10:47:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
+2026-06-28 09:51:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
 {'source': 'Kemper Containerdienst', 'title': '3 m³ Baumischabfall', 'type': 'Baumischabfall', 'city': 'Bochum', 'size': '3 m³', 'price': '440,30', 'lid_price': 'auf Anfrage', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14 Tage', 'fee_after_max': 'auf Anfrage', 'cancellation_fee': None, 'URL': 'https://www.containerdienst-kemper.de/container-online-bestellen/produkt/baumischabfaelle/'}
-2026-06-21 10:47:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
+2026-06-28 09:51:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
 {'source': 'Kemper Containerdienst', 'title': '5,5 m³ Baumischabfall', 'type': 'Baumischabfall', 'city': 'Bochum', 'size': '5,5 m³', 'price': '526,71', 'lid_price': 'auf Anfrage', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14 Tage', 'fee_after_max': 'auf Anfrage', 'cancellation_fee': None, 'URL': 'https://www.containerdienst-kemper.de/container-online-bestellen/produkt/baumischabfaelle/'}
-2026-06-21 10:47:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
+2026-06-28 09:51:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
 {'source': 'Kemper Containerdienst', 'title': '7 m³ Baumischabfall', 'type': 'Baumischabfall', 'city': 'Bochum', 'size': '7 m³', 'price': '690,20', 'lid_price': 'auf Anfrage', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14 Tage', 'fee_after_max': 'auf Anfrage', 'cancellation_fee': None, 'URL': 'https://www.containerdienst-kemper.de/container-online-bestellen/produkt/baumischabfaelle/'}
-2026-06-21 10:47:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
+2026-06-28 09:51:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
 {'source': 'Kemper Containerdienst', 'title': '10 m³ Baumischabfall', 'type': 'Baumischabfall', 'city': 'Bochum', 'size': '10 m³', 'price': '809,20', 'lid_price': 'auf Anfrage', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14 Tage', 'fee_after_max': 'auf Anfrage', 'cancellation_fee': None, 'URL': 'https://www.containerdienst-kemper.de/container-online-bestellen/produkt/baumischabfaelle/'}
-2026-06-21 10:47:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
+2026-06-28 09:51:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
 {'source': 'Kemper Containerdienst', 'title': '3 m³ Bauschutt', 'type': 'Bauschutt', 'city': 'Bochum', 'size': '3 m³', 'price': '290,10', 'lid_price': 'auf Anfrage', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14 Tage', 'fee_after_max': 'auf Anfrage', 'cancellation_fee': None, 'URL': 'https://www.containerdienst-kemper.de/container-online-bestellen/produkt/bauschutt/'}
-2026-06-21 10:47:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
+2026-06-28 09:51:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
 {'source': 'Kemper Containerdienst', 'title': '5,5 m³ Bauschutt', 'type': 'Bauschutt', 'city': 'Bochum', 'size': '5,5 m³', 'price': '325,80', 'lid_price': 'auf Anfrage', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14 Tage', 'fee_after_max': 'auf Anfrage', 'cancellation_fee': None, 'URL': 'https://www.containerdienst-kemper.de/container-online-bestellen/produkt/bauschutt/'}
-2026-06-21 10:47:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
+2026-06-28 09:51:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
 {'source': 'Kemper Containerdienst', 'title': '7 m³ Bauschutt', 'type': 'Bauschutt', 'city': 'Bochum', 'size': '7 m³', 'price': '343,65', 'lid_price': 'auf Anfrage', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14 Tage', 'fee_after_max': 'auf Anfrage', 'cancellation_fee': None, 'URL': 'https://www.containerdienst-kemper.de/container-online-bestellen/produkt/bauschutt/'}
-2026-06-21 10:47:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
+2026-06-28 09:51:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
 {'source': 'Kemper Containerdienst', 'title': '3 m³ Gips', 'type': 'Gips', 'city': 'Bochum', 'size': '3 m³', 'price': '397,83', 'lid_price': 'auf Anfrage', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14 Tage', 'fee_after_max': 'auf Anfrage', 'cancellation_fee': None, 'URL': 'https://www.containerdienst-kemper.de/container-online-bestellen/produkt/gips/'}
-2026-06-21 10:47:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
+2026-06-28 09:51:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
 {'source': 'Kemper Containerdienst', 'title': '5,5 m³ Gips', 'type': 'Gips', 'city': 'Bochum', 'size': '5,5 m³', 'price': '576,33', 'lid_price': 'auf Anfrage', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14 Tage', 'fee_after_max': 'auf Anfrage', 'cancellation_fee': None, 'URL': 'https://www.containerdienst-kemper.de/container-online-bestellen/produkt/gips/'}
-2026-06-21 10:47:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
+2026-06-28 09:51:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
 {'source': 'Kemper Containerdienst', 'title': '7 m³ Gips', 'type': 'Gips', 'city': 'Bochum', 'size': '7 m³', 'price': '673,43', 'lid_price': 'auf Anfrage', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14 Tage', 'fee_after_max': 'auf Anfrage', 'cancellation_fee': None, 'URL': 'https://www.containerdienst-kemper.de/container-online-bestellen/produkt/gips/'}
-2026-06-21 10:47:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
+2026-06-28 09:51:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
 {'source': 'Kemper Containerdienst', 'title': '3 m³ Boden', 'type': 'Boden', 'city': 'Bochum', 'size': '3 m³', 'price': '311,52', 'lid_price': 'auf Anfrage', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14 Tage', 'fee_after_max': 'auf Anfrage', 'cancellation_fee': None, 'URL': 'https://www.containerdienst-kemper.de/container-online-bestellen/produkt/boden-steine/'}
-2026-06-21 10:47:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
+2026-06-28 09:51:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
 {'source': 'Kemper Containerdienst', 'title': '5,5 m³ Boden', 'type': 'Boden', 'city': 'Bochum', 'size': '5,5 m³', 'price': '501,92', 'lid_price': 'auf Anfrage', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14 Tage', 'fee_after_max': 'auf Anfrage', 'cancellation_fee': None, 'URL': 'https://www.containerdienst-kemper.de/container-online-bestellen/produkt/boden-steine/'}
-2026-06-21 10:47:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
+2026-06-28 09:51:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
 {'source': 'Kemper Containerdienst', 'title': '7 m³ Boden', 'type': 'Boden', 'city': 'Bochum', 'size': '7 m³', 'price': '597,12', 'lid_price': 'auf Anfrage', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14 Tage', 'fee_after_max': 'auf Anfrage', 'cancellation_fee': None, 'URL': 'https://www.containerdienst-kemper.de/container-online-bestellen/produkt/boden-steine/'}
-2026-06-21 10:47:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
+2026-06-28 09:51:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
 {'source': 'Kemper Containerdienst', 'title': '3 m³ Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Bochum', 'size': '3 m³', 'price': '216,32', 'lid_price': 'auf Anfrage', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14 Tage', 'fee_after_max': 'auf Anfrage', 'cancellation_fee': None, 'URL': 'https://www.containerdienst-kemper.de/container-online-bestellen/produkt/gruenschnitt/'}
-2026-06-21 10:47:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
+2026-06-28 09:51:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
 {'source': 'Kemper Containerdienst', 'title': '5,5 m³ Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Bochum', 'size': '5,5 m³', 'price': '246,07', 'lid_price': 'auf Anfrage', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14 Tage', 'fee_after_max': 'auf Anfrage', 'cancellation_fee': None, 'URL': 'https://www.containerdienst-kemper.de/container-online-bestellen/produkt/gruenschnitt/'}
-2026-06-21 10:47:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
+2026-06-28 09:51:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
 {'source': 'Kemper Containerdienst', 'title': '7 m³ Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Bochum', 'size': '7 m³', 'price': '263,92', 'lid_price': 'auf Anfrage', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14 Tage', 'fee_after_max': 'auf Anfrage', 'cancellation_fee': None, 'URL': 'https://www.containerdienst-kemper.de/container-online-bestellen/produkt/gruenschnitt/'}
-2026-06-21 10:47:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
+2026-06-28 09:51:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
 {'source': 'Kemper Containerdienst', 'title': '10 m³ Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Bochum', 'size': '10 m³', 'price': '299,62', 'lid_price': 'auf Anfrage', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14 Tage', 'fee_after_max': 'auf Anfrage', 'cancellation_fee': None, 'URL': 'https://www.containerdienst-kemper.de/container-online-bestellen/produkt/gruenschnitt/'}
-2026-06-21 10:47:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
+2026-06-28 09:51:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
 {'source': 'Kemper Containerdienst', 'title': '3 m³ Holz A4', 'type': 'Holz A4', 'city': 'Bochum', 'size': '3 m³', 'price': '436,85', 'lid_price': 'auf Anfrage', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14 Tage', 'fee_after_max': 'auf Anfrage', 'cancellation_fee': None, 'URL': 'https://www.containerdienst-kemper.de/container-online-bestellen/produkt/holz-a-4/'}
-2026-06-21 10:47:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
+2026-06-28 09:51:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
 {'source': 'Kemper Containerdienst', 'title': '5,5 m³ Holz A4', 'type': 'Holz A4', 'city': 'Bochum', 'size': '5,5 m³', 'price': '665,33', 'lid_price': 'auf Anfrage', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14 Tage', 'fee_after_max': 'auf Anfrage', 'cancellation_fee': None, 'URL': 'https://www.containerdienst-kemper.de/container-online-bestellen/produkt/holz-a-4/'}
-2026-06-21 10:47:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
+2026-06-28 09:51:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
 {'source': 'Kemper Containerdienst', 'title': '7 m³ Holz A4', 'type': 'Holz A4', 'city': 'Bochum', 'size': '7 m³', 'price': '852,16', 'lid_price': 'auf Anfrage', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14 Tage', 'fee_after_max': 'auf Anfrage', 'cancellation_fee': None, 'URL': 'https://www.containerdienst-kemper.de/container-online-bestellen/produkt/holz-a-4/'}
-2026-06-21 10:47:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
+2026-06-28 09:51:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
 {'source': 'Kemper Containerdienst', 'title': '10 m³ Holz A4', 'type': 'Holz A4', 'city': 'Bochum', 'size': '10 m³', 'price': '1081,83', 'lid_price': 'auf Anfrage', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14 Tage', 'fee_after_max': 'auf Anfrage', 'cancellation_fee': None, 'URL': 'https://www.containerdienst-kemper.de/container-online-bestellen/produkt/holz-a-4/'}
-2026-06-21 10:47:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
+2026-06-28 09:51:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
 {'source': 'Kemper Containerdienst', 'title': '3 m³ Holz A1-A3', 'type': 'Holz A1-A3', 'city': 'Bochum', 'size': '3 m³', 'price': '246,07', 'lid_price': 'auf Anfrage', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14 Tage', 'fee_after_max': 'auf Anfrage', 'cancellation_fee': None, 'URL': 'https://www.containerdienst-kemper.de/container-online-bestellen/produkt/holz-a1-bis-a3/'}
-2026-06-21 10:47:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
+2026-06-28 09:51:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
 {'source': 'Kemper Containerdienst', 'title': '5,5 m³ Holz A1-A3', 'type': 'Holz A1-A3', 'city': 'Bochum', 'size': '5,5 m³', 'price': '293,67', 'lid_price': 'auf Anfrage', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14 Tage', 'fee_after_max': 'auf Anfrage', 'cancellation_fee': None, 'URL': 'https://www.containerdienst-kemper.de/container-online-bestellen/produkt/holz-a1-bis-a3/'}
-2026-06-21 10:47:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
+2026-06-28 09:51:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
 {'source': 'Kemper Containerdienst', 'title': '7 m³ Holz A1-A3', 'type': 'Holz A1-A3', 'city': 'Bochum', 'size': '7 m³', 'price': '305,57', 'lid_price': 'auf Anfrage', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14 Tage', 'fee_after_max': 'auf Anfrage', 'cancellation_fee': None, 'URL': 'https://www.containerdienst-kemper.de/container-online-bestellen/produkt/holz-a1-bis-a3/'}
-2026-06-21 10:47:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
+2026-06-28 09:51:10 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.containerdienst-kemper.de/container-online-bestellen/>
 {'source': 'Kemper Containerdienst', 'title': '10 m³ Holz A1-A3', 'type': 'Holz A1-A3', 'city': 'Bochum', 'size': '10 m³', 'price': '341,27', 'lid_price': 'auf Anfrage', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14 Tage', 'fee_after_max': 'auf Anfrage', 'cancellation_fee': None, 'URL': 'https://www.containerdienst-kemper.de/container-online-bestellen/produkt/holz-a1-bis-a3/'}
-2026-06-21 10:47:48 [scrapy.core.engine] INFO: Closing spider (finished)
-2026-06-21 10:47:48 [scrapy.extensions.feedexport] INFO: Stored json feed (25 items) in: ../data/kemper-products.json
-2026-06-21 10:47:48 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+2026-06-28 09:51:10 [scrapy.core.engine] INFO: Closing spider (finished)
+2026-06-28 09:51:10 [scrapy.extensions.feedexport] INFO: Stored json feed (25 items) in: ../data/kemper-products.json
+2026-06-28 09:51:10 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
 {'downloader/request_bytes': 323,
  'downloader/request_count': 1,
  'downloader/request_method_count/GET': 1,
- 'downloader/response_bytes': 8136,
+ 'downloader/response_bytes': 8139,
  'downloader/response_count': 1,
  'downloader/response_status_count/200': 1,
- 'elapsed_time_seconds': 34.51250836500003,
+ 'elapsed_time_seconds': 34.77964980900015,
  'feedexport/success_count/FileFeedStorage': 1,
  'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2026, 6, 21, 10, 47, 48, 574993, tzinfo=datetime.timezone.utc),
- 'httpcompression/response_bytes': 33840,
+ 'finish_time': datetime.datetime(2026, 6, 28, 9, 51, 10, 894305, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 33832,
  'httpcompression/response_count': 1,
  'item_scraped_count': 25,
  'items_per_minute': 44.11764705882353,
  'log_count/DEBUG': 64,
  'log_count/INFO': 3,
- 'memusage/max': 80932864,
- 'memusage/startup': 80932864,
+ 'memusage/max': 81121280,
+ 'memusage/startup': 81121280,
  'response_received_count': 1,
  'responses_per_minute': 1.7647058823529411,
  'scheduler/dequeued': 1,
  'scheduler/dequeued/memory': 1,
  'scheduler/enqueued': 1,
  'scheduler/enqueued/memory': 1,
- 'start_time': datetime.datetime(2026, 6, 21, 10, 47, 14, 62482, tzinfo=datetime.timezone.utc)}
-2026-06-21 10:47:48 [scrapy.core.engine] INFO: Spider closed (finished)
+ 'start_time': datetime.datetime(2026, 6, 28, 9, 50, 36, 114652, tzinfo=datetime.timezone.utc)}
+2026-06-28 09:51:10 [scrapy.core.engine] INFO: Spider closed (finished)
