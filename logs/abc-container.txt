@@ -1,30 +1,30 @@
-2026-07-26 08:20:25 [scrapy.utils.log] INFO: Scrapy 2.17.0 started (bot: nebi_spiders)
-2026-07-26 08:20:25 [scrapy.utils.log] INFO: Versions:
+2026-08-02 08:15:22 [scrapy.utils.log] INFO: Scrapy 2.17.0 started (bot: nebi_spiders)
+2026-08-02 08:15:22 [scrapy.utils.log] INFO: Versions:
 {'lxml': '6.1.1',
  'libxml2': '2.14.6',
- 'cssselect': '1.4.0',
+ 'cssselect': '1.5.0',
  'parsel': '1.11.0',
  'w3lib': '2.4.1',
  'Twisted': '26.4.0',
  'Python': '3.11.15 (main, Jun 16 2026, 21:41:52) [GCC 13.3.0]',
- 'pyOpenSSL': '26.3.0 (OpenSSL 4.0.1 9 Jun 2026)',
- 'cryptography': '49.0.0',
+ 'pyOpenSSL': '26.4.0 (OpenSSL 4.0.1 9 Jun 2026)',
+ 'cryptography': '50.0.0',
  'Platform': 'Linux-6.17.0-1020-azure-x86_64-with-glibc2.39'}
-2026-07-26 08:20:25 [scrapy.crawler] DEBUG: Using AsyncCrawlerProcess
-2026-07-26 08:20:25 [asyncio] DEBUG: Using selector: EpollSelector
-2026-07-26 08:20:25 [scrapy.addons] INFO: Enabled addons:
+2026-08-02 08:15:22 [scrapy.crawler] DEBUG: Using AsyncCrawlerProcess
+2026-08-02 08:15:22 [asyncio] DEBUG: Using selector: EpollSelector
+2026-08-02 08:15:22 [scrapy.addons] INFO: Enabled addons:
 []
-2026-07-26 08:20:25 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
-2026-07-26 08:20:25 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
-2026-07-26 08:20:25 [scrapy.extensions.telnet] INFO: Telnet Password: 86a71da335d3eeb3
-2026-07-26 08:20:25 [scrapy.middleware] INFO: Enabled extensions:
+2026-08-02 08:15:22 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2026-08-02 08:15:22 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2026-08-02 08:15:22 [scrapy.extensions.telnet] INFO: Telnet Password: fb6fc0d88b7c75e5
+2026-08-02 08:15:22 [scrapy.middleware] INFO: Enabled extensions:
 ['scrapy.extensions.corestats.CoreStats',
  'scrapy.extensions.logcount.LogCount',
  'scrapy.extensions.telnet.TelnetConsole',
  'scrapy.extensions.memusage.MemoryUsage',
  'scrapy.extensions.feedexport.FeedExporter',
  'scrapy.extensions.logstats.LogStats']
-2026-07-26 08:20:25 [scrapy.crawler] INFO: Overridden settings:
+2026-08-02 08:15:22 [scrapy.crawler] INFO: Overridden settings:
 {'BOT_NAME': 'nebi_spiders',
  'CONCURRENT_REQUESTS': 1,
  'DOWNLOAD_DELAY': 2,
@@ -39,7 +39,7 @@
                     'nebi_spiders.spiders.koeln'],
  'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
                'AppleWebKit/537.36'}
-2026-07-26 08:20:26 [scrapy.middleware] INFO: Enabled downloader middlewares:
+2026-08-02 08:15:23 [scrapy.middleware] INFO: Enabled downloader middlewares:
 ['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
  'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
  'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
@@ -53,164 +53,164 @@
  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
  'scrapy.downloadermiddlewares.stats.DownloaderStats']
-2026-07-26 08:20:26 [scrapy.middleware] INFO: Enabled spider middlewares:
+2026-08-02 08:15:23 [scrapy.middleware] INFO: Enabled spider middlewares:
 ['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
  'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
  'scrapy.spidermiddlewares.referer.RefererMiddleware',
  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
  'scrapy.spidermiddlewares.depth.DepthMiddleware']
-2026-07-26 08:20:26 [scrapy.middleware] INFO: Enabled item pipelines:
+2026-08-02 08:15:23 [scrapy.middleware] INFO: Enabled item pipelines:
 []
-2026-07-26 08:20:26 [scrapy.core.engine] INFO: Spider opened
-2026-07-26 08:20:26 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2026-07-26 08:20:26 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
-2026-07-26 08:20:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://abc-containerdienst.de/robots.txt> (referer: None)
-2026-07-26 08:20:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://abc-containerdienst.de/abfall-entsorgen-berlin/> (referer: None)
-2026-07-26 08:20:30 [abc-container] INFO: Visiting 10 waste type pages
-2026-07-26 08:20:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://abc-containerdienst.de/teerhaltige-abfaelle/> (referer: https://abc-containerdienst.de/abfall-entsorgen-berlin/)
-2026-07-26 08:20:32 [abc-container] INFO: Processing: Teerhaltige Abfälle
-2026-07-26 08:20:32 [abc-container] WARNING:   No prices found for Teerhaltige Abfälle
-2026-07-26 08:20:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://abc-containerdienst.de/sperrmuell-entsorgen/> (referer: https://abc-containerdienst.de/abfall-entsorgen-berlin/)
-2026-07-26 08:20:34 [abc-container] INFO: Processing: Sperrmüll
-2026-07-26 08:20:34 [abc-container] INFO:   Found table prices: ['275,00 €', '65,00 €']
-2026-07-26 08:20:34 [abc-container] INFO:   Extracted: 3m³ flat rate = 275.0€, per m³ = 65.0€
-2026-07-26 08:20:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/sperrmuell-entsorgen/>
+2026-08-02 08:15:23 [scrapy.core.engine] INFO: Spider opened
+2026-08-02 08:15:23 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2026-08-02 08:15:23 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2026-08-02 08:15:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://abc-containerdienst.de/robots.txt> (referer: None)
+2026-08-02 08:15:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://abc-containerdienst.de/abfall-entsorgen-berlin/> (referer: None)
+2026-08-02 08:15:25 [abc-container] INFO: Visiting 10 waste type pages
+2026-08-02 08:15:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://abc-containerdienst.de/teerhaltige-abfaelle/> (referer: https://abc-containerdienst.de/abfall-entsorgen-berlin/)
+2026-08-02 08:15:28 [abc-container] INFO: Processing: Teerhaltige Abfälle
+2026-08-02 08:15:28 [abc-container] WARNING:   No prices found for Teerhaltige Abfälle
+2026-08-02 08:15:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://abc-containerdienst.de/sperrmuell-entsorgen/> (referer: https://abc-containerdienst.de/abfall-entsorgen-berlin/)
+2026-08-02 08:15:30 [abc-container] INFO: Processing: Sperrmüll
+2026-08-02 08:15:30 [abc-container] INFO:   Found table prices: ['275,00 €', '65,00 €']
+2026-08-02 08:15:30 [abc-container] INFO:   Extracted: 3m³ flat rate = 275.0€, per m³ = 65.0€
+2026-08-02 08:15:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/sperrmuell-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '3 m³ Sperrmüll', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '3', 'price': '327,25', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/sperrmuell-entsorgen/'}
-2026-07-26 08:20:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/sperrmuell-entsorgen/>
+2026-08-02 08:15:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/sperrmuell-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '5 m³ Sperrmüll', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '5', 'price': '386,75', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/sperrmuell-entsorgen/'}
-2026-07-26 08:20:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/sperrmuell-entsorgen/>
+2026-08-02 08:15:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/sperrmuell-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '7 m³ Sperrmüll', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '7', 'price': '541,45', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/sperrmuell-entsorgen/'}
-2026-07-26 08:20:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/sperrmuell-entsorgen/>
+2026-08-02 08:15:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/sperrmuell-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '8 m³ Sperrmüll', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '8', 'price': '618,80', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/sperrmuell-entsorgen/'}
-2026-07-26 08:20:34 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/sperrmuell-entsorgen/>
+2026-08-02 08:15:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/sperrmuell-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '10 m³ Sperrmüll', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '10', 'price': '773,50', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/sperrmuell-entsorgen/'}
-2026-07-26 08:20:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://abc-containerdienst.de/holz-entsorgen/> (referer: https://abc-containerdienst.de/abfall-entsorgen-berlin/)
-2026-07-26 08:20:36 [abc-container] INFO: Processing: Holz A1-A3
-2026-07-26 08:20:36 [abc-container] INFO:   Found table prices: ['220,00 €', '50,00 €']
-2026-07-26 08:20:36 [abc-container] INFO:   Extracted: 3m³ flat rate = 220.0€, per m³ = 50.0€
-2026-07-26 08:20:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/holz-entsorgen/>
+2026-08-02 08:15:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://abc-containerdienst.de/holz-entsorgen/> (referer: https://abc-containerdienst.de/abfall-entsorgen-berlin/)
+2026-08-02 08:15:33 [abc-container] INFO: Processing: Holz A1-A3
+2026-08-02 08:15:33 [abc-container] INFO:   Found table prices: ['220,00 €', '50,00 €']
+2026-08-02 08:15:33 [abc-container] INFO:   Extracted: 3m³ flat rate = 220.0€, per m³ = 50.0€
+2026-08-02 08:15:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/holz-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '3 m³ Holz A1-A3', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '3', 'price': '261,80', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/holz-entsorgen/'}
-2026-07-26 08:20:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/holz-entsorgen/>
+2026-08-02 08:15:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/holz-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '5 m³ Holz A1-A3', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '5', 'price': '297,50', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/holz-entsorgen/'}
-2026-07-26 08:20:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/holz-entsorgen/>
+2026-08-02 08:15:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/holz-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '7 m³ Holz A1-A3', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '7', 'price': '416,50', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/holz-entsorgen/'}
-2026-07-26 08:20:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/holz-entsorgen/>
+2026-08-02 08:15:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/holz-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '8 m³ Holz A1-A3', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '8', 'price': '476,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/holz-entsorgen/'}
-2026-07-26 08:20:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/holz-entsorgen/>
+2026-08-02 08:15:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/holz-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '10 m³ Holz A1-A3', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '10', 'price': '595,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/holz-entsorgen/'}
-2026-07-26 08:20:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://abc-containerdienst.de/gipsabfall-entsorgen/> (referer: https://abc-containerdienst.de/abfall-entsorgen-berlin/)
-2026-07-26 08:20:39 [abc-container] INFO: Processing: Gips
-2026-07-26 08:20:39 [abc-container] INFO:   Found table prices: ['315,00 €', '78,00 €']
-2026-07-26 08:20:39 [abc-container] INFO:   Extracted: 3m³ flat rate = 315.0€, per m³ = 78.0€
-2026-07-26 08:20:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/gipsabfall-entsorgen/>
+2026-08-02 08:15:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://abc-containerdienst.de/gipsabfall-entsorgen/> (referer: https://abc-containerdienst.de/abfall-entsorgen-berlin/)
+2026-08-02 08:15:36 [abc-container] INFO: Processing: Gips
+2026-08-02 08:15:36 [abc-container] INFO:   Found table prices: ['315,00 €', '78,00 €']
+2026-08-02 08:15:36 [abc-container] INFO:   Extracted: 3m³ flat rate = 315.0€, per m³ = 78.0€
+2026-08-02 08:15:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/gipsabfall-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '3 m³ Gips', 'type': 'Gips', 'city': 'Berlin', 'size': '3', 'price': '374,85', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/gipsabfall-entsorgen/'}
-2026-07-26 08:20:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/gipsabfall-entsorgen/>
+2026-08-02 08:15:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/gipsabfall-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '5 m³ Gips', 'type': 'Gips', 'city': 'Berlin', 'size': '5', 'price': '464,10', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/gipsabfall-entsorgen/'}
-2026-07-26 08:20:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/gipsabfall-entsorgen/>
+2026-08-02 08:15:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/gipsabfall-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '7 m³ Gips', 'type': 'Gips', 'city': 'Berlin', 'size': '7', 'price': '649,74', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/gipsabfall-entsorgen/'}
-2026-07-26 08:20:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/gipsabfall-entsorgen/>
+2026-08-02 08:15:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/gipsabfall-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '8 m³ Gips', 'type': 'Gips', 'city': 'Berlin', 'size': '8', 'price': '742,56', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/gipsabfall-entsorgen/'}
-2026-07-26 08:20:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/gipsabfall-entsorgen/>
+2026-08-02 08:15:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/gipsabfall-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '10 m³ Gips', 'type': 'Gips', 'city': 'Berlin', 'size': '10', 'price': '928,20', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/gipsabfall-entsorgen/'}
-2026-07-26 08:20:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://abc-containerdienst.de/gartenabfall-entsorgen-berlin/> (referer: https://abc-containerdienst.de/abfall-entsorgen-berlin/)
-2026-07-26 08:20:41 [abc-container] INFO: Processing: Gartenabfälle
-2026-07-26 08:20:41 [abc-container] INFO:   Found table prices: ['240,00 €', '54,00 €']
-2026-07-26 08:20:41 [abc-container] INFO:   Extracted: 3m³ flat rate = 240.0€, per m³ = 54.0€
-2026-07-26 08:20:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/gartenabfall-entsorgen-berlin/>
+2026-08-02 08:15:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://abc-containerdienst.de/gartenabfall-entsorgen-berlin/> (referer: https://abc-containerdienst.de/abfall-entsorgen-berlin/)
+2026-08-02 08:15:37 [abc-container] INFO: Processing: Gartenabfälle
+2026-08-02 08:15:37 [abc-container] INFO:   Found table prices: ['240,00 €', '54,00 €']
+2026-08-02 08:15:37 [abc-container] INFO:   Extracted: 3m³ flat rate = 240.0€, per m³ = 54.0€
+2026-08-02 08:15:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/gartenabfall-entsorgen-berlin/>
 {'source': 'ABC-Containerdienst', 'title': '3 m³ Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '3', 'price': '285,60', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/gartenabfall-entsorgen-berlin/'}
-2026-07-26 08:20:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/gartenabfall-entsorgen-berlin/>
+2026-08-02 08:15:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/gartenabfall-entsorgen-berlin/>
 {'source': 'ABC-Containerdienst', 'title': '5 m³ Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '5', 'price': '321,30', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/gartenabfall-entsorgen-berlin/'}
-2026-07-26 08:20:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/gartenabfall-entsorgen-berlin/>
+2026-08-02 08:15:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/gartenabfall-entsorgen-berlin/>
 {'source': 'ABC-Containerdienst', 'title': '7 m³ Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '7', 'price': '449,82', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/gartenabfall-entsorgen-berlin/'}
-2026-07-26 08:20:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/gartenabfall-entsorgen-berlin/>
+2026-08-02 08:15:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/gartenabfall-entsorgen-berlin/>
 {'source': 'ABC-Containerdienst', 'title': '8 m³ Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '8', 'price': '514,08', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/gartenabfall-entsorgen-berlin/'}
-2026-07-26 08:20:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/gartenabfall-entsorgen-berlin/>
+2026-08-02 08:15:37 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/gartenabfall-entsorgen-berlin/>
 {'source': 'ABC-Containerdienst', 'title': '10 m³ Gartenabfälle', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '10', 'price': '642,60', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/gartenabfall-entsorgen-berlin/'}
-2026-07-26 08:20:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://abc-containerdienst.de/erdaushub-entsorgen/> (referer: https://abc-containerdienst.de/abfall-entsorgen-berlin/)
-2026-07-26 08:20:43 [abc-container] INFO: Processing: Erdaushub
-2026-07-26 08:20:43 [abc-container] INFO:   Found table prices: ['315,00 €', '72,00 €']
-2026-07-26 08:20:43 [abc-container] INFO:   Extracted: 3m³ flat rate = 315.0€, per m³ = 72.0€
-2026-07-26 08:20:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/erdaushub-entsorgen/>
+2026-08-02 08:15:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://abc-containerdienst.de/erdaushub-entsorgen/> (referer: https://abc-containerdienst.de/abfall-entsorgen-berlin/)
+2026-08-02 08:15:39 [abc-container] INFO: Processing: Erdaushub
+2026-08-02 08:15:39 [abc-container] INFO:   Found table prices: ['315,00 €', '72,00 €']
+2026-08-02 08:15:39 [abc-container] INFO:   Extracted: 3m³ flat rate = 315.0€, per m³ = 72.0€
+2026-08-02 08:15:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/erdaushub-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '3 m³ Erdaushub', 'type': 'Erdaushub', 'city': 'Berlin', 'size': '3', 'price': '374,85', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/erdaushub-entsorgen/'}
-2026-07-26 08:20:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/erdaushub-entsorgen/>
+2026-08-02 08:15:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/erdaushub-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '5 m³ Erdaushub', 'type': 'Erdaushub', 'city': 'Berlin', 'size': '5', 'price': '428,40', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/erdaushub-entsorgen/'}
-2026-07-26 08:20:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/erdaushub-entsorgen/>
+2026-08-02 08:15:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/erdaushub-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '7 m³ Erdaushub', 'type': 'Erdaushub', 'city': 'Berlin', 'size': '7', 'price': '599,76', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/erdaushub-entsorgen/'}
-2026-07-26 08:20:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/erdaushub-entsorgen/>
+2026-08-02 08:15:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/erdaushub-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '8 m³ Erdaushub', 'type': 'Erdaushub', 'city': 'Berlin', 'size': '8', 'price': '685,44', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/erdaushub-entsorgen/'}
-2026-07-26 08:20:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/erdaushub-entsorgen/>
+2026-08-02 08:15:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/erdaushub-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '10 m³ Erdaushub', 'type': 'Erdaushub', 'city': 'Berlin', 'size': '10', 'price': '856,80', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/erdaushub-entsorgen/'}
-2026-07-26 08:20:46 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://abc-containerdienst.de/daemmmaterial-entsorgen/> (referer: https://abc-containerdienst.de/abfall-entsorgen-berlin/)
-2026-07-26 08:20:46 [abc-container] INFO: Processing: Dämmstoffe
-2026-07-26 08:20:46 [abc-container] INFO:   Found table prices: ['315,00 €', '90,00 €']
-2026-07-26 08:20:46 [abc-container] INFO:   Extracted: 3m³ flat rate = 315.0€, per m³ = 90.0€
-2026-07-26 08:20:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/daemmmaterial-entsorgen/>
+2026-08-02 08:15:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://abc-containerdienst.de/daemmmaterial-entsorgen/> (referer: https://abc-containerdienst.de/abfall-entsorgen-berlin/)
+2026-08-02 08:15:43 [abc-container] INFO: Processing: Dämmstoffe
+2026-08-02 08:15:43 [abc-container] INFO:   Found table prices: ['315,00 €', '90,00 €']
+2026-08-02 08:15:43 [abc-container] INFO:   Extracted: 3m³ flat rate = 315.0€, per m³ = 90.0€
+2026-08-02 08:15:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/daemmmaterial-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '3 m³ Dämmstoffe', 'type': 'Dämmstoffe', 'city': 'Berlin', 'size': '3', 'price': '374,85', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/daemmmaterial-entsorgen/'}
-2026-07-26 08:20:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/daemmmaterial-entsorgen/>
+2026-08-02 08:15:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/daemmmaterial-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '5 m³ Dämmstoffe', 'type': 'Dämmstoffe', 'city': 'Berlin', 'size': '5', 'price': '535,50', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/daemmmaterial-entsorgen/'}
-2026-07-26 08:20:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/daemmmaterial-entsorgen/>
+2026-08-02 08:15:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/daemmmaterial-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '7 m³ Dämmstoffe', 'type': 'Dämmstoffe', 'city': 'Berlin', 'size': '7', 'price': '749,70', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/daemmmaterial-entsorgen/'}
-2026-07-26 08:20:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/daemmmaterial-entsorgen/>
+2026-08-02 08:15:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/daemmmaterial-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '8 m³ Dämmstoffe', 'type': 'Dämmstoffe', 'city': 'Berlin', 'size': '8', 'price': '856,80', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/daemmmaterial-entsorgen/'}
-2026-07-26 08:20:46 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/daemmmaterial-entsorgen/>
+2026-08-02 08:15:43 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/daemmmaterial-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '10 m³ Dämmstoffe', 'type': 'Dämmstoffe', 'city': 'Berlin', 'size': '10', 'price': '1071,00', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/daemmmaterial-entsorgen/'}
-2026-07-26 08:20:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://abc-containerdienst.de/beton-entsorgen/> (referer: https://abc-containerdienst.de/abfall-entsorgen-berlin/)
-2026-07-26 08:20:48 [abc-container] INFO: Processing: Beton
-2026-07-26 08:20:48 [abc-container] INFO:   Found table prices: ['180,00 €', '48,00 €']
-2026-07-26 08:20:48 [abc-container] INFO:   Extracted: 3m³ flat rate = 180.0€, per m³ = 48.0€
-2026-07-26 08:20:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/beton-entsorgen/>
+2026-08-02 08:15:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://abc-containerdienst.de/beton-entsorgen/> (referer: https://abc-containerdienst.de/abfall-entsorgen-berlin/)
+2026-08-02 08:15:44 [abc-container] INFO: Processing: Beton
+2026-08-02 08:15:44 [abc-container] INFO:   Found table prices: ['180,00 €', '48,00 €']
+2026-08-02 08:15:44 [abc-container] INFO:   Extracted: 3m³ flat rate = 180.0€, per m³ = 48.0€
+2026-08-02 08:15:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/beton-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '3 m³ Beton', 'type': 'Beton', 'city': 'Berlin', 'size': '3', 'price': '214,20', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/beton-entsorgen/'}
-2026-07-26 08:20:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/beton-entsorgen/>
+2026-08-02 08:15:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/beton-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '5 m³ Beton', 'type': 'Beton', 'city': 'Berlin', 'size': '5', 'price': '285,60', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/beton-entsorgen/'}
-2026-07-26 08:20:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/beton-entsorgen/>
+2026-08-02 08:15:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/beton-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '7 m³ Beton', 'type': 'Beton', 'city': 'Berlin', 'size': '7', 'price': '399,84', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/beton-entsorgen/'}
-2026-07-26 08:20:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/beton-entsorgen/>
+2026-08-02 08:15:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/beton-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '8 m³ Beton', 'type': 'Beton', 'city': 'Berlin', 'size': '8', 'price': '456,96', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/beton-entsorgen/'}
-2026-07-26 08:20:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/beton-entsorgen/>
+2026-08-02 08:15:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/beton-entsorgen/>
 {'source': 'ABC-Containerdienst', 'title': '10 m³ Beton', 'type': 'Beton', 'city': 'Berlin', 'size': '10', 'price': '571,20', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/beton-entsorgen/'}
-2026-07-26 08:20:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://abc-containerdienst.de/bauschutt-entsorgen-berlin/> (referer: https://abc-containerdienst.de/abfall-entsorgen-berlin/)
-2026-07-26 08:20:51 [abc-container] INFO: Processing: Bauschutt
-2026-07-26 08:20:51 [abc-container] INFO:   Found table prices: ['250,00 €', '62,00 €']
-2026-07-26 08:20:51 [abc-container] INFO:   Extracted: 3m³ flat rate = 250.0€, per m³ = 62.0€
-2026-07-26 08:20:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/bauschutt-entsorgen-berlin/>
+2026-08-02 08:15:47 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://abc-containerdienst.de/bauschutt-entsorgen-berlin/> (referer: https://abc-containerdienst.de/abfall-entsorgen-berlin/)
+2026-08-02 08:15:47 [abc-container] INFO: Processing: Bauschutt
+2026-08-02 08:15:47 [abc-container] INFO:   Found table prices: ['250,00 €', '62,00 €']
+2026-08-02 08:15:47 [abc-container] INFO:   Extracted: 3m³ flat rate = 250.0€, per m³ = 62.0€
+2026-08-02 08:15:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/bauschutt-entsorgen-berlin/>
 {'source': 'ABC-Containerdienst', 'title': '3 m³ Bauschutt', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '3', 'price': '297,50', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/bauschutt-entsorgen-berlin/'}
-2026-07-26 08:20:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/bauschutt-entsorgen-berlin/>
+2026-08-02 08:15:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/bauschutt-entsorgen-berlin/>
 {'source': 'ABC-Containerdienst', 'title': '5 m³ Bauschutt', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '5', 'price': '368,90', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/bauschutt-entsorgen-berlin/'}
-2026-07-26 08:20:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/bauschutt-entsorgen-berlin/>
+2026-08-02 08:15:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/bauschutt-entsorgen-berlin/>
 {'source': 'ABC-Containerdienst', 'title': '7 m³ Bauschutt', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '7', 'price': '516,46', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/bauschutt-entsorgen-berlin/'}
-2026-07-26 08:20:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/bauschutt-entsorgen-berlin/>
+2026-08-02 08:15:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/bauschutt-entsorgen-berlin/>
 {'source': 'ABC-Containerdienst', 'title': '8 m³ Bauschutt', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '8', 'price': '590,24', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/bauschutt-entsorgen-berlin/'}
-2026-07-26 08:20:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/bauschutt-entsorgen-berlin/>
+2026-08-02 08:15:47 [scrapy.core.scraper] DEBUG: Scraped from <200 https://abc-containerdienst.de/bauschutt-entsorgen-berlin/>
 {'source': 'ABC-Containerdienst', 'title': '10 m³ Bauschutt', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '10', 'price': '737,80', 'lid_price': '', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '10', 'fee_after_max': '', 'cancellation_fee': 'Preis anfragen', 'URL': 'https://abc-containerdienst.de/bauschutt-entsorgen-berlin/'}
-2026-07-26 08:20:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://abc-containerdienst.de/baumisch-entsorgen/> (referer: https://abc-containerdienst.de/abfall-entsorgen-berlin/)
-2026-07-26 08:20:54 [abc-container] INFO: Processing: Baumischabfall
-2026-07-26 08:20:54 [abc-container] INFO:   Found table prices: ['315,- €', '85,- €']
-2026-07-26 08:20:54 [abc-container] WARNING:   No prices found for Baumischabfall
-2026-07-26 08:20:54 [scrapy.core.engine] INFO: Closing spider (finished)
-2026-07-26 08:20:54 [scrapy.extensions.feedexport] INFO: Stored json feed (40 items) in: ../data/abc-container-products.json
-2026-07-26 08:20:54 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+2026-08-02 08:15:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://abc-containerdienst.de/baumisch-entsorgen/> (referer: https://abc-containerdienst.de/abfall-entsorgen-berlin/)
+2026-08-02 08:15:50 [abc-container] INFO: Processing: Baumischabfall
+2026-08-02 08:15:50 [abc-container] INFO:   Found table prices: ['315,- €', '85,- €']
+2026-08-02 08:15:50 [abc-container] WARNING:   No prices found for Baumischabfall
+2026-08-02 08:15:50 [scrapy.core.engine] INFO: Closing spider (finished)
+2026-08-02 08:15:50 [scrapy.extensions.feedexport] INFO: Stored json feed (40 items) in: ../data/abc-container-products.json
+2026-08-02 08:15:50 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
 {'downloader/request_bytes': 3956,
  'downloader/request_count': 12,
  'downloader/request_method_count/GET': 12,
- 'downloader/response_bytes': 315522,
+ 'downloader/response_bytes': 315497,
  'downloader/response_count': 12,
  'downloader/response_status_count/200': 12,
- 'elapsed_time_seconds': 28.739559952999997,
+ 'elapsed_time_seconds': 26.946231311999995,
  'feedexport/success_count/FileFeedStorage': 1,
  'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2026, 7, 26, 8, 20, 54, 894001, tzinfo=datetime.timezone.utc),
- 'httpcompression/response_bytes': 1896077,
+ 'finish_time': datetime.datetime(2026, 8, 2, 8, 15, 50, 10536, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 1896079,
  'httpcompression/response_count': 12,
  'item_scraped_count': 40,
- 'items_per_minute': 85.71428571428571,
+ 'items_per_minute': 92.3076923076923,
  'log_count/DEBUG': 52,
  'log_count/INFO': 31,
  'log_count/WARNING': 2,
- 'memusage/max': 80719872,
- 'memusage/startup': 80719872,
+ 'memusage/max': 80424960,
+ 'memusage/startup': 80424960,
  'request_depth_max': 1,
  'response_received_count': 12,
- 'responses_per_minute': 25.714285714285715,
+ 'responses_per_minute': 27.69230769230769,
  'robotstxt/request_count': 1,
  'robotstxt/response_count': 1,
  'robotstxt/response_status_count/200': 1,
@@ -218,5 +218,5 @@
  'scheduler/dequeued/memory': 11,
  'scheduler/enqueued': 11,
  'scheduler/enqueued/memory': 11,
- 'start_time': datetime.datetime(2026, 7, 26, 8, 20, 26, 154438, tzinfo=datetime.timezone.utc)}
-2026-07-26 08:20:54 [scrapy.core.engine] INFO: Spider closed (finished)
+ 'start_time': datetime.datetime(2026, 8, 2, 8, 15, 23, 64300, tzinfo=datetime.timezone.utc)}
+2026-08-02 08:15:50 [scrapy.core.engine] INFO: Spider closed (finished)
