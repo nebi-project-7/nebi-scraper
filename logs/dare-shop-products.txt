@@ -1,5 +1,5 @@
-2026-08-23 07:18:44 [scrapy.utils.log] INFO: Scrapy 2.18.0 started (bot: nebi_spiders)
-2026-08-23 07:18:44 [scrapy.utils.log] INFO: Versions:
+2026-08-30 11:54:00 [scrapy.utils.log] INFO: Scrapy 2.18.0 started (bot: nebi_spiders)
+2026-08-30 11:54:00 [scrapy.utils.log] INFO: Versions:
 {'lxml': '6.1.2',
  'libxml2': '2.14.6',
  'cssselect': '1.5.0',
@@ -7,32 +7,32 @@
  'w3lib': '2.4.1',
  'Twisted': '26.4.0',
  'Python': '3.11.16 (main, Aug 13 2026, 02:46:14) [GCC 13.3.0]',
- 'pyOpenSSL': '26.4.0 (OpenSSL 4.0.1 9 Jun 2026)',
- 'cryptography': '50.0.0',
+ 'pyOpenSSL': '26.4.0 (OpenSSL 4.0.2 25 Aug 2026)',
+ 'cryptography': '50.0.1',
  'Platform': 'Linux-6.17.0-1022-azure-x86_64-with-glibc2.39'}
-2026-08-23 07:18:44 [scrapy.crawler] DEBUG: Using AsyncCrawlerProcess
-2026-08-23 07:18:44 [asyncio] DEBUG: Using selector: EpollSelector
-2026-08-23 07:18:44 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/berlin/dare-shop.py:94: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
+2026-08-30 11:54:00 [scrapy.crawler] DEBUG: Using AsyncCrawlerProcess
+2026-08-30 11:54:00 [asyncio] DEBUG: Using selector: EpollSelector
+2026-08-30 11:54:01 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/berlin/dare-shop.py:94: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
   self.log("Hole dynamische Werte von AGB-Seite...")
 
-2026-08-23 07:18:44 [dare-shop-products] DEBUG: Hole dynamische Werte von AGB-Seite...
-2026-08-23 07:18:47 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/berlin/dare-shop.py:114: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
+2026-08-30 11:54:01 [dare-shop-products] DEBUG: Hole dynamische Werte von AGB-Seite...
+2026-08-30 11:54:04 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/berlin/dare-shop.py:114: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
   self.log(f"✓ AGB-Werte geladen: Mietzeit={max_rental_period} Tage, Wartezeit={wait_time} Min")
 
-2026-08-23 07:18:47 [dare-shop-products] DEBUG: ✓ AGB-Werte geladen: Mietzeit=14 Tage, Wartezeit=15 Min
-2026-08-23 07:18:47 [scrapy.addons] INFO: Enabled addons:
+2026-08-30 11:54:04 [dare-shop-products] DEBUG: ✓ AGB-Werte geladen: Mietzeit=14 Tage, Wartezeit=15 Min
+2026-08-30 11:54:04 [scrapy.addons] INFO: Enabled addons:
 []
-2026-08-23 07:18:47 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
-2026-08-23 07:18:47 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
-2026-08-23 07:18:47 [scrapy.extensions.telnet] INFO: Telnet Password: 3b4d1371824bb40c
-2026-08-23 07:18:47 [scrapy.middleware] INFO: Enabled extensions:
+2026-08-30 11:54:04 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2026-08-30 11:54:04 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2026-08-30 11:54:04 [scrapy.extensions.telnet] INFO: Telnet Password: 38d0551ed67f6c49
+2026-08-30 11:54:04 [scrapy.middleware] INFO: Enabled extensions:
 ['scrapy.extensions.corestats.CoreStats',
  'scrapy.extensions.logcount.LogCount',
  'scrapy.extensions.telnet.TelnetConsole',
  'scrapy.extensions.memusage.MemoryUsage',
  'scrapy.extensions.feedexport.FeedExporter',
  'scrapy.extensions.logstats.LogStats']
-2026-08-23 07:18:47 [scrapy.crawler] INFO: Overridden settings:
+2026-08-30 11:54:04 [scrapy.crawler] INFO: Overridden settings:
 {'BOT_NAME': 'nebi_spiders',
  'CONCURRENT_REQUESTS': 1,
  'DOWNLOAD_DELAY': 0.5,
@@ -46,7 +46,7 @@
                     'nebi_spiders.spiders.berlin'],
  'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, '
                'like Gecko) Chrome/141.0.0.0 Safari/537.36'}
-2026-08-23 07:18:48 [scrapy.middleware] INFO: Enabled downloader middlewares:
+2026-08-30 11:54:04 [scrapy.middleware] INFO: Enabled downloader middlewares:
 ['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
  'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
@@ -59,611 +59,611 @@
  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
  'scrapy.downloadermiddlewares.stats.DownloaderStats']
-2026-08-23 07:18:48 [scrapy.middleware] INFO: Enabled spider middlewares:
+2026-08-30 11:54:04 [scrapy.middleware] INFO: Enabled spider middlewares:
 ['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
  'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
  'scrapy.spidermiddlewares.referer.RefererMiddleware',
  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
  'scrapy.spidermiddlewares.depth.DepthMiddleware',
  'scrapy.spidermiddlewares.metacopy.MetaCopyDetectionMiddleware']
-2026-08-23 07:18:48 [scrapy.middleware] INFO: Enabled item pipelines:
+2026-08-30 11:54:04 [scrapy.middleware] INFO: Enabled item pipelines:
 []
-2026-08-23 07:18:48 [scrapy.core.engine] INFO: Spider opened
-2026-08-23 07:18:48 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2026-08-23 07:18:48 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
-2026-08-23 07:18:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/25/absetzcontainer-fuer-baumischabfall-in-berlin?c=7> (referer: None)
-2026-08-23 07:18:48 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/berlin/dare-shop.py:138: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
+2026-08-30 11:54:04 [scrapy.core.engine] INFO: Spider opened
+2026-08-30 11:54:04 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2026-08-30 11:54:04 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2026-08-30 11:54:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/25/absetzcontainer-fuer-baumischabfall-in-berlin?c=7> (referer: None)
+2026-08-30 11:54:05 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/berlin/dare-shop.py:138: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
   self.log(f"\n{'='*80}")
 
-2026-08-23 07:18:48 [dare-shop-products] DEBUG: 
+2026-08-30 11:54:05 [dare-shop-products] DEBUG: 
 ================================================================================
-2026-08-23 07:18:48 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/berlin/dare-shop.py:139: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
+2026-08-30 11:54:05 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/berlin/dare-shop.py:139: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
   self.log(f"Starte Produktseite: {url}")
 
-2026-08-23 07:18:48 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/25/absetzcontainer-fuer-baumischabfall-in-berlin?c=7
-2026-08-23 07:18:48 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/berlin/dare-shop.py:140: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
+2026-08-30 11:54:05 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/25/absetzcontainer-fuer-baumischabfall-in-berlin?c=7
+2026-08-30 11:54:05 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/berlin/dare-shop.py:140: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
   self.log(f"{'='*80}\n")
 
-2026-08-23 07:18:48 [dare-shop-products] DEBUG: ================================================================================
+2026-08-30 11:54:05 [dare-shop-products] DEBUG: ================================================================================
 
-2026-08-23 07:18:56 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/berlin/dare-shop.py:157: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
+2026-08-30 11:54:12 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/berlin/dare-shop.py:157: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
   self.log("Cookie-Banner nicht gefunden oder bereits akzeptiert.")
 
-2026-08-23 07:18:56 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
-2026-08-23 07:18:56 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/berlin/dare-shop.py:209: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
+2026-08-30 11:54:12 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
+2026-08-30 11:54:12 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/berlin/dare-shop.py:209: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
   self.log(f"Gefunden: {options_count} Größen-Optionen")
 
-2026-08-23 07:18:56 [dare-shop-products] DEBUG: Gefunden: 4 Größen-Optionen
-2026-08-23 07:18:56 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/berlin/dare-shop.py:228: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
+2026-08-30 11:54:12 [dare-shop-products] DEBUG: Gefunden: 4 Größen-Optionen
+2026-08-30 11:54:12 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/berlin/dare-shop.py:228: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
   self.log(f"Verarbeite Option {idx+1}/{options_count}: {size_text}")
 
-2026-08-23 07:18:56 [dare-shop-products] DEBUG: Verarbeite Option 1/4: 3 cbm
-2026-08-23 07:18:56 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/berlin/dare-shop.py:233: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
+2026-08-30 11:54:12 [dare-shop-products] DEBUG: Verarbeite Option 1/4: 3 cbm
+2026-08-30 11:54:12 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/berlin/dare-shop.py:233: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
   self.log(f"Preis vor Auswahl: {price_before}")
 
-2026-08-23 07:18:56 [dare-shop-products] DEBUG: Preis vor Auswahl: 731,00
-2026-08-23 07:18:57 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/berlin/dare-shop.py:248: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
+2026-08-30 11:54:12 [dare-shop-products] DEBUG: Preis vor Auswahl: 731,00
+2026-08-30 11:54:14 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/berlin/dare-shop.py:248: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
   self.log(f"Preis aktualisiert nach {(attempt+1)*0.5}s: {price}")
 
-2026-08-23 07:18:57 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 471,00
-2026-08-23 07:18:58 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/berlin/dare-shop.py:271: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
+2026-08-30 11:54:14 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 471,00
+2026-08-30 11:54:14 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/berlin/dare-shop.py:271: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
   self.log(
 
-2026-08-23 07:18:58 [dare-shop-products] DEBUG: ✓ ITEM: type=Baumischabfall, size=3, price=471,00, url=https://www.dare-shop.de/container-bestellen/25/absetzcontainer-fuer-baumischabfall-in-berlin?number=CS-B1-P_BMA-03M&c=7
-2026-08-23 07:18:58 [dare-shop-products] DEBUG: Verarbeite Option 2/4: 5 cbm
-2026-08-23 07:18:58 [dare-shop-products] DEBUG: Preis vor Auswahl: 471,00
-2026-08-23 07:18:59 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 643,00
-2026-08-23 07:18:59 [dare-shop-products] DEBUG: ✓ ITEM: type=Baumischabfall, size=5, price=643,00, url=https://www.dare-shop.de/container-bestellen/25/absetzcontainer-fuer-baumischabfall-in-berlin?number=CS-B1-P_BMA-05M&c=7
-2026-08-23 07:18:59 [dare-shop-products] DEBUG: Verarbeite Option 3/4: 7 cbm
-2026-08-23 07:18:59 [dare-shop-products] DEBUG: Preis vor Auswahl: 643,00
-2026-08-23 07:19:00 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 731,00
-2026-08-23 07:19:01 [dare-shop-products] DEBUG: ✓ ITEM: type=Baumischabfall, size=7, price=731,00, url=https://www.dare-shop.de/container-bestellen/25/absetzcontainer-fuer-baumischabfall-in-berlin?number=CS-B1-P_BMA-07M&c=7
-2026-08-23 07:19:01 [dare-shop-products] DEBUG: Verarbeite Option 4/4: 10 cbm
-2026-08-23 07:19:01 [dare-shop-products] DEBUG: Preis vor Auswahl: 731,00
-2026-08-23 07:19:02 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 988,00
-2026-08-23 07:19:02 [dare-shop-products] DEBUG: ✓ ITEM: type=Baumischabfall, size=10, price=988,00, url=https://www.dare-shop.de/container-bestellen/25/absetzcontainer-fuer-baumischabfall-in-berlin?number=CS-B1-P_BMA-10M&c=7
-2026-08-23 07:19:02 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/berlin/dare-shop.py:276: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
+2026-08-30 11:54:14 [dare-shop-products] DEBUG: ✓ ITEM: type=Baumischabfall, size=3, price=471,00, url=https://www.dare-shop.de/container-bestellen/25/absetzcontainer-fuer-baumischabfall-in-berlin?number=CS-B1-P_BMA-03M&c=7
+2026-08-30 11:54:14 [dare-shop-products] DEBUG: Verarbeite Option 2/4: 5 cbm
+2026-08-30 11:54:14 [dare-shop-products] DEBUG: Preis vor Auswahl: 471,00
+2026-08-30 11:54:15 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 643,00
+2026-08-30 11:54:16 [dare-shop-products] DEBUG: ✓ ITEM: type=Baumischabfall, size=5, price=643,00, url=https://www.dare-shop.de/container-bestellen/25/absetzcontainer-fuer-baumischabfall-in-berlin?number=CS-B1-P_BMA-05M&c=7
+2026-08-30 11:54:16 [dare-shop-products] DEBUG: Verarbeite Option 3/4: 7 cbm
+2026-08-30 11:54:16 [dare-shop-products] DEBUG: Preis vor Auswahl: 643,00
+2026-08-30 11:54:17 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 731,00
+2026-08-30 11:54:17 [dare-shop-products] DEBUG: ✓ ITEM: type=Baumischabfall, size=7, price=731,00, url=https://www.dare-shop.de/container-bestellen/25/absetzcontainer-fuer-baumischabfall-in-berlin?number=CS-B1-P_BMA-07M&c=7
+2026-08-30 11:54:17 [dare-shop-products] DEBUG: Verarbeite Option 4/4: 10 cbm
+2026-08-30 11:54:17 [dare-shop-products] DEBUG: Preis vor Auswahl: 731,00
+2026-08-30 11:54:18 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 988,00
+2026-08-30 11:54:19 [dare-shop-products] DEBUG: ✓ ITEM: type=Baumischabfall, size=10, price=988,00, url=https://www.dare-shop.de/container-bestellen/25/absetzcontainer-fuer-baumischabfall-in-berlin?number=CS-B1-P_BMA-10M&c=7
+2026-08-30 11:54:19 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/berlin/dare-shop.py:276: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
   self.log(f"\nProduktseite abgeschlossen: {title} ({options_count} Größen)\n")
 
-2026-08-23 07:19:02 [dare-shop-products] DEBUG: 
+2026-08-30 11:54:19 [dare-shop-products] DEBUG: 
 Produktseite abgeschlossen: Absetzcontainer für Baumischabfall in Berlin (4 Größen)
 
-2026-08-23 07:19:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/25/absetzcontainer-fuer-baumischabfall-in-berlin?c=7>
+2026-08-30 11:54:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/25/absetzcontainer-fuer-baumischabfall-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Baumischabfall in Berlin', 'type': 'Baumischabfall', 'city': 'Berlin', 'size': '3', 'price': '471,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/25/absetzcontainer-fuer-baumischabfall-in-berlin?number=CS-B1-P_BMA-03M&c=7'}
-2026-08-23 07:19:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/25/absetzcontainer-fuer-baumischabfall-in-berlin?c=7>
+2026-08-30 11:54:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/25/absetzcontainer-fuer-baumischabfall-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Baumischabfall in Berlin', 'type': 'Baumischabfall', 'city': 'Berlin', 'size': '5', 'price': '643,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/25/absetzcontainer-fuer-baumischabfall-in-berlin?number=CS-B1-P_BMA-05M&c=7'}
-2026-08-23 07:19:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/25/absetzcontainer-fuer-baumischabfall-in-berlin?c=7>
+2026-08-30 11:54:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/25/absetzcontainer-fuer-baumischabfall-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Baumischabfall in Berlin', 'type': 'Baumischabfall', 'city': 'Berlin', 'size': '7', 'price': '731,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/25/absetzcontainer-fuer-baumischabfall-in-berlin?number=CS-B1-P_BMA-07M&c=7'}
-2026-08-23 07:19:02 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/25/absetzcontainer-fuer-baumischabfall-in-berlin?c=7>
+2026-08-30 11:54:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/25/absetzcontainer-fuer-baumischabfall-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Baumischabfall in Berlin', 'type': 'Baumischabfall', 'city': 'Berlin', 'size': '10', 'price': '988,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/25/absetzcontainer-fuer-baumischabfall-in-berlin?number=CS-B1-P_BMA-10M&c=7'}
-2026-08-23 07:19:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/30/abrollcontainer-fuer-baumischabfall-in-berlin?c=7> (referer: None)
-2026-08-23 07:19:03 [dare-shop-products] DEBUG: 
+2026-08-30 11:54:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/30/abrollcontainer-fuer-baumischabfall-in-berlin?c=7> (referer: None)
+2026-08-30 11:54:19 [dare-shop-products] DEBUG: 
 ================================================================================
-2026-08-23 07:19:03 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/30/abrollcontainer-fuer-baumischabfall-in-berlin?c=7
-2026-08-23 07:19:03 [dare-shop-products] DEBUG: ================================================================================
+2026-08-30 11:54:19 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/30/abrollcontainer-fuer-baumischabfall-in-berlin?c=7
+2026-08-30 11:54:19 [dare-shop-products] DEBUG: ================================================================================
 
-2026-08-23 07:19:10 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
-2026-08-23 07:19:10 [dare-shop-products] DEBUG: Gefunden: 3 Größen-Optionen
-2026-08-23 07:19:10 [dare-shop-products] DEBUG: Verarbeite Option 1/3: 13 cbm
-2026-08-23 07:19:10 [dare-shop-products] DEBUG: Preis vor Auswahl: 2.016,00
-2026-08-23 07:19:11 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 1.245,00
-2026-08-23 07:19:12 [dare-shop-products] DEBUG: ✓ ITEM: type=Baumischabfall, size=13, price=1.245,00, url=https://www.dare-shop.de/container-bestellen/30/abrollcontainer-fuer-baumischabfall-in-berlin?number=CS-B1-P_BMA-13C&c=7
-2026-08-23 07:19:12 [dare-shop-products] DEBUG: Verarbeite Option 2/3: 22 cbm
-2026-08-23 07:19:12 [dare-shop-products] DEBUG: Preis vor Auswahl: 1.245,00
-2026-08-23 07:19:13 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 2.016,00
-2026-08-23 07:19:13 [dare-shop-products] DEBUG: ✓ ITEM: type=Baumischabfall, size=22, price=2.016,00, url=https://www.dare-shop.de/container-bestellen/30/abrollcontainer-fuer-baumischabfall-in-berlin?number=CS-B1-P_BMA-22C&c=7
-2026-08-23 07:19:13 [dare-shop-products] DEBUG: Verarbeite Option 3/3: 40 cbm
-2026-08-23 07:19:13 [dare-shop-products] DEBUG: Preis vor Auswahl: 2.016,00
-2026-08-23 07:19:14 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 3.081,00
-2026-08-23 07:19:15 [dare-shop-products] DEBUG: ✓ ITEM: type=Baumischabfall, size=40, price=3.081,00, url=https://www.dare-shop.de/container-bestellen/30/abrollcontainer-fuer-baumischabfall-in-berlin?number=CS-B1-P_BMA-40C&c=7
-2026-08-23 07:19:15 [dare-shop-products] DEBUG: 
+2026-08-30 11:54:27 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
+2026-08-30 11:54:27 [dare-shop-products] DEBUG: Gefunden: 3 Größen-Optionen
+2026-08-30 11:54:27 [dare-shop-products] DEBUG: Verarbeite Option 1/3: 13 cbm
+2026-08-30 11:54:27 [dare-shop-products] DEBUG: Preis vor Auswahl: 2.016,00
+2026-08-30 11:54:28 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 1.245,00
+2026-08-30 11:54:28 [dare-shop-products] DEBUG: ✓ ITEM: type=Baumischabfall, size=13, price=1.245,00, url=https://www.dare-shop.de/container-bestellen/30/abrollcontainer-fuer-baumischabfall-in-berlin?number=CS-B1-P_BMA-13C&c=7
+2026-08-30 11:54:28 [dare-shop-products] DEBUG: Verarbeite Option 2/3: 22 cbm
+2026-08-30 11:54:28 [dare-shop-products] DEBUG: Preis vor Auswahl: 1.245,00
+2026-08-30 11:54:30 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 2.016,00
+2026-08-30 11:54:30 [dare-shop-products] DEBUG: ✓ ITEM: type=Baumischabfall, size=22, price=2.016,00, url=https://www.dare-shop.de/container-bestellen/30/abrollcontainer-fuer-baumischabfall-in-berlin?number=CS-B1-P_BMA-22C&c=7
+2026-08-30 11:54:30 [dare-shop-products] DEBUG: Verarbeite Option 3/3: 40 cbm
+2026-08-30 11:54:30 [dare-shop-products] DEBUG: Preis vor Auswahl: 2.016,00
+2026-08-30 11:54:31 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 3.081,00
+2026-08-30 11:54:32 [dare-shop-products] DEBUG: ✓ ITEM: type=Baumischabfall, size=40, price=3.081,00, url=https://www.dare-shop.de/container-bestellen/30/abrollcontainer-fuer-baumischabfall-in-berlin?number=CS-B1-P_BMA-40C&c=7
+2026-08-30 11:54:32 [dare-shop-products] DEBUG: 
 Produktseite abgeschlossen: Abrollcontainer für Baumischabfall in Berlin (3 Größen)
 
-2026-08-23 07:19:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/30/abrollcontainer-fuer-baumischabfall-in-berlin?c=7>
+2026-08-30 11:54:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/30/abrollcontainer-fuer-baumischabfall-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Abrollcontainer für Baumischabfall in Berlin', 'type': 'Baumischabfall', 'city': 'Berlin', 'size': '13', 'price': '1.245,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/30/abrollcontainer-fuer-baumischabfall-in-berlin?number=CS-B1-P_BMA-13C&c=7'}
-2026-08-23 07:19:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/30/abrollcontainer-fuer-baumischabfall-in-berlin?c=7>
+2026-08-30 11:54:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/30/abrollcontainer-fuer-baumischabfall-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Abrollcontainer für Baumischabfall in Berlin', 'type': 'Baumischabfall', 'city': 'Berlin', 'size': '22', 'price': '2.016,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/30/abrollcontainer-fuer-baumischabfall-in-berlin?number=CS-B1-P_BMA-22C&c=7'}
-2026-08-23 07:19:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/30/abrollcontainer-fuer-baumischabfall-in-berlin?c=7>
+2026-08-30 11:54:32 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/30/abrollcontainer-fuer-baumischabfall-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Abrollcontainer für Baumischabfall in Berlin', 'type': 'Baumischabfall', 'city': 'Berlin', 'size': '40', 'price': '3.081,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/30/abrollcontainer-fuer-baumischabfall-in-berlin?number=CS-B1-P_BMA-40C&c=7'}
-2026-08-23 07:19:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/27/absetzcontainer-fuer-bauschutt-in-berlin?c=7> (referer: None)
-2026-08-23 07:19:15 [dare-shop-products] DEBUG: 
+2026-08-30 11:54:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/27/absetzcontainer-fuer-bauschutt-in-berlin?c=7> (referer: None)
+2026-08-30 11:54:32 [dare-shop-products] DEBUG: 
 ================================================================================
-2026-08-23 07:19:15 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/27/absetzcontainer-fuer-bauschutt-in-berlin?c=7
-2026-08-23 07:19:15 [dare-shop-products] DEBUG: ================================================================================
+2026-08-30 11:54:32 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/27/absetzcontainer-fuer-bauschutt-in-berlin?c=7
+2026-08-30 11:54:32 [dare-shop-products] DEBUG: ================================================================================
 
-2026-08-23 07:19:23 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
-2026-08-23 07:19:23 [dare-shop-products] DEBUG: Gefunden: 4 Größen-Optionen
-2026-08-23 07:19:23 [dare-shop-products] DEBUG: Verarbeite Option 1/4: 3 cbm
-2026-08-23 07:19:23 [dare-shop-products] DEBUG: Preis vor Auswahl: 656,00
-2026-08-23 07:19:24 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 439,00
-2026-08-23 07:19:24 [dare-shop-products] DEBUG: ✓ ITEM: type=Bauschutt, size=3, price=439,00, url=https://www.dare-shop.de/container-bestellen/27/absetzcontainer-fuer-bauschutt-in-berlin?number=CS-B1-P_BS_NR-03M&c=7
-2026-08-23 07:19:25 [dare-shop-products] DEBUG: Verarbeite Option 2/4: 5 cbm
-2026-08-23 07:19:25 [dare-shop-products] DEBUG: Preis vor Auswahl: 439,00
-2026-08-23 07:19:26 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 589,00
-2026-08-23 07:19:26 [dare-shop-products] DEBUG: ✓ ITEM: type=Bauschutt, size=5, price=589,00, url=https://www.dare-shop.de/container-bestellen/27/absetzcontainer-fuer-bauschutt-in-berlin?number=CS-B1-P_BS_NR-05M&c=7
-2026-08-23 07:19:26 [dare-shop-products] DEBUG: Verarbeite Option 3/4: 7 cbm
-2026-08-23 07:19:26 [dare-shop-products] DEBUG: Preis vor Auswahl: 589,00
-2026-08-23 07:19:27 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 656,00
-2026-08-23 07:19:28 [dare-shop-products] DEBUG: ✓ ITEM: type=Bauschutt, size=7, price=656,00, url=https://www.dare-shop.de/container-bestellen/27/absetzcontainer-fuer-bauschutt-in-berlin?number=CS-B1-P_BS_NR-07M&c=7
-2026-08-23 07:19:28 [dare-shop-products] DEBUG: Verarbeite Option 4/4: 10 cbm
-2026-08-23 07:19:28 [dare-shop-products] DEBUG: Preis vor Auswahl: 656,00
-2026-08-23 07:19:38 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/berlin/dare-shop.py:252: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
+2026-08-30 11:54:39 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
+2026-08-30 11:54:39 [dare-shop-products] DEBUG: Gefunden: 4 Größen-Optionen
+2026-08-30 11:54:39 [dare-shop-products] DEBUG: Verarbeite Option 1/4: 3 cbm
+2026-08-30 11:54:39 [dare-shop-products] DEBUG: Preis vor Auswahl: 656,00
+2026-08-30 11:54:40 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 439,00
+2026-08-30 11:54:41 [dare-shop-products] DEBUG: ✓ ITEM: type=Bauschutt, size=3, price=439,00, url=https://www.dare-shop.de/container-bestellen/27/absetzcontainer-fuer-bauschutt-in-berlin?number=CS-B1-P_BS_NR-03M&c=7
+2026-08-30 11:54:41 [dare-shop-products] DEBUG: Verarbeite Option 2/4: 5 cbm
+2026-08-30 11:54:41 [dare-shop-products] DEBUG: Preis vor Auswahl: 439,00
+2026-08-30 11:54:42 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 589,00
+2026-08-30 11:54:42 [dare-shop-products] DEBUG: ✓ ITEM: type=Bauschutt, size=5, price=589,00, url=https://www.dare-shop.de/container-bestellen/27/absetzcontainer-fuer-bauschutt-in-berlin?number=CS-B1-P_BS_NR-05M&c=7
+2026-08-30 11:54:42 [dare-shop-products] DEBUG: Verarbeite Option 3/4: 7 cbm
+2026-08-30 11:54:42 [dare-shop-products] DEBUG: Preis vor Auswahl: 589,00
+2026-08-30 11:54:44 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 656,00
+2026-08-30 11:54:44 [dare-shop-products] DEBUG: ✓ ITEM: type=Bauschutt, size=7, price=656,00, url=https://www.dare-shop.de/container-bestellen/27/absetzcontainer-fuer-bauschutt-in-berlin?number=CS-B1-P_BS_NR-07M&c=7
+2026-08-30 11:54:44 [dare-shop-products] DEBUG: Verarbeite Option 4/4: 10 cbm
+2026-08-30 11:54:44 [dare-shop-products] DEBUG: Preis vor Auswahl: 656,00
+2026-08-30 11:54:55 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/berlin/dare-shop.py:252: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
   self.log(f"WARNUNG: Preis hat sich nicht geändert für Größe {size}! Verwende: {price}")
 
-2026-08-23 07:19:38 [dare-shop-products] DEBUG: WARNUNG: Preis hat sich nicht geändert für Größe 10! Verwende: 656,00
-2026-08-23 07:19:39 [dare-shop-products] DEBUG: ✓ ITEM: type=Bauschutt, size=10, price=656,00, url=https://www.dare-shop.de/container-bestellen/27/absetzcontainer-fuer-bauschutt-in-berlin?number=CS-B1-P_BS_NR-07M&c=7
-2026-08-23 07:19:39 [dare-shop-products] DEBUG: 
+2026-08-30 11:54:55 [dare-shop-products] DEBUG: WARNUNG: Preis hat sich nicht geändert für Größe 10! Verwende: 656,00
+2026-08-30 11:54:55 [dare-shop-products] DEBUG: ✓ ITEM: type=Bauschutt, size=10, price=656,00, url=https://www.dare-shop.de/container-bestellen/27/absetzcontainer-fuer-bauschutt-in-berlin?number=CS-B1-P_BS_NR-07M&c=7
+2026-08-30 11:54:55 [dare-shop-products] DEBUG: 
 Produktseite abgeschlossen: Absetzcontainer für Bauschutt in Berlin (4 Größen)
 
-2026-08-23 07:19:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/27/absetzcontainer-fuer-bauschutt-in-berlin?c=7>
+2026-08-30 11:54:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/27/absetzcontainer-fuer-bauschutt-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Bauschutt in Berlin', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '3', 'price': '439,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/27/absetzcontainer-fuer-bauschutt-in-berlin?number=CS-B1-P_BS_NR-03M&c=7'}
-2026-08-23 07:19:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/27/absetzcontainer-fuer-bauschutt-in-berlin?c=7>
+2026-08-30 11:54:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/27/absetzcontainer-fuer-bauschutt-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Bauschutt in Berlin', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '5', 'price': '589,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/27/absetzcontainer-fuer-bauschutt-in-berlin?number=CS-B1-P_BS_NR-05M&c=7'}
-2026-08-23 07:19:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/27/absetzcontainer-fuer-bauschutt-in-berlin?c=7>
+2026-08-30 11:54:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/27/absetzcontainer-fuer-bauschutt-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Bauschutt in Berlin', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '7', 'price': '656,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/27/absetzcontainer-fuer-bauschutt-in-berlin?number=CS-B1-P_BS_NR-07M&c=7'}
-2026-08-23 07:19:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/27/absetzcontainer-fuer-bauschutt-in-berlin?c=7>
+2026-08-30 11:54:55 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/27/absetzcontainer-fuer-bauschutt-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Bauschutt in Berlin', 'type': 'Bauschutt', 'city': 'Berlin', 'size': '10', 'price': '656,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/27/absetzcontainer-fuer-bauschutt-in-berlin?number=CS-B1-P_BS_NR-07M&c=7'}
-2026-08-23 07:19:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/47/absetzcontainer-fuer-beton-in-berlin?c=7> (referer: None)
-2026-08-23 07:19:39 [dare-shop-products] DEBUG: 
+2026-08-30 11:54:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/47/absetzcontainer-fuer-beton-in-berlin?c=7> (referer: None)
+2026-08-30 11:54:56 [dare-shop-products] DEBUG: 
 ================================================================================
-2026-08-23 07:19:39 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/47/absetzcontainer-fuer-beton-in-berlin?c=7
-2026-08-23 07:19:39 [dare-shop-products] DEBUG: ================================================================================
+2026-08-30 11:54:56 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/47/absetzcontainer-fuer-beton-in-berlin?c=7
+2026-08-30 11:54:56 [dare-shop-products] DEBUG: ================================================================================
 
-2026-08-23 07:19:47 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
-2026-08-23 07:19:47 [dare-shop-products] DEBUG: Gefunden: 4 Größen-Optionen
-2026-08-23 07:19:47 [dare-shop-products] DEBUG: Verarbeite Option 1/4: 3 cbm
-2026-08-23 07:19:47 [dare-shop-products] DEBUG: Preis vor Auswahl: 406,00
-2026-08-23 07:19:48 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 332,00
-2026-08-23 07:19:48 [dare-shop-products] DEBUG: ✓ ITEM: type=Beton, size=3, price=332,00, url=https://www.dare-shop.de/container-bestellen/47/absetzcontainer-fuer-beton-in-berlin?number=CS-B1-P_BET-03M&c=7
-2026-08-23 07:19:48 [dare-shop-products] DEBUG: Verarbeite Option 2/4: 5 cbm
-2026-08-23 07:19:48 [dare-shop-products] DEBUG: Preis vor Auswahl: 332,00
-2026-08-23 07:19:49 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 411,00
-2026-08-23 07:19:50 [dare-shop-products] DEBUG: ✓ ITEM: type=Beton, size=5, price=411,00, url=https://www.dare-shop.de/container-bestellen/47/absetzcontainer-fuer-beton-in-berlin?number=CS-B1-P_BET-05M&c=7
-2026-08-23 07:19:50 [dare-shop-products] DEBUG: Verarbeite Option 3/4: 7 cbm
-2026-08-23 07:19:50 [dare-shop-products] DEBUG: Preis vor Auswahl: 411,00
-2026-08-23 07:19:51 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 406,00
-2026-08-23 07:19:52 [dare-shop-products] DEBUG: ✓ ITEM: type=Beton, size=7, price=406,00, url=https://www.dare-shop.de/container-bestellen/47/absetzcontainer-fuer-beton-in-berlin?number=CS-B1-P_BET-07M&c=7
-2026-08-23 07:19:52 [dare-shop-products] DEBUG: Verarbeite Option 4/4: 10 cbm
-2026-08-23 07:19:52 [dare-shop-products] DEBUG: Preis vor Auswahl: 406,00
-2026-08-23 07:20:02 [dare-shop-products] DEBUG: WARNUNG: Preis hat sich nicht geändert für Größe 10! Verwende: 406,00
-2026-08-23 07:20:03 [dare-shop-products] DEBUG: ✓ ITEM: type=Beton, size=10, price=406,00, url=https://www.dare-shop.de/container-bestellen/47/absetzcontainer-fuer-beton-in-berlin?number=CS-B1-P_BET-07M&c=7
-2026-08-23 07:20:03 [dare-shop-products] DEBUG: 
+2026-08-30 11:55:03 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
+2026-08-30 11:55:03 [dare-shop-products] DEBUG: Gefunden: 4 Größen-Optionen
+2026-08-30 11:55:03 [dare-shop-products] DEBUG: Verarbeite Option 1/4: 3 cbm
+2026-08-30 11:55:03 [dare-shop-products] DEBUG: Preis vor Auswahl: 406,00
+2026-08-30 11:55:04 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 332,00
+2026-08-30 11:55:05 [dare-shop-products] DEBUG: ✓ ITEM: type=Beton, size=3, price=332,00, url=https://www.dare-shop.de/container-bestellen/47/absetzcontainer-fuer-beton-in-berlin?number=CS-B1-P_BET-03M&c=7
+2026-08-30 11:55:05 [dare-shop-products] DEBUG: Verarbeite Option 2/4: 5 cbm
+2026-08-30 11:55:05 [dare-shop-products] DEBUG: Preis vor Auswahl: 332,00
+2026-08-30 11:55:06 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 411,00
+2026-08-30 11:55:06 [dare-shop-products] DEBUG: ✓ ITEM: type=Beton, size=5, price=411,00, url=https://www.dare-shop.de/container-bestellen/47/absetzcontainer-fuer-beton-in-berlin?number=CS-B1-P_BET-05M&c=7
+2026-08-30 11:55:07 [dare-shop-products] DEBUG: Verarbeite Option 3/4: 7 cbm
+2026-08-30 11:55:07 [dare-shop-products] DEBUG: Preis vor Auswahl: 411,00
+2026-08-30 11:55:08 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 406,00
+2026-08-30 11:55:08 [dare-shop-products] DEBUG: ✓ ITEM: type=Beton, size=7, price=406,00, url=https://www.dare-shop.de/container-bestellen/47/absetzcontainer-fuer-beton-in-berlin?number=CS-B1-P_BET-07M&c=7
+2026-08-30 11:55:08 [dare-shop-products] DEBUG: Verarbeite Option 4/4: 10 cbm
+2026-08-30 11:55:08 [dare-shop-products] DEBUG: Preis vor Auswahl: 406,00
+2026-08-30 11:55:19 [dare-shop-products] DEBUG: WARNUNG: Preis hat sich nicht geändert für Größe 10! Verwende: 406,00
+2026-08-30 11:55:19 [dare-shop-products] DEBUG: ✓ ITEM: type=Beton, size=10, price=406,00, url=https://www.dare-shop.de/container-bestellen/47/absetzcontainer-fuer-beton-in-berlin?number=CS-B1-P_BET-07M&c=7
+2026-08-30 11:55:19 [dare-shop-products] DEBUG: 
 Produktseite abgeschlossen: Absetzcontainer für Beton in Berlin (4 Größen)
 
-2026-08-23 07:20:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/47/absetzcontainer-fuer-beton-in-berlin?c=7>
+2026-08-30 11:55:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/47/absetzcontainer-fuer-beton-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Beton in Berlin', 'type': 'Beton', 'city': 'Berlin', 'size': '3', 'price': '332,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/47/absetzcontainer-fuer-beton-in-berlin?number=CS-B1-P_BET-03M&c=7'}
-2026-08-23 07:20:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/47/absetzcontainer-fuer-beton-in-berlin?c=7>
+2026-08-30 11:55:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/47/absetzcontainer-fuer-beton-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Beton in Berlin', 'type': 'Beton', 'city': 'Berlin', 'size': '5', 'price': '411,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/47/absetzcontainer-fuer-beton-in-berlin?number=CS-B1-P_BET-05M&c=7'}
-2026-08-23 07:20:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/47/absetzcontainer-fuer-beton-in-berlin?c=7>
+2026-08-30 11:55:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/47/absetzcontainer-fuer-beton-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Beton in Berlin', 'type': 'Beton', 'city': 'Berlin', 'size': '7', 'price': '406,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/47/absetzcontainer-fuer-beton-in-berlin?number=CS-B1-P_BET-07M&c=7'}
-2026-08-23 07:20:03 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/47/absetzcontainer-fuer-beton-in-berlin?c=7>
+2026-08-30 11:55:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/47/absetzcontainer-fuer-beton-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Beton in Berlin', 'type': 'Beton', 'city': 'Berlin', 'size': '10', 'price': '406,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/47/absetzcontainer-fuer-beton-in-berlin?number=CS-B1-P_BET-07M&c=7'}
-2026-08-23 07:20:03 [scrapy.extensions.logstats] INFO: Crawled 4 pages (at 4 pages/min), scraped 15 items (at 15 items/min)
-2026-08-23 07:20:03 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/46/absetzcontainer-fuer-boden-in-berlin> (referer: None)
-2026-08-23 07:20:03 [dare-shop-products] DEBUG: 
+2026-08-30 11:55:20 [scrapy.extensions.logstats] INFO: Crawled 4 pages (at 4 pages/min), scraped 15 items (at 15 items/min)
+2026-08-30 11:55:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/46/absetzcontainer-fuer-boden-in-berlin> (referer: None)
+2026-08-30 11:55:20 [dare-shop-products] DEBUG: 
 ================================================================================
-2026-08-23 07:20:03 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/46/absetzcontainer-fuer-boden-in-berlin
-2026-08-23 07:20:03 [dare-shop-products] DEBUG: ================================================================================
+2026-08-30 11:55:20 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/46/absetzcontainer-fuer-boden-in-berlin
+2026-08-30 11:55:20 [dare-shop-products] DEBUG: ================================================================================
 
-2026-08-23 07:20:11 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
-2026-08-23 07:20:11 [dare-shop-products] DEBUG: Gefunden: 4 Größen-Optionen
-2026-08-23 07:20:11 [dare-shop-products] DEBUG: Verarbeite Option 1/4: 3 cbm
-2026-08-23 07:20:11 [dare-shop-products] DEBUG: Preis vor Auswahl: 922,00
-2026-08-23 07:20:12 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 553,00
-2026-08-23 07:20:12 [dare-shop-products] DEBUG: ✓ ITEM: type=Boden, size=3, price=553,00, url=https://www.dare-shop.de/container-bestellen/46/absetzcontainer-fuer-boden-in-berlin?number=CS-B1-P_BO-03M
-2026-08-23 07:20:12 [dare-shop-products] DEBUG: Verarbeite Option 2/4: 5 cbm
-2026-08-23 07:20:12 [dare-shop-products] DEBUG: Preis vor Auswahl: 553,00
-2026-08-23 07:20:13 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 779,00
-2026-08-23 07:20:14 [dare-shop-products] DEBUG: ✓ ITEM: type=Boden, size=5, price=779,00, url=https://www.dare-shop.de/container-bestellen/46/absetzcontainer-fuer-boden-in-berlin?number=CS-B1-P_BO-05M
-2026-08-23 07:20:14 [dare-shop-products] DEBUG: Verarbeite Option 3/4: 7 cbm
-2026-08-23 07:20:14 [dare-shop-products] DEBUG: Preis vor Auswahl: 779,00
-2026-08-23 07:20:15 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 922,00
-2026-08-23 07:20:15 [dare-shop-products] DEBUG: ✓ ITEM: type=Boden, size=7, price=922,00, url=https://www.dare-shop.de/container-bestellen/46/absetzcontainer-fuer-boden-in-berlin?number=CS-B1-P_BO-07M
-2026-08-23 07:20:15 [dare-shop-products] DEBUG: Verarbeite Option 4/4: 10 cbm
-2026-08-23 07:20:15 [dare-shop-products] DEBUG: Preis vor Auswahl: 922,00
-2026-08-23 07:20:26 [dare-shop-products] DEBUG: WARNUNG: Preis hat sich nicht geändert für Größe 10! Verwende: 922,00
-2026-08-23 07:20:27 [dare-shop-products] DEBUG: ✓ ITEM: type=Boden, size=10, price=922,00, url=https://www.dare-shop.de/container-bestellen/46/absetzcontainer-fuer-boden-in-berlin?number=CS-B1-P_BO-07M
-2026-08-23 07:20:27 [dare-shop-products] DEBUG: 
+2026-08-30 11:55:27 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
+2026-08-30 11:55:27 [dare-shop-products] DEBUG: Gefunden: 4 Größen-Optionen
+2026-08-30 11:55:27 [dare-shop-products] DEBUG: Verarbeite Option 1/4: 3 cbm
+2026-08-30 11:55:27 [dare-shop-products] DEBUG: Preis vor Auswahl: 922,00
+2026-08-30 11:55:29 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 553,00
+2026-08-30 11:55:29 [dare-shop-products] DEBUG: ✓ ITEM: type=Boden, size=3, price=553,00, url=https://www.dare-shop.de/container-bestellen/46/absetzcontainer-fuer-boden-in-berlin?number=CS-B1-P_BO-03M
+2026-08-30 11:55:29 [dare-shop-products] DEBUG: Verarbeite Option 2/4: 5 cbm
+2026-08-30 11:55:29 [dare-shop-products] DEBUG: Preis vor Auswahl: 553,00
+2026-08-30 11:55:30 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 779,00
+2026-08-30 11:55:31 [dare-shop-products] DEBUG: ✓ ITEM: type=Boden, size=5, price=779,00, url=https://www.dare-shop.de/container-bestellen/46/absetzcontainer-fuer-boden-in-berlin?number=CS-B1-P_BO-05M
+2026-08-30 11:55:31 [dare-shop-products] DEBUG: Verarbeite Option 3/4: 7 cbm
+2026-08-30 11:55:31 [dare-shop-products] DEBUG: Preis vor Auswahl: 779,00
+2026-08-30 11:55:32 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 922,00
+2026-08-30 11:55:32 [dare-shop-products] DEBUG: ✓ ITEM: type=Boden, size=7, price=922,00, url=https://www.dare-shop.de/container-bestellen/46/absetzcontainer-fuer-boden-in-berlin?number=CS-B1-P_BO-07M
+2026-08-30 11:55:32 [dare-shop-products] DEBUG: Verarbeite Option 4/4: 10 cbm
+2026-08-30 11:55:32 [dare-shop-products] DEBUG: Preis vor Auswahl: 922,00
+2026-08-30 11:55:43 [dare-shop-products] DEBUG: WARNUNG: Preis hat sich nicht geändert für Größe 10! Verwende: 922,00
+2026-08-30 11:55:44 [dare-shop-products] DEBUG: ✓ ITEM: type=Boden, size=10, price=922,00, url=https://www.dare-shop.de/container-bestellen/46/absetzcontainer-fuer-boden-in-berlin?number=CS-B1-P_BO-07M
+2026-08-30 11:55:44 [dare-shop-products] DEBUG: 
 Produktseite abgeschlossen: Absetzcontainer für Boden in Berlin (4 Größen)
 
-2026-08-23 07:20:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/46/absetzcontainer-fuer-boden-in-berlin>
+2026-08-30 11:55:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/46/absetzcontainer-fuer-boden-in-berlin>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Boden in Berlin', 'type': 'Boden', 'city': 'Berlin', 'size': '3', 'price': '553,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/46/absetzcontainer-fuer-boden-in-berlin?number=CS-B1-P_BO-03M'}
-2026-08-23 07:20:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/46/absetzcontainer-fuer-boden-in-berlin>
+2026-08-30 11:55:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/46/absetzcontainer-fuer-boden-in-berlin>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Boden in Berlin', 'type': 'Boden', 'city': 'Berlin', 'size': '5', 'price': '779,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/46/absetzcontainer-fuer-boden-in-berlin?number=CS-B1-P_BO-05M'}
-2026-08-23 07:20:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/46/absetzcontainer-fuer-boden-in-berlin>
+2026-08-30 11:55:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/46/absetzcontainer-fuer-boden-in-berlin>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Boden in Berlin', 'type': 'Boden', 'city': 'Berlin', 'size': '7', 'price': '922,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/46/absetzcontainer-fuer-boden-in-berlin?number=CS-B1-P_BO-07M'}
-2026-08-23 07:20:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/46/absetzcontainer-fuer-boden-in-berlin>
+2026-08-30 11:55:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/46/absetzcontainer-fuer-boden-in-berlin>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Boden in Berlin', 'type': 'Boden', 'city': 'Berlin', 'size': '10', 'price': '922,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/46/absetzcontainer-fuer-boden-in-berlin?number=CS-B1-P_BO-07M'}
-2026-08-23 07:20:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/43/absetzcontainer-fuer-gartenabfall-in-berlin?c=7> (referer: None)
-2026-08-23 07:20:27 [dare-shop-products] DEBUG: 
+2026-08-30 11:55:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/43/absetzcontainer-fuer-gartenabfall-in-berlin?c=7> (referer: None)
+2026-08-30 11:55:44 [dare-shop-products] DEBUG: 
 ================================================================================
-2026-08-23 07:20:27 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/43/absetzcontainer-fuer-gartenabfall-in-berlin?c=7
-2026-08-23 07:20:27 [dare-shop-products] DEBUG: ================================================================================
+2026-08-30 11:55:44 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/43/absetzcontainer-fuer-gartenabfall-in-berlin?c=7
+2026-08-30 11:55:44 [dare-shop-products] DEBUG: ================================================================================
 
-2026-08-23 07:20:34 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
-2026-08-23 07:20:34 [dare-shop-products] DEBUG: Gefunden: 4 Größen-Optionen
-2026-08-23 07:20:34 [dare-shop-products] DEBUG: Verarbeite Option 1/4: 3 cbm
-2026-08-23 07:20:34 [dare-shop-products] DEBUG: Preis vor Auswahl: 506,00
-2026-08-23 07:20:35 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 375,00
-2026-08-23 07:20:36 [dare-shop-products] DEBUG: ✓ ITEM: type=Gartenabfälle, size=3, price=375,00, url=https://www.dare-shop.de/container-bestellen/43/absetzcontainer-fuer-gartenabfall-in-berlin?number=CS-B1-P_GRUENSCH-03M&c=7
-2026-08-23 07:20:36 [dare-shop-products] DEBUG: Verarbeite Option 2/4: 5 cbm
-2026-08-23 07:20:36 [dare-shop-products] DEBUG: Preis vor Auswahl: 375,00
-2026-08-23 07:20:37 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 482,00
-2026-08-23 07:20:38 [dare-shop-products] DEBUG: ✓ ITEM: type=Gartenabfälle, size=5, price=482,00, url=https://www.dare-shop.de/container-bestellen/43/absetzcontainer-fuer-gartenabfall-in-berlin?number=CS-B1-P_GRUENSCH-05M&c=7
-2026-08-23 07:20:38 [dare-shop-products] DEBUG: Verarbeite Option 3/4: 7 cbm
-2026-08-23 07:20:38 [dare-shop-products] DEBUG: Preis vor Auswahl: 482,00
-2026-08-23 07:20:39 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 506,00
-2026-08-23 07:20:39 [dare-shop-products] DEBUG: ✓ ITEM: type=Gartenabfälle, size=7, price=506,00, url=https://www.dare-shop.de/container-bestellen/43/absetzcontainer-fuer-gartenabfall-in-berlin?number=CS-B1-P_GRUENSCH-07M&c=7
-2026-08-23 07:20:39 [dare-shop-products] DEBUG: Verarbeite Option 4/4: 10 cbm
-2026-08-23 07:20:39 [dare-shop-products] DEBUG: Preis vor Auswahl: 506,00
-2026-08-23 07:20:40 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 666,00
-2026-08-23 07:20:41 [dare-shop-products] DEBUG: ✓ ITEM: type=Gartenabfälle, size=10, price=666,00, url=https://www.dare-shop.de/container-bestellen/43/absetzcontainer-fuer-gartenabfall-in-berlin?number=CS-B1-P_GRUENSCH-10M&c=7
-2026-08-23 07:20:41 [dare-shop-products] DEBUG: 
+2026-08-30 11:55:51 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
+2026-08-30 11:55:51 [dare-shop-products] DEBUG: Gefunden: 4 Größen-Optionen
+2026-08-30 11:55:51 [dare-shop-products] DEBUG: Verarbeite Option 1/4: 3 cbm
+2026-08-30 11:55:51 [dare-shop-products] DEBUG: Preis vor Auswahl: 506,00
+2026-08-30 11:55:53 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 375,00
+2026-08-30 11:55:53 [dare-shop-products] DEBUG: ✓ ITEM: type=Gartenabfälle, size=3, price=375,00, url=https://www.dare-shop.de/container-bestellen/43/absetzcontainer-fuer-gartenabfall-in-berlin?number=CS-B1-P_GRUENSCH-03M&c=7
+2026-08-30 11:55:53 [dare-shop-products] DEBUG: Verarbeite Option 2/4: 5 cbm
+2026-08-30 11:55:53 [dare-shop-products] DEBUG: Preis vor Auswahl: 375,00
+2026-08-30 11:55:54 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 482,00
+2026-08-30 11:55:55 [dare-shop-products] DEBUG: ✓ ITEM: type=Gartenabfälle, size=5, price=482,00, url=https://www.dare-shop.de/container-bestellen/43/absetzcontainer-fuer-gartenabfall-in-berlin?number=CS-B1-P_GRUENSCH-05M&c=7
+2026-08-30 11:55:55 [dare-shop-products] DEBUG: Verarbeite Option 3/4: 7 cbm
+2026-08-30 11:55:55 [dare-shop-products] DEBUG: Preis vor Auswahl: 482,00
+2026-08-30 11:55:56 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 506,00
+2026-08-30 11:55:56 [dare-shop-products] DEBUG: ✓ ITEM: type=Gartenabfälle, size=7, price=506,00, url=https://www.dare-shop.de/container-bestellen/43/absetzcontainer-fuer-gartenabfall-in-berlin?number=CS-B1-P_GRUENSCH-07M&c=7
+2026-08-30 11:55:56 [dare-shop-products] DEBUG: Verarbeite Option 4/4: 10 cbm
+2026-08-30 11:55:56 [dare-shop-products] DEBUG: Preis vor Auswahl: 506,00
+2026-08-30 11:55:57 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 666,00
+2026-08-30 11:55:58 [dare-shop-products] DEBUG: ✓ ITEM: type=Gartenabfälle, size=10, price=666,00, url=https://www.dare-shop.de/container-bestellen/43/absetzcontainer-fuer-gartenabfall-in-berlin?number=CS-B1-P_GRUENSCH-10M&c=7
+2026-08-30 11:55:58 [dare-shop-products] DEBUG: 
 Produktseite abgeschlossen: Absetzcontainer für Gartenabfall in Berlin (4 Größen)
 
-2026-08-23 07:20:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/43/absetzcontainer-fuer-gartenabfall-in-berlin?c=7>
+2026-08-30 11:55:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/43/absetzcontainer-fuer-gartenabfall-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Gartenabfall in Berlin', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '3', 'price': '375,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/43/absetzcontainer-fuer-gartenabfall-in-berlin?number=CS-B1-P_GRUENSCH-03M&c=7'}
-2026-08-23 07:20:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/43/absetzcontainer-fuer-gartenabfall-in-berlin?c=7>
+2026-08-30 11:55:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/43/absetzcontainer-fuer-gartenabfall-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Gartenabfall in Berlin', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '5', 'price': '482,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/43/absetzcontainer-fuer-gartenabfall-in-berlin?number=CS-B1-P_GRUENSCH-05M&c=7'}
-2026-08-23 07:20:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/43/absetzcontainer-fuer-gartenabfall-in-berlin?c=7>
+2026-08-30 11:55:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/43/absetzcontainer-fuer-gartenabfall-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Gartenabfall in Berlin', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '7', 'price': '506,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/43/absetzcontainer-fuer-gartenabfall-in-berlin?number=CS-B1-P_GRUENSCH-07M&c=7'}
-2026-08-23 07:20:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/43/absetzcontainer-fuer-gartenabfall-in-berlin?c=7>
+2026-08-30 11:55:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/43/absetzcontainer-fuer-gartenabfall-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Gartenabfall in Berlin', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '10', 'price': '666,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/43/absetzcontainer-fuer-gartenabfall-in-berlin?number=CS-B1-P_GRUENSCH-10M&c=7'}
-2026-08-23 07:20:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/42/abrollcontainer-fuer-gartenabfall-in-berlin?c=7> (referer: None)
-2026-08-23 07:20:41 [dare-shop-products] DEBUG: 
+2026-08-30 11:55:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/42/abrollcontainer-fuer-gartenabfall-in-berlin?c=7> (referer: None)
+2026-08-30 11:55:58 [dare-shop-products] DEBUG: 
 ================================================================================
-2026-08-23 07:20:41 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/42/abrollcontainer-fuer-gartenabfall-in-berlin?c=7
-2026-08-23 07:20:41 [dare-shop-products] DEBUG: ================================================================================
+2026-08-30 11:55:58 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/42/abrollcontainer-fuer-gartenabfall-in-berlin?c=7
+2026-08-30 11:55:58 [dare-shop-products] DEBUG: ================================================================================
 
-2026-08-23 07:20:49 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
-2026-08-23 07:20:49 [dare-shop-products] DEBUG: Gefunden: 2 Größen-Optionen
-2026-08-23 07:20:49 [dare-shop-products] DEBUG: Verarbeite Option 1/2: 13 cbm
-2026-08-23 07:20:49 [dare-shop-products] DEBUG: Preis vor Auswahl: 1.309,00
-2026-08-23 07:20:50 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 827,00
-2026-08-23 07:20:50 [dare-shop-products] DEBUG: ✓ ITEM: type=Gartenabfälle, size=13, price=827,00, url=https://www.dare-shop.de/container-bestellen/42/abrollcontainer-fuer-gartenabfall-in-berlin?number=CS-B1-P_GRUENSCH-13C&c=7
-2026-08-23 07:20:50 [dare-shop-products] DEBUG: Verarbeite Option 2/2: 22 cbm
-2026-08-23 07:20:50 [dare-shop-products] DEBUG: Preis vor Auswahl: 827,00
-2026-08-23 07:20:51 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 1.309,00
-2026-08-23 07:20:52 [dare-shop-products] DEBUG: ✓ ITEM: type=Gartenabfälle, size=22, price=1.309,00, url=https://www.dare-shop.de/container-bestellen/42/abrollcontainer-fuer-gartenabfall-in-berlin?number=CS-B1-P_GRUENSCH-22C&c=7
-2026-08-23 07:20:52 [dare-shop-products] DEBUG: 
+2026-08-30 11:56:06 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
+2026-08-30 11:56:06 [dare-shop-products] DEBUG: Gefunden: 2 Größen-Optionen
+2026-08-30 11:56:06 [dare-shop-products] DEBUG: Verarbeite Option 1/2: 13 cbm
+2026-08-30 11:56:06 [dare-shop-products] DEBUG: Preis vor Auswahl: 1.309,00
+2026-08-30 11:56:07 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 827,00
+2026-08-30 11:56:07 [dare-shop-products] DEBUG: ✓ ITEM: type=Gartenabfälle, size=13, price=827,00, url=https://www.dare-shop.de/container-bestellen/42/abrollcontainer-fuer-gartenabfall-in-berlin?number=CS-B1-P_GRUENSCH-13C&c=7
+2026-08-30 11:56:07 [dare-shop-products] DEBUG: Verarbeite Option 2/2: 22 cbm
+2026-08-30 11:56:07 [dare-shop-products] DEBUG: Preis vor Auswahl: 827,00
+2026-08-30 11:56:08 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 1.309,00
+2026-08-30 11:56:09 [dare-shop-products] DEBUG: ✓ ITEM: type=Gartenabfälle, size=22, price=1.309,00, url=https://www.dare-shop.de/container-bestellen/42/abrollcontainer-fuer-gartenabfall-in-berlin?number=CS-B1-P_GRUENSCH-22C&c=7
+2026-08-30 11:56:09 [dare-shop-products] DEBUG: 
 Produktseite abgeschlossen: Abrollcontainer für Gartenabfall in Berlin (2 Größen)
 
-2026-08-23 07:20:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/42/abrollcontainer-fuer-gartenabfall-in-berlin?c=7>
+2026-08-30 11:56:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/42/abrollcontainer-fuer-gartenabfall-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Abrollcontainer für Gartenabfall in Berlin', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '13', 'price': '827,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/42/abrollcontainer-fuer-gartenabfall-in-berlin?number=CS-B1-P_GRUENSCH-13C&c=7'}
-2026-08-23 07:20:52 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/42/abrollcontainer-fuer-gartenabfall-in-berlin?c=7>
+2026-08-30 11:56:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/42/abrollcontainer-fuer-gartenabfall-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Abrollcontainer für Gartenabfall in Berlin', 'type': 'Gartenabfälle', 'city': 'Berlin', 'size': '22', 'price': '1.309,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/42/abrollcontainer-fuer-gartenabfall-in-berlin?number=CS-B1-P_GRUENSCH-22C&c=7'}
-2026-08-23 07:20:52 [scrapy.extensions.logstats] INFO: Crawled 7 pages (at 3 pages/min), scraped 25 items (at 10 items/min)
-2026-08-23 07:20:52 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/44/absetzcontainer-fuer-gewerbeabfall-in-berlin?c=7> (referer: None)
-2026-08-23 07:20:52 [dare-shop-products] DEBUG: 
+2026-08-30 11:56:09 [scrapy.extensions.logstats] INFO: Crawled 7 pages (at 3 pages/min), scraped 25 items (at 10 items/min)
+2026-08-30 11:56:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/44/absetzcontainer-fuer-gewerbeabfall-in-berlin?c=7> (referer: None)
+2026-08-30 11:56:09 [dare-shop-products] DEBUG: 
 ================================================================================
-2026-08-23 07:20:52 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/44/absetzcontainer-fuer-gewerbeabfall-in-berlin?c=7
-2026-08-23 07:20:52 [dare-shop-products] DEBUG: ================================================================================
+2026-08-30 11:56:09 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/44/absetzcontainer-fuer-gewerbeabfall-in-berlin?c=7
+2026-08-30 11:56:09 [dare-shop-products] DEBUG: ================================================================================
 
-2026-08-23 07:21:00 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
-2026-08-23 07:21:00 [dare-shop-products] DEBUG: Gefunden: 4 Größen-Optionen
-2026-08-23 07:21:00 [dare-shop-products] DEBUG: Verarbeite Option 1/4: 3 cbm
-2026-08-23 07:21:00 [dare-shop-products] DEBUG: Preis vor Auswahl: 731,00
-2026-08-23 07:21:01 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 471,00
-2026-08-23 07:21:01 [dare-shop-products] DEBUG: ✓ ITEM: type=Gewerbeabfälle, size=3, price=471,00, url=https://www.dare-shop.de/container-bestellen/44/absetzcontainer-fuer-gewerbeabfall-in-berlin?number=CS-B1-P_GSA-03M&c=7
-2026-08-23 07:21:01 [dare-shop-products] DEBUG: Verarbeite Option 2/4: 5 cbm
-2026-08-23 07:21:01 [dare-shop-products] DEBUG: Preis vor Auswahl: 471,00
-2026-08-23 07:21:02 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 643,00
-2026-08-23 07:21:03 [dare-shop-products] DEBUG: ✓ ITEM: type=Gewerbeabfälle, size=5, price=643,00, url=https://www.dare-shop.de/container-bestellen/44/absetzcontainer-fuer-gewerbeabfall-in-berlin?number=CS-B1-P_GSA-05M&c=7
-2026-08-23 07:21:03 [dare-shop-products] DEBUG: Verarbeite Option 3/4: 7 cbm
-2026-08-23 07:21:03 [dare-shop-products] DEBUG: Preis vor Auswahl: 643,00
-2026-08-23 07:21:04 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 731,00
-2026-08-23 07:21:04 [dare-shop-products] DEBUG: ✓ ITEM: type=Gewerbeabfälle, size=7, price=731,00, url=https://www.dare-shop.de/container-bestellen/44/absetzcontainer-fuer-gewerbeabfall-in-berlin?number=CS-B1-P_GSA-07M&c=7
-2026-08-23 07:21:04 [dare-shop-products] DEBUG: Verarbeite Option 4/4: 10 cbm
-2026-08-23 07:21:04 [dare-shop-products] DEBUG: Preis vor Auswahl: 731,00
-2026-08-23 07:21:06 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 988,00
-2026-08-23 07:21:06 [dare-shop-products] DEBUG: ✓ ITEM: type=Gewerbeabfälle, size=10, price=988,00, url=https://www.dare-shop.de/container-bestellen/44/absetzcontainer-fuer-gewerbeabfall-in-berlin?number=CS-B1-P_GSA-10M&c=7
-2026-08-23 07:21:06 [dare-shop-products] DEBUG: 
+2026-08-30 11:56:17 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
+2026-08-30 11:56:17 [dare-shop-products] DEBUG: Gefunden: 4 Größen-Optionen
+2026-08-30 11:56:17 [dare-shop-products] DEBUG: Verarbeite Option 1/4: 3 cbm
+2026-08-30 11:56:17 [dare-shop-products] DEBUG: Preis vor Auswahl: 731,00
+2026-08-30 11:56:18 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 471,00
+2026-08-30 11:56:18 [dare-shop-products] DEBUG: ✓ ITEM: type=Gewerbeabfälle, size=3, price=471,00, url=https://www.dare-shop.de/container-bestellen/44/absetzcontainer-fuer-gewerbeabfall-in-berlin?number=CS-B1-P_GSA-03M&c=7
+2026-08-30 11:56:18 [dare-shop-products] DEBUG: Verarbeite Option 2/4: 5 cbm
+2026-08-30 11:56:18 [dare-shop-products] DEBUG: Preis vor Auswahl: 471,00
+2026-08-30 11:56:19 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 643,00
+2026-08-30 11:56:20 [dare-shop-products] DEBUG: ✓ ITEM: type=Gewerbeabfälle, size=5, price=643,00, url=https://www.dare-shop.de/container-bestellen/44/absetzcontainer-fuer-gewerbeabfall-in-berlin?number=CS-B1-P_GSA-05M&c=7
+2026-08-30 11:56:20 [dare-shop-products] DEBUG: Verarbeite Option 3/4: 7 cbm
+2026-08-30 11:56:20 [dare-shop-products] DEBUG: Preis vor Auswahl: 643,00
+2026-08-30 11:56:21 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 731,00
+2026-08-30 11:56:22 [dare-shop-products] DEBUG: ✓ ITEM: type=Gewerbeabfälle, size=7, price=731,00, url=https://www.dare-shop.de/container-bestellen/44/absetzcontainer-fuer-gewerbeabfall-in-berlin?number=CS-B1-P_GSA-07M&c=7
+2026-08-30 11:56:22 [dare-shop-products] DEBUG: Verarbeite Option 4/4: 10 cbm
+2026-08-30 11:56:22 [dare-shop-products] DEBUG: Preis vor Auswahl: 731,00
+2026-08-30 11:56:23 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 988,00
+2026-08-30 11:56:23 [dare-shop-products] DEBUG: ✓ ITEM: type=Gewerbeabfälle, size=10, price=988,00, url=https://www.dare-shop.de/container-bestellen/44/absetzcontainer-fuer-gewerbeabfall-in-berlin?number=CS-B1-P_GSA-10M&c=7
+2026-08-30 11:56:23 [dare-shop-products] DEBUG: 
 Produktseite abgeschlossen: Absetzcontainer für Gewerbeabfall in Berlin (4 Größen)
 
-2026-08-23 07:21:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/44/absetzcontainer-fuer-gewerbeabfall-in-berlin?c=7>
+2026-08-30 11:56:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/44/absetzcontainer-fuer-gewerbeabfall-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Gewerbeabfall in Berlin', 'type': 'Gewerbeabfälle', 'city': 'Berlin', 'size': '3', 'price': '471,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/44/absetzcontainer-fuer-gewerbeabfall-in-berlin?number=CS-B1-P_GSA-03M&c=7'}
-2026-08-23 07:21:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/44/absetzcontainer-fuer-gewerbeabfall-in-berlin?c=7>
+2026-08-30 11:56:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/44/absetzcontainer-fuer-gewerbeabfall-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Gewerbeabfall in Berlin', 'type': 'Gewerbeabfälle', 'city': 'Berlin', 'size': '5', 'price': '643,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/44/absetzcontainer-fuer-gewerbeabfall-in-berlin?number=CS-B1-P_GSA-05M&c=7'}
-2026-08-23 07:21:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/44/absetzcontainer-fuer-gewerbeabfall-in-berlin?c=7>
+2026-08-30 11:56:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/44/absetzcontainer-fuer-gewerbeabfall-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Gewerbeabfall in Berlin', 'type': 'Gewerbeabfälle', 'city': 'Berlin', 'size': '7', 'price': '731,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/44/absetzcontainer-fuer-gewerbeabfall-in-berlin?number=CS-B1-P_GSA-07M&c=7'}
-2026-08-23 07:21:06 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/44/absetzcontainer-fuer-gewerbeabfall-in-berlin?c=7>
+2026-08-30 11:56:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/44/absetzcontainer-fuer-gewerbeabfall-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Gewerbeabfall in Berlin', 'type': 'Gewerbeabfälle', 'city': 'Berlin', 'size': '10', 'price': '988,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/44/absetzcontainer-fuer-gewerbeabfall-in-berlin?number=CS-B1-P_GSA-10M&c=7'}
-2026-08-23 07:21:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/45/abrollcontainer-fuer-gewerbeabfall-in-berlin?c=7> (referer: None)
-2026-08-23 07:21:06 [dare-shop-products] DEBUG: 
+2026-08-30 11:56:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/45/abrollcontainer-fuer-gewerbeabfall-in-berlin?c=7> (referer: None)
+2026-08-30 11:56:23 [dare-shop-products] DEBUG: 
 ================================================================================
-2026-08-23 07:21:06 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/45/abrollcontainer-fuer-gewerbeabfall-in-berlin?c=7
-2026-08-23 07:21:06 [dare-shop-products] DEBUG: ================================================================================
+2026-08-30 11:56:23 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/45/abrollcontainer-fuer-gewerbeabfall-in-berlin?c=7
+2026-08-30 11:56:23 [dare-shop-products] DEBUG: ================================================================================
 
-2026-08-23 07:21:14 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
-2026-08-23 07:21:14 [dare-shop-products] DEBUG: Gefunden: 3 Größen-Optionen
-2026-08-23 07:21:14 [dare-shop-products] DEBUG: Verarbeite Option 1/3: 13 cbm
-2026-08-23 07:21:14 [dare-shop-products] DEBUG: Preis vor Auswahl: 2.016,00
-2026-08-23 07:21:15 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 1.245,00
-2026-08-23 07:21:15 [dare-shop-products] DEBUG: ✓ ITEM: type=Gewerbeabfälle, size=13, price=1.245,00, url=https://www.dare-shop.de/container-bestellen/45/abrollcontainer-fuer-gewerbeabfall-in-berlin?number=CS-B1-P_GSA-13C&c=7
-2026-08-23 07:21:15 [dare-shop-products] DEBUG: Verarbeite Option 2/3: 22 cbm
-2026-08-23 07:21:16 [dare-shop-products] DEBUG: Preis vor Auswahl: 1.245,00
-2026-08-23 07:21:17 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 2.016,00
-2026-08-23 07:21:17 [dare-shop-products] DEBUG: ✓ ITEM: type=Gewerbeabfälle, size=22, price=2.016,00, url=https://www.dare-shop.de/container-bestellen/45/abrollcontainer-fuer-gewerbeabfall-in-berlin?number=CS-B1-P_GSA-22C&c=7
-2026-08-23 07:21:17 [dare-shop-products] DEBUG: Verarbeite Option 3/3: 40 cbm
-2026-08-23 07:21:17 [dare-shop-products] DEBUG: Preis vor Auswahl: 2.016,00
-2026-08-23 07:21:18 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 3.558,00
-2026-08-23 07:21:19 [dare-shop-products] DEBUG: ✓ ITEM: type=Gewerbeabfälle, size=40, price=3.558,00, url=https://www.dare-shop.de/container-bestellen/45/abrollcontainer-fuer-gewerbeabfall-in-berlin?number=CS-B1-P_GSA-40C&c=7
-2026-08-23 07:21:19 [dare-shop-products] DEBUG: 
+2026-08-30 11:56:31 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
+2026-08-30 11:56:31 [dare-shop-products] DEBUG: Gefunden: 3 Größen-Optionen
+2026-08-30 11:56:31 [dare-shop-products] DEBUG: Verarbeite Option 1/3: 13 cbm
+2026-08-30 11:56:31 [dare-shop-products] DEBUG: Preis vor Auswahl: 2.016,00
+2026-08-30 11:56:32 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 1.245,00
+2026-08-30 11:56:32 [dare-shop-products] DEBUG: ✓ ITEM: type=Gewerbeabfälle, size=13, price=1.245,00, url=https://www.dare-shop.de/container-bestellen/45/abrollcontainer-fuer-gewerbeabfall-in-berlin?number=CS-B1-P_GSA-13C&c=7
+2026-08-30 11:56:33 [dare-shop-products] DEBUG: Verarbeite Option 2/3: 22 cbm
+2026-08-30 11:56:33 [dare-shop-products] DEBUG: Preis vor Auswahl: 1.245,00
+2026-08-30 11:56:34 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 2.016,00
+2026-08-30 11:56:34 [dare-shop-products] DEBUG: ✓ ITEM: type=Gewerbeabfälle, size=22, price=2.016,00, url=https://www.dare-shop.de/container-bestellen/45/abrollcontainer-fuer-gewerbeabfall-in-berlin?number=CS-B1-P_GSA-22C&c=7
+2026-08-30 11:56:34 [dare-shop-products] DEBUG: Verarbeite Option 3/3: 40 cbm
+2026-08-30 11:56:34 [dare-shop-products] DEBUG: Preis vor Auswahl: 2.016,00
+2026-08-30 11:56:35 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 3.558,00
+2026-08-30 11:56:36 [dare-shop-products] DEBUG: ✓ ITEM: type=Gewerbeabfälle, size=40, price=3.558,00, url=https://www.dare-shop.de/container-bestellen/45/abrollcontainer-fuer-gewerbeabfall-in-berlin?number=CS-B1-P_GSA-40C&c=7
+2026-08-30 11:56:36 [dare-shop-products] DEBUG: 
 Produktseite abgeschlossen: Abrollcontainer für Gewerbeabfall in Berlin (3 Größen)
 
-2026-08-23 07:21:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/45/abrollcontainer-fuer-gewerbeabfall-in-berlin?c=7>
+2026-08-30 11:56:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/45/abrollcontainer-fuer-gewerbeabfall-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Abrollcontainer für Gewerbeabfall in Berlin', 'type': 'Gewerbeabfälle', 'city': 'Berlin', 'size': '13', 'price': '1.245,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/45/abrollcontainer-fuer-gewerbeabfall-in-berlin?number=CS-B1-P_GSA-13C&c=7'}
-2026-08-23 07:21:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/45/abrollcontainer-fuer-gewerbeabfall-in-berlin?c=7>
+2026-08-30 11:56:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/45/abrollcontainer-fuer-gewerbeabfall-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Abrollcontainer für Gewerbeabfall in Berlin', 'type': 'Gewerbeabfälle', 'city': 'Berlin', 'size': '22', 'price': '2.016,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/45/abrollcontainer-fuer-gewerbeabfall-in-berlin?number=CS-B1-P_GSA-22C&c=7'}
-2026-08-23 07:21:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/45/abrollcontainer-fuer-gewerbeabfall-in-berlin?c=7>
+2026-08-30 11:56:36 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/45/abrollcontainer-fuer-gewerbeabfall-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Abrollcontainer für Gewerbeabfall in Berlin', 'type': 'Gewerbeabfälle', 'city': 'Berlin', 'size': '40', 'price': '3.558,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/45/abrollcontainer-fuer-gewerbeabfall-in-berlin?number=CS-B1-P_GSA-40C&c=7'}
-2026-08-23 07:21:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/26/absetzcontainer-fuer-gipsbaustoffe-in-berlin?c=7> (referer: None)
-2026-08-23 07:21:19 [dare-shop-products] DEBUG: 
+2026-08-30 11:56:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/26/absetzcontainer-fuer-gipsbaustoffe-in-berlin?c=7> (referer: None)
+2026-08-30 11:56:36 [dare-shop-products] DEBUG: 
 ================================================================================
-2026-08-23 07:21:19 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/26/absetzcontainer-fuer-gipsbaustoffe-in-berlin?c=7
-2026-08-23 07:21:19 [dare-shop-products] DEBUG: ================================================================================
+2026-08-30 11:56:36 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/26/absetzcontainer-fuer-gipsbaustoffe-in-berlin?c=7
+2026-08-30 11:56:36 [dare-shop-products] DEBUG: ================================================================================
 
-2026-08-23 07:21:26 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
-2026-08-23 07:21:26 [dare-shop-products] DEBUG: Gefunden: 4 Größen-Optionen
-2026-08-23 07:21:27 [dare-shop-products] DEBUG: Verarbeite Option 1/4: 3 cbm
-2026-08-23 07:21:27 [dare-shop-products] DEBUG: Preis vor Auswahl: 656,00
-2026-08-23 07:21:28 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 439,00
-2026-08-23 07:21:28 [dare-shop-products] DEBUG: ✓ ITEM: type=Gips, size=3, price=439,00, url=https://www.dare-shop.de/container-bestellen/26/absetzcontainer-fuer-gipsbaustoffe-in-berlin?number=CS-B1-P_GIPS-03M&c=7
-2026-08-23 07:21:28 [dare-shop-products] DEBUG: Verarbeite Option 2/4: 5 cbm
-2026-08-23 07:21:28 [dare-shop-products] DEBUG: Preis vor Auswahl: 439,00
-2026-08-23 07:21:29 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 589,00
-2026-08-23 07:21:30 [dare-shop-products] DEBUG: ✓ ITEM: type=Gips, size=5, price=589,00, url=https://www.dare-shop.de/container-bestellen/26/absetzcontainer-fuer-gipsbaustoffe-in-berlin?number=CS-B1-P_GIPS-05M&c=7
-2026-08-23 07:21:30 [dare-shop-products] DEBUG: Verarbeite Option 3/4: 7 cbm
-2026-08-23 07:21:30 [dare-shop-products] DEBUG: Preis vor Auswahl: 589,00
-2026-08-23 07:21:31 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 656,00
-2026-08-23 07:21:31 [dare-shop-products] DEBUG: ✓ ITEM: type=Gips, size=7, price=656,00, url=https://www.dare-shop.de/container-bestellen/26/absetzcontainer-fuer-gipsbaustoffe-in-berlin?number=CS-B1-P_GIPS-07M&c=7
-2026-08-23 07:21:31 [dare-shop-products] DEBUG: Verarbeite Option 4/4: 10 cbm
-2026-08-23 07:21:31 [dare-shop-products] DEBUG: Preis vor Auswahl: 656,00
-2026-08-23 07:21:32 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 881,00
-2026-08-23 07:21:33 [dare-shop-products] DEBUG: ✓ ITEM: type=Gips, size=10, price=881,00, url=https://www.dare-shop.de/container-bestellen/26/absetzcontainer-fuer-gipsbaustoffe-in-berlin?number=CS-B1-P_GIPS-10M&c=7
-2026-08-23 07:21:33 [dare-shop-products] DEBUG: 
+2026-08-30 11:56:43 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
+2026-08-30 11:56:43 [dare-shop-products] DEBUG: Gefunden: 4 Größen-Optionen
+2026-08-30 11:56:43 [dare-shop-products] DEBUG: Verarbeite Option 1/4: 3 cbm
+2026-08-30 11:56:43 [dare-shop-products] DEBUG: Preis vor Auswahl: 656,00
+2026-08-30 11:56:44 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 439,00
+2026-08-30 11:56:45 [dare-shop-products] DEBUG: ✓ ITEM: type=Gips, size=3, price=439,00, url=https://www.dare-shop.de/container-bestellen/26/absetzcontainer-fuer-gipsbaustoffe-in-berlin?number=CS-B1-P_GIPS-03M&c=7
+2026-08-30 11:56:45 [dare-shop-products] DEBUG: Verarbeite Option 2/4: 5 cbm
+2026-08-30 11:56:45 [dare-shop-products] DEBUG: Preis vor Auswahl: 439,00
+2026-08-30 11:56:46 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 589,00
+2026-08-30 11:56:47 [dare-shop-products] DEBUG: ✓ ITEM: type=Gips, size=5, price=589,00, url=https://www.dare-shop.de/container-bestellen/26/absetzcontainer-fuer-gipsbaustoffe-in-berlin?number=CS-B1-P_GIPS-05M&c=7
+2026-08-30 11:56:47 [dare-shop-products] DEBUG: Verarbeite Option 3/4: 7 cbm
+2026-08-30 11:56:47 [dare-shop-products] DEBUG: Preis vor Auswahl: 589,00
+2026-08-30 11:56:48 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 656,00
+2026-08-30 11:56:48 [dare-shop-products] DEBUG: ✓ ITEM: type=Gips, size=7, price=656,00, url=https://www.dare-shop.de/container-bestellen/26/absetzcontainer-fuer-gipsbaustoffe-in-berlin?number=CS-B1-P_GIPS-07M&c=7
+2026-08-30 11:56:48 [dare-shop-products] DEBUG: Verarbeite Option 4/4: 10 cbm
+2026-08-30 11:56:48 [dare-shop-products] DEBUG: Preis vor Auswahl: 656,00
+2026-08-30 11:56:49 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 881,00
+2026-08-30 11:56:50 [dare-shop-products] DEBUG: ✓ ITEM: type=Gips, size=10, price=881,00, url=https://www.dare-shop.de/container-bestellen/26/absetzcontainer-fuer-gipsbaustoffe-in-berlin?number=CS-B1-P_GIPS-10M&c=7
+2026-08-30 11:56:50 [dare-shop-products] DEBUG: 
 Produktseite abgeschlossen: Absetzcontainer für Gipsbaustoffe in Berlin (4 Größen)
 
-2026-08-23 07:21:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/26/absetzcontainer-fuer-gipsbaustoffe-in-berlin?c=7>
+2026-08-30 11:56:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/26/absetzcontainer-fuer-gipsbaustoffe-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Gipsbaustoffe in Berlin', 'type': 'Gips', 'city': 'Berlin', 'size': '3', 'price': '439,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/26/absetzcontainer-fuer-gipsbaustoffe-in-berlin?number=CS-B1-P_GIPS-03M&c=7'}
-2026-08-23 07:21:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/26/absetzcontainer-fuer-gipsbaustoffe-in-berlin?c=7>
+2026-08-30 11:56:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/26/absetzcontainer-fuer-gipsbaustoffe-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Gipsbaustoffe in Berlin', 'type': 'Gips', 'city': 'Berlin', 'size': '5', 'price': '589,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/26/absetzcontainer-fuer-gipsbaustoffe-in-berlin?number=CS-B1-P_GIPS-05M&c=7'}
-2026-08-23 07:21:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/26/absetzcontainer-fuer-gipsbaustoffe-in-berlin?c=7>
+2026-08-30 11:56:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/26/absetzcontainer-fuer-gipsbaustoffe-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Gipsbaustoffe in Berlin', 'type': 'Gips', 'city': 'Berlin', 'size': '7', 'price': '656,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/26/absetzcontainer-fuer-gipsbaustoffe-in-berlin?number=CS-B1-P_GIPS-07M&c=7'}
-2026-08-23 07:21:33 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/26/absetzcontainer-fuer-gipsbaustoffe-in-berlin?c=7>
+2026-08-30 11:56:50 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/26/absetzcontainer-fuer-gipsbaustoffe-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Gipsbaustoffe in Berlin', 'type': 'Gips', 'city': 'Berlin', 'size': '10', 'price': '881,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/26/absetzcontainer-fuer-gipsbaustoffe-in-berlin?number=CS-B1-P_GIPS-10M&c=7'}
-2026-08-23 07:21:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/28/abrollcontainer-fuer-gipsbaustoffe-in-berlin?c=7> (referer: None)
-2026-08-23 07:21:33 [dare-shop-products] DEBUG: 
+2026-08-30 11:56:50 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/28/abrollcontainer-fuer-gipsbaustoffe-in-berlin?c=7> (referer: None)
+2026-08-30 11:56:50 [dare-shop-products] DEBUG: 
 ================================================================================
-2026-08-23 07:21:33 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/28/abrollcontainer-fuer-gipsbaustoffe-in-berlin?c=7
-2026-08-23 07:21:33 [dare-shop-products] DEBUG: ================================================================================
+2026-08-30 11:56:50 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/28/abrollcontainer-fuer-gipsbaustoffe-in-berlin?c=7
+2026-08-30 11:56:50 [dare-shop-products] DEBUG: ================================================================================
 
-2026-08-23 07:21:41 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
-2026-08-23 07:21:41 [dare-shop-products] DEBUG: Gefunden: 2 Größen-Optionen
-2026-08-23 07:21:41 [dare-shop-products] DEBUG: Verarbeite Option 1/2: 13 cbm
-2026-08-23 07:21:41 [dare-shop-products] DEBUG: Preis vor Auswahl: 1.780,00
-2026-08-23 07:21:42 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 1.106,00
-2026-08-23 07:21:42 [dare-shop-products] DEBUG: ✓ ITEM: type=Gips, size=13, price=1.106,00, url=https://www.dare-shop.de/container-bestellen/28/abrollcontainer-fuer-gipsbaustoffe-in-berlin?number=CS-B1-P_GIPS-13C&c=7
-2026-08-23 07:21:42 [dare-shop-products] DEBUG: Verarbeite Option 2/2: 22 cbm
-2026-08-23 07:21:42 [dare-shop-products] DEBUG: Preis vor Auswahl: 1.106,00
-2026-08-23 07:21:43 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 1.780,00
-2026-08-23 07:21:44 [dare-shop-products] DEBUG: ✓ ITEM: type=Gips, size=22, price=1.780,00, url=https://www.dare-shop.de/container-bestellen/28/abrollcontainer-fuer-gipsbaustoffe-in-berlin?number=CS-B1-P_GIPS-22C&c=7
-2026-08-23 07:21:44 [dare-shop-products] DEBUG: 
+2026-08-30 11:56:58 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
+2026-08-30 11:56:58 [dare-shop-products] DEBUG: Gefunden: 2 Größen-Optionen
+2026-08-30 11:56:58 [dare-shop-products] DEBUG: Verarbeite Option 1/2: 13 cbm
+2026-08-30 11:56:58 [dare-shop-products] DEBUG: Preis vor Auswahl: 1.780,00
+2026-08-30 11:56:59 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 1.106,00
+2026-08-30 11:56:59 [dare-shop-products] DEBUG: ✓ ITEM: type=Gips, size=13, price=1.106,00, url=https://www.dare-shop.de/container-bestellen/28/abrollcontainer-fuer-gipsbaustoffe-in-berlin?number=CS-B1-P_GIPS-13C&c=7
+2026-08-30 11:56:59 [dare-shop-products] DEBUG: Verarbeite Option 2/2: 22 cbm
+2026-08-30 11:56:59 [dare-shop-products] DEBUG: Preis vor Auswahl: 1.106,00
+2026-08-30 11:57:00 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 1.780,00
+2026-08-30 11:57:01 [dare-shop-products] DEBUG: ✓ ITEM: type=Gips, size=22, price=1.780,00, url=https://www.dare-shop.de/container-bestellen/28/abrollcontainer-fuer-gipsbaustoffe-in-berlin?number=CS-B1-P_GIPS-22C&c=7
+2026-08-30 11:57:01 [dare-shop-products] DEBUG: 
 Produktseite abgeschlossen: Abrollcontainer für Gipsbaustoffe in Berlin (2 Größen)
 
-2026-08-23 07:21:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/28/abrollcontainer-fuer-gipsbaustoffe-in-berlin?c=7>
+2026-08-30 11:57:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/28/abrollcontainer-fuer-gipsbaustoffe-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Abrollcontainer für Gipsbaustoffe in Berlin', 'type': 'Gips', 'city': 'Berlin', 'size': '13', 'price': '1.106,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/28/abrollcontainer-fuer-gipsbaustoffe-in-berlin?number=CS-B1-P_GIPS-13C&c=7'}
-2026-08-23 07:21:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/28/abrollcontainer-fuer-gipsbaustoffe-in-berlin?c=7>
+2026-08-30 11:57:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/28/abrollcontainer-fuer-gipsbaustoffe-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Abrollcontainer für Gipsbaustoffe in Berlin', 'type': 'Gips', 'city': 'Berlin', 'size': '22', 'price': '1.780,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/28/abrollcontainer-fuer-gipsbaustoffe-in-berlin?number=CS-B1-P_GIPS-22C&c=7'}
-2026-08-23 07:21:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/37/absetzcontainer-fuer-holz-a1-3-in-berlin?c=7> (referer: None)
-2026-08-23 07:21:44 [dare-shop-products] DEBUG: 
+2026-08-30 11:57:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/37/absetzcontainer-fuer-holz-a1-3-in-berlin?c=7> (referer: None)
+2026-08-30 11:57:01 [dare-shop-products] DEBUG: 
 ================================================================================
-2026-08-23 07:21:44 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/37/absetzcontainer-fuer-holz-a1-3-in-berlin?c=7
-2026-08-23 07:21:44 [dare-shop-products] DEBUG: ================================================================================
+2026-08-30 11:57:01 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/37/absetzcontainer-fuer-holz-a1-3-in-berlin?c=7
+2026-08-30 11:57:01 [dare-shop-products] DEBUG: ================================================================================
 
-2026-08-23 07:21:52 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
-2026-08-23 07:21:52 [dare-shop-products] DEBUG: Gefunden: 4 Größen-Optionen
-2026-08-23 07:21:52 [dare-shop-products] DEBUG: Verarbeite Option 1/4: 3 cbm
-2026-08-23 07:21:52 [dare-shop-products] DEBUG: Preis vor Auswahl: 456,00
-2026-08-23 07:21:53 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 353,00
-2026-08-23 07:21:53 [dare-shop-products] DEBUG: ✓ ITEM: type=Holz A1-A3, size=3, price=353,00, url=https://www.dare-shop.de/container-bestellen/37/absetzcontainer-fuer-holz-a1-3-in-berlin?number=CS-B1-P_HO_I_III-03M&c=7
-2026-08-23 07:21:53 [dare-shop-products] DEBUG: Verarbeite Option 2/4: 5 cbm
-2026-08-23 07:21:53 [dare-shop-products] DEBUG: Preis vor Auswahl: 353,00
-2026-08-23 07:21:54 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 446,00
-2026-08-23 07:21:55 [dare-shop-products] DEBUG: ✓ ITEM: type=Holz A1-A3, size=5, price=446,00, url=https://www.dare-shop.de/container-bestellen/37/absetzcontainer-fuer-holz-a1-3-in-berlin?number=CS-B1-P_HO_I_III-05M&c=7
-2026-08-23 07:21:55 [dare-shop-products] DEBUG: Verarbeite Option 3/4: 7 cbm
-2026-08-23 07:21:55 [dare-shop-products] DEBUG: Preis vor Auswahl: 446,00
-2026-08-23 07:21:56 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 456,00
-2026-08-23 07:21:56 [dare-shop-products] DEBUG: ✓ ITEM: type=Holz A1-A3, size=7, price=456,00, url=https://www.dare-shop.de/container-bestellen/37/absetzcontainer-fuer-holz-a1-3-in-berlin?number=CS-B1-P_HO_I_III-07M&c=7
-2026-08-23 07:21:56 [dare-shop-products] DEBUG: Verarbeite Option 4/4: 10 cbm
-2026-08-23 07:21:56 [dare-shop-products] DEBUG: Preis vor Auswahl: 456,00
-2026-08-23 07:21:58 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 595,00
-2026-08-23 07:21:58 [dare-shop-products] DEBUG: ✓ ITEM: type=Holz A1-A3, size=10, price=595,00, url=https://www.dare-shop.de/container-bestellen/37/absetzcontainer-fuer-holz-a1-3-in-berlin?number=CS-B1-P_HO_I_III-10M&c=7
-2026-08-23 07:21:58 [dare-shop-products] DEBUG: 
+2026-08-30 11:57:09 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
+2026-08-30 11:57:09 [dare-shop-products] DEBUG: Gefunden: 4 Größen-Optionen
+2026-08-30 11:57:09 [dare-shop-products] DEBUG: Verarbeite Option 1/4: 3 cbm
+2026-08-30 11:57:09 [dare-shop-products] DEBUG: Preis vor Auswahl: 456,00
+2026-08-30 11:57:10 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 353,00
+2026-08-30 11:57:10 [dare-shop-products] DEBUG: ✓ ITEM: type=Holz A1-A3, size=3, price=353,00, url=https://www.dare-shop.de/container-bestellen/37/absetzcontainer-fuer-holz-a1-3-in-berlin?number=CS-B1-P_HO_I_III-03M&c=7
+2026-08-30 11:57:10 [dare-shop-products] DEBUG: Verarbeite Option 2/4: 5 cbm
+2026-08-30 11:57:10 [dare-shop-products] DEBUG: Preis vor Auswahl: 353,00
+2026-08-30 11:57:11 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 446,00
+2026-08-30 11:57:12 [dare-shop-products] DEBUG: ✓ ITEM: type=Holz A1-A3, size=5, price=446,00, url=https://www.dare-shop.de/container-bestellen/37/absetzcontainer-fuer-holz-a1-3-in-berlin?number=CS-B1-P_HO_I_III-05M&c=7
+2026-08-30 11:57:12 [dare-shop-products] DEBUG: Verarbeite Option 3/4: 7 cbm
+2026-08-30 11:57:12 [dare-shop-products] DEBUG: Preis vor Auswahl: 446,00
+2026-08-30 11:57:13 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 456,00
+2026-08-30 11:57:13 [dare-shop-products] DEBUG: ✓ ITEM: type=Holz A1-A3, size=7, price=456,00, url=https://www.dare-shop.de/container-bestellen/37/absetzcontainer-fuer-holz-a1-3-in-berlin?number=CS-B1-P_HO_I_III-07M&c=7
+2026-08-30 11:57:13 [dare-shop-products] DEBUG: Verarbeite Option 4/4: 10 cbm
+2026-08-30 11:57:14 [dare-shop-products] DEBUG: Preis vor Auswahl: 456,00
+2026-08-30 11:57:15 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 595,00
+2026-08-30 11:57:15 [dare-shop-products] DEBUG: ✓ ITEM: type=Holz A1-A3, size=10, price=595,00, url=https://www.dare-shop.de/container-bestellen/37/absetzcontainer-fuer-holz-a1-3-in-berlin?number=CS-B1-P_HO_I_III-10M&c=7
+2026-08-30 11:57:15 [dare-shop-products] DEBUG: 
 Produktseite abgeschlossen: Absetzcontainer für Holz A1-3 in Berlin (4 Größen)
 
-2026-08-23 07:21:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/37/absetzcontainer-fuer-holz-a1-3-in-berlin?c=7>
+2026-08-30 11:57:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/37/absetzcontainer-fuer-holz-a1-3-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Holz A1-3 in Berlin', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '3', 'price': '353,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/37/absetzcontainer-fuer-holz-a1-3-in-berlin?number=CS-B1-P_HO_I_III-03M&c=7'}
-2026-08-23 07:21:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/37/absetzcontainer-fuer-holz-a1-3-in-berlin?c=7>
+2026-08-30 11:57:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/37/absetzcontainer-fuer-holz-a1-3-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Holz A1-3 in Berlin', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '5', 'price': '446,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/37/absetzcontainer-fuer-holz-a1-3-in-berlin?number=CS-B1-P_HO_I_III-05M&c=7'}
-2026-08-23 07:21:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/37/absetzcontainer-fuer-holz-a1-3-in-berlin?c=7>
+2026-08-30 11:57:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/37/absetzcontainer-fuer-holz-a1-3-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Holz A1-3 in Berlin', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '7', 'price': '456,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/37/absetzcontainer-fuer-holz-a1-3-in-berlin?number=CS-B1-P_HO_I_III-07M&c=7'}
-2026-08-23 07:21:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/37/absetzcontainer-fuer-holz-a1-3-in-berlin?c=7>
+2026-08-30 11:57:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/37/absetzcontainer-fuer-holz-a1-3-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Holz A1-3 in Berlin', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '10', 'price': '595,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/37/absetzcontainer-fuer-holz-a1-3-in-berlin?number=CS-B1-P_HO_I_III-10M&c=7'}
-2026-08-23 07:21:58 [scrapy.extensions.logstats] INFO: Crawled 12 pages (at 5 pages/min), scraped 42 items (at 17 items/min)
-2026-08-23 07:21:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/40/abrollcontainer-fuer-holz-a1-3-in-berlin?c=7> (referer: None)
-2026-08-23 07:21:58 [dare-shop-products] DEBUG: 
+2026-08-30 11:57:15 [scrapy.extensions.logstats] INFO: Crawled 12 pages (at 5 pages/min), scraped 42 items (at 17 items/min)
+2026-08-30 11:57:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/40/abrollcontainer-fuer-holz-a1-3-in-berlin?c=7> (referer: None)
+2026-08-30 11:57:15 [dare-shop-products] DEBUG: 
 ================================================================================
-2026-08-23 07:21:58 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/40/abrollcontainer-fuer-holz-a1-3-in-berlin?c=7
-2026-08-23 07:21:58 [dare-shop-products] DEBUG: ================================================================================
+2026-08-30 11:57:15 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/40/abrollcontainer-fuer-holz-a1-3-in-berlin?c=7
+2026-08-30 11:57:15 [dare-shop-products] DEBUG: ================================================================================
 
-2026-08-23 07:22:06 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
-2026-08-23 07:22:06 [dare-shop-products] DEBUG: Gefunden: 3 Größen-Optionen
-2026-08-23 07:22:06 [dare-shop-products] DEBUG: Verarbeite Option 1/3: 13 cbm
-2026-08-23 07:22:06 [dare-shop-products] DEBUG: Preis vor Auswahl: 1.152,00
-2026-08-23 07:22:07 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 734,00
-2026-08-23 07:22:08 [dare-shop-products] DEBUG: ✓ ITEM: type=Holz A1-A3, size=13, price=734,00, url=https://www.dare-shop.de/container-bestellen/40/abrollcontainer-fuer-holz-a1-3-in-berlin?number=CS-B1-P_HO_I_III-13C&c=7
-2026-08-23 07:22:08 [dare-shop-products] DEBUG: Verarbeite Option 2/3: 22 cbm
-2026-08-23 07:22:08 [dare-shop-products] DEBUG: Preis vor Auswahl: 734,00
-2026-08-23 07:22:09 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 1.152,00
-2026-08-23 07:22:09 [dare-shop-products] DEBUG: ✓ ITEM: type=Holz A1-A3, size=22, price=1.152,00, url=https://www.dare-shop.de/container-bestellen/40/abrollcontainer-fuer-holz-a1-3-in-berlin?number=CS-B1-P_HO_I_III-22C&c=7
-2026-08-23 07:22:09 [dare-shop-products] DEBUG: Verarbeite Option 3/3: 40 cbm
-2026-08-23 07:22:09 [dare-shop-products] DEBUG: Preis vor Auswahl: 1.152,00
-2026-08-23 07:22:10 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 1.987,00
-2026-08-23 07:22:11 [dare-shop-products] DEBUG: ✓ ITEM: type=Holz A1-A3, size=40, price=1.987,00, url=https://www.dare-shop.de/container-bestellen/40/abrollcontainer-fuer-holz-a1-3-in-berlin?number=CS-B1-P_HO_I_III-40C&c=7
-2026-08-23 07:22:11 [dare-shop-products] DEBUG: 
+2026-08-30 11:57:23 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
+2026-08-30 11:57:23 [dare-shop-products] DEBUG: Gefunden: 3 Größen-Optionen
+2026-08-30 11:57:23 [dare-shop-products] DEBUG: Verarbeite Option 1/3: 13 cbm
+2026-08-30 11:57:23 [dare-shop-products] DEBUG: Preis vor Auswahl: 1.152,00
+2026-08-30 11:57:24 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 734,00
+2026-08-30 11:57:25 [dare-shop-products] DEBUG: ✓ ITEM: type=Holz A1-A3, size=13, price=734,00, url=https://www.dare-shop.de/container-bestellen/40/abrollcontainer-fuer-holz-a1-3-in-berlin?number=CS-B1-P_HO_I_III-13C&c=7
+2026-08-30 11:57:25 [dare-shop-products] DEBUG: Verarbeite Option 2/3: 22 cbm
+2026-08-30 11:57:25 [dare-shop-products] DEBUG: Preis vor Auswahl: 734,00
+2026-08-30 11:57:26 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 1.152,00
+2026-08-30 11:57:26 [dare-shop-products] DEBUG: ✓ ITEM: type=Holz A1-A3, size=22, price=1.152,00, url=https://www.dare-shop.de/container-bestellen/40/abrollcontainer-fuer-holz-a1-3-in-berlin?number=CS-B1-P_HO_I_III-22C&c=7
+2026-08-30 11:57:26 [dare-shop-products] DEBUG: Verarbeite Option 3/3: 40 cbm
+2026-08-30 11:57:26 [dare-shop-products] DEBUG: Preis vor Auswahl: 1.152,00
+2026-08-30 11:57:27 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 1.987,00
+2026-08-30 11:57:28 [dare-shop-products] DEBUG: ✓ ITEM: type=Holz A1-A3, size=40, price=1.987,00, url=https://www.dare-shop.de/container-bestellen/40/abrollcontainer-fuer-holz-a1-3-in-berlin?number=CS-B1-P_HO_I_III-40C&c=7
+2026-08-30 11:57:28 [dare-shop-products] DEBUG: 
 Produktseite abgeschlossen: Abrollcontainer für Holz A1-3 in Berlin (3 Größen)
 
-2026-08-23 07:22:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/40/abrollcontainer-fuer-holz-a1-3-in-berlin?c=7>
+2026-08-30 11:57:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/40/abrollcontainer-fuer-holz-a1-3-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Abrollcontainer für Holz A1-3 in Berlin', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '13', 'price': '734,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/40/abrollcontainer-fuer-holz-a1-3-in-berlin?number=CS-B1-P_HO_I_III-13C&c=7'}
-2026-08-23 07:22:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/40/abrollcontainer-fuer-holz-a1-3-in-berlin?c=7>
+2026-08-30 11:57:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/40/abrollcontainer-fuer-holz-a1-3-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Abrollcontainer für Holz A1-3 in Berlin', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '22', 'price': '1.152,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/40/abrollcontainer-fuer-holz-a1-3-in-berlin?number=CS-B1-P_HO_I_III-22C&c=7'}
-2026-08-23 07:22:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/40/abrollcontainer-fuer-holz-a1-3-in-berlin?c=7>
+2026-08-30 11:57:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/40/abrollcontainer-fuer-holz-a1-3-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Abrollcontainer für Holz A1-3 in Berlin', 'type': 'Holz A1-A3', 'city': 'Berlin', 'size': '40', 'price': '1.987,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/40/abrollcontainer-fuer-holz-a1-3-in-berlin?number=CS-B1-P_HO_I_III-40C&c=7'}
-2026-08-23 07:22:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/38/absetzcontainer-fuer-holz-a4-in-berlin?c=7> (referer: None)
-2026-08-23 07:22:11 [dare-shop-products] DEBUG: 
+2026-08-30 11:57:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/38/absetzcontainer-fuer-holz-a4-in-berlin?c=7> (referer: None)
+2026-08-30 11:57:28 [dare-shop-products] DEBUG: 
 ================================================================================
-2026-08-23 07:22:11 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/38/absetzcontainer-fuer-holz-a4-in-berlin?c=7
-2026-08-23 07:22:11 [dare-shop-products] DEBUG: ================================================================================
+2026-08-30 11:57:28 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/38/absetzcontainer-fuer-holz-a4-in-berlin?c=7
+2026-08-30 11:57:28 [dare-shop-products] DEBUG: ================================================================================
 
-2026-08-23 07:22:19 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
-2026-08-23 07:22:19 [dare-shop-products] DEBUG: Gefunden: 4 Größen-Optionen
-2026-08-23 07:22:19 [dare-shop-products] DEBUG: Verarbeite Option 1/4: 3 cbm
-2026-08-23 07:22:19 [dare-shop-products] DEBUG: Preis vor Auswahl: 531,00
-2026-08-23 07:22:20 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 386,00
-2026-08-23 07:22:20 [dare-shop-products] DEBUG: ✓ ITEM: type=Holz A4, size=3, price=386,00, url=https://www.dare-shop.de/container-bestellen/38/absetzcontainer-fuer-holz-a4-in-berlin?number=CS-B1-P_HO_IV-03M&c=7
-2026-08-23 07:22:20 [dare-shop-products] DEBUG: Verarbeite Option 2/4: 5 cbm
-2026-08-23 07:22:20 [dare-shop-products] DEBUG: Preis vor Auswahl: 386,00
-2026-08-23 07:22:21 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 500,00
-2026-08-23 07:22:22 [dare-shop-products] DEBUG: ✓ ITEM: type=Holz A4, size=5, price=500,00, url=https://www.dare-shop.de/container-bestellen/38/absetzcontainer-fuer-holz-a4-in-berlin?number=CS-B1-P_HO_IV-05M&c=7
-2026-08-23 07:22:22 [dare-shop-products] DEBUG: Verarbeite Option 3/4: 7 cbm
-2026-08-23 07:22:22 [dare-shop-products] DEBUG: Preis vor Auswahl: 500,00
-2026-08-23 07:22:23 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 531,00
-2026-08-23 07:22:23 [dare-shop-products] DEBUG: ✓ ITEM: type=Holz A4, size=7, price=531,00, url=https://www.dare-shop.de/container-bestellen/38/absetzcontainer-fuer-holz-a4-in-berlin?number=CS-B1-P_HO_IV-07M&c=7
-2026-08-23 07:22:23 [dare-shop-products] DEBUG: Verarbeite Option 4/4: 10 cbm
-2026-08-23 07:22:23 [dare-shop-products] DEBUG: Preis vor Auswahl: 531,00
-2026-08-23 07:22:24 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 702,00
-2026-08-23 07:22:25 [dare-shop-products] DEBUG: ✓ ITEM: type=Holz A4, size=10, price=702,00, url=https://www.dare-shop.de/container-bestellen/38/absetzcontainer-fuer-holz-a4-in-berlin?number=CS-B1-P_HO_IV-10M&c=7
-2026-08-23 07:22:25 [dare-shop-products] DEBUG: 
+2026-08-30 11:57:36 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
+2026-08-30 11:57:36 [dare-shop-products] DEBUG: Gefunden: 4 Größen-Optionen
+2026-08-30 11:57:36 [dare-shop-products] DEBUG: Verarbeite Option 1/4: 3 cbm
+2026-08-30 11:57:36 [dare-shop-products] DEBUG: Preis vor Auswahl: 531,00
+2026-08-30 11:57:37 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 386,00
+2026-08-30 11:57:37 [dare-shop-products] DEBUG: ✓ ITEM: type=Holz A4, size=3, price=386,00, url=https://www.dare-shop.de/container-bestellen/38/absetzcontainer-fuer-holz-a4-in-berlin?number=CS-B1-P_HO_IV-03M&c=7
+2026-08-30 11:57:37 [dare-shop-products] DEBUG: Verarbeite Option 2/4: 5 cbm
+2026-08-30 11:57:37 [dare-shop-products] DEBUG: Preis vor Auswahl: 386,00
+2026-08-30 11:57:38 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 500,00
+2026-08-30 11:57:39 [dare-shop-products] DEBUG: ✓ ITEM: type=Holz A4, size=5, price=500,00, url=https://www.dare-shop.de/container-bestellen/38/absetzcontainer-fuer-holz-a4-in-berlin?number=CS-B1-P_HO_IV-05M&c=7
+2026-08-30 11:57:39 [dare-shop-products] DEBUG: Verarbeite Option 3/4: 7 cbm
+2026-08-30 11:57:39 [dare-shop-products] DEBUG: Preis vor Auswahl: 500,00
+2026-08-30 11:57:40 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 531,00
+2026-08-30 11:57:40 [dare-shop-products] DEBUG: ✓ ITEM: type=Holz A4, size=7, price=531,00, url=https://www.dare-shop.de/container-bestellen/38/absetzcontainer-fuer-holz-a4-in-berlin?number=CS-B1-P_HO_IV-07M&c=7
+2026-08-30 11:57:40 [dare-shop-products] DEBUG: Verarbeite Option 4/4: 10 cbm
+2026-08-30 11:57:40 [dare-shop-products] DEBUG: Preis vor Auswahl: 531,00
+2026-08-30 11:57:42 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 702,00
+2026-08-30 11:57:42 [dare-shop-products] DEBUG: ✓ ITEM: type=Holz A4, size=10, price=702,00, url=https://www.dare-shop.de/container-bestellen/38/absetzcontainer-fuer-holz-a4-in-berlin?number=CS-B1-P_HO_IV-10M&c=7
+2026-08-30 11:57:42 [dare-shop-products] DEBUG: 
 Produktseite abgeschlossen: Absetzcontainer für Holz A4 in Berlin (4 Größen)
 
-2026-08-23 07:22:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/38/absetzcontainer-fuer-holz-a4-in-berlin?c=7>
+2026-08-30 11:57:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/38/absetzcontainer-fuer-holz-a4-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Holz A4 in Berlin', 'type': 'Holz A4', 'city': 'Berlin', 'size': '3', 'price': '386,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/38/absetzcontainer-fuer-holz-a4-in-berlin?number=CS-B1-P_HO_IV-03M&c=7'}
-2026-08-23 07:22:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/38/absetzcontainer-fuer-holz-a4-in-berlin?c=7>
+2026-08-30 11:57:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/38/absetzcontainer-fuer-holz-a4-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Holz A4 in Berlin', 'type': 'Holz A4', 'city': 'Berlin', 'size': '5', 'price': '500,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/38/absetzcontainer-fuer-holz-a4-in-berlin?number=CS-B1-P_HO_IV-05M&c=7'}
-2026-08-23 07:22:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/38/absetzcontainer-fuer-holz-a4-in-berlin?c=7>
+2026-08-30 11:57:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/38/absetzcontainer-fuer-holz-a4-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Holz A4 in Berlin', 'type': 'Holz A4', 'city': 'Berlin', 'size': '7', 'price': '531,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/38/absetzcontainer-fuer-holz-a4-in-berlin?number=CS-B1-P_HO_IV-07M&c=7'}
-2026-08-23 07:22:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/38/absetzcontainer-fuer-holz-a4-in-berlin?c=7>
+2026-08-30 11:57:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/38/absetzcontainer-fuer-holz-a4-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Holz A4 in Berlin', 'type': 'Holz A4', 'city': 'Berlin', 'size': '10', 'price': '702,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/38/absetzcontainer-fuer-holz-a4-in-berlin?number=CS-B1-P_HO_IV-10M&c=7'}
-2026-08-23 07:22:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/39/abrollcontainer-fuer-holz-a4-in-berlin?c=7> (referer: None)
-2026-08-23 07:22:25 [dare-shop-products] DEBUG: 
+2026-08-30 11:57:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/39/abrollcontainer-fuer-holz-a4-in-berlin?c=7> (referer: None)
+2026-08-30 11:57:42 [dare-shop-products] DEBUG: 
 ================================================================================
-2026-08-23 07:22:25 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/39/abrollcontainer-fuer-holz-a4-in-berlin?c=7
-2026-08-23 07:22:25 [dare-shop-products] DEBUG: ================================================================================
+2026-08-30 11:57:42 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/39/abrollcontainer-fuer-holz-a4-in-berlin?c=7
+2026-08-30 11:57:42 [dare-shop-products] DEBUG: ================================================================================
 
-2026-08-23 07:22:33 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
-2026-08-23 07:22:33 [dare-shop-products] DEBUG: Gefunden: 1 Größen-Optionen
-2026-08-23 07:22:33 [dare-shop-products] DEBUG: Verarbeite Option 1/1: 13 cbm
-2026-08-23 07:22:33 [dare-shop-products] DEBUG: Preis vor Auswahl: 873,00
-2026-08-23 07:22:44 [dare-shop-products] DEBUG: WARNUNG: Preis hat sich nicht geändert für Größe 13! Verwende: 873,00
-2026-08-23 07:22:44 [dare-shop-products] DEBUG: ✓ ITEM: type=Holz A4, size=13, price=873,00, url=https://www.dare-shop.de/container-bestellen/39/abrollcontainer-fuer-holz-a4-in-berlin?c=7
-2026-08-23 07:22:44 [dare-shop-products] DEBUG: 
+2026-08-30 11:57:50 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
+2026-08-30 11:57:50 [dare-shop-products] DEBUG: Gefunden: 1 Größen-Optionen
+2026-08-30 11:57:50 [dare-shop-products] DEBUG: Verarbeite Option 1/1: 13 cbm
+2026-08-30 11:57:50 [dare-shop-products] DEBUG: Preis vor Auswahl: 873,00
+2026-08-30 11:58:01 [dare-shop-products] DEBUG: WARNUNG: Preis hat sich nicht geändert für Größe 13! Verwende: 873,00
+2026-08-30 11:58:01 [dare-shop-products] DEBUG: ✓ ITEM: type=Holz A4, size=13, price=873,00, url=https://www.dare-shop.de/container-bestellen/39/abrollcontainer-fuer-holz-a4-in-berlin?c=7
+2026-08-30 11:58:01 [dare-shop-products] DEBUG: 
 Produktseite abgeschlossen: Abrollcontainer für Holz A4 in Berlin (1 Größen)
 
-2026-08-23 07:22:44 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/39/abrollcontainer-fuer-holz-a4-in-berlin?c=7>
+2026-08-30 11:58:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/39/abrollcontainer-fuer-holz-a4-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Abrollcontainer für Holz A4 in Berlin', 'type': 'Holz A4', 'city': 'Berlin', 'size': '13', 'price': '873,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/39/abrollcontainer-fuer-holz-a4-in-berlin?c=7'}
-2026-08-23 07:22:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/49/absetzcontainer-fuer-sperrmuell-in-berlin?c=7> (referer: None)
-2026-08-23 07:22:44 [dare-shop-products] DEBUG: 
+2026-08-30 11:58:01 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/49/absetzcontainer-fuer-sperrmuell-in-berlin?c=7> (referer: None)
+2026-08-30 11:58:01 [dare-shop-products] DEBUG: 
 ================================================================================
-2026-08-23 07:22:44 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/49/absetzcontainer-fuer-sperrmuell-in-berlin?c=7
-2026-08-23 07:22:44 [dare-shop-products] DEBUG: ================================================================================
+2026-08-30 11:58:01 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/49/absetzcontainer-fuer-sperrmuell-in-berlin?c=7
+2026-08-30 11:58:01 [dare-shop-products] DEBUG: ================================================================================
 
-2026-08-23 07:22:52 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
-2026-08-23 07:22:52 [dare-shop-products] DEBUG: Gefunden: 4 Größen-Optionen
-2026-08-23 07:22:52 [dare-shop-products] DEBUG: Verarbeite Option 1/4: 3 cbm
-2026-08-23 07:22:52 [dare-shop-products] DEBUG: Preis vor Auswahl: 589,00
-2026-08-23 07:22:53 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 411,00
-2026-08-23 07:22:54 [dare-shop-products] DEBUG: ✓ ITEM: type=Sperrmüll, size=3, price=411,00, url=https://www.dare-shop.de/container-bestellen/49/absetzcontainer-fuer-sperrmuell-in-berlin?number=CS-B1-P_SPERRM-03M&c=7
-2026-08-23 07:22:54 [dare-shop-products] DEBUG: Verarbeite Option 2/4: 5 cbm
-2026-08-23 07:22:54 [dare-shop-products] DEBUG: Preis vor Auswahl: 411,00
-2026-08-23 07:22:55 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 541,00
-2026-08-23 07:22:55 [dare-shop-products] DEBUG: ✓ ITEM: type=Sperrmüll, size=5, price=541,00, url=https://www.dare-shop.de/container-bestellen/49/absetzcontainer-fuer-sperrmuell-in-berlin?number=CS-B1-P_SPERRM-05M&c=7
-2026-08-23 07:22:55 [dare-shop-products] DEBUG: Verarbeite Option 3/4: 7 cbm
-2026-08-23 07:22:55 [dare-shop-products] DEBUG: Preis vor Auswahl: 541,00
-2026-08-23 07:22:56 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 589,00
-2026-08-23 07:22:57 [dare-shop-products] DEBUG: ✓ ITEM: type=Sperrmüll, size=7, price=589,00, url=https://www.dare-shop.de/container-bestellen/49/absetzcontainer-fuer-sperrmuell-in-berlin?number=CS-B1-P_SPERRM-07M&c=7
-2026-08-23 07:22:57 [dare-shop-products] DEBUG: Verarbeite Option 4/4: 10 cbm
-2026-08-23 07:22:57 [dare-shop-products] DEBUG: Preis vor Auswahl: 589,00
-2026-08-23 07:22:58 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 785,00
-2026-08-23 07:22:58 [dare-shop-products] DEBUG: ✓ ITEM: type=Sperrmüll, size=10, price=785,00, url=https://www.dare-shop.de/container-bestellen/49/absetzcontainer-fuer-sperrmuell-in-berlin?number=CS-B1-P_SPERRM-10M&c=7
-2026-08-23 07:22:58 [dare-shop-products] DEBUG: 
+2026-08-30 11:58:09 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
+2026-08-30 11:58:09 [dare-shop-products] DEBUG: Gefunden: 4 Größen-Optionen
+2026-08-30 11:58:09 [dare-shop-products] DEBUG: Verarbeite Option 1/4: 3 cbm
+2026-08-30 11:58:09 [dare-shop-products] DEBUG: Preis vor Auswahl: 589,00
+2026-08-30 11:58:10 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 411,00
+2026-08-30 11:58:11 [dare-shop-products] DEBUG: ✓ ITEM: type=Sperrmüll, size=3, price=411,00, url=https://www.dare-shop.de/container-bestellen/49/absetzcontainer-fuer-sperrmuell-in-berlin?number=CS-B1-P_SPERRM-03M&c=7
+2026-08-30 11:58:11 [dare-shop-products] DEBUG: Verarbeite Option 2/4: 5 cbm
+2026-08-30 11:58:11 [dare-shop-products] DEBUG: Preis vor Auswahl: 411,00
+2026-08-30 11:58:12 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 541,00
+2026-08-30 11:58:12 [dare-shop-products] DEBUG: ✓ ITEM: type=Sperrmüll, size=5, price=541,00, url=https://www.dare-shop.de/container-bestellen/49/absetzcontainer-fuer-sperrmuell-in-berlin?number=CS-B1-P_SPERRM-05M&c=7
+2026-08-30 11:58:12 [dare-shop-products] DEBUG: Verarbeite Option 3/4: 7 cbm
+2026-08-30 11:58:12 [dare-shop-products] DEBUG: Preis vor Auswahl: 541,00
+2026-08-30 11:58:13 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 589,00
+2026-08-30 11:58:14 [dare-shop-products] DEBUG: ✓ ITEM: type=Sperrmüll, size=7, price=589,00, url=https://www.dare-shop.de/container-bestellen/49/absetzcontainer-fuer-sperrmuell-in-berlin?number=CS-B1-P_SPERRM-07M&c=7
+2026-08-30 11:58:14 [dare-shop-products] DEBUG: Verarbeite Option 4/4: 10 cbm
+2026-08-30 11:58:14 [dare-shop-products] DEBUG: Preis vor Auswahl: 589,00
+2026-08-30 11:58:15 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 785,00
+2026-08-30 11:58:15 [dare-shop-products] DEBUG: ✓ ITEM: type=Sperrmüll, size=10, price=785,00, url=https://www.dare-shop.de/container-bestellen/49/absetzcontainer-fuer-sperrmuell-in-berlin?number=CS-B1-P_SPERRM-10M&c=7
+2026-08-30 11:58:15 [dare-shop-products] DEBUG: 
 Produktseite abgeschlossen: Absetzcontainer für Sperrmüll in Berlin (4 Größen)
 
-2026-08-23 07:22:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/49/absetzcontainer-fuer-sperrmuell-in-berlin?c=7>
+2026-08-30 11:58:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/49/absetzcontainer-fuer-sperrmuell-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Sperrmüll in Berlin', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '3', 'price': '411,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/49/absetzcontainer-fuer-sperrmuell-in-berlin?number=CS-B1-P_SPERRM-03M&c=7'}
-2026-08-23 07:22:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/49/absetzcontainer-fuer-sperrmuell-in-berlin?c=7>
+2026-08-30 11:58:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/49/absetzcontainer-fuer-sperrmuell-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Sperrmüll in Berlin', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '5', 'price': '541,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/49/absetzcontainer-fuer-sperrmuell-in-berlin?number=CS-B1-P_SPERRM-05M&c=7'}
-2026-08-23 07:22:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/49/absetzcontainer-fuer-sperrmuell-in-berlin?c=7>
+2026-08-30 11:58:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/49/absetzcontainer-fuer-sperrmuell-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Sperrmüll in Berlin', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '7', 'price': '589,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/49/absetzcontainer-fuer-sperrmuell-in-berlin?number=CS-B1-P_SPERRM-07M&c=7'}
-2026-08-23 07:22:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/49/absetzcontainer-fuer-sperrmuell-in-berlin?c=7>
+2026-08-30 11:58:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/49/absetzcontainer-fuer-sperrmuell-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Absetzcontainer für Sperrmüll in Berlin', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '10', 'price': '785,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/49/absetzcontainer-fuer-sperrmuell-in-berlin?number=CS-B1-P_SPERRM-10M&c=7'}
-2026-08-23 07:22:58 [scrapy.extensions.logstats] INFO: Crawled 16 pages (at 4 pages/min), scraped 54 items (at 12 items/min)
-2026-08-23 07:22:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/50/abrollcontainer-fuer-sperrmuell-in-berlin?c=7> (referer: None)
-2026-08-23 07:22:59 [dare-shop-products] DEBUG: 
+2026-08-30 11:58:15 [scrapy.extensions.logstats] INFO: Crawled 16 pages (at 4 pages/min), scraped 54 items (at 12 items/min)
+2026-08-30 11:58:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.dare-shop.de/container-bestellen/50/abrollcontainer-fuer-sperrmuell-in-berlin?c=7> (referer: None)
+2026-08-30 11:58:16 [dare-shop-products] DEBUG: 
 ================================================================================
-2026-08-23 07:22:59 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/50/abrollcontainer-fuer-sperrmuell-in-berlin?c=7
-2026-08-23 07:22:59 [dare-shop-products] DEBUG: ================================================================================
+2026-08-30 11:58:16 [dare-shop-products] DEBUG: Starte Produktseite: https://www.dare-shop.de/container-bestellen/50/abrollcontainer-fuer-sperrmuell-in-berlin?c=7
+2026-08-30 11:58:16 [dare-shop-products] DEBUG: ================================================================================
 
-2026-08-23 07:23:06 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
-2026-08-23 07:23:06 [dare-shop-products] DEBUG: Gefunden: 3 Größen-Optionen
-2026-08-23 07:23:06 [dare-shop-products] DEBUG: Verarbeite Option 1/3: 13 cbm
-2026-08-23 07:23:06 [dare-shop-products] DEBUG: Preis vor Auswahl: 1.571,00
-2026-08-23 07:23:07 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 982,00
-2026-08-23 07:23:08 [dare-shop-products] DEBUG: ✓ ITEM: type=Sperrmüll, size=13, price=982,00, url=https://www.dare-shop.de/container-bestellen/50/abrollcontainer-fuer-sperrmuell-in-berlin?number=CS-B1-P_SPERRM-13C&c=7
-2026-08-23 07:23:08 [dare-shop-products] DEBUG: Verarbeite Option 2/3: 22 cbm
-2026-08-23 07:23:08 [dare-shop-products] DEBUG: Preis vor Auswahl: 982,00
-2026-08-23 07:23:09 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 1.571,00
-2026-08-23 07:23:09 [dare-shop-products] DEBUG: ✓ ITEM: type=Sperrmüll, size=22, price=1.571,00, url=https://www.dare-shop.de/container-bestellen/50/abrollcontainer-fuer-sperrmuell-in-berlin?number=CS-B1-P_SPERRM-22C&c=7
-2026-08-23 07:23:09 [dare-shop-products] DEBUG: Verarbeite Option 3/3: 40 cbm
-2026-08-23 07:23:09 [dare-shop-products] DEBUG: Preis vor Auswahl: 1.571,00
-2026-08-23 07:23:10 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 2.749,00
-2026-08-23 07:23:11 [dare-shop-products] DEBUG: ✓ ITEM: type=Sperrmüll, size=40, price=2.749,00, url=https://www.dare-shop.de/container-bestellen/50/abrollcontainer-fuer-sperrmuell-in-berlin?number=CS-B1-P_SPERRM-40C&c=7
-2026-08-23 07:23:11 [dare-shop-products] DEBUG: 
+2026-08-30 11:58:23 [dare-shop-products] DEBUG: Cookie-Banner nicht gefunden oder bereits akzeptiert.
+2026-08-30 11:58:23 [dare-shop-products] DEBUG: Gefunden: 3 Größen-Optionen
+2026-08-30 11:58:23 [dare-shop-products] DEBUG: Verarbeite Option 1/3: 13 cbm
+2026-08-30 11:58:23 [dare-shop-products] DEBUG: Preis vor Auswahl: 1.571,00
+2026-08-30 11:58:24 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 982,00
+2026-08-30 11:58:25 [dare-shop-products] DEBUG: ✓ ITEM: type=Sperrmüll, size=13, price=982,00, url=https://www.dare-shop.de/container-bestellen/50/abrollcontainer-fuer-sperrmuell-in-berlin?number=CS-B1-P_SPERRM-13C&c=7
+2026-08-30 11:58:25 [dare-shop-products] DEBUG: Verarbeite Option 2/3: 22 cbm
+2026-08-30 11:58:25 [dare-shop-products] DEBUG: Preis vor Auswahl: 982,00
+2026-08-30 11:58:26 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 1.571,00
+2026-08-30 11:58:26 [dare-shop-products] DEBUG: ✓ ITEM: type=Sperrmüll, size=22, price=1.571,00, url=https://www.dare-shop.de/container-bestellen/50/abrollcontainer-fuer-sperrmuell-in-berlin?number=CS-B1-P_SPERRM-22C&c=7
+2026-08-30 11:58:26 [dare-shop-products] DEBUG: Verarbeite Option 3/3: 40 cbm
+2026-08-30 11:58:26 [dare-shop-products] DEBUG: Preis vor Auswahl: 1.571,00
+2026-08-30 11:58:28 [dare-shop-products] DEBUG: Preis aktualisiert nach 0.5s: 2.749,00
+2026-08-30 11:58:28 [dare-shop-products] DEBUG: ✓ ITEM: type=Sperrmüll, size=40, price=2.749,00, url=https://www.dare-shop.de/container-bestellen/50/abrollcontainer-fuer-sperrmuell-in-berlin?number=CS-B1-P_SPERRM-40C&c=7
+2026-08-30 11:58:28 [dare-shop-products] DEBUG: 
 Produktseite abgeschlossen: Abrollcontainer für Sperrmüll in Berlin (3 Größen)
 
-2026-08-23 07:23:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/50/abrollcontainer-fuer-sperrmuell-in-berlin?c=7>
+2026-08-30 11:58:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/50/abrollcontainer-fuer-sperrmuell-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Abrollcontainer für Sperrmüll in Berlin', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '13', 'price': '982,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/50/abrollcontainer-fuer-sperrmuell-in-berlin?number=CS-B1-P_SPERRM-13C&c=7'}
-2026-08-23 07:23:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/50/abrollcontainer-fuer-sperrmuell-in-berlin?c=7>
+2026-08-30 11:58:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/50/abrollcontainer-fuer-sperrmuell-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Abrollcontainer für Sperrmüll in Berlin', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '22', 'price': '1.571,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/50/abrollcontainer-fuer-sperrmuell-in-berlin?number=CS-B1-P_SPERRM-22C&c=7'}
-2026-08-23 07:23:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/50/abrollcontainer-fuer-sperrmuell-in-berlin?c=7>
+2026-08-30 11:58:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.dare-shop.de/container-bestellen/50/abrollcontainer-fuer-sperrmuell-in-berlin?c=7>
 {'source': 'dare-shop.de', 'title': 'Abrollcontainer für Sperrmüll in Berlin', 'type': 'Sperrmüll', 'city': 'Berlin', 'size': '40', 'price': '2.749,00', 'lid_price': 'kostenlos nur, wenn verfügbar', 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5€', 'cancellation_fee': '135', 'URL': 'https://www.dare-shop.de/container-bestellen/50/abrollcontainer-fuer-sperrmuell-in-berlin?number=CS-B1-P_SPERRM-40C&c=7'}
-2026-08-23 07:23:11 [scrapy.core.engine] INFO: Closing spider (finished)
-2026-08-23 07:23:11 [scrapy.extensions.feedexport] INFO: Stored json feed (57 items) in: ../data/dare-shop-products-products.json
-2026-08-23 07:23:11 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+2026-08-30 11:58:28 [scrapy.core.engine] INFO: Closing spider (finished)
+2026-08-30 11:58:28 [scrapy.extensions.feedexport] INFO: Stored json feed (57 items) in: ../data/dare-shop-products-products.json
+2026-08-30 11:58:28 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
 {'downloader/request_bytes': 7770,
  'downloader/request_count': 17,
  'downloader/request_method_count/GET': 17,
- 'downloader/response_bytes': 241436,
+ 'downloader/response_bytes': 241434,
  'downloader/response_count': 17,
  'downloader/response_status_count/200': 17,
- 'elapsed_time_seconds': 263.44913813200037,
+ 'elapsed_time_seconds': 263.9481697870001,
  'feedexport/success_count/FileFeedStorage': 1,
  'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2026, 8, 23, 7, 23, 11, 484369, tzinfo=datetime.timezone.utc),
- 'httpcompression/response_bytes': 1161784,
+ 'finish_time': datetime.datetime(2026, 8, 30, 11, 58, 28, 630068, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 1161785,
  'httpcompression/response_count': 17,
  'item_scraped_count': 57,
  'items_per_minute': 13.00380228136882,
  'log_count/DEBUG': 404,
  'log_count/INFO': 7,
  'log_count/WARNING': 11,
- 'memusage/max': 96120832,
- 'memusage/startup': 82223104,
+ 'memusage/max': 95657984,
+ 'memusage/startup': 82395136,
  'response_received_count': 17,
  'responses_per_minute': 3.8783269961977185,
  'scheduler/dequeued': 17,
  'scheduler/dequeued/memory': 17,
  'scheduler/enqueued': 17,
  'scheduler/enqueued/memory': 17,
- 'start_time': datetime.datetime(2026, 8, 23, 7, 18, 48, 35230, tzinfo=datetime.timezone.utc)}
-2026-08-23 07:23:11 [scrapy.core.engine] INFO: Spider closed (finished)
+ 'start_time': datetime.datetime(2026, 8, 30, 11, 54, 4, 681896, tzinfo=datetime.timezone.utc)}
+2026-08-30 11:58:28 [scrapy.core.engine] INFO: Spider closed (finished)

@@ -1,5 +1,5 @@
-2026-08-23 09:24:27 [scrapy.utils.log] INFO: Scrapy 2.18.0 started (bot: nebi_spiders)
-2026-08-23 09:24:27 [scrapy.utils.log] INFO: Versions:
+2026-08-30 12:54:36 [scrapy.utils.log] INFO: Scrapy 2.18.0 started (bot: nebi_spiders)
+2026-08-30 12:54:36 [scrapy.utils.log] INFO: Versions:
 {'lxml': '6.1.2',
  'libxml2': '2.14.6',
  'cssselect': '1.5.0',
@@ -7,24 +7,24 @@
  'w3lib': '2.4.1',
  'Twisted': '26.4.0',
  'Python': '3.11.16 (main, Aug 13 2026, 02:46:14) [GCC 13.3.0]',
- 'pyOpenSSL': '26.4.0 (OpenSSL 4.0.1 9 Jun 2026)',
- 'cryptography': '50.0.0',
+ 'pyOpenSSL': '26.4.0 (OpenSSL 4.0.2 25 Aug 2026)',
+ 'cryptography': '50.0.1',
  'Platform': 'Linux-6.17.0-1022-azure-x86_64-with-glibc2.39'}
-2026-08-23 09:24:27 [scrapy.crawler] DEBUG: Using AsyncCrawlerProcess
-2026-08-23 09:24:27 [asyncio] DEBUG: Using selector: EpollSelector
-2026-08-23 09:24:27 [scrapy.addons] INFO: Enabled addons:
+2026-08-30 12:54:36 [scrapy.crawler] DEBUG: Using AsyncCrawlerProcess
+2026-08-30 12:54:36 [asyncio] DEBUG: Using selector: EpollSelector
+2026-08-30 12:54:37 [scrapy.addons] INFO: Enabled addons:
 []
-2026-08-23 09:24:27 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
-2026-08-23 09:24:27 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
-2026-08-23 09:24:27 [scrapy.extensions.telnet] INFO: Telnet Password: 2af5a66cdabfd24a
-2026-08-23 09:24:27 [scrapy.middleware] INFO: Enabled extensions:
+2026-08-30 12:54:37 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2026-08-30 12:54:37 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2026-08-30 12:54:37 [scrapy.extensions.telnet] INFO: Telnet Password: da0fb1c8ae0d78a5
+2026-08-30 12:54:37 [scrapy.middleware] INFO: Enabled extensions:
 ['scrapy.extensions.corestats.CoreStats',
  'scrapy.extensions.logcount.LogCount',
  'scrapy.extensions.telnet.TelnetConsole',
  'scrapy.extensions.memusage.MemoryUsage',
  'scrapy.extensions.feedexport.FeedExporter',
  'scrapy.extensions.logstats.LogStats']
-2026-08-23 09:24:27 [scrapy.crawler] INFO: Overridden settings:
+2026-08-30 12:54:37 [scrapy.crawler] INFO: Overridden settings:
 {'BOT_NAME': 'nebi_spiders',
  'CONCURRENT_REQUESTS': 1,
  'DOWNLOAD_DELAY': 0.5,
@@ -38,7 +38,7 @@
                     'nebi_spiders.spiders.berlin'],
  'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, '
                'like Gecko) Chrome/141.0.0.0 Safari/537.36'}
-2026-08-23 09:24:28 [scrapy.middleware] INFO: Enabled downloader middlewares:
+2026-08-30 12:54:37 [scrapy.middleware] INFO: Enabled downloader middlewares:
 ['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
  'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
@@ -51,169 +51,169 @@
  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
  'scrapy.downloadermiddlewares.stats.DownloaderStats']
-2026-08-23 09:24:28 [scrapy.middleware] INFO: Enabled spider middlewares:
+2026-08-30 12:54:37 [scrapy.middleware] INFO: Enabled spider middlewares:
 ['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
  'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
  'scrapy.spidermiddlewares.referer.RefererMiddleware',
  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
  'scrapy.spidermiddlewares.depth.DepthMiddleware',
  'scrapy.spidermiddlewares.metacopy.MetaCopyDetectionMiddleware']
-2026-08-23 09:24:28 [scrapy.middleware] INFO: Enabled item pipelines:
+2026-08-30 12:54:37 [scrapy.middleware] INFO: Enabled item pipelines:
 []
-2026-08-23 09:24:28 [scrapy.core.engine] INFO: Spider opened
-2026-08-23 09:24:28 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2026-08-23 09:24:28 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
-2026-08-23 09:24:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ravos.de/containerdienst/containerdienst/> (referer: None)
-2026-08-23 09:24:28 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/koeln/ravos-containerdienst.py:61: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
+2026-08-30 12:54:37 [scrapy.core.engine] INFO: Spider opened
+2026-08-30 12:54:37 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2026-08-30 12:54:37 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2026-08-30 12:54:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://ravos.de/containerdienst/containerdienst/> (referer: None)
+2026-08-30 12:54:38 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/koeln/ravos-containerdienst.py:61: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
   self.log(f"\n{'='*80}")
 
-2026-08-23 09:24:28 [ravos-containerdienst] DEBUG: 
+2026-08-30 12:54:38 [ravos-containerdienst] DEBUG: 
 ================================================================================
-2026-08-23 09:24:28 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/koeln/ravos-containerdienst.py:62: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
+2026-08-30 12:54:38 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/koeln/ravos-containerdienst.py:62: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
   self.log(f"Starte RAVOS Containerdienst Scraping (Köln)")
 
-2026-08-23 09:24:28 [ravos-containerdienst] DEBUG: Starte RAVOS Containerdienst Scraping (Köln)
-2026-08-23 09:24:28 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/koeln/ravos-containerdienst.py:63: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
+2026-08-30 12:54:38 [ravos-containerdienst] DEBUG: Starte RAVOS Containerdienst Scraping (Köln)
+2026-08-30 12:54:38 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/koeln/ravos-containerdienst.py:63: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
   self.log(f"{'='*80}\n")
 
-2026-08-23 09:24:28 [ravos-containerdienst] DEBUG: ================================================================================
+2026-08-30 12:54:38 [ravos-containerdienst] DEBUG: ================================================================================
 
-2026-08-23 09:24:28 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/koeln/ravos-containerdienst.py:95: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
+2026-08-30 12:54:38 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/koeln/ravos-containerdienst.py:95: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
   self.log(f"📋 Lade FAQ-Seite: {self.faq_url}")
 
-2026-08-23 09:24:28 [ravos-containerdienst] DEBUG: 📋 Lade FAQ-Seite: https://ravos.de/faq/
-2026-08-23 09:24:33 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/koeln/ravos-containerdienst.py:105: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
+2026-08-30 12:54:38 [ravos-containerdienst] DEBUG: 📋 Lade FAQ-Seite: https://ravos.de/faq/
+2026-08-30 12:54:42 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/koeln/ravos-containerdienst.py:105: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
   self.log(f"  ✓ Stellzeit mietfrei: {self.max_rental_period} Tage")
 
-2026-08-23 09:24:33 [ravos-containerdienst] DEBUG:   ✓ Stellzeit mietfrei: 14 Tage
-2026-08-23 09:24:33 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/koeln/ravos-containerdienst.py:111: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
+2026-08-30 12:54:42 [ravos-containerdienst] DEBUG:   ✓ Stellzeit mietfrei: 14 Tage
+2026-08-30 12:54:42 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/koeln/ravos-containerdienst.py:111: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
   self.log(f"  ✓ Miete pro Tag: {self.fee_after_max}€")
 
-2026-08-23 09:24:33 [ravos-containerdienst] DEBUG:   ✓ Miete pro Tag: 5,95€
-2026-08-23 09:24:33 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/koeln/ravos-containerdienst.py:119: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
+2026-08-30 12:54:42 [ravos-containerdienst] DEBUG:   ✓ Miete pro Tag: 5,95€
+2026-08-30 12:54:42 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/koeln/ravos-containerdienst.py:119: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
   self.log(f"  ✓ Fehlfahrten: {self.cancellation_fees}")
 
-2026-08-23 09:24:33 [ravos-containerdienst] DEBUG:   ✓ Fehlfahrten: Zone 1: 120€, Zone 2: 145€, Zone 3: 205€, Zone 4: 240€
-2026-08-23 09:24:33 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/koeln/ravos-containerdienst.py:71: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
+2026-08-30 12:54:42 [ravos-containerdienst] DEBUG:   ✓ Fehlfahrten: Zone 1: 120€, Zone 2: 145€, Zone 3: 205€, Zone 4: 240€
+2026-08-30 12:54:42 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/koeln/ravos-containerdienst.py:71: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
   self.log(f"\n--- Verarbeite: {waste_type} ---")
 
-2026-08-23 09:24:33 [ravos-containerdienst] DEBUG: 
+2026-08-30 12:54:42 [ravos-containerdienst] DEBUG: 
 --- Verarbeite: Bauschutt ---
-2026-08-23 09:24:49 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/koeln/ravos-containerdienst.py:191: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
+2026-08-30 12:54:59 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/koeln/ravos-containerdienst.py:191: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
   self.log(f"  ⚠️ Kein Dropdown gefunden, versuche alternative Methode")
 
-2026-08-23 09:24:49 [ravos-containerdienst] DEBUG:   ⚠️ Kein Dropdown gefunden, versuche alternative Methode
-2026-08-23 09:24:49 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/koeln/ravos-containerdienst.py:81: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
+2026-08-30 12:54:59 [ravos-containerdienst] DEBUG:   ⚠️ Kein Dropdown gefunden, versuche alternative Methode
+2026-08-30 12:54:59 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/koeln/ravos-containerdienst.py:81: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
   self.log(f"  ✓ {product['size']}m³: {product['price']}€")
 
-2026-08-23 09:24:49 [ravos-containerdienst] DEBUG:   ✓ 3m³: 299,00€
-2026-08-23 09:24:49 [ravos-containerdienst] DEBUG:   ✓ 5m³: 359,00€
-2026-08-23 09:24:49 [ravos-containerdienst] DEBUG:   ✓ 7m³: 389,00€
-2026-08-23 09:24:49 [ravos-containerdienst] DEBUG: 
+2026-08-30 12:54:59 [ravos-containerdienst] DEBUG:   ✓ 3m³: 299,00€
+2026-08-30 12:54:59 [ravos-containerdienst] DEBUG:   ✓ 5m³: 359,00€
+2026-08-30 12:54:59 [ravos-containerdienst] DEBUG:   ✓ 7m³: 389,00€
+2026-08-30 12:54:59 [ravos-containerdienst] DEBUG: 
 --- Verarbeite: Baumischabfall ---
-2026-08-23 09:25:05 [ravos-containerdienst] DEBUG:   ⚠️ Kein Dropdown gefunden, versuche alternative Methode
-2026-08-23 09:25:05 [ravos-containerdienst] DEBUG:   ✓ 3m³: 489,00€
-2026-08-23 09:25:05 [ravos-containerdienst] DEBUG:   ✓ 5m³: 619,00€
-2026-08-23 09:25:05 [ravos-containerdienst] DEBUG:   ✓ 7m³: 669,00€
-2026-08-23 09:25:05 [ravos-containerdienst] DEBUG:   ✓ 10m³: 849,00€
-2026-08-23 09:25:05 [ravos-containerdienst] DEBUG: 
+2026-08-30 12:55:14 [ravos-containerdienst] DEBUG:   ⚠️ Kein Dropdown gefunden, versuche alternative Methode
+2026-08-30 12:55:14 [ravos-containerdienst] DEBUG:   ✓ 3m³: 489,00€
+2026-08-30 12:55:14 [ravos-containerdienst] DEBUG:   ✓ 5m³: 619,00€
+2026-08-30 12:55:14 [ravos-containerdienst] DEBUG:   ✓ 7m³: 669,00€
+2026-08-30 12:55:14 [ravos-containerdienst] DEBUG:   ✓ 10m³: 849,00€
+2026-08-30 12:55:14 [ravos-containerdienst] DEBUG: 
 --- Verarbeite: Gartenabfälle ---
-2026-08-23 09:25:24 [ravos-containerdienst] DEBUG:   ⚠️ Kein Dropdown gefunden, versuche alternative Methode
-2026-08-23 09:25:24 [ravos-containerdienst] DEBUG:   ✓ 3m³: 249,00€
-2026-08-23 09:25:24 [ravos-containerdienst] DEBUG:   ✓ 5m³: 329,00€
-2026-08-23 09:25:24 [ravos-containerdienst] DEBUG:   ✓ 7m³: 349,00€
-2026-08-23 09:25:24 [ravos-containerdienst] DEBUG:   ✓ 10m³: 399,00€
-2026-08-23 09:25:24 [ravos-containerdienst] DEBUG: 
+2026-08-30 12:55:34 [ravos-containerdienst] DEBUG:   ⚠️ Kein Dropdown gefunden, versuche alternative Methode
+2026-08-30 12:55:34 [ravos-containerdienst] DEBUG:   ✓ 3m³: 249,00€
+2026-08-30 12:55:34 [ravos-containerdienst] DEBUG:   ✓ 5m³: 329,00€
+2026-08-30 12:55:34 [ravos-containerdienst] DEBUG:   ✓ 7m³: 349,00€
+2026-08-30 12:55:34 [ravos-containerdienst] DEBUG:   ✓ 10m³: 399,00€
+2026-08-30 12:55:34 [ravos-containerdienst] DEBUG: 
 --- Verarbeite: Holz A1-A3 ---
-2026-08-23 09:25:39 [ravos-containerdienst] DEBUG:   ⚠️ Kein Dropdown gefunden, versuche alternative Methode
-2026-08-23 09:25:39 [ravos-containerdienst] DEBUG:   ✓ 3m³: 249,00€
-2026-08-23 09:25:39 [ravos-containerdienst] DEBUG:   ✓ 5m³: 279,00€
-2026-08-23 09:25:39 [ravos-containerdienst] DEBUG:   ✓ 7m³: 299,00€
-2026-08-23 09:25:39 [ravos-containerdienst] DEBUG:   ✓ 10m³: 349,00€
-2026-08-23 09:25:39 [ravos-containerdienst] DEBUG: 
+2026-08-30 12:55:52 [ravos-containerdienst] DEBUG:   ⚠️ Kein Dropdown gefunden, versuche alternative Methode
+2026-08-30 12:55:52 [ravos-containerdienst] DEBUG:   ✓ 3m³: 249,00€
+2026-08-30 12:55:52 [ravos-containerdienst] DEBUG:   ✓ 5m³: 279,00€
+2026-08-30 12:55:52 [ravos-containerdienst] DEBUG:   ✓ 7m³: 299,00€
+2026-08-30 12:55:52 [ravos-containerdienst] DEBUG:   ✓ 10m³: 349,00€
+2026-08-30 12:55:52 [ravos-containerdienst] DEBUG: 
 --- Verarbeite: Boden ---
-2026-08-23 09:25:56 [ravos-containerdienst] DEBUG:   ⚠️ Kein Dropdown gefunden, versuche alternative Methode
-2026-08-23 09:25:56 [ravos-containerdienst] DEBUG:   ✓ 3m³: 359,00€
-2026-08-23 09:25:56 [ravos-containerdienst] DEBUG:   ✓ 5m³: 419,00€
-2026-08-23 09:25:56 [ravos-containerdienst] DEBUG:   ✓ 7m³: 449,00€
-2026-08-23 09:25:56 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/koeln/ravos-containerdienst.py:88: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
+2026-08-30 12:56:08 [ravos-containerdienst] DEBUG:   ⚠️ Kein Dropdown gefunden, versuche alternative Methode
+2026-08-30 12:56:08 [ravos-containerdienst] DEBUG:   ✓ 3m³: 359,00€
+2026-08-30 12:56:08 [ravos-containerdienst] DEBUG:   ✓ 5m³: 419,00€
+2026-08-30 12:56:08 [ravos-containerdienst] DEBUG:   ✓ 7m³: 449,00€
+2026-08-30 12:56:08 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/koeln/ravos-containerdienst.py:88: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
   self.log(f"\n{'='*80}")
 
-2026-08-23 09:25:56 [ravos-containerdienst] DEBUG: 
+2026-08-30 12:56:08 [ravos-containerdienst] DEBUG: 
 ================================================================================
-2026-08-23 09:25:56 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/koeln/ravos-containerdienst.py:89: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
+2026-08-30 12:56:08 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/koeln/ravos-containerdienst.py:89: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
   self.log(f"✓ Gesamt gescrapt: {total_products} Produkte")
 
-2026-08-23 09:25:56 [ravos-containerdienst] DEBUG: ✓ Gesamt gescrapt: 18 Produkte
-2026-08-23 09:25:56 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/koeln/ravos-containerdienst.py:90: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
+2026-08-30 12:56:08 [ravos-containerdienst] DEBUG: ✓ Gesamt gescrapt: 18 Produkte
+2026-08-30 12:56:08 [py.warnings] WARNING: /home/runner/work/nebi-scraper/nebi-scraper/nebi_spiders/spiders/koeln/ravos-containerdienst.py:90: ScrapyDeprecationWarning: Spider.log() is deprecated, use methods of Spider.logger instead.
   self.log(f"{'='*80}\n")
 
-2026-08-23 09:25:56 [ravos-containerdienst] DEBUG: ================================================================================
+2026-08-30 12:56:08 [ravos-containerdienst] DEBUG: ================================================================================
 
-2026-08-23 09:25:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
+2026-08-30 12:56:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
 {'source': 'RAVOS Containerdienst', 'title': 'Bauschutt 3 m³', 'type': 'Bauschutt', 'city': 'Köln', 'size': '3', 'price': '299,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5,95', 'cancellation_fee': 'Zone 1: 120€, Zone 2: 145€, Zone 3: 205€, Zone 4: 240€', 'URL': 'https://ravos.de/produkt/container-bauschutt/'}
-2026-08-23 09:25:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
+2026-08-30 12:56:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
 {'source': 'RAVOS Containerdienst', 'title': 'Bauschutt 5 m³', 'type': 'Bauschutt', 'city': 'Köln', 'size': '5', 'price': '359,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5,95', 'cancellation_fee': 'Zone 1: 120€, Zone 2: 145€, Zone 3: 205€, Zone 4: 240€', 'URL': 'https://ravos.de/produkt/container-bauschutt/'}
-2026-08-23 09:25:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
+2026-08-30 12:56:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
 {'source': 'RAVOS Containerdienst', 'title': 'Bauschutt 7 m³', 'type': 'Bauschutt', 'city': 'Köln', 'size': '7', 'price': '389,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5,95', 'cancellation_fee': 'Zone 1: 120€, Zone 2: 145€, Zone 3: 205€, Zone 4: 240€', 'URL': 'https://ravos.de/produkt/container-bauschutt/'}
-2026-08-23 09:25:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
+2026-08-30 12:56:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
 {'source': 'RAVOS Containerdienst', 'title': 'Baumischabfall 3 m³', 'type': 'Baumischabfall', 'city': 'Köln', 'size': '3', 'price': '489,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5,95', 'cancellation_fee': 'Zone 1: 120€, Zone 2: 145€, Zone 3: 205€, Zone 4: 240€', 'URL': 'https://ravos.de/produkt/container-baumischabfall/'}
-2026-08-23 09:25:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
+2026-08-30 12:56:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
 {'source': 'RAVOS Containerdienst', 'title': 'Baumischabfall 5 m³', 'type': 'Baumischabfall', 'city': 'Köln', 'size': '5', 'price': '619,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5,95', 'cancellation_fee': 'Zone 1: 120€, Zone 2: 145€, Zone 3: 205€, Zone 4: 240€', 'URL': 'https://ravos.de/produkt/container-baumischabfall/'}
-2026-08-23 09:25:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
+2026-08-30 12:56:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
 {'source': 'RAVOS Containerdienst', 'title': 'Baumischabfall 7 m³', 'type': 'Baumischabfall', 'city': 'Köln', 'size': '7', 'price': '669,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5,95', 'cancellation_fee': 'Zone 1: 120€, Zone 2: 145€, Zone 3: 205€, Zone 4: 240€', 'URL': 'https://ravos.de/produkt/container-baumischabfall/'}
-2026-08-23 09:25:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
+2026-08-30 12:56:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
 {'source': 'RAVOS Containerdienst', 'title': 'Baumischabfall 10 m³', 'type': 'Baumischabfall', 'city': 'Köln', 'size': '10', 'price': '849,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5,95', 'cancellation_fee': 'Zone 1: 120€, Zone 2: 145€, Zone 3: 205€, Zone 4: 240€', 'URL': 'https://ravos.de/produkt/container-baumischabfall/'}
-2026-08-23 09:25:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
+2026-08-30 12:56:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
 {'source': 'RAVOS Containerdienst', 'title': 'Gartenabfälle 3 m³', 'type': 'Gartenabfälle', 'city': 'Köln', 'size': '3', 'price': '249,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5,95', 'cancellation_fee': 'Zone 1: 120€, Zone 2: 145€, Zone 3: 205€, Zone 4: 240€', 'URL': 'https://ravos.de/produkt/container-gruenschnitt/'}
-2026-08-23 09:25:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
+2026-08-30 12:56:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
 {'source': 'RAVOS Containerdienst', 'title': 'Gartenabfälle 5 m³', 'type': 'Gartenabfälle', 'city': 'Köln', 'size': '5', 'price': '329,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5,95', 'cancellation_fee': 'Zone 1: 120€, Zone 2: 145€, Zone 3: 205€, Zone 4: 240€', 'URL': 'https://ravos.de/produkt/container-gruenschnitt/'}
-2026-08-23 09:25:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
+2026-08-30 12:56:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
 {'source': 'RAVOS Containerdienst', 'title': 'Gartenabfälle 7 m³', 'type': 'Gartenabfälle', 'city': 'Köln', 'size': '7', 'price': '349,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5,95', 'cancellation_fee': 'Zone 1: 120€, Zone 2: 145€, Zone 3: 205€, Zone 4: 240€', 'URL': 'https://ravos.de/produkt/container-gruenschnitt/'}
-2026-08-23 09:25:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
+2026-08-30 12:56:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
 {'source': 'RAVOS Containerdienst', 'title': 'Gartenabfälle 10 m³', 'type': 'Gartenabfälle', 'city': 'Köln', 'size': '10', 'price': '399,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5,95', 'cancellation_fee': 'Zone 1: 120€, Zone 2: 145€, Zone 3: 205€, Zone 4: 240€', 'URL': 'https://ravos.de/produkt/container-gruenschnitt/'}
-2026-08-23 09:25:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
+2026-08-30 12:56:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
 {'source': 'RAVOS Containerdienst', 'title': 'Holz A1-A3 3 m³', 'type': 'Holz A1-A3', 'city': 'Köln', 'size': '3', 'price': '249,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5,95', 'cancellation_fee': 'Zone 1: 120€, Zone 2: 145€, Zone 3: 205€, Zone 4: 240€', 'URL': 'https://ravos.de/produkt/container-holzabfall/'}
-2026-08-23 09:25:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
+2026-08-30 12:56:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
 {'source': 'RAVOS Containerdienst', 'title': 'Holz A1-A3 5 m³', 'type': 'Holz A1-A3', 'city': 'Köln', 'size': '5', 'price': '279,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5,95', 'cancellation_fee': 'Zone 1: 120€, Zone 2: 145€, Zone 3: 205€, Zone 4: 240€', 'URL': 'https://ravos.de/produkt/container-holzabfall/'}
-2026-08-23 09:25:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
+2026-08-30 12:56:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
 {'source': 'RAVOS Containerdienst', 'title': 'Holz A1-A3 7 m³', 'type': 'Holz A1-A3', 'city': 'Köln', 'size': '7', 'price': '299,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5,95', 'cancellation_fee': 'Zone 1: 120€, Zone 2: 145€, Zone 3: 205€, Zone 4: 240€', 'URL': 'https://ravos.de/produkt/container-holzabfall/'}
-2026-08-23 09:25:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
+2026-08-30 12:56:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
 {'source': 'RAVOS Containerdienst', 'title': 'Holz A1-A3 10 m³', 'type': 'Holz A1-A3', 'city': 'Köln', 'size': '10', 'price': '349,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5,95', 'cancellation_fee': 'Zone 1: 120€, Zone 2: 145€, Zone 3: 205€, Zone 4: 240€', 'URL': 'https://ravos.de/produkt/container-holzabfall/'}
-2026-08-23 09:25:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
+2026-08-30 12:56:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
 {'source': 'RAVOS Containerdienst', 'title': 'Boden 3 m³', 'type': 'Boden', 'city': 'Köln', 'size': '3', 'price': '359,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5,95', 'cancellation_fee': 'Zone 1: 120€, Zone 2: 145€, Zone 3: 205€, Zone 4: 240€', 'URL': 'https://ravos.de/produkt/container-erdaushub/'}
-2026-08-23 09:25:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
+2026-08-30 12:56:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
 {'source': 'RAVOS Containerdienst', 'title': 'Boden 5 m³', 'type': 'Boden', 'city': 'Köln', 'size': '5', 'price': '419,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5,95', 'cancellation_fee': 'Zone 1: 120€, Zone 2: 145€, Zone 3: 205€, Zone 4: 240€', 'URL': 'https://ravos.de/produkt/container-erdaushub/'}
-2026-08-23 09:25:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
+2026-08-30 12:56:08 [scrapy.core.scraper] DEBUG: Scraped from <200 https://ravos.de/containerdienst/containerdienst/>
 {'source': 'RAVOS Containerdienst', 'title': 'Boden 7 m³', 'type': 'Boden', 'city': 'Köln', 'size': '7', 'price': '449,00', 'lid_price': None, 'arrival_price': 'inklusive', 'departure_price': 'inklusive', 'max_rental_period': '14', 'fee_after_max': '5,95', 'cancellation_fee': 'Zone 1: 120€, Zone 2: 145€, Zone 3: 205€, Zone 4: 240€', 'URL': 'https://ravos.de/produkt/container-erdaushub/'}
-2026-08-23 09:25:56 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 1 pages/min), scraped 18 items (at 18 items/min)
-2026-08-23 09:25:56 [scrapy.core.engine] INFO: Closing spider (finished)
-2026-08-23 09:25:56 [scrapy.extensions.feedexport] INFO: Stored json feed (18 items) in: ../data/ravos-containerdienst-products.json
-2026-08-23 09:25:56 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+2026-08-30 12:56:08 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 1 pages/min), scraped 18 items (at 18 items/min)
+2026-08-30 12:56:08 [scrapy.core.engine] INFO: Closing spider (finished)
+2026-08-30 12:56:08 [scrapy.extensions.feedexport] INFO: Stored json feed (18 items) in: ../data/ravos-containerdienst-products.json
+2026-08-30 12:56:08 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
 {'downloader/request_bytes': 317,
  'downloader/request_count': 1,
  'downloader/request_method_count/GET': 1,
- 'downloader/response_bytes': 31147,
+ 'downloader/response_bytes': 31141,
  'downloader/response_count': 1,
  'downloader/response_status_count/200': 1,
- 'elapsed_time_seconds': 88.30442176799988,
+ 'elapsed_time_seconds': 90.97176582100019,
  'feedexport/success_count/FileFeedStorage': 1,
  'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2026, 8, 23, 9, 25, 56, 345842, tzinfo=datetime.timezone.utc),
- 'httpcompression/response_bytes': 122818,
+ 'finish_time': datetime.datetime(2026, 8, 30, 12, 56, 8, 450149, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 122790,
  'httpcompression/response_count': 1,
  'item_scraped_count': 18,
- 'items_per_minute': 12.272727272727273,
+ 'items_per_minute': 12.0,
  'log_count/DEBUG': 57,
  'log_count/INFO': 4,
  'log_count/WARNING': 13,
- 'memusage/max': 86884352,
- 'memusage/startup': 81747968,
+ 'memusage/max': 86605824,
+ 'memusage/startup': 81854464,
  'response_received_count': 1,
- 'responses_per_minute': 0.6818181818181819,
+ 'responses_per_minute': 0.6666666666666666,
  'scheduler/dequeued': 1,
  'scheduler/dequeued/memory': 1,
  'scheduler/enqueued': 1,
  'scheduler/enqueued/memory': 1,
- 'start_time': datetime.datetime(2026, 8, 23, 9, 24, 28, 41399, tzinfo=datetime.timezone.utc)}
-2026-08-23 09:25:56 [scrapy.core.engine] INFO: Spider closed (finished)
+ 'start_time': datetime.datetime(2026, 8, 30, 12, 54, 37, 478376, tzinfo=datetime.timezone.utc)}
+2026-08-30 12:56:08 [scrapy.core.engine] INFO: Spider closed (finished)
