@@ -60,17 +60,18 @@ class ABCContainerSpider(scrapy.Spider):
         self.logger.info(f"Processing: {waste_type}")
 
         # Extract price information from the page
-        # Look for patterns like "315,- €" or "85,- €"
-        text_content = ' '.join(response.xpath('//text()').getall())
-
-        # Extract prices from table cells
-        table_prices = response.xpath('//td[contains(text(), "€")]/text()').getall()
+        # Seit dem Relaunch (08/2026) stehen die Preise nicht mehr in einer
+        # Tabelle, sondern in <div class="abc-price-row"> mit den Kindern
+        # .abc-price-name ("3 m3 Container Pauschalpreis") und .abc-price-value
+        # ("315,00 EUR"). Reihenfolge unveraendert: 1. Zeile = 3m3-Pauschale,
+        # 2. Zeile = Preis je m3.
+        table_prices = response.css('.abc-price-row .abc-price-value::text').getall()
 
         flat_rate_3m3 = None
         price_per_m3 = None
 
         if table_prices:
-            self.logger.info(f"  Found table prices: {table_prices}")
+            self.logger.info(f"  Found price rows: {table_prices}")
             # Extract numbers from price strings like "315,00 €"
             extracted_prices = []
             for price_text in table_prices:

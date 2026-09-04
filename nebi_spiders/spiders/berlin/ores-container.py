@@ -1,12 +1,15 @@
-import logging
+"""
+ORES Containerlogistik Spider
+Extrahiert Preise für Container-Entsorgung in Berlin
+
+Shop: https://containerentsorgung-berlin.de/
+Reines Scrapy — kein Selenium. Produktlisten und Detailseiten liefern
+Links, Größen und Preise bereits im statischen HTML.
+"""
+
 import re
-from time import sleep
 
-from scrapy import Spider
-from scrapy.selector import Selector
-
-from selenium import webdriver
-from selenium.webdriver.common.by import By
+from scrapy import Spider, Request
 
 
 class OresContainerProductsSpider(Spider):
@@ -27,232 +30,149 @@ class OresContainerProductsSpider(Spider):
         ("https://containerentsorgung-berlin.de/Strauchwerk/Strauchwerk-ohne-Stammholz/", "Strauchwerk ohne Stammholz"),
     ]
 
-    start_urls = ["https://containerentsorgung-berlin.de/"]
+    AGB_URL = "https://containerentsorgung-berlin.de/Informationen/Unsere-AGB/"
 
-    def __init__(self):
-        logging.getLogger("selenium").setLevel(logging.WARNING)
-        logging.getLogger("urllib3").setLevel(logging.WARNING)
-
-        options = webdriver.ChromeOptions()
-        options.add_argument('--headless')
-        options.add_argument('--no-sandbox')
-        options.add_argument('--disable-dev-shm-usage')
-        options.add_argument('--disable-gpu')
-        options.add_argument('--window-size=1920,1080')
-        self.driver = webdriver.Chrome(options=options)
-
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
         # Rental period will be extracted from AGB
         self.max_rental_period = None
+        self.total_products = 0
 
-    def closed(self, reason):
-        try:
-            self.driver.quit()
-        except Exception:
-            pass
+    def start_requests(self):
+        """Zuerst die AGB lesen (Mietdauer), danach die Abfallarten."""
+        self.logger.info("=" * 80)
+        self.logger.info("Starte ORES Containerlogistik Scraping")
+        self.logger.info("=" * 80)
 
-    def parse(self, response):
-        self.log(f"\n{'='*80}")
-        self.log(f"Starte ORES Containerlogistik Scraping")
-        self.log(f"{'='*80}\n")
+        yield Request(
+            url=self.AGB_URL,
+            callback=self.parse_agb,
+            errback=self.agb_failed,
+            dont_filter=True,
+        )
 
-        # Extract rental period from AGB page
-        self._extract_rental_period_from_agb()
+    def parse_agb(self, response):
+        """Extrahiert die maximale Mietdauer aus der AGB-Seite."""
+        visible_text = self.page_text(response)
 
-        total_products = 0
+        # Pattern: "max. 6 Kalendertagen" o.ä. in § 2
+        rental_match = re.search(r'max\.\s*(\d+)\s*Kalendertag', visible_text, re.IGNORECASE)
+        if rental_match:
+            self.max_rental_period = rental_match.group(1)
+            self.logger.info(f"✓ Mietdauer extrahiert: {self.max_rental_period} Tage")
+        else:
+            self.max_rental_period = "6"
+            self.logger.warning(f"⚠️ Mietdauer nicht gefunden, nutze Standard: {self.max_rental_period} Tage")
 
-        # For each waste type
+        yield from self.category_requests()
+
+    def agb_failed(self, failure):
+        """AGB nicht erreichbar — mit Standardwert weiterarbeiten."""
+        self.max_rental_period = "6"
+        self.logger.warning(f"⚠️ AGB nicht abrufbar ({failure.value}), nutze Standard: 6 Tage")
+
+        for request in self.category_requests():
+            yield request
+
+    def category_requests(self):
         for url, display_name in self.waste_type_urls:
-            self.log(f"\n--- Verarbeite: {display_name} ---")
-
-            try:
-                # Navigate to waste type page
-                self.driver.get(url)
-                sleep(3)
-
-                # Dismiss cookie banner (only on first call)
-                self._dismiss_cookie_banner()
-
-                # Find all product links on the page
-                product_links = self._find_product_links()
-
-                if not product_links:
-                    self.log(f"  ⚠️ Keine Produkt-Links gefunden")
-                    continue
-
-                self.log(f"  Gefunden: {len(product_links)} Produkte")
-
-                # For each product link, visit detail page and extract data
-                for product_url in product_links:
-                    try:
-                        # Navigate to product detail page
-                        self.driver.get(product_url)
-                        sleep(2)
-
-                        # Extract product details
-                        product = self._extract_product(product_url, display_name)
-
-                        if product:
-                            total_products += 1
-                            self.log(f"  ✓ {product['size']}m³: {product['price']}€ (Deckel: {product['lid_price']}€)")
-                            yield product
-
-                    except Exception as e:
-                        self.log(f"  ❌ Fehler bei {product_url}: {e}")
-                        continue
-
-            except Exception as e:
-                self.log(f"  ❌ Fehler: {e}")
-                continue
-
-        self.log(f"\n{'='*80}")
-        self.log(f"✓ Gesamt gescrapt: {total_products} Produkte")
-        self.log(f"{'='*80}\n")
-
-    def _extract_rental_period_from_agb(self):
-        """
-        Extrahiert die maximale Mietdauer aus der AGB-Seite.
-        """
-        try:
-            agb_url = "https://containerentsorgung-berlin.de/Informationen/Unsere-AGB/"
-            self.log(f"Extrahiere Mietdauer aus AGB: {agb_url}")
-
-            self.driver.get(agb_url)
-            sleep(2)
-
-            # Get visible text
-            visible_text = self.driver.execute_script("return document.body.innerText;")
-
-            # Search for pattern: "max. X Kalendertagen" in § 2
-            # Pattern: "max. 6 Kalendertagen" or similar
-            rental_match = re.search(r'max\.\s*(\d+)\s*Kalendertag', visible_text, re.IGNORECASE)
-            if rental_match:
-                self.max_rental_period = rental_match.group(1)
-                self.log(f"✓ Mietdauer extrahiert: {self.max_rental_period} Tage")
-            else:
-                # Fallback to default
-                self.max_rental_period = "6"
-                self.log(f"⚠️ Mietdauer nicht gefunden, nutze Standard: {self.max_rental_period} Tage")
-
-        except Exception as e:
-            self.log(f"⚠️ Fehler beim Extrahieren der Mietdauer: {e}")
-            self.max_rental_period = "6"  # Fallback
-
-    def _dismiss_cookie_banner(self):
-        """
-        Versucht, den Cookie-Banner zu schließen.
-        """
-        try:
-            cookie_buttons = self.driver.find_elements(
-                By.XPATH,
-                "//button[contains(., 'Akzeptieren') or contains(., 'Accept') or contains(., 'OK') or contains(@class, 'cookie')]"
+            yield Request(
+                url=url,
+                callback=self.parse_category,
+                meta={'waste_type': display_name},
             )
 
-            if cookie_buttons:
-                for btn in cookie_buttons:
-                    try:
-                        if btn.is_displayed():
-                            btn.click()
-                            self.log("✓ Cookie-Banner geschlossen")
-                            sleep(1)
-                            return
-                    except:
-                        pass
-        except:
-            pass
+    def parse_category(self, response):
+        """Sammelt die Produktlinks einer Abfallart."""
+        waste_type = response.meta['waste_type']
+        self.logger.info(f"--- Verarbeite: {waste_type} ---")
 
-    def _find_product_links(self):
-        """
-        Findet alle Produkt-Links auf der aktuellen Seite.
-        """
         product_links = []
+        for href in response.css('a.product-name::attr(href)').getall():
+            url = response.urljoin(href)
+            if url not in product_links:
+                product_links.append(url)
 
-        try:
-            # Find all product links with class "product-name"
-            links = self.driver.find_elements(By.CSS_SELECTOR, "a.product-name")
+        if not product_links:
+            self.logger.warning("  ⚠️ Keine Produkt-Links gefunden")
+            return
 
-            for link in links:
-                href = link.get_attribute("href")
-                if href and href not in product_links:
-                    product_links.append(href)
+        self.logger.info(f"  Gefunden: {len(product_links)} Produkte")
 
-        except Exception as e:
-            self.log(f"Fehler beim Finden der Produkt-Links: {e}")
+        for url in product_links:
+            yield Request(
+                url=url,
+                callback=self.parse_product,
+                meta={'waste_type': waste_type},
+            )
 
-        return product_links
+    def parse_product(self, response):
+        """Extrahiert Produktdetails von der Produktseite."""
+        waste_type = response.meta['waste_type']
 
-    def _extract_product(self, product_url: str, waste_type: str):
-        """
-        Extrahiert Produktdetails von der Produktseite.
-        """
-        try:
-            # Extract size from page title
-            page_title = self.driver.title
-            size = ""
+        # Größe aus dem Seitentitel: "... - 1,5 m³ | 2"
+        page_title = ' '.join((response.css('title::text').get() or '').split())
+        size = ""
+        size_match = re.search(r'(\d+(?:[.,]\d+)?)\s*m³', page_title)
+        if size_match:
+            size = size_match.group(1).replace(',', '.')
 
-            # Pattern: X,X m³ or X m³
-            size_match = re.search(r'(\d+(?:[.,]\d+)?)\s*m³', page_title)
-            if size_match:
-                size = size_match.group(1).replace(',', '.')
+        # Grundpreis: <p class="product-detail-price">342,99 €</p>
+        price = self.clean_price(response.css('p.product-detail-price::text').get())
 
-            # Extract base price from visible text
-            # The page shows: 0,00€ (cart), then 342,99€ or 1.368,99€ (product price), then 15,00€ (lid), etc.
-            price = ""
-            visible_text = self.driver.execute_script("return document.body.innerText;")
+        # Deckelpreis: Options-Block mit der Überschrift "Mit Deckel"
+        lid_price = ""
+        for option in response.css('.option'):
+            option_text = ' '.join(option.css('::text').getall())
+            if 'Mit Deckel' in option_text:
+                lid_price = self.clean_price(option.css('.price::text').get())
+                break
 
-            # Find all prices in the visible text (including thousand separators)
-            # Pattern matches: 1.368,99 or 368,99 or 0,00
-            price_matches = re.findall(r'([\d.,]+)\s*€', visible_text)
-            if len(price_matches) >= 2:
-                # Skip first price (0,00 cart total), take second price (product price)
-                # But only if first is 0,00
-                if price_matches[0] == "0,00":
-                    # Remove thousand separator (.) but keep comma as decimal separator
-                    price = price_matches[1].replace('.', '') if '.' in price_matches[1] and ',' in price_matches[1] else price_matches[1]
-                else:
-                    # If first is not 0,00, it might be the correct price
-                    price = price_matches[0].replace('.', '') if '.' in price_matches[0] and ',' in price_matches[0] else price_matches[0]
-            elif len(price_matches) >= 1:
-                price = price_matches[0].replace('.', '') if '.' in price_matches[0] and ',' in price_matches[0] else price_matches[0]
+        if not size or not price:
+            self.logger.warning(f"⚠️ Größe oder Preis nicht gefunden für {response.url}")
+            return
 
-            # Extract lid price (Deckel)
-            # Find "Mit Deckel" text on the page, then find associated price
-            lid_price = ""
-            try:
-                visible_text = self.driver.execute_script("return document.body.innerText;")
-                deckel_pos = visible_text.find("Mit Deckel")
-                if deckel_pos != -1:
-                    # Search for price after "Mit Deckel" position
-                    remaining_text = visible_text[deckel_pos:]
-                    lid_match = re.search(r'([\d.,]+)\s*€', remaining_text)
-                    if lid_match:
-                        # Remove thousand separator (.) but keep comma as decimal separator
-                        lid_str = lid_match.group(1)
-                        lid_price = lid_str.replace('.', '') if '.' in lid_str and ',' in lid_str else lid_str
-            except:
-                pass
+        self.total_products += 1
+        self.logger.info(f"  ✓ {size}m³: {price}€ (Deckel: {lid_price}€)")
 
-            if not size or not price:
-                self.log(f"⚠️ Größe oder Preis nicht gefunden für {product_url}")
-                return None
+        yield {
+            "source": "ORES Containerlogistik",
+            "title": f"{size} m³ {waste_type}",
+            "type": waste_type,
+            "city": "Berlin",
+            "size": size,
+            "price": price,
+            "lid_price": lid_price,
+            "arrival_price": "Abhängig v. d. Zone 4€,6€,10€,12€",
+            "departure_price": "inklusive",
+            "max_rental_period": self.max_rental_period or "6",
+            "fee_after_max": "",
+            "cancellation_fee": "109,48",
+            "URL": response.url
+        }
 
-            product = {
-                "source": "ORES Containerlogistik",
-                "title": f"{size} m³ {waste_type}",
-                "type": waste_type,
-                "city": "Berlin",
-                "size": size,
-                "price": price,
-                "lid_price": lid_price,
-                "arrival_price": "Abhängig v. d. Zone 4€,6€,10€,12€",
-                "departure_price": "inklusive",
-                "max_rental_period": self.max_rental_period or "6",
-                "fee_after_max": "",
-                "cancellation_fee": "109,48",
-                "URL": product_url
-            }
+    def closed(self, reason):
+        self.logger.info("=" * 80)
+        self.logger.info(f"✓ Gesamt gescrapt: {self.total_products} Produkte")
+        self.logger.info("=" * 80)
 
-            return product
+    @staticmethod
+    def page_text(response):
+        """Sichtbarer Seitentext ohne Skript- und Style-Inhalte."""
+        parts = response.xpath('//body//*[not(self::script or self::style)]/text()').getall()
+        return re.sub(r'\s+', ' ', ' '.join(parts))
 
-        except Exception as e:
-            self.log(f"Fehler beim Extrahieren: {e}")
-            return None
+    @staticmethod
+    def clean_price(raw):
+        """'342,99 €' / '1.368,99 €' -> '342,99' / '1368,99'"""
+        if not raw:
+            return ""
+        text = raw.replace('\xa0', ' ')
+        match = re.search(r'([\d.,]+)\s*€', text)
+        if not match:
+            return ""
+        value = match.group(1)
+        # Tausenderpunkt entfernen, Komma als Dezimaltrenner behalten
+        if '.' in value and ',' in value:
+            value = value.replace('.', '')
+        return value
